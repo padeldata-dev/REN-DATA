@@ -1,0 +1,9 @@
+/rentabilidad/* /rentabilidad-:splat 301
+/ciudad/* /rentabilidad-:splat 301
+/glosario /glosario.html 301
+/ranking /ranking.html 301
+/comparador /comparador.html 301
+/contacto /contacto.html 301
+/aviso-legal /aviso-legal.html 301
+/privacidad /privacidad.html 301
+/* /index.html 200

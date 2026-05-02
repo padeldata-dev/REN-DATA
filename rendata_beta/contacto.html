@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contacto | Ren Data</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8fafc;--white:#fff;--blue:#2563eb;--navy:#0e2a6b;--text:#0f1923;--muted:#6b7a8d;--border:#e5eaf2;--font:'Plus Jakarta Sans',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased}
+header{background:#0e2a6b;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#60a5fa 0%,#fff 50%,#60a5fa 100%);background-size:200% 100%;animation:sh 4s linear infinite}
+@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.logo{text-decoration:none;font-family:var(--font)}
+nav{display:flex;gap:.2rem}
+nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
+nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-cta{background:rgba(255,255,255,.15)!important;color:#fff!important;font-weight:600!important;border:1px solid rgba(255,255,255,.25)!important}
+.page-hero{background:var(--white);border-bottom:1px solid var(--border);padding:3rem 2rem 2.5rem}
+.page-hero-inner{max-width:760px;margin:0 auto}
+.page-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.page-hero h1{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.04em;margin-bottom:.5rem}
+.page-hero p{font-size:.9rem;color:var(--muted)}
+.content{max-width:760px;margin:2.5rem auto 5rem;padding:0 2rem}
+h2{font-size:1.15rem;font-weight:700;letter-spacing:-.02em;margin:2rem 0 .65rem;color:var(--text)}
+h3{font-size:.95rem;font-weight:600;margin:1.25rem 0 .4rem}
+p{font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:.9rem}
+ul{font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:.9rem;padding-left:1.4rem}
+ul li{margin-bottom:.3rem}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.highlight-box{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.875rem;color:#1e3a8a;line-height:1.65}
+footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;max-width:1100px;margin:0 auto}
+footer p{font-size:.76rem;color:var(--muted)}
+.f-links{display:flex;gap:1.5rem}
+.f-links a{font-size:.76rem;color:var(--muted);text-decoration:none}
+.f-links a:hover{color:var(--blue)}
+</style>
+
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.contact-form{background:#fff;border:1px solid var(--border);border-radius:14px;padding:2rem;box-shadow:0 1px 3px rgba(14,24,40,.08)}
+.form-field{margin-bottom:1.1rem}
+.form-label{font-size:.75rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:.4rem}
+.form-input{width:100%;background:#f8fafc;border:1.5px solid var(--border);color:var(--text);font-family:var(--font);font-size:.9rem;padding:.72rem .95rem;border-radius:8px;outline:none;transition:border-color .15s}
+.form-input:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.form-input::placeholder{color:#a0aec0}
+textarea.form-input{min-height:140px;resize:vertical}
+.form-btn{width:100%;background:#0e2a6b;color:#fff;font-family:var(--font);font-weight:700;font-size:.9rem;padding:.82rem;border:none;border-radius:8px;cursor:pointer;transition:all .15s}
+.form-btn:hover{background:#2563eb;transform:translateY(-1px)}
+.info-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem;box-shadow:0 1px 3px rgba(14,24,40,.08);margin-bottom:1rem}
+.info-icon{font-size:1.3rem;margin-bottom:.5rem}
+.info-title{font-size:.9rem;font-weight:700;margin-bottom:.35rem}
+.info-text{font-size:.82rem;color:var(--muted);line-height:1.6}
+@media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header>
+  <a href="index.html" class="logo"><div style="font-size:1.1rem;line-height:1"><span style="color:#fff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
+  <nav><a href="index.html" >Ciudades</a>
+    <a href="ranking.html" >Ranking</a>
+    <a href="comparador.html" >Comparar</a>
+    <a href="glosario.html" >Glosario</a>
+    <a href="index.html#alertas" class="nav-cta">Alertas</a></nav>
+</header>
+<div class="page-hero"><div class="page-hero-inner">
+  <div class="page-eyebrow">Contacto</div>
+  <h1>Hablemos</h1>
+  <p>¿Tienes dudas, quieres colaborar o necesitas información? Escríbenos.</p>
+</div></div>
+<div class="content">
+  <div class="contact-grid">
+    <div class="contact-form">
+      <h2 style="margin-top:0;margin-bottom:1.25rem;font-size:1.05rem">Envíanos un mensaje</h2>
+      <div class="form-field">
+        <label class="form-label">Tu nombre</label>
+        <input type="text" class="form-input" placeholder="María García">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="maria@ejemplo.com">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Asunto</label>
+        <select class="form-input">
+          <option>Quiero invertir — necesito orientación</option>
+          <option>Propuesta de colaboración</option>
+          <option>Error en los datos</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Mensaje</label>
+        <textarea class="form-input" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+      </div>
+      <button class="form-btn">Enviar mensaje →</button>
+    </div>
+    <div>
+      <div class="info-card">
+        <div class="info-icon">⏱️</div>
+        <div class="info-title">Tiempo de respuesta</div>
+        <div class="info-text">Respondemos en menos de 48 horas en días laborables.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🤝</div>
+        <div class="info-title">Colaboraciones</div>
+        <div class="info-text">Si eres agencia inmobiliaria, portal o medio de comunicación y quieres colaborar, escríbenos indicando tu propuesta.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">⚠️</div>
+        <div class="info-title">Error en los datos</div>
+        <div class="info-text">Si detectas algún dato incorrecto en alguna ciudad, indícanos ciudad, dato y la fuente que usas de referencia.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📊</div>
+        <div class="info-title">Datos y API</div>
+        <div class="info-text">Si eres empresa y necesitas acceso a nuestros datos de rentabilidad para tu plataforma, contáctanos para hablar de condiciones.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <a href="index.html" class="logo"><div style="font-size:1rem"><span style="color:#0e2a6b;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#2563eb;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
+  <p>© 2026 rendata.es · Datos de fuentes públicas</p>
+  <div class="f-links">
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</footer></body></html>

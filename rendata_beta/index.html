@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 50 ciudades.">
+<title>Ren Data — Rentabilidad inmobiliaria por ciudad en España</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#0e2a6b;--blue-l:#f0f6ff;
+  --text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--border2:#d1dae8;
+  --green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;
+  --sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);
+  --sh-md:0 4px 16px rgba(14,24,40,.1),0 1px 4px rgba(14,24,40,.06);
+  --sh-lg:0 12px 40px rgba(14,24,40,.14);
+  --font:'Plus Jakarta Sans',sans-serif;--r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* HEADER */
+header{background:#0e2a6b;border-bottom:1px solid var(--border);padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,#60a5fa 0%,#fff 50%,#60a5fa 100%);background-size:200% 100%;animation:shimmer 4s linear infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* LOGO */
+.logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+.logo-icon{width:32px;height:32px;flex-shrink:0}
+.logo-wm{font-size:1.12rem;font-weight:800;letter-spacing:-.03em;color:var(--text);line-height:1}
+.logo-wm em{color:var(--blue);font-style:normal}
+
+nav{display:flex;align-items:center;gap:.2rem}
+nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.45rem .85rem;border-radius:8px;transition:all .15s}
+nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-cta{background:rgba(255,255,255,.15)!important;color:#fff!important;font-weight:600!important;border:1px solid rgba(255,255,255,.25)!important}
+.nav-cta:hover{background:rgba(255,255,255,.25)!important}
+
+/* HERO */
+.hero{background:var(--white);border-bottom:1px solid var(--border);padding:5.5rem 2.5rem 4.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,#c7d7f8 1px,transparent 1px);background-size:28px 28px;opacity:.3;pointer-events:none}
+.hero::after{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(26,86,219,.07) 0%,transparent 68%);pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+
+.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--white);border:1px solid var(--border2);color:var(--text2);font-size:.71rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.35rem .9rem;border-radius:20px;margin-bottom:1.75rem;box-shadow:0 1px 2px rgba(14,24,40,.06)}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:livePulse 2s ease infinite;box-shadow:0 0 0 0 rgba(5,150,105,.4)}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(5,150,105,.4)}70%{box-shadow:0 0 0 6px rgba(5,150,105,0)}100%{box-shadow:0 0 0 0 rgba(5,150,105,0)}}
+
+h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800;letter-spacing:-.05em;line-height:1.05;max-width:820px;margin:0 auto 1.25rem}
+h1 .ac{color:var(--blue)}
+h1 .ul{position:relative;display:inline-block}
+h1 .ul::after{content:'';position:absolute;bottom:2px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),#60a5fa);border-radius:2px}
+.hero-desc{font-size:1.05rem;color:var(--muted);max-width:520px;margin:0 auto 2.75rem;line-height:1.8}
+
+/* KPI row */
+.hero-kpis{display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh-md);overflow:hidden;margin-bottom:3rem}
+.hero-kpi{padding:1.1rem 2rem;text-align:center;border-right:1px solid var(--border);min-width:130px}
+.hero-kpi:last-child{border-right:none}
+.hero-kpi-v{font-size:1.65rem;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:.2rem}
+.hero-kpi-v .c{color:var(--blue)}
+.hero-kpi-l{font-size:.68rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+
+/* Search */
+.search-wrap{max-width:480px;margin:0 auto;position:relative}
+.search-box{width:100%;background:var(--white);border:1.5px solid var(--border2);color:var(--text);font-family:var(--font);font-size:.95rem;padding:.9rem 3.5rem .9rem 3rem;border-radius:10px;outline:none;box-shadow:var(--sh-md);transition:border-color .15s,box-shadow .15s}
+.search-box:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1),var(--sh-md)}
+.search-box::placeholder{color:#a0aec0}
+.s-ico{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.s-hint{position:absolute;right:.75rem;top:50%;transform:translateY(-50%);font-size:.67rem;font-weight:600;color:var(--muted);background:var(--bg);border:1px solid var(--border);padding:.15rem .45rem;border-radius:4px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--white);border-bottom:1px solid var(--border);padding:1.2rem 2.5rem}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.45rem;font-size:.78rem;color:var(--muted);font-weight:500}
+.trust-item svg{color:var(--blue);flex-shrink:0}
+
+/* FILTER BAR */
+.filter-bar{max-width:1100px;margin:2.25rem auto 0;padding:0 2rem;display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
+.f-label{font-size:.73rem;font-weight:700;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-right:.2rem}
+.f-btn{background:var(--white);border:1px solid var(--border);color:var(--text2);font-family:var(--font);font-size:.78rem;font-weight:500;padding:.38rem .9rem;border-radius:20px;cursor:pointer;transition:all .15s}
+.f-btn:hover{border-color:var(--blue);color:var(--blue)}
+.f-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.f-btn.roi-f{border-color:#bbf7d0;color:var(--green);background:#f0fdf4}
+.f-btn.roi-f.active{background:var(--green);border-color:var(--green);color:#fff}
+.f-sort{margin-left:auto;background:var(--white);border:1px solid var(--border);color:var(--text2);font-family:var(--font);font-size:.78rem;font-weight:500;padding:.4rem .85rem;border-radius:8px;cursor:pointer;outline:none;box-shadow:0 1px 2px rgba(14,24,40,.06)}
+
+/* CITIES */
+.cities-section{max-width:1100px;margin:1.5rem auto 5rem;padding:0 2rem}
+.cities-meta{display:flex;align-items:center;margin-bottom:1.25rem}
+.cities-count{font-size:.82rem;color:var(--muted)}
+.cities-count strong{color:var(--text);font-weight:600}
+.cities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+
+/* CITY CARD */
+.city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);transition:border-color .2s,box-shadow .2s,transform .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column;overflow:hidden}
+.city-card:hover{border-color:#3b73ea;box-shadow:var(--sh-lg);transform:translateY(-3px)}
+
+/* Card image */
+.c-img{width:100%;height:148px;position:relative;overflow:hidden;background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);flex-shrink:0}
+.c-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.city-card:hover .c-img img{transform:scale(1.06)}
+.c-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,24,40,.38) 0%,transparent 55%)}
+.c-roi-badge{position:absolute;top:.7rem;right:.7rem;font-size:.82rem;font-weight:800;padding:.28rem .65rem;border-radius:7px;z-index:1;letter-spacing:-.02em;backdrop-filter:blur(6px)}
+.c-roi-badge.rh{background:rgba(5,150,105,.88);color:#fff}
+.c-roi-badge.rm{background:rgba(26,86,219,.88);color:#fff}
+.c-roi-badge.rl{background:rgba(220,38,38,.82);color:#fff}
+.c-city-label{position:absolute;bottom:.65rem;left:.85rem;font-size:.82rem;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5);z-index:1;letter-spacing:-.01em}
+
+/* Card body */
+.c-body{padding:1.1rem 1.2rem 1.2rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.c-header{display:flex;justify-content:space-between;align-items:flex-start}
+.c-name{font-size:1rem;font-weight:700;letter-spacing:-.02em}
+.c-ccaa{font-size:.72rem;color:var(--muted);margin-top:.1rem}
+.c-roi-chip{font-size:.78rem;font-weight:700;padding:.22rem .6rem;border-radius:6px;flex-shrink:0;margin-left:.5rem;letter-spacing:-.01em}
+.rh{background:var(--green-bg);color:var(--green)}
+.rm{background:var(--blue-l);color:var(--blue)}
+.rl{background:var(--red-bg);color:var(--red)}
+.c-div{border:none;border-top:1px solid var(--border)}
+.c-stats{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .75rem}
+.c-sl{font-size:.62rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.1rem}
+.c-sv{font-size:.875rem;font-weight:600;letter-spacing:-.01em}
+.c-footer{display:flex;justify-content:space-between;align-items:center;padding-top:.7rem;border-top:1px solid var(--border)}
+.c-trend{font-size:.72rem;font-weight:600}
+.c-link{font-size:.75rem;font-weight:700;color:var(--blue)}
+
+/* HOW */
+.how-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2.5rem;position:relative;overflow:hidden}
+.how-section::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(26,86,219,.05) 0%,transparent 70%);pointer-events:none}
+.how-inner{max-width:1100px;margin:0 auto}
+.s-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+.s-eyebrow::before{content:'';display:block;width:18px;height:2px;background:var(--blue);border-radius:2px}
+.s-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.04em;margin-bottom:3rem;line-height:1.15}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.how-num{width:38px;height:38px;background:var(--blue-l);color:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;margin-bottom:1rem;border:1px solid #bfdbfe}
+.how-step h3{font-size:.95rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.02em}
+.how-step p{font-size:.82rem;color:var(--muted);line-height:1.7}
+
+/* CTA */
+.cta-banner{background:linear-gradient(135deg,#1140a6 0%,var(--blue) 50%,#3b82f6 100%);padding:5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px}
+.cta-inner{max-width:560px;margin:0 auto;position:relative;z-index:1}
+.cta-banner h2{font-size:clamp(1.75rem,4vw,2.4rem);font-weight:800;color:#fff;letter-spacing:-.04em;margin-bottom:.75rem;line-height:1.1}
+.cta-banner p{color:rgba(255,255,255,.72);font-size:.95rem;margin-bottom:2.25rem;line-height:1.7}
+.cta-row{display:flex;gap:.65rem;max-width:400px;margin:0 auto}
+.cta-email{flex:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:var(--font);font-size:.875rem;padding:.8rem 1rem;border-radius:9px;outline:none;transition:all .15s}
+.cta-email::placeholder{color:rgba(255,255,255,.48)}
+.cta-email:focus{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5)}
+.cta-go{background:#fff;color:var(--blue);font-family:var(--font);font-weight:700;font-size:.875rem;padding:.8rem 1.4rem;border:none;border-radius:9px;cursor:pointer;white-space:nowrap;transition:all .15s}
+.cta-go:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.2)}
+
+/* FOOTER */
+footer{background:var(--white);border-top:1px solid var(--border);padding:2rem 2.5rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:.78rem;color:var(--muted)}
+.f-links{display:flex;gap:1.5rem}
+.f-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .15s}
+.f-links a:hover{color:var(--blue)}
+
+/* Empty */
+.empty{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--muted)}
+.empty p{font-size:.9rem;margin-top:.75rem}
+
+/* Animations */
+.fu{opacity:0;transform:translateY(18px);animation:fuA .55s ease forwards}
+@keyframes fuA{to{opacity:1;transform:translateY(0)}}
+.d1{animation-delay:.04s}.d2{animation-delay:.1s}.d3{animation-delay:.16s}.d4{animation-delay:.22s}
+
+@media(max-width:900px){.cities-grid{grid-template-columns:repeat(2,1fr)}.how-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
+@media(max-width:600px){header{padding:0 1.25rem}.hero{padding:3.5rem 1.25rem 3rem}.cities-grid{grid-template-columns:1fr}.hero-kpis{width:100%}.hero-kpi{min-width:auto;flex:1;padding:.9rem 1rem}.cta-row{flex-direction:column}.trust-inner{gap:1.25rem}nav a:not(.nav-cta){display:none}}
+/* INTERACTIVE MAP */
+.map-section{background:var(--white);border-bottom:1px solid var(--border);padding:3rem 2rem}
+.map-inner{max-width:1100px;margin:0 auto}
+.map-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.map-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.map-eyebrow::before{content:'';display:block;width:14px;height:2px;background:var(--blue);border-radius:2px}
+.map-title{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.4rem}
+.map-desc{font-size:.85rem;color:var(--muted);max-width:420px}
+.map-legend{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:.85rem 1.1rem}
+.legend-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.6rem}
+.legend-items{display:flex;flex-direction:column;gap:.38rem}
+.legend-item{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--text2);font-weight:500}
+.legend-dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.map-container{display:grid;grid-template-columns:1fr 260px;gap:1.5rem;align-items:start}
+/* SVG paths */
+#spainMap path, #spainMap ellipse, #spainMap rect:not([fill="none"]){
+  cursor:pointer;
+  fill:#dbeafe;
+  stroke:white;
+  stroke-width:1.5;
+  transition:fill .15s, filter .15s;
+}
+#spainMap path:hover, #spainMap ellipse:hover{filter:brightness(.88)}
+#spainMap path.roi-high, #spainMap ellipse.roi-high{fill:#bbf7d0}
+#spainMap path.roi-mid,  #spainMap ellipse.roi-mid {fill:#bfdbfe}
+#spainMap path.roi-low,  #spainMap ellipse.roi-low {fill:#fecaca}
+#spainMap path.selected, #spainMap ellipse.selected,
+#spainMap g.selected rect:not([fill="none"]){
+  stroke:var(--blue)!important;stroke-width:2.5!important;filter:brightness(.82)
+}
+#spainMap .reg-label{font-size:8px;font-weight:600;fill:#374151;pointer-events:none;user-select:none}
+#spainMap g[data-ccaa] rect:not([fill="none"]){cursor:pointer;fill:#bfdbfe;stroke:white;stroke-width:1.5;transition:fill .15s}
+#spainMap g[data-ccaa] ellipse{cursor:pointer;fill:#bbf7d0;stroke:white;stroke-width:1.5}
+/* Tooltip */
+.map-tooltip{position:fixed;background:var(--text);color:white;font-size:.78rem;font-weight:500;padding:.45rem .8rem;border-radius:7px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:9999;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.map-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--text)}
+/* Info panel */
+.map-info-panel{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;min-height:200px}
+.mip-empty{text-align:center;padding:2rem 1rem}
+.mip-empty-icon{font-size:2.2rem;margin-bottom:.75rem}
+.mip-empty-title{font-size:.9rem;font-weight:700;margin-bottom:.4rem}
+.mip-empty-desc{font-size:.78rem;color:var(--muted);line-height:1.6}
+.mip-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.mip-name{font-size:1rem;font-weight:800;letter-spacing:-.02em}
+.mip-reset{background:none;border:1px solid var(--border);color:var(--muted);font-family:var(--font);font-size:.72rem;font-weight:500;padding:.28rem .65rem;border-radius:6px;cursor:pointer;transition:all .15s}
+.mip-reset:hover{border-color:var(--blue);color:var(--blue)}
+.mip-stats{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:1rem}
+.mip-stat{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.65rem .8rem;text-align:center}
+.mip-stat-v{font-size:1.1rem;font-weight:800;letter-spacing:-.03em}
+.mip-stat-l{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.12rem}
+.mip-cities{display:flex;flex-direction:column;gap:.38rem;max-height:280px;overflow-y:auto}
+.mip-city{display:flex;justify-content:space-between;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.55rem .8rem;text-decoration:none;color:inherit;transition:all .15s;font-size:.82rem}
+.mip-city:hover{border-color:var(--blue);color:var(--blue)}
+.mip-city-name{font-weight:600}
+.mip-city-roi{font-size:.8rem;font-weight:700;padding:.18rem .48rem;border-radius:5px}
+@media(max-width:900px){.map-container{grid-template-columns:1fr}.map-info-panel{min-height:auto}}
+@media(max-width:600px){.map-header{flex-direction:column}.map-legend{width:100%}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">
+    <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/>
+      <path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 1.9.6 4 1.6 6L24 4.8C22.2 3.4 19.7 2.5 17 2.5z" fill="rgba(255,255,255,.15)"/>
+      <circle cx="17" cy="11" r="4.5" fill="rgba(255,255,255,.12)"/>
+      <polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
+  </a>
+  <nav>
+    <a href="#">Ciudades</a>
+    <a href="#">Comparar</a>
+    <a href="#">Calculadora</a>
+    <a href="#alertas" class="nav-cta">Recibir alertas</a>
+  </nav>
+</header>
+
+<section class="hero fu d1">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="live-dot"></span>Datos actualizados · Abril 2026</div>
+    <h1>¿Dónde invertir en <span class="ul">vivienda</span> en <span class="ac">España?</span></h1>
+    <p class="hero-desc">Análisis de rentabilidad, precio del m² y datos de mercado para más de 50 ciudades. Todo lo que necesitas para invertir con cabeza.</p>
+    <div class="hero-kpis">
+      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">50</span></div><div class="hero-kpi-l">Ciudades</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">6,7</span>%</div><div class="hero-kpi-l">ROI medio España</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">7,5</span>%</div><div class="hero-kpi-l">Mejor ROI</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-v">↑<span class="c">11</span>%</div><div class="hero-kpi-l">Subida media m²</div></div>
+    </div>
+    <div class="search-wrap">
+      <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
+      <span class="s-hint">50 ciudades</span>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar fu d2">
+  <div class="trust-inner">
+    <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fuente: Idealista Q1 2026</div>
+    <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Fotocasa · Ministerio de Vivienda</div>
+    <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Actualizado trimestralmente</div>
+    <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>100% gratuito</div>
+  </div>
+</div>
+
+<!-- MAPA INTERACTIVO -->
+<section class="map-section fu d2">
+  <div class="map-inner">
+    <div class="map-header">
+      <div>
+        <div class="map-eyebrow">Explorar por comunidad</div>
+        <h2 class="map-title">Haz clic en cualquier región de España</h2>
+        <p class="map-desc">Filtra las ciudades por comunidad autónoma directamente en el mapa. El color indica la rentabilidad media.</p>
+      </div>
+      <div class="map-legend">
+        <div class="legend-title">Rentabilidad media</div>
+        <div class="legend-items">
+          <div class="legend-item"><div class="legend-dot" style="background:#059669"></div>&gt;6,5% Alta</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#1a56db"></div>5–6,5% Media</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>&lt;5% Baja</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <!-- TOOLTIP -->
+      <div class="map-tooltip" id="mapTooltip"></div>
+
+      <!-- SVG MAP -->
+      <svg id="spainMap" viewBox="0 0 760 580" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto">
+
+        <!-- Galicia -->
+        <path id="reg-Galicia" data-ccaa="Galicia" data-name="Galicia"
+          d="M55,85 L142,65 L165,102 L156,175 L80,195 L52,155 Z"/>
+
+        <!-- Asturias -->
+        <path id="reg-Asturias" data-ccaa="Asturias" data-name="Asturias"
+          d="M142,65 L252,48 L268,85 L248,115 L165,102 Z"/>
+
+        <!-- Cantabria -->
+        <path id="reg-Cantabria" data-ccaa="Cantabria" data-name="Cantabria"
+          d="M252,48 L308,42 L325,75 L268,85 Z"/>
+
+        <!-- País Vasco -->
+        <path id="reg-PaisVasco" data-ccaa="País Vasco" data-name="País Vasco"
+          d="M308,42 L378,38 L400,72 L362,95 L325,75 Z"/>
+
+        <!-- Navarra -->
+        <path id="reg-Navarra" data-ccaa="Navarra" data-name="Navarra"
+          d="M378,38 L440,48 L442,130 L390,140 L362,95 L400,72 Z"/>
+
+        <!-- La Rioja -->
+        <path id="reg-LaRioja" data-ccaa="La Rioja" data-name="La Rioja"
+          d="M325,75 L390,88 L390,140 L348,150 L324,118 Z"/>
+
+        <!-- Aragón -->
+        <path id="reg-Aragon" data-ccaa="Aragón" data-name="Aragón"
+          d="M440,48 L560,68 L570,262 L470,278 L440,268 L410,158 L390,140 L442,130 Z"/>
+
+        <!-- Cataluña -->
+        <path id="reg-Cataluna" data-ccaa="Cataluña" data-name="Cataluña"
+          d="M560,68 L682,118 L660,262 L570,262 Z"/>
+
+        <!-- Castilla y León -->
+        <path id="reg-CastillaLeon" data-ccaa="Castilla y León" data-name="Castilla y León"
+          d="M52,155 L80,195 L156,175 L165,102 L248,115 L268,85 L325,75 L324,118 L348,150 L390,140 L410,158 L390,242 L338,278 L238,288 L158,278 L96,288 Z"/>
+
+        <!-- Madrid -->
+        <path id="reg-Madrid" data-ccaa="C. de Madrid" data-name="C. de Madrid"
+          d="M288,275 L352,268 L362,332 L288,342 Z"/>
+
+        <!-- Castilla-La Mancha -->
+        <path id="reg-CLaMancha" data-ccaa="Castilla-La Mancha" data-name="Castilla-La Mancha"
+          d="M238,288 L338,278 L362,332 L392,350 L422,360 L470,340 L530,360 L490,410 L430,420 L352,432 L258,418 L250,378 Z"/>
+
+        <!-- Extremadura -->
+        <path id="reg-Extremadura" data-ccaa="Extremadura" data-name="Extremadura"
+          d="M96,288 L158,278 L238,288 L250,378 L218,442 L128,450 L90,390 Z"/>
+
+        <!-- Andalucía -->
+        <path id="reg-Andalucia" data-ccaa="Andalucía" data-name="Andalucía"
+          d="M90,390 L128,450 L218,442 L258,418 L352,432 L430,420 L490,410 L510,468 L490,500 L370,538 L198,538 L98,492 Z"/>
+
+        <!-- Murcia -->
+        <path id="reg-Murcia" data-ccaa="R. de Murcia" data-name="R. de Murcia"
+          d="M530,360 L570,410 L580,460 L510,468 L490,410 Z"/>
+
+        <!-- C. Valenciana -->
+        <path id="reg-Valencia" data-ccaa="C. Valenciana" data-name="C. Valenciana"
+          d="M570,262 L660,262 L620,400 L570,410 L530,360 L540,300 Z"/>
+
+        <!-- Islas Baleares (inset) -->
+        <g id="reg-Baleares" data-ccaa="Islas Baleares" data-name="Islas Baleares" style="cursor:pointer">
+          <rect x="660" y="280" width="70" height="40" rx="4"/>
+          <text x="695" y="298" text-anchor="middle" style="font-size:9px;font-weight:600;fill:white;pointer-events:none">Baleares</text>
+          <rect x="660" y="325" width="32" height="18" rx="3"/>
+          <rect x="698" y="325" width="32" height="18" rx="3"/>
+        </g>
+
+        <!-- Canarias (inset bottom-left) -->
+        <g id="reg-Canarias" data-ccaa="Canarias" data-name="Canarias" style="cursor:pointer">
+          <rect x="30" y="490" width="130" height="60" rx="6" fill="none" stroke="#e5eaf2" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="45" y="508" style="font-size:8px;fill:#6b7a8d;font-weight:500">Canarias</text>
+          <ellipse cx="55" cy="528" rx="14" ry="8"/>
+          <ellipse cx="82" cy="524" rx="18" ry="9"/>
+          <ellipse cx="112" cy="528" rx="14" ry="8"/>
+          <ellipse cx="140" cy="530" rx="10" ry="7"/>
+        </g>
+
+        <!-- Region labels -->
+        <text class="reg-label" x="95" y="140" text-anchor="middle">Galicia</text>
+        <text class="reg-label" x="205" y="88" text-anchor="middle">Asturias</text>
+        <text class="reg-label" x="280" y="68" text-anchor="middle" style="font-size:7px">Cantabria</text>
+        <text class="reg-label" x="355" y="68" text-anchor="middle" style="font-size:7px">P. Vasco</text>
+        <text class="reg-label" x="408" y="92" text-anchor="middle" style="font-size:7px">Navarra</text>
+        <text class="reg-label" x="352" y="118" text-anchor="middle" style="font-size:6px">Rioja</text>
+        <text class="reg-label" x="498" y="168" text-anchor="middle">Aragón</text>
+        <text class="reg-label" x="618" y="175" text-anchor="middle">Cataluña</text>
+        <text class="reg-label" x="225" y="215" text-anchor="middle">Castilla y León</text>
+        <text class="reg-label" x="322" y="312" text-anchor="middle" style="font-size:7px">Madrid</text>
+        <text class="reg-label" x="358" y="375" text-anchor="middle">Castilla-La Mancha</text>
+        <text class="reg-label" x="170" y="368" text-anchor="middle">Extremadura</text>
+        <text class="reg-label" x="295" y="488" text-anchor="middle">Andalucía</text>
+        <text class="reg-label" x="538" y="428" text-anchor="middle" style="font-size:7px">Murcia</text>
+        <text class="reg-label" x="598" y="335" text-anchor="middle" style="font-size:8px">C. Valenciana</text>
+      </svg>
+
+      <!-- Info panel -->
+      <div class="map-info-panel" id="mapInfoPanel">
+        <div class="mip-empty" id="mipEmpty">
+          <div class="mip-empty-icon">🗺️</div>
+          <div class="mip-empty-title">Selecciona una comunidad</div>
+          <div class="mip-empty-desc">Haz clic en cualquier región del mapa para ver sus ciudades y datos.</div>
+        </div>
+        <div class="mip-data" id="mipData" style="display:none">
+          <div class="mip-header">
+            <div class="mip-name" id="mipName">—</div>
+            <button class="mip-reset" onclick="resetMap()">✕ Todas</button>
+          </div>
+          <div class="mip-stats" id="mipStats"></div>
+          <div class="mip-cities" id="mipCities"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="filter-bar fu d3">
+  <span class="f-label">Filtrar</span>
+  <button class="f-btn active" onclick="flt('all',this)">Todas</button>
+  <button class="f-btn" onclick="flt('andalucia',this)">Andalucía</button>
+  <button class="f-btn" onclick="flt('levante',this)">Levante</button>
+  <button class="f-btn" onclick="flt('centro',this)">Centro</button>
+  <button class="f-btn" onclick="flt('norte',this)">Norte</button>
+  <button class="f-btn" onclick="flt('islas',this)">Islas</button>
+  <button class="f-btn roi-f" onclick="flt('roi-alto',this)">⚡ ROI &gt; 6%</button>
+  <select class="f-sort" onchange="srt(this.value)">
+    <option value="roi">Mayor ROI</option>
+    <option value="pa">Menor precio m²</option>
+    <option value="pd">Mayor precio m²</option>
+    <option value="alq">Mayor alquiler</option>
+    <option value="az">A → Z</option>
+  </select>
+</div>
+
+<section class="cities-section fu d4">
+  <div class="cities-meta"><div class="cities-count" id="cnt"></div></div>
+  <div class="cities-grid" id="grid"></div>
+</section>
+
+<section class="how-section">
+  <div class="how-inner">
+    <div class="s-eyebrow">¿Cómo funciona?</div>
+    <h2 class="s-title">La herramienta del inversor inteligente</h2>
+    <div class="how-grid">
+      <div class="how-step"><div class="how-num">1</div><h3>Elige tu ciudad</h3><p>Explora más de 50 ciudades con datos reales de precio, alquiler y rentabilidad actualizados cada trimestre.</p></div>
+      <div class="how-step"><div class="how-num">2</div><h3>Analiza por barrios</h3><p>Cada ciudad incluye análisis detallado por zonas: qué barrio da mejor ROI, distancia al centro y a la playa.</p></div>
+      <div class="how-step"><div class="how-num">3</div><h3>Compara y decide</h3><p>Evolución histórica de precios, indicadores clave de mercado y desglose por tipo de inmueble en una sola página.</p></div>
+      <div class="how-step"><div class="how-num">4</div><h3>Conecta con expertos</h3><p>¿Ya sabes dónde? Te conectamos con profesionales locales especializados en inversión, sin ningún compromiso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" id="alertas">
+  <div class="cta-inner">
+    <h2>Recibe alertas de rentabilidad</h2>
+    <p>Te avisamos cuando cambien los datos de tu ciudad o aparezcan oportunidades con ROI superior al 7%.</p>
+    <div class="cta-row">
+      <input type="email" class="cta-email" placeholder="tu@email.com">
+      <button class="cta-go">Quiero alertas →</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="logo">
+      <svg width="26" height="26" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
+    </a>
+    <p>© 2026 Ren Data.es · Datos de fuentes públicas · No somos asesores financieros</p>
+    <div class="f-links"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Contacto</a></div>
+  </div>
+</footer>
+
+<script>
+const DATA=[
+  {n:"Lleida",cc:"Cataluña",reg:"centro",roi:7.5,p:1300,alq:650,vp:7.5,va:16.1,d:22,sl:"lleida"},
+  {n:"Murcia",cc:"R. de Murcia",reg:"levante",roi:7.4,p:1750,alq:860,vp:9.0,va:13.0,d:20,sl:"murcia"},
+  {n:"Zamora",cc:"Castilla y León",reg:"centro",roi:7.2,p:960,alq:600,vp:7.0,va:7.8,d:28,sl:"zamora"},
+  {n:"Huelva",cc:"Andalucía",reg:"andalucia",roi:7.0,p:1400,alq:700,vp:9.0,va:14.4,d:24,sl:"huelva"},
+  {n:"Jaén",cc:"Andalucía",reg:"andalucia",roi:7.0,p:980,alq:580,vp:8.5,va:6.8,d:26,sl:"jaen"},
+  {n:"Castellón",cc:"C. Valenciana",reg:"levante",roi:7.0,p:1500,alq:750,vp:8.0,va:13.5,d:23,sl:"castellon"},
+  {n:"Las Palmas GC",cc:"Canarias",reg:"islas",roi:6.7,p:2100,alq:980,vp:10.0,va:11.0,d:20,sl:"las-palmas-gc"},
+  {n:"Ávila",cc:"Castilla y León",reg:"centro",roi:6.7,p:1120,alq:660,vp:9.0,va:20.0,d:27,sl:"avila"},
+  {n:"Lugo",cc:"Galicia",reg:"norte",roi:6.6,p:980,alq:570,vp:7.0,va:8.1,d:30,sl:"lugo"},
+  {n:"Almería",cc:"Andalucía",reg:"andalucia",roi:6.6,p:1380,alq:760,vp:9.5,va:14.0,d:25,sl:"almeria"},
+  {n:"Cuenca",cc:"Castilla-La Mancha",reg:"centro",roi:6.8,p:900,alq:560,vp:10.0,va:12.9,d:30,sl:"cuenca"},
+  {n:"Ciudad Real",cc:"Castilla-La Mancha",reg:"centro",roi:6.5,p:900,alq:540,vp:10.5,va:14.4,d:28,sl:"ciudad-real"},
+  {n:"Badajoz",cc:"Extremadura",reg:"centro",roi:6.5,p:920,alq:530,vp:8.0,va:7.4,d:29,sl:"badajoz"},
+  {n:"Teruel",cc:"Aragón",reg:"centro",roi:6.5,p:820,alq:490,vp:9.0,va:9.0,d:30,sl:"teruel"},
+  {n:"Soria",cc:"Castilla y León",reg:"centro",roi:6.5,p:840,alq:500,vp:11.0,va:15.0,d:29,sl:"soria"},
+  {n:"Cáceres",cc:"Extremadura",reg:"centro",roi:6.3,p:960,alq:560,vp:8.5,va:7.5,d:28,sl:"caceres"},
+  {n:"Albacete",cc:"Castilla-La Mancha",reg:"centro",roi:6.2,p:1200,alq:680,vp:8.5,va:13.6,d:26,sl:"albacete"},
+  {n:"Ourense",cc:"Galicia",reg:"norte",roi:6.4,p:1080,alq:610,vp:8.0,va:8.1,d:29,sl:"ourense"},
+  {n:"Palencia",cc:"Castilla y León",reg:"centro",roi:6.0,p:1020,alq:580,vp:7.5,va:13.2,d:28,sl:"palencia"},
+  {n:"Toledo",cc:"Castilla-La Mancha",reg:"centro",roi:6.0,p:1600,alq:860,vp:9.0,va:12.9,d:24,sl:"toledo"},
+  {n:"Huesca",cc:"Aragón",reg:"centro",roi:6.0,p:1350,alq:740,vp:8.0,va:9.0,d:27,sl:"huesca"},
+  {n:"Zaragoza",cc:"Aragón",reg:"centro",roi:6.0,p:1950,alq:980,vp:8.0,va:12.0,d:24,sl:"zaragoza"},
+  {n:"Valladolid",cc:"Castilla y León",reg:"centro",roi:5.9,p:1600,alq:800,vp:7.0,va:11.0,d:25,sl:"valladolid"},
+  {n:"Logroño",cc:"La Rioja",reg:"norte",roi:5.9,p:1560,alq:780,vp:8.0,va:11.5,d:23,sl:"logrono"},
+  {n:"León",cc:"Castilla y León",reg:"centro",roi:5.8,p:1400,alq:770,vp:8.0,va:10.0,d:26,sl:"leon"},
+  {n:"Córdoba",cc:"Andalucía",reg:"andalucia",roi:5.8,p:1520,alq:740,vp:8.5,va:12.0,d:26,sl:"cordoba"},
+  {n:"Tarragona",cc:"Cataluña",reg:"centro",roi:5.8,p:1780,alq:890,vp:8.0,va:10.0,d:24,sl:"tarragona"},
+  {n:"Gijón",cc:"Asturias",reg:"norte",roi:5.7,p:1680,alq:800,vp:6.5,va:10.0,d:27,sl:"gijon"},
+  {n:"Burgos",cc:"Castilla y León",reg:"centro",roi:5.6,p:1720,alq:890,vp:8.0,va:12.0,d:25,sl:"burgos"},
+  {n:"Granada",cc:"Andalucía",reg:"andalucia",roi:5.5,p:1980,alq:910,vp:9.0,va:12.0,d:21,sl:"granada"},
+  {n:"Oviedo",cc:"Asturias",reg:"norte",roi:5.5,p:1850,alq:880,vp:7.0,va:8.0,d:26,sl:"oviedo"},
+  {n:"Valencia",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2700,alq:1200,vp:12.0,va:10.3,d:16,sl:"valencia"},
+  {n:"Salamanca",cc:"Castilla y León",reg:"centro",roi:5.4,p:1750,alq:880,vp:7.5,va:9.0,d:25,sl:"salamanca"},
+  {n:"Guadalajara",cc:"Castilla-La Mancha",reg:"centro",roi:5.3,p:1750,alq:860,vp:10.0,va:10.0,d:23,sl:"guadalajara"},
+  {n:"Sevilla",cc:"Andalucía",reg:"andalucia",roi:5.3,p:2450,alq:1080,vp:9.5,va:6.8,d:22,sl:"sevilla"},
+  {n:"Vigo",cc:"Galicia",reg:"norte",roi:5.2,p:1850,alq:890,vp:8.0,va:8.0,d:25,sl:"vigo"},
+  {n:"Girona",cc:"Cataluña",reg:"centro",roi:5.2,p:2300,alq:1050,vp:8.0,va:8.0,d:22,sl:"girona"},
+  {n:"Alicante",cc:"C. Valenciana",reg:"levante",roi:5.2,p:2250,alq:990,vp:13.0,va:9.0,d:19,sl:"alicante"},
+  {n:"Cádiz",cc:"Andalucía",reg:"andalucia",roi:4.7,p:2200,alq:1000,vp:9.0,va:9.0,d:23,sl:"cadiz"},
+  {n:"Málaga",cc:"Andalucía",reg:"andalucia",roi:4.8,p:3180,alq:1340,vp:11.0,va:6.4,d:18,sl:"malaga"},
+  {n:"Vitoria",cc:"País Vasco",reg:"norte",roi:4.8,p:2700,alq:1150,vp:7.0,va:5.0,d:27,sl:"vitoria"},
+  {n:"A Coruña",cc:"Galicia",reg:"norte",roi:4.5,p:2100,alq:880,vp:7.5,va:8.0,d:26,sl:"a-coruna"},
+  {n:"Bilbao",cc:"País Vasco",reg:"norte",roi:4.7,p:3150,alq:1270,vp:7.5,va:5.4,d:28,sl:"bilbao"},
+  {n:"Santander",cc:"Cantabria",reg:"norte",roi:4.7,p:2250,alq:940,vp:7.0,va:10.5,d:26,sl:"santander"},
+  {n:"Pamplona",cc:"Navarra",reg:"norte",roi:4.7,p:2950,alq:1170,vp:7.5,va:10.0,d:24,sl:"pamplona"},
+  {n:"Pontevedra",cc:"Galicia",reg:"norte",roi:4.0,p:1700,alq:760,vp:7.5,va:7.5,d:28,sl:"pontevedra"},
+  {n:"Palma",cc:"Islas Baleares",reg:"islas",roi:4.3,p:4200,alq:1650,vp:9.0,va:7.6,d:22,sl:"palma"},
+  {n:"Madrid",cc:"C. de Madrid",reg:"centro",roi:4.7,p:5960,alq:1750,vp:12.0,va:9.4,d:15,sl:"madrid"},
+  {n:"Barcelona",cc:"Cataluña",reg:"centro",roi:4.5,p:4900,alq:1880,vp:6.0,va:-3.7,d:18,sl:"barcelona"},
+  {n:"San Sebastián",cc:"País Vasco",reg:"norte",roi:3.3,p:5200,alq:1880,vp:6.5,va:6.1,d:30,sl:"san-sebastian"},
+];
+
+let cf='all',cs='roi';
+const rc=r=>r>=6.5?'rh':r>=5.0?'rm':'rl';
+const fmt=n=>n>=1000?n.toLocaleString('es'):n;
+function flt(f,b){cf=f;document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
+function srt(v){cs=v;render()}
+
+function render(){
+  if(cf==='custom') return; // handled by map selectRegion
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  let d=[...DATA];
+  if(q) d=d.filter(c=>c.n.toLowerCase().includes(q)||c.cc.toLowerCase().includes(q));
+  if(cf==='andalucia') d=d.filter(c=>c.reg==='andalucia');
+  else if(cf==='levante') d=d.filter(c=>c.reg==='levante');
+  else if(cf==='centro') d=d.filter(c=>c.reg==='centro');
+  else if(cf==='norte') d=d.filter(c=>c.reg==='norte');
+  else if(cf==='islas') d=d.filter(c=>c.reg==='islas');
+  else if(cf==='roi-alto') d=d.filter(c=>c.roi>=6.0);
+  if(cs==='roi') d.sort((a,b)=>b.roi-a.roi);
+  else if(cs==='pa') d.sort((a,b)=>a.p-b.p);
+  else if(cs==='pd') d.sort((a,b)=>b.p-a.p);
+  else if(cs==='alq') d.sort((a,b)=>b.alq-a.alq);
+  else if(cs==='az') d.sort((a,b)=>a.n.localeCompare(b.n));
+
+  document.getElementById('cnt').innerHTML=`Mostrando <strong>${d.length}</strong> ${d.length===1?'ciudad':'ciudades'}`;
+
+  if(!d.length){
+    document.getElementById('grid').innerHTML=`<div class="empty"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.4"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><p>Sin resultados. Prueba otro filtro.</p></div>`;
+    return;
+  }
+
+  const va=c=>c.va<0
+    ?`<span style="color:var(--red)">↓ ${Math.abs(c.va)}%</span>`
+    :`<span style="color:var(--green)">↑ ${c.va}%</span>`;
+
+  document.getElementById('grid').innerHTML=d.map(c=>`
+    <a class="city-card" href="rentabilidad-${c.sl}.html">
+      <div class="c-img">
+        <img loading="lazy"
+          src="https://source.unsplash.com/400x148/?${encodeURIComponent(c.n+' spain')}"
+          alt="${c.n}"
+          onerror="this.style.display='none'">
+        <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
+        <span class="c-city-label">${c.n}</span>
+      </div>
+      <div class="c-body">
+        <div class="c-header">
+          <div><div class="c-name">${c.n}</div><div class="c-ccaa">${c.cc}</div></div>
+          <span class="c-roi-chip ${rc(c.roi)}">${c.roi.toFixed(1)}% ROI</span>
+        </div>
+        <hr class="c-div">
+        <div class="c-stats">
+          <div><div class="c-sl">Precio m²</div><div class="c-sv">${fmt(c.p)}€</div></div>
+          <div><div class="c-sl">Alquiler medio</div><div class="c-sv">${fmt(c.alq)}€/mes</div></div>
+          <div><div class="c-sl">Días en mercado</div><div class="c-sv">${c.d} días</div></div>
+          <div><div class="c-sl">Precio m² anual</div><div class="c-sv" style="color:var(--green)">↑ ${c.vp}%</div></div>
+        </div>
+        <div class="c-footer">
+          <div class="c-trend">Alquiler ${va(c)} anual</div>
+          <div class="c-link">Ver análisis →</div>
+        </div>
+      </div>
+    </a>`).join('');
+}
+
+render();
+</script>
+<!-- MAP LOGIC -->
+<script>
+// Region → CCAA mapping
+const REGION_CCAA = {
+  'reg-Galicia':     ['Galicia'],
+  'reg-Asturias':    ['Asturias'],
+  'reg-Cantabria':   ['Cantabria'],
+  'reg-PaisVasco':   ['País Vasco'],
+  'reg-Navarra':     ['Navarra'],
+  'reg-LaRioja':     ['La Rioja'],
+  'reg-Aragon':      ['Aragón'],
+  'reg-Cataluna':    ['Cataluña'],
+  'reg-CastillaLeon':['Castilla y León'],
+  'reg-Madrid':      ['C. de Madrid'],
+  'reg-CLaMancha':   ['Castilla-La Mancha'],
+  'reg-Extremadura': ['Extremadura'],
+  'reg-Andalucia':   ['Andalucía'],
+  'reg-Murcia':      ['R. de Murcia'],
+  'reg-Valencia':    ['C. Valenciana'],
+  'reg-Baleares':    ['Islas Baleares'],
+  'reg-Canarias':    ['Canarias'],
+};
+
+// Compute avg ROI per region from DATA
+function regionROI(ccaaList) {
+  const cities = DATA.filter(c => ccaaList.some(cc => c.cc.includes(cc) || cc.includes(c.cc)));
+  if (!cities.length) return 0;
+  return cities.reduce((s,c) => s+c.roi, 0) / cities.length;
+}
+
+// Colour map regions by ROI
+function colorRegions() {
+  Object.entries(REGION_CCAA).forEach(([id, ccaaList]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const roi = regionROI(ccaaList);
+    const cls = roi >= 6.5 ? 'roi-high' : roi >= 5 ? 'roi-mid' : 'roi-low';
+    // Apply to path or children
+    if (el.tagName === 'g') {
+      el.querySelectorAll('ellipse, rect:not([fill="none"])').forEach(c => c.classList.add(cls));
+    } else {
+      el.classList.add(cls);
+    }
+  });
+}
+
+// Tooltip
+const tooltip = document.getElementById('mapTooltip');
+function showTip(e, text) {
+  tooltip.innerHTML = text;
+  tooltip.style.opacity = '1';
+  moveTip(e);
+}
+function moveTip(e) {
+  tooltip.style.left = (e.clientX - tooltip.offsetWidth/2) + 'px';
+  tooltip.style.top  = (e.clientY - tooltip.offsetHeight - 14) + 'px';
+}
+function hideTip() { tooltip.style.opacity = '0'; }
+
+// Selected state
+let selectedReg = null;
+function resetMap() {
+  if (selectedReg) {
+    const el = document.getElementById(selectedReg);
+    if (el) el.classList.remove('selected');
+    if (el && el.tagName === 'g') el.querySelectorAll('ellipse,rect').forEach(c => c.classList.remove('selected'));
+  }
+  selectedReg = null;
+  document.getElementById('mipEmpty').style.display = '';
+  document.getElementById('mipData').style.display = 'none';
+  // Reset city filter
+  cf = 'all';
+  document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.f-btn').classList.add('active');
+  render();
+}
+
+function selectRegion(id) {
+  const ccaaList = REGION_CCAA[id];
+  if (!ccaaList) return;
+  // Deselect previous
+  if (selectedReg && selectedReg !== id) {
+    const prev = document.getElementById(selectedReg);
+    if (prev) {
+      prev.classList.remove('selected');
+      if (prev.tagName === 'g') prev.querySelectorAll('ellipse,rect').forEach(c => c.classList.remove('selected'));
+    }
+  }
+  if (selectedReg === id) { resetMap(); return; }
+  selectedReg = id;
+  const el = document.getElementById(id);
+  if (el) {
+    el.classList.add('selected');
+    if (el.tagName === 'g') el.querySelectorAll('ellipse,rect').forEach(c => c.classList.add('selected'));
+  }
+  // Filter cities
+  const cities = DATA.filter(c => ccaaList.some(cc => c.cc.includes(cc) || cc.includes(c.cc)));
+  const avgRoi = cities.length ? (cities.reduce((s,c)=>s+c.roi,0)/cities.length).toFixed(1) : '—';
+  const minP = cities.length ? Math.min(...cities.map(c=>c.p)).toLocaleString('es') : '—';
+  const name = el.dataset ? el.dataset.name : ccaaList[0];
+  // Show panel
+  document.getElementById('mipEmpty').style.display = 'none';
+  document.getElementById('mipData').style.display = '';
+  document.getElementById('mipName').textContent = name;
+  document.getElementById('mipStats').innerHTML = `
+    <div class="mip-stat"><div class="mip-stat-v" style="color:${parseFloat(avgRoi)>=6.5?'var(--green)':parseFloat(avgRoi)>=5?'var(--blue)':'var(--red)'}">${avgRoi}%</div><div class="mip-stat-l">ROI medio</div></div>
+    <div class="mip-stat"><div class="mip-stat-v">${cities.length}</div><div class="mip-stat-l">Ciudades</div></div>
+  `;
+  const rc = r => r>=6.5?'roi-high':r>=5?'roi-mid':'roi-low';
+  const roiColors = {'roi-high':'var(--green)','roi-mid':'var(--blue)','roi-low':'var(--red)'};
+  const roiBgs   = {'roi-high':'var(--green-bg)','roi-mid':'var(--blue-l)','roi-low':'var(--red-bg)'};
+  document.getElementById('mipCities').innerHTML = cities.sort((a,b)=>b.roi-a.roi).map(c=>`
+    <a class="mip-city" href="rentabilidad-${c.sl}.html">
+      <span class="mip-city-name">${c.n}</span>
+      <span class="mip-city-roi" style="color:${roiColors[rc(c.roi)]};background:${roiBgs[rc(c.roi)]}">${c.roi.toFixed(1)}%</span>
+    </a>`).join('');
+  // Filter grid below
+  cf = 'custom';
+  document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+  // Custom render
+  const q = (document.getElementById('searchInput').value||'').toLowerCase();
+  let d = cities.slice();
+  if (q) d = d.filter(c=>c.n.toLowerCase().includes(q)||c.cc.toLowerCase().includes(q));
+  if (cs==='roi') d.sort((a,b)=>b.roi-a.roi);
+  document.getElementById('cnt').innerHTML=`Mostrando <strong>${d.length}</strong> ciudades de <strong>${name}</strong>`;
+  const va=c=>c.va<0?`<span style="color:var(--red)">↓${Math.abs(c.va)}%</span>`:`<span style="color:var(--green)">↑${c.va}%</span>`;
+  document.getElementById('grid').innerHTML=d.map(c=>`
+    <a class="city-card" href="rentabilidad-${c.sl}.html">
+      <div class="c-img">
+        <img loading="lazy" src="https://source.unsplash.com/400x148/?${encodeURIComponent(c.n+' spain')}" alt="${c.n}" onerror="this.style.display='none'">
+        <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
+        <span class="c-city-label">${c.n}</span>
+      </div>
+      <div class="c-body">
+        <div class="c-header"><div><div class="c-name">${c.n}</div><div class="c-ccaa">${c.cc}</div></div><span class="c-roi-chip ${rc(c.roi)}">${c.roi.toFixed(1)}% ROI</span></div>
+        <hr class="c-div">
+        <div class="c-stats">
+          <div><div class="c-sl">Precio m²</div><div class="c-sv">${fmt(c.p)}€</div></div>
+          <div><div class="c-sl">Alquiler medio</div><div class="c-sv">${fmt(c.alq)}€/mes</div></div>
+          <div><div class="c-sl">Días en mercado</div><div class="c-sv">${c.d} días</div></div>
+          <div><div class="c-sl">Subida precio</div><div class="c-sv" style="color:var(--green)">↑${c.vp}%</div></div>
+        </div>
+        <div class="c-footer"><div class="c-trend">Alquiler ${va(c)} anual</div><div class="c-link">Ver análisis →</div></div>
+      </div>
+    </a>`).join('');
+  // Scroll to cities
+  setTimeout(() => document.querySelector('.filter-bar').scrollIntoView({behavior:'smooth',block:'start'}), 100);
+}
+
+// Attach events to all regions
+function initMap() {
+  colorRegions();
+  Object.keys(REGION_CCAA).forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const name = el.dataset ? el.dataset.name : id;
+    const ccaaList = REGION_CCAA[id];
+    const roi = regionROI(ccaaList);
+    const cities = DATA.filter(c => ccaaList.some(cc => c.cc.includes(cc) || cc.includes(c.cc)));
+    const tipText = `<strong>${name}</strong> · ROI ${roi.toFixed(1)}% · ${cities.length} ciudades`;
+    const clickFn = () => selectRegion(id);
+    const enterFn = (e) => showTip(e, tipText);
+    const moveFn  = (e) => moveTip(e);
+    const leaveFn = () => hideTip();
+    if (el.tagName === 'g') {
+      el.addEventListener('click', clickFn);
+      el.addEventListener('mouseenter', enterFn);
+      el.addEventListener('mousemove', moveFn);
+      el.addEventListener('mouseleave', leaveFn);
+    } else {
+      el.addEventListener('click', clickFn);
+      el.addEventListener('mouseenter', enterFn);
+      el.addEventListener('mousemove', moveFn);
+      el.addEventListener('mouseleave', leaveFn);
+    }
+  });
+}
+initMap();
+</script>
+</body>
+</html>

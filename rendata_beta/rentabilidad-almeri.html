@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rentabilidad del alquiler en Almerí 2026. Precio m², análisis por barrios, evolución histórica y comparativa. Todo para invertir en Almerí.">
+<title>Invertir en Almerí — Rentabilidad y Precio m² 2026 | ZonaInversor</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f9fc;--white:#fff;--blue:#1a56db;--blue-dark:#1140a6;
+  --blue-light:#e8f0fe;--text:#0f1923;--muted:#6b7a8d;--border:#e2e8f0;
+  --green:#0e9f6e;--green-bg:#ecfdf5;--red:#e02424;--red-bg:#fef2f2;
+  --shadow:0 1px 3px rgba(15,25,35,.08),0 4px 16px rgba(15,25,35,.04);
+  --shadow-lg:0 4px 24px rgba(15,25,35,.1);--font:'Sora',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:var(--white);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:1.15rem;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:.4rem}
+.logo-dot{width:7px;height:7px;background:var(--blue);border-radius:50%}
+.logo span{color:var(--text)}
+nav{display:flex;align-items:center;gap:.25rem}
+nav a{font-size:.82rem;color:var(--muted);text-decoration:none;padding:.4rem .8rem;border-radius:6px;transition:all .15s}
+nav a:hover{color:var(--blue);background:var(--blue-light)}
+.nav-cta{background:var(--blue)!important;color:white!important;font-weight:500!important;padding:.45rem 1rem!important}
+.breadcrumb{max-width:1080px;margin:0 auto;padding:1rem 2rem 0;display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted)}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--blue)}
+.hero{max-width:1080px;margin:0 auto;padding:2.5rem 2rem 2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue-light);color:var(--blue);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .75rem;border-radius:20px;margin-bottom:1rem}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:1rem}
+h1 .city{color:var(--blue);font-style:italic}
+.hero-desc{color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:1.8rem;max-width:460px}
+.btn-primary{background:var(--blue);color:white;font-family:var(--font);font-weight:600;font-size:.875rem;padding:.75rem 1.5rem;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .15s;box-shadow:0 1px 3px rgba(26,86,219,.3)}
+.btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.btn-secondary{background:var(--white);color:var(--text);font-family:var(--font);font-weight:500;font-size:.875rem;padding:.75rem 1.5rem;border:1px solid var(--border);border-radius:8px;cursor:pointer;text-decoration:none;transition:all .15s}
+.btn-secondary:hover{border-color:var(--blue);color:var(--blue)}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.hero-stats{display:flex;flex-direction:column;gap:.75rem}
+.stat-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem 1.6rem;box-shadow:var(--shadow)}
+.stat-card.featured{background:var(--blue);border-color:var(--blue)}
+.stat-card.featured .stat-label{color:rgba(255,255,255,.7)}
+.stat-card.featured .stat-value{color:white}
+.stat-card.featured .stat-sub{color:rgba(255,255,255,.6)}
+.stat-card-inner{display:flex;justify-content:space-between;align-items:flex-end}
+.stat-label{font-size:.75rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.stat-value{font-size:2.2rem;font-weight:700;letter-spacing:-.03em;line-height:1}
+.stat-sub{font-size:.78rem;color:var(--muted);margin-top:.25rem}
+.stat-badge{display:inline-flex;align-items:center;font-size:.75rem;font-weight:600;padding:.3rem .6rem;border-radius:20px}
+.badge-up{background:var(--green-bg);color:var(--green)}
+.badge-neutral{background:var(--blue-light);color:var(--blue)}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.main{max-width:1080px;margin:0 auto;padding:0 2rem 4rem}
+.section{margin-bottom:2.5rem}
+.section-header{margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.section-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
+h2{font-size:1.4rem;font-weight:700;letter-spacing:-.02em}
+h2+p{font-size:.875rem;color:var(--muted);margin-top:.3rem}
+/* Zone tabs */
+.zone-tabs{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
+.zone-tab{background:var(--white);border:1px solid var(--border);color:var(--muted);font-family:var(--font);font-size:.8rem;font-weight:500;padding:.45rem 1rem;border-radius:20px;cursor:pointer;transition:all .15s}
+.zone-tab:hover{border-color:var(--blue);color:var(--blue)}
+.zone-tab.active{background:var(--blue);border-color:var(--blue);color:white}
+.sort-bar{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.sort-label{font-size:.78rem;color:var(--muted)}
+.sort-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:var(--font);font-size:.78rem;font-weight:500;padding:.3rem .75rem;border-radius:6px;cursor:pointer;transition:all .15s}
+.sort-btn:hover{border-color:var(--blue);color:var(--blue)}
+.sort-btn.active{background:var(--blue-light);border-color:var(--blue);color:var(--blue)}
+.zones-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}
+.zone-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;box-shadow:var(--shadow);transition:all .2s}
+.zone-card:hover{border-color:var(--blue);box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.zone-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.9rem}
+.zone-card-name{font-size:.95rem;font-weight:700}
+.zone-area-tag{font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .5rem;border-radius:4px;white-space:nowrap;margin-left:.5rem;flex-shrink:0}
+.tag-oeste{background:#fdf4ff;color:#9333ea}
+.tag-centro{background:#eff6ff;color:#2563eb}
+.tag-este{background:#fff7ed;color:#c2410c}
+.tag-norte{background:#f0fdf4;color:#16a34a}
+.tag-sur{background:#fffbeb;color:#b45309}
+.zone-roi-big{font-size:1.5rem;font-weight:700;line-height:1;margin-bottom:.2rem}
+.zone-roi-label{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.zone-divider{border:none;border-top:1px solid var(--border);margin:.9rem 0}
+.zone-stats{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.9rem}
+.zone-stat-label{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.15rem}
+.zone-stat-value{font-size:.9rem;font-weight:600}
+.zone-perfil{font-size:.75rem;color:var(--muted);margin-bottom:.9rem;font-style:italic}
+.zone-distances{display:flex;gap:.4rem;flex-wrap:wrap}
+.dist-badge{display:inline-flex;align-items:center;gap:.25rem;font-size:.7rem;font-weight:500;padding:.2rem .5rem;border-radius:20px;white-space:nowrap}
+.dist-centro{background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe}
+.dist-playa{background:#f0fdfa;color:#0d9488;border:1px solid #99f6e4}
+/* Evo chart */
+.evolution-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.75rem;box-shadow:var(--shadow);margin-bottom:1rem}
+.evo-chart{display:flex;align-items:flex-end;gap:.6rem;height:140px;margin-top:1.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border);position:relative}
+.evo-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;position:relative}
+.evo-bar{width:100%;border-radius:4px 4px 0 0;background:var(--blue-light);border:1px solid #bfdbfe}
+.evo-bar.current{background:var(--blue);border-color:var(--blue)}
+.evo-value{font-size:.68rem;font-weight:600;position:absolute;top:-1.3rem;left:50%;transform:translateX(-50%);white-space:nowrap}
+.evo-value.current{color:var(--blue)}
+.evo-label{font-size:.7rem;color:var(--muted);text-align:center;position:absolute;bottom:-1.8rem}
+.evo-label.current{color:var(--blue);font-weight:600}
+/* Indicators */
+.indicators-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2.5rem}
+.indicator-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;box-shadow:var(--shadow);text-align:center}
+.indicator-icon{font-size:1.5rem;margin-bottom:.5rem}
+.indicator-value{font-size:1.6rem;font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:.25rem}
+.indicator-label{font-size:.72rem;color:var(--muted);line-height:1.4}
+.indicator-trend{font-size:.72rem;font-weight:600;margin-top:.4rem}
+.up-text{color:var(--green)}.down-text{color:var(--red)}
+/* Info boxes */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem}
+.info-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem;box-shadow:var(--shadow)}
+.info-box-icon{width:36px;height:36px;background:var(--blue-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem;font-size:1rem}
+.info-box h3{font-size:.9rem;font-weight:600;margin-bottom:.4rem}
+.info-box p{font-size:.82rem;color:var(--muted);line-height:1.6}
+/* CTA */
+.cta-section{background:var(--blue);border-radius:16px;padding:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;margin-bottom:2rem;position:relative;overflow:hidden}
+.cta-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.6rem}
+.cta-title{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:white;line-height:1.25;margin-bottom:.6rem}
+.cta-desc{font-size:.875rem;color:rgba(255,255,255,.65);line-height:1.65}
+.cta-form{display:flex;flex-direction:column;gap:.65rem;position:relative;z-index:1}
+.cta-input{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:white;font-family:var(--font);font-size:.875rem;padding:.75rem 1rem;border-radius:8px;outline:none}
+.cta-input:focus{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.5)}
+.cta-input::placeholder{color:rgba(255,255,255,.45)}
+.cta-submit{background:white;color:var(--blue);font-family:var(--font);font-weight:700;font-size:.875rem;padding:.85rem;border:none;border-radius:8px;cursor:pointer}
+.cta-submit:hover{background:var(--blue-light)}
+.disclaimer{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;font-size:.76rem;color:var(--muted);line-height:1.65;margin-bottom:2rem}
+footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto}
+footer p{font-size:.78rem;color:var(--muted)}
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;gap:2rem;padding:1.5rem}
+  .info-grid{grid-template-columns:1fr}
+  .cta-section{grid-template-columns:1fr;gap:1.5rem;padding:1.75rem}
+  nav a:not(.nav-cta){display:none}
+  .mini-grid{grid-template-columns:1fr 1fr}
+  .zones-grid{grid-template-columns:1fr}
+  .indicators-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><div class="logo-dot"></div>Zona<span>Inversor</span></div>
+  <nav>
+    <a href="/">Ciudades</a>
+    <a href="/calculadora">Calculadora</a>
+    <a href="#contacto" class="nav-cta">Hablar con experto</a>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Inicio</a> › <a href="#">Andalucía</a> › <span>Almerí</span>
+</div>
+
+<div class="hero">
+  <div>
+    <div class="hero-tag"><span class="live-dot"></span>Datos actualizados · 2026</div>
+    <h1>Rentabilidad del alquiler<br>en <span class="city">Almerí</span></h1>
+    <p class="hero-desc">Análisis completo para inversores: precio del m², rentabilidad por barrio y comparativa con otras ciudades. Todo lo que necesitas antes de comprar en Almerí.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Hablar con un experto →</a>
+      <a href="#zonas" class="btn-secondary">Ver análisis por zonas</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card featured">
+      <div class="stat-card-inner">
+        <div>
+          <div class="stat-label">Rentabilidad bruta estimada</div>
+          <div class="stat-value">5,9%</div>
+          <div class="stat-sub">Media ciudad · Q1 2026</div>
+        </div>
+        <span class="stat-badge" style="background:rgba(255,255,255,.15);color:white">Media España 6,5%</span>
+      </div>
+    </div>
+    <div class="mini-grid">
+      <div class="stat-card">
+        <div class="stat-label">Precio m²</div>
+        <div class="stat-value" style="font-size:1.6rem">1.350€</div>
+        <div style="margin-top:.4rem"><span class="stat-badge badge-up">↑ 9,5% anual</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Alquiler medio</div>
+        <div class="stat-value" style="font-size:1.6rem">660€</div>
+        <div style="margin-top:.4rem"><span class="stat-badge badge-up">↑ 14,0% anual</span></div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-inner">
+        <div>
+          <div class="stat-label">Zona más rentable</div>
+          <div class="stat-value" style="font-size:1.4rem">El Zapillo</div>
+          <div class="stat-sub">6,8% rentabilidad estimada</div>
+        </div>
+        <span class="stat-badge badge-up">Mejor ROI</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ZONAS -->
+  <div class="section" id="zonas">
+    <div class="section-header">
+      <div class="section-eyebrow">Análisis completo por zonas</div>
+      <h2>Barrios de Almerí para invertir</h2>
+      <p>Precio, alquiler y rentabilidad estimada por zona.</p>
+    </div>
+    <div class="zone-tabs">
+      <button class="zone-tab active" onclick="filterZones('all',this)">Todas</button>
+      <button class="zone-tab" onclick="filterZones('oeste',this)">Oeste</button>
+      <button class="zone-tab" onclick="filterZones('centro',this)">Centro</button>
+      <button class="zone-tab" onclick="filterZones('este',this)">Este</button>
+      <button class="zone-tab" onclick="filterZones('norte',this)">Norte</button>
+      <button class="zone-tab" onclick="filterZones('sur',this)">Sur</button>
+    </div>
+    <div class="sort-bar">
+      <span class="sort-label">Ordenar por:</span>
+      <button class="sort-btn active" onclick="sortZones('roi',this)">Mayor ROI</button>
+      <button class="sort-btn" onclick="sortZones('precio',this)">Menor precio</button>
+      <button class="sort-btn" onclick="sortZones('alquiler',this)">Mayor alquiler</button>
+    </div>
+    <div class="zones-grid" id="zonesGrid"></div>
+  </div>
+
+  <!-- EVOLUCIÓN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Histórico de precios</div>
+      <h2>Evolución del precio en Almerí</h2>
+      <p>Precio medio de venta por m² · 2019–2026 · Fuente: Ministerio de Vivienda / Idealista</p>
+    </div>
+    <div class="evolution-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
+        <div>
+          <span style="font-size:.78rem;color:var(--muted)">Precio actual</span>
+          <div style="font-size:1.8rem;font-weight:700;letter-spacing:-.03em;color:var(--blue)">1.350 €/m²</div>
+        </div>
+        <div style="text-align:right">
+          <span class="stat-badge badge-up">↑ 9,5% último año</span>
+        </div>
+      </div>
+      <div class="evo-chart">
+        <div class="evo-col"><span class="evo-value">900€</span><div class="evo-bar" style="height:68%"></div><span class="evo-label">2019</span></div>
+        <div class="evo-col"><span class="evo-value">1.080€</span><div class="evo-bar" style="height:79%"></div><span class="evo-label">2021</span></div>
+        <div class="evo-col"><span class="evo-value">1.240€</span><div class="evo-bar" style="height:88%"></div><span class="evo-label">2023</span></div>
+        <div class="evo-col"><span class="evo-value">1.300€</span><div class="evo-bar" style="height:92%"></div><span class="evo-label">2024</span></div>
+        <div class="evo-col"><span class="evo-value current">1.350€</span><div class="evo-bar current" style="height:95%"></div><span class="evo-label current">2026 ◀</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDICADORES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-eyebrow">Pulso del mercado</div>
+      <h2>Indicadores clave · Almerí 2026</h2>
+    </div>
+    <div class="indicators-grid">
+      <div class="indicator-card"><div class="indicator-icon">⏱️</div><div class="indicator-value">25</div><div class="indicator-label">Días de media en el mercado antes de venderse</div><div class="indicator-trend up-text">↓ Mercado activo</div></div>
+      <div class="indicator-card"><div class="indicator-icon">📦</div><div class="indicator-value">-16%</div><div class="indicator-label">Caída de la oferta disponible en los últimos 2 años</div><div class="indicator-trend up-text">↑ Escasez de stock</div></div>
+      <div class="indicator-card"><div class="indicator-icon">🌍</div><div class="indicator-value">14%</div><div class="indicator-label">Compradores extranjeros sobre total de operaciones</div><div class="indicator-trend" style="color:var(--blue)">→ Demanda internacional</div></div>
+      <div class="indicator-card"><div class="indicator-icon">💡</div><div class="indicator-value">6,8%</div><div class="indicator-label">Mejor rentabilidad disponible en El Zapillo</div><div class="indicator-trend up-text">↑ Máximo ROI ciudad</div></div>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="info-grid section">
+    <div class="info-box"><div class="info-box-icon">📈</div><h3>Mercado en expansión</h3><p>El precio de la vivienda en Almerí ha subido un 9,5% en el último año. El alquiler sube aún más rápido (+14,0%), lo que mejora la rentabilidad.</p></div>
+    <div class="info-box"><div class="info-box-icon">🏘️</div><h3>Mejor opción: El Zapillo</h3><p>Con una rentabilidad estimada del 6,8% y un precio de 1.000€/m², es la zona con mejor relación rentabilidad/precio de Almerí.</p></div>
+    <div class="info-box"><div class="info-box-icon">📊</div><h3>Contexto nacional</h3><p>La rentabilidad media de España es el 6,5%. Almerí se sitúa en el 5,9%, en línea con la media nacional.</p></div>
+    <div class="info-box"><div class="info-box-icon">💡</div><h3>Lo que debes saber</h3><p>Ciudad costera con precios muy asequibles. Buen potencial de revalorización.</p></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section" id="contacto">
+    <div>
+      <div class="cta-eyebrow">¿Listo para invertir en Almerí?</div>
+      <div class="cta-title">Habla con un experto<br>en inversión local</div>
+      <p class="cta-desc">Te conectamos con profesionales especializados en Almerí. Asesoramiento personalizado, sin compromiso.</p>
+    </div>
+    <div class="cta-form">
+      <input type="text" class="cta-input" placeholder="Tu nombre completo">
+      <input type="email" class="cta-input" placeholder="Tu email">
+      <input type="tel" class="cta-input" placeholder="Teléfono (opcional)">
+      <button class="cta-submit">Quiero que me contacten →</button>
+    </div>
+  </div>
+
+  <div class="disclaimer"><strong>Aviso legal:</strong> Los datos mostrados son estimaciones basadas en precios de oferta publicados en portales inmobiliarios y fuentes públicas. No constituyen asesoramiento financiero ni de inversión. La rentabilidad real puede variar según el inmueble y las condiciones del mercado.</div>
+</div>
+
+<footer>
+  <div class="logo"><div class="logo-dot"></div>Zona<span>Inversor</span></div>
+  <p>© 2026 ZonaInversor · Datos actualizados trimestralmente</p>
+</footer>
+
+<script>
+const zones = [
+
+];
+let cf='all', cs='roi';
+function roiColor(r){ return r>=6.5?'var(--green)':r>=5.0?'var(--blue)':'var(--red)'; }
+function areaTag(a){
+  const m={oeste:'Oeste',centro:'Centro',este:'Este',norte:'Norte',sur:'Sur'};
+  const c={oeste:'tag-oeste',centro:'tag-centro',este:'tag-este',norte:'tag-norte',sur:'tag-sur'};
+  return `<span class="zone-area-tag ${c[a]||'tag-centro'}">${m[a]||a}</span>`;
+}
+function renderZones(){
+  let d=[...zones];
+  if(cf!=='all') d=d.filter(z=>z.area===cf);
+  if(cs==='roi') d.sort((a,b)=>b.roi-a.roi);
+  if(cs==='precio') d.sort((a,b)=>a.precio-b.precio);
+  if(cs==='alquiler') d.sort((a,b)=>b.alquiler-a.alquiler);
+  const fmtNum = n => n>=1000 ? n.toLocaleString('es') : n;
+  const distP = dp => dp<1 ? Math.round(dp*1000)+'m' : dp.toFixed(1)+' km';
+  document.getElementById('zonesGrid').innerHTML=d.map(z=>`
+    <div class="zone-card">
+      <div class="zone-card-top">
+        <div><div class="zone-card-name">${z.nombre}</div>${z.tag?`<div style="font-size:.65rem;color:var(--blue);font-weight:600;margin-top:.2rem">${z.tag}</div>`:''}</div>
+        <div style="text-align:right;flex-shrink:0">${areaTag(z.area)}<div class="zone-roi-big" style="color:${roiColor(z.roi)};margin-top:.4rem">${z.roi.toFixed(1)}%</div><div class="zone-roi-label">ROI est.</div></div>
+      </div>
+      <hr class="zone-divider">
+      <div class="zone-stats">
+        <div><div class="zone-stat-label">Precio m²</div><div class="zone-stat-value">${fmtNum(z.precio)}€</div></div>
+        <div><div class="zone-stat-label">Alquiler</div><div class="zone-stat-value">${fmtNum(z.alquiler)}€/mes</div></div>
+      </div>
+      <div class="zone-perfil">${z.perfil}</div>
+      <div class="zone-distances">
+        <span class="dist-badge dist-centro">🏙 ${z.distCentro===0?'Centro':z.distCentro+' km centro'}</span>
+        <span class="dist-badge dist-playa">🏖 ${distP(z.distPlaya)} · ${z.playaNombre}</span>
+      </div>
+    </div>`).join('');
+}
+function filterZones(a,btn){cf=a;document.querySelectorAll('.zone-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderZones();}
+function sortZones(k,btn){cs=k;document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderZones();}
+renderZones();
+</script>
+</body></html>
