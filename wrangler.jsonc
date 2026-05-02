@@ -3,6 +3,7 @@
   "name": "rendata",
   "compatibility_date": "2026-05-02",
   "assets": {
-    "directory": "./rendata_beta"
+    "directory": "./rendata_beta",
+    "not_found_handling": "404-page"
   }
 }
