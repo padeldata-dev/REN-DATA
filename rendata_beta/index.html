@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 75 ciudades.">
-<title>InvierteZona — Rentabilidad inmobiliaria por ciudad en España</title>
+<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 50 ciudades.">
+<title>Ren Data — Rentabilidad inmobiliaria por ciudad en España</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f8fafc;--white:#fff;--blue:#1a56db;--blue-d:#1140a6;--blue-l:#eff6ff;
+  --bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#0e2a6b;--blue-l:#f0f6ff;
   --text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--border2:#d1dae8;
   --green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;
   --sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);
@@ -21,8 +21,8 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
 
 /* HEADER */
-header{background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
-header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue) 0%,#60a5fa 50%,var(--blue) 100%);background-size:200% 100%;animation:shimmer 4s linear infinite}
+header{background:#0e2a6b;border-bottom:1px solid var(--border);padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,#60a5fa 0%,#fff 50%,#60a5fa 100%);background-size:200% 100%;animation:shimmer 4s linear infinite}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
 
 /* LOGO */
@@ -32,10 +32,10 @@ header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;ba
 .logo-wm em{color:var(--blue);font-style:normal}
 
 nav{display:flex;align-items:center;gap:.2rem}
-nav a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.45rem .85rem;border-radius:8px;transition:all .15s}
-nav a:hover{color:var(--blue);background:var(--blue-l)}
-.nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600!important;box-shadow:0 1px 4px rgba(26,86,219,.3)!important}
-.nav-cta:hover{background:var(--blue-d)!important;transform:translateY(-1px)}
+nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.45rem .85rem;border-radius:8px;transition:all .15s}
+nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-cta{background:rgba(255,255,255,.15)!important;color:#fff!important;font-weight:600!important;border:1px solid rgba(255,255,255,.25)!important}
+.nav-cta:hover{background:rgba(255,255,255,.25)!important}
 
 /* HERO */
 .hero{background:var(--white);border-bottom:1px solid var(--border);padding:5.5rem 2.5rem 4.5rem;text-align:center;position:relative;overflow:hidden}
@@ -226,14 +226,6 @@ footer p{font-size:.78rem;color:var(--muted)}
 @media(max-width:900px){.map-container{grid-template-columns:1fr}.map-info-panel{min-height:auto}}
 @media(max-width:600px){.map-header{flex-direction:column}.map-legend{width:100%}}
 </style>
-<meta property="og:title" content="Ren Data — Rentabilidad inmobiliaria en España">
-<meta property="og:description" content="Análisis de precio m², alquiler y ROI para 75 ciudades españolas. Gratuito y actualizado trimestralmente.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://rendata.es">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ren Data — Rentabilidad inmobiliaria en España">
-<meta name="twitter:description" content="Análisis de rentabilidad inmobiliaria para 75 ciudades. Precio m², alquiler, ROI y más.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230e2a6b'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='16' fill='white'>Rd</text></svg>">
 </head>
 <body>
 
@@ -246,14 +238,13 @@ footer p{font-size:.78rem;color:var(--muted)}
       <polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       <polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </svg>
-    <div class="logo-wm"><em>Invierte</em>Zona</div>
+    <div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
   </a>
   <nav>
-    <a href="/">Ciudades</a>
-    <a href="ranking.html">Ranking</a>
-    <a href="comparador.html">Comparar</a>
-    <a href="glosario.html">Glosario</a>
-    <a href="#alertas" class="nav-cta">Alertas</a>
+    <a href="#">Ciudades</a>
+    <a href="#">Comparar</a>
+    <a href="#">Calculadora</a>
+    <a href="#alertas" class="nav-cta">Recibir alertas</a>
   </nav>
 </header>
 
@@ -261,7 +252,7 @@ footer p{font-size:.78rem;color:var(--muted)}
   <div class="hero-inner">
     <div class="hero-badge"><span class="live-dot"></span>Datos actualizados · Abril 2026</div>
     <h1>¿Dónde invertir en <span class="ul">vivienda</span> en <span class="ac">España?</span></h1>
-    <p class="hero-desc">Análisis de rentabilidad, precio del m² y datos de mercado para más de 75 ciudades. Todo lo que necesitas para invertir con cabeza.</p>
+    <p class="hero-desc">Análisis de rentabilidad, precio del m² y datos de mercado para más de 50 ciudades. Todo lo que necesitas para invertir con cabeza.</p>
     <div class="hero-kpis">
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">50</span></div><div class="hero-kpi-l">Ciudades</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">6,7</span>%</div><div class="hero-kpi-l">ROI medio España</div></div>
@@ -271,7 +262,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="search-wrap">
       <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
-      <span class="s-hint">75 ciudades</span>
+      <span class="s-hint">50 ciudades</span>
     </div>
   </div>
 </section>
@@ -455,7 +446,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="s-eyebrow">¿Cómo funciona?</div>
     <h2 class="s-title">La herramienta del inversor inteligente</h2>
     <div class="how-grid">
-      <div class="how-step"><div class="how-num">1</div><h3>Elige tu ciudad</h3><p>Explora más de 75 ciudades con datos reales de precio, alquiler y rentabilidad actualizados cada trimestre.</p></div>
+      <div class="how-step"><div class="how-num">1</div><h3>Elige tu ciudad</h3><p>Explora más de 50 ciudades con datos reales de precio, alquiler y rentabilidad actualizados cada trimestre.</p></div>
       <div class="how-step"><div class="how-num">2</div><h3>Analiza por barrios</h3><p>Cada ciudad incluye análisis detallado por zonas: qué barrio da mejor ROI, distancia al centro y a la playa.</p></div>
       <div class="how-step"><div class="how-num">3</div><h3>Compara y decide</h3><p>Evolución histórica de precios, indicadores clave de mercado y desglose por tipo de inmueble en una sola página.</p></div>
       <div class="how-step"><div class="how-num">4</div><h3>Conecta con expertos</h3><p>¿Ya sabes dónde? Te conectamos con profesionales locales especializados en inversión, sin ningún compromiso.</p></div>
@@ -478,9 +469,9 @@ footer p{font-size:.78rem;color:var(--muted)}
   <div class="footer-inner">
     <a href="/" class="logo">
       <svg width="26" height="26" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-      <div class="logo-wm"><em>Invierte</em>Zona</div>
+      <div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
     </a>
-    <p>© 2026 InvierteZona.es · Datos de fuentes públicas · No somos asesores financieros</p>
+    <p>© 2026 Ren Data.es · Datos de fuentes públicas · No somos asesores financieros</p>
     <div class="f-links"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Contacto</a></div>
   </div>
 </footer>
@@ -539,16 +530,6 @@ const DATA=[
   {n:"San Sebastián",cc:"País Vasco",reg:"norte",roi:3.3,p:5200,alq:1880,vp:6.5,va:6.1,d:30,sl:"san-sebastian"},
 ];
 
-
-const gradMap = {
-  andalucia: 'linear-gradient(135deg,#be8a5a 0%,#e8b97a 50%,#d4956a 100%)',
-  levante:   'linear-gradient(135deg,#4a9eca 0%,#74bde0 50%,#5aadcc 100%)',
-  centro:    'linear-gradient(135deg,#7b6fa0 0%,#9d8ec0 50%,#8a7db0 100%)',
-  norte:     'linear-gradient(135deg,#4a8a6a 0%,#6aaa8a 50%,#5a9a7a 100%)',
-  islas:     'linear-gradient(135deg,#e07a5a 0%,#f09a7a 50%,#e8896a 100%)',
-  default:   'linear-gradient(135deg,#5a7abf 0%,#7a9add 50%,#6a8acf 100%)',
-};
-
 let cf='all',cs='roi';
 const rc=r=>r>=6.5?'rh':r>=5.0?'rm':'rl';
 const fmt=n=>n>=1000?n.toLocaleString('es'):n;
@@ -585,9 +566,9 @@ function render(){
 
   document.getElementById('grid').innerHTML=d.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
-      <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
+      <div class="c-img">
         <img loading="lazy"
-          style="display:none"
+          src="https://source.unsplash.com/400x148/?${encodeURIComponent(c.n+' spain')}"
           alt="${c.n}"
           onerror="this.style.display='none'">
         <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
@@ -743,8 +724,8 @@ function selectRegion(id) {
   const va=c=>c.va<0?`<span style="color:var(--red)">↓${Math.abs(c.va)}%</span>`:`<span style="color:var(--green)">↑${c.va}%</span>`;
   document.getElementById('grid').innerHTML=d.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
-      <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
-        <img loading="lazy" style="display:none" alt="${c.n}" onerror="this.style.display='none'">
+      <div class="c-img">
+        <img loading="lazy" src="https://source.unsplash.com/400x148/?${encodeURIComponent(c.n+' spain')}" alt="${c.n}" onerror="this.style.display='none'">
         <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
         <span class="c-city-label">${c.n}</span>
       </div>
