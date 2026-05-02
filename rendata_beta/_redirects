@@ -4,3 +4,6 @@
 /contacto /contacto.html 301
 /aviso-legal /aviso-legal.html 301
 /privacidad /privacidad.html 301
+/guia-inversor /guia-inversor.html 301
+/rentabilidad/* /rentabilidad-:splat 301
+/ciudad/* /rentabilidad-:splat 301
