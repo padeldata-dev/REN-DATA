@@ -299,101 +299,103 @@ footer p{font-size:.78rem;color:var(--muted)}
 
       <!-- SVG MAP -->
       <svg id="spainMap" viewBox="0 0 760 580" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto">
+        <!-- Background para cubrir gaps -->
+        <rect x="0" y="0" width="760" height="580" fill="#1e293b" rx="0"/>
 
         <!-- Galicia -->
         <path id="reg-Galicia" data-ccaa="Galicia" data-name="Galicia"
-          d="M55,85 L142,65 L165,102 L156,175 L80,195 L52,155 Z"/>
+          d="M48,150 L75,195 L155,185 L168,100 L145,60 L50,80 Z"/>
 
         <!-- Asturias -->
         <path id="reg-Asturias" data-ccaa="Asturias" data-name="Asturias"
-          d="M142,65 L252,48 L268,85 L248,115 L165,102 Z"/>
+          d="M145,60 L258,42 L272,82 L248,115 L168,100 Z"/>
 
         <!-- Cantabria -->
         <path id="reg-Cantabria" data-ccaa="Cantabria" data-name="Cantabria"
-          d="M252,48 L308,42 L325,75 L268,85 Z"/>
+          d="M258,42 L312,38 L328,72 L272,82 Z"/>
 
         <!-- País Vasco -->
         <path id="reg-PaisVasco" data-ccaa="País Vasco" data-name="País Vasco"
-          d="M308,42 L378,38 L400,72 L362,95 L325,75 Z"/>
+          d="M312,38 L382,34 L402,70 L365,92 L328,72 Z"/>
 
         <!-- Navarra -->
         <path id="reg-Navarra" data-ccaa="Navarra" data-name="Navarra"
-          d="M378,38 L440,48 L442,130 L390,140 L362,95 L400,72 Z"/>
+          d="M382,34 L445,44 L445,132 L392,142 L365,92 L402,70 Z"/>
 
         <!-- La Rioja -->
         <path id="reg-LaRioja" data-ccaa="La Rioja" data-name="La Rioja"
-          d="M325,75 L390,88 L390,140 L348,150 L324,118 Z"/>
+          d="M328,72 L392,85 L392,142 L350,152 L326,118 Z"/>
 
         <!-- Aragón -->
         <path id="reg-Aragon" data-ccaa="Aragón" data-name="Aragón"
-          d="M440,48 L560,68 L570,262 L470,278 L440,268 L410,158 L390,140 L442,130 Z"/>
+          d="M445,44 L565,62 L572,265 L472,280 L442,270 L412,160 L392,142 L445,132 Z"/>
 
         <!-- Cataluña -->
         <path id="reg-Cataluna" data-ccaa="Cataluña" data-name="Cataluña"
-          d="M560,68 L682,118 L660,262 L570,262 Z"/>
+          d="M565,62 L685,115 L662,265 L572,265 Z"/>
 
         <!-- Castilla y León -->
         <path id="reg-CastillaLeon" data-ccaa="Castilla y León" data-name="Castilla y León"
-          d="M52,155 L80,195 L156,175 L165,102 L248,115 L268,85 L325,75 L324,118 L348,150 L390,140 L410,158 L390,242 L355,252 L270,258 L238,265 L158,265 L96,278 Z"/>
+          d="M48,150 L75,195 L155,185 L168,100 L248,115 L272,82 L328,72 L326,118 L350,152 L392,142 L412,160 L392,245 L360,258 L272,264 L238,272 L158,272 L95,282 Z"/>
 
         <!-- Madrid -->
         <path id="reg-Madrid" data-ccaa="C. de Madrid" data-name="C. de Madrid"
-          d="M270,258 L355,252 L372,310 L280,320 L238,310 L238,265 Z"/>
+          d="M272,264 L360,258 L375,315 L282,325 L238,315 L238,272 Z"/>
 
         <!-- Castilla-La Mancha -->
         <path id="reg-CLaMancha" data-ccaa="Castilla-La Mancha" data-name="Castilla-La Mancha"
-          d="M238,310 L280,320 L372,310 L395,348 L422,360 L470,340 L530,360 L490,410 L430,420 L352,432 L258,418 L250,378 Z"/>
+          d="M238,315 L282,325 L375,315 L398,352 L425,362 L472,342 L532,362 L492,412 L432,422 L354,435 L258,422 L248,382 Z"/>
 
         <!-- Extremadura -->
         <path id="reg-Extremadura" data-ccaa="Extremadura" data-name="Extremadura"
-          d="M96,288 L158,278 L238,288 L250,378 L218,442 L128,450 L90,390 Z"/>
+          d="M95,282 L158,272 L238,272 L238,315 L248,382 L258,422 L218,448 L128,455 L88,392 Z"/>
 
         <!-- Andalucía -->
         <path id="reg-Andalucia" data-ccaa="Andalucía" data-name="Andalucía"
-          d="M90,390 L128,450 L218,442 L258,418 L352,432 L430,420 L490,410 L510,468 L490,500 L370,538 L198,538 L98,492 Z"/>
+          d="M88,392 L128,455 L218,448 L258,422 L354,435 L432,422 L492,412 L512,470 L492,502 L372,540 L198,540 L96,494 Z"/>
 
         <!-- Murcia -->
         <path id="reg-Murcia" data-ccaa="R. de Murcia" data-name="R. de Murcia"
-          d="M530,360 L570,410 L580,460 L510,468 L490,410 Z"/>
+          d="M532,362 L572,412 L582,462 L512,470 L492,412 Z"/>
 
         <!-- C. Valenciana -->
         <path id="reg-Valencia" data-ccaa="C. Valenciana" data-name="C. Valenciana"
-          d="M570,262 L660,262 L620,400 L570,410 L530,360 L540,300 Z"/>
+          d="M572,265 L662,265 L622,402 L572,412 L532,362 L472,280 Z"/>
 
         <!-- Islas Baleares (inset) -->
         <g id="reg-Baleares" data-ccaa="Islas Baleares" data-name="Islas Baleares" style="cursor:pointer">
-          <rect x="660" y="280" width="70" height="40" rx="4"/>
-          <text x="695" y="298" text-anchor="middle" style="font-size:9px;font-weight:600;fill:white;pointer-events:none">Baleares</text>
-          <rect x="660" y="325" width="32" height="18" rx="3"/>
-          <rect x="698" y="325" width="32" height="18" rx="3"/>
+          <rect x="658" y="278" width="72" height="42" rx="4"/>
+          <text x="694" y="296" text-anchor="middle" style="font-size:9px;font-weight:600;fill:white;pointer-events:none">Baleares</text>
+          <rect x="658" y="325" width="33" height="18" rx="3"/>
+          <rect x="697" y="325" width="33" height="18" rx="3"/>
         </g>
 
         <!-- Canarias (inset bottom-left) -->
         <g id="reg-Canarias" data-ccaa="Canarias" data-name="Canarias" style="cursor:pointer">
-          <rect x="30" y="490" width="130" height="60" rx="6" fill="none" stroke="#e5eaf2" stroke-width="1.5" stroke-dasharray="4,3"/>
-          <text x="45" y="508" style="font-size:8px;fill:#6b7a8d;font-weight:500">Canarias</text>
-          <ellipse cx="55" cy="528" rx="14" ry="8"/>
+          <rect x="28" y="488" width="132" height="62" rx="6" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="44" y="506" style="font-size:8px;fill:#94a3b8;font-weight:500">Canarias</text>
+          <ellipse cx="54" cy="528" rx="14" ry="8"/>
           <ellipse cx="82" cy="524" rx="18" ry="9"/>
           <ellipse cx="112" cy="528" rx="14" ry="8"/>
           <ellipse cx="140" cy="530" rx="10" ry="7"/>
         </g>
 
         <!-- Region labels -->
-        <text class="reg-label" x="95" y="140" text-anchor="middle">Galicia</text>
-        <text class="reg-label" x="205" y="88" text-anchor="middle">Asturias</text>
-        <text class="reg-label" x="280" y="68" text-anchor="middle" style="font-size:7px">Cantabria</text>
-        <text class="reg-label" x="355" y="68" text-anchor="middle" style="font-size:7px">P. Vasco</text>
-        <text class="reg-label" x="408" y="92" text-anchor="middle" style="font-size:7px">Navarra</text>
-        <text class="reg-label" x="352" y="118" text-anchor="middle" style="font-size:6px">Rioja</text>
-        <text class="reg-label" x="498" y="168" text-anchor="middle">Aragón</text>
-        <text class="reg-label" x="618" y="175" text-anchor="middle">Cataluña</text>
-        <text class="reg-label" x="225" y="215" text-anchor="middle">Castilla y León</text>
-        <text class="reg-label" x="322" y="312" text-anchor="middle" style="font-size:7px">Madrid</text>
-        <text class="reg-label" x="358" y="375" text-anchor="middle">Castilla-La Mancha</text>
-        <text class="reg-label" x="170" y="368" text-anchor="middle">Extremadura</text>
-        <text class="reg-label" x="295" y="488" text-anchor="middle">Andalucía</text>
-        <text class="reg-label" x="538" y="428" text-anchor="middle" style="font-size:7px">Murcia</text>
-        <text class="reg-label" x="598" y="335" text-anchor="middle" style="font-size:8px">C. Valenciana</text>
+        <text class="reg-label" x="98" y="138" text-anchor="middle">Galicia</text>
+        <text class="reg-label" x="205" y="85" text-anchor="middle">Asturias</text>
+        <text class="reg-label" x="282" y="64" text-anchor="middle" style="font-size:7px">Cantabria</text>
+        <text class="reg-label" x="355" y="64" text-anchor="middle" style="font-size:7px">P. Vasco</text>
+        <text class="reg-label" x="410" y="88" text-anchor="middle" style="font-size:7px">Navarra</text>
+        <text class="reg-label" x="352" y="115" text-anchor="middle" style="font-size:6px">Rioja</text>
+        <text class="reg-label" x="495" y="165" text-anchor="middle">Aragón</text>
+        <text class="reg-label" x="618" y="172" text-anchor="middle">Cataluña</text>
+        <text class="reg-label" x="222" y="210" text-anchor="middle">Castilla y León</text>
+        <text class="reg-label" x="308" y="295" text-anchor="middle" style="font-size:7px">Madrid</text>
+        <text class="reg-label" x="355" y="380" text-anchor="middle">Castilla-La Mancha</text>
+        <text class="reg-label" x="168" y="372" text-anchor="middle">Extremadura</text>
+        <text class="reg-label" x="292" y="488" text-anchor="middle">Andalucía</text>
+        <text class="reg-label" x="538" y="432" text-anchor="middle" style="font-size:7px">Murcia</text>
+        <text class="reg-label" x="592" y="332" text-anchor="middle" style="font-size:8px">C. Valenciana</text>
       </svg>
 
       <!-- Info panel -->
