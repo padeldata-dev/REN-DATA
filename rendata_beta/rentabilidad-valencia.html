@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Rentabilidad alquiler Valencia 2026: 5,5% ROI, precio m² 2.700€, alquiler medio 1.200€/mes. Análisis completo por barrios para inversores.">
 <title>Invertir en Valencia 2026 — Rentabilidad 5,5% · Precio m² 2.700€ | Ren Data</title>
-<link rel="canonical" href="https://invertirzona.es/rentabilidad-valencia">
+<link rel="canonical" href="https://rendata.es/rentabilidad-valencia">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -16,7 +16,7 @@
 }</script>
 <style>
 :root{
-  --bg:#f8fafc;--white:#fff;--blue:#1a56db;--blue-d:#1140a6;--blue-l:#eff6ff;
+  --bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#0e2a6b;--blue-l:#f0f6ff;
   --text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--border2:#d1dae8;
   --green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;--amber:#d97706;
   --sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);
@@ -27,20 +27,20 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
 /* HEADER */
-header{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
-header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue) 0%,#60a5fa 50%,var(--blue) 100%);background-size:200% 100%;animation:sh 4s linear infinite}
+header{background:#0e2a6b;backdrop-filter:none;border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,#60a5fa 0%,#fff 50%,#60a5fa 100%);background-size:200% 100%;animation:sh 4s linear infinite}
 @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
 .logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
 .logo-wm{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--text)}
 .logo-wm em{color:var(--blue);font-style:normal}
 nav{display:flex;align-items:center;gap:.2rem}
-nav a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
-nav a:hover{color:var(--blue);background:var(--blue-l)}
-.nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600!important}
-.nav-cta:hover{background:var(--blue-d)!important}
+nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
+nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-cta{background:rgba(255,255,255,.15)!important;color:#fff!important;font-weight:600!important;border:1px solid rgba(255,255,255,.25)!important}
+.nav-cta:hover{background:rgba(255,255,255,.25)!important}
 /* BREADCRUMB */
 .bc{max-width:1080px;margin:0 auto;padding:.9rem 2rem 0;display:flex;align-items:center;gap:.45rem;font-size:.76rem;color:var(--muted)}
-.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
+.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:#2563eb}
 .bc span{color:var(--text);font-weight:600}
 /* BANNER */
 .banner{width:100%;height:320px;position:relative;overflow:hidden;background:#1a2535}
@@ -259,7 +259,64 @@ h2+p{font-size:.85rem;color:var(--muted);margin-top:.3rem}
 .disc{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.95rem 1.2rem;font-size:.74rem;color:var(--muted);line-height:1.65;margin-bottom:2rem}
 footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto}
 footer p{font-size:.76rem;color:var(--muted)}
-/* DEMOGRAFÍA Y ECONOMÍA */
+/* COLLAPSIBLE SECTIONS */
+.coll-wrap{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:2.5rem;box-shadow:var(--sh)}
+.coll-trigger{width:100%;background:var(--white);border:none;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;cursor:pointer;font-family:var(--font);transition:background .15s}
+.coll-trigger:hover{background:var(--bg)}
+.coll-trigger-left{display:flex;align-items:center;gap:.75rem}
+.coll-trigger-icon{font-size:1.1rem}
+.coll-trigger-text{text-align:left}
+.coll-trigger-title{font-size:.92rem;font-weight:700;letter-spacing:-.01em;color:var(--text);display:block}
+.coll-trigger-sub{font-size:.75rem;color:var(--muted);margin-top:.1rem;display:block}
+.coll-trigger-badge{font-size:.68rem;font-weight:600;background:var(--blue-l);color:var(--blue);padding:.18rem .55rem;border-radius:20px;white-space:nowrap}
+.coll-arrow{color:var(--muted);transition:transform .25s ease;flex-shrink:0}
+.coll-arrow.open{transform:rotate(180deg)}
+.coll-body{display:none;border-top:1px solid var(--border)}
+.coll-body.open{display:block}
+.coll-body-inner{padding:1.5rem}
+/* STICKY SUMMARY BAR */
+.sticky-bar{position:sticky;top:64px;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:.55rem 2rem;display:flex;align-items:center;gap:1.5rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sticky-bar-item{display:flex;align-items:center;gap:.4rem;white-space:nowrap;flex-shrink:0}
+.sb-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sb-val{font-size:.82rem;font-weight:700;color:var(--text)}
+.sb-val.up{color:var(--green)}.sb-val.blue{color:var(--blue)}
+.sb-sep{width:1px;height:20px;background:var(--border);flex-shrink:0}
+/* SECTION PROGRESS */
+.sec-progress{display:flex;align-items:center;gap:.5rem;margin-bottom:2.5rem;overflow-x:auto;padding-bottom:.25rem}
+.sp-item{display:flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--muted);white-space:nowrap;text-decoration:none;padding:.28rem .65rem;border-radius:20px;border:1px solid transparent;transition:all .15s;flex-shrink:0}
+.sp-item:hover{background:var(--blue-l);color:var(--blue);border-color:#bfdbfe}
+.sp-sep{color:var(--border);font-size:.7rem;flex-shrink:0}
+/* VISUAL IMPROVEMENTS */
+.sec-hdr{margin-bottom:1.4rem;padding-bottom:.9rem;border-bottom:2px solid var(--blue-l)}
+.datos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+/* END COLLAPSIBLE */
+.dato-cell{background:var(--white);padding:1.1rem 1.2rem;transition:background .15s}
+.dato-cell:hover{background:#fafbff}
+.dato-icon{font-size:1.1rem;margin-bottom:.38rem}
+.dato-label{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.28rem}
+.dato-value{font-size:1.15rem;font-weight:800;letter-spacing:-.03em;color:var(--text);line-height:1}
+.dato-value.up{color:var(--green)}.dato-value.dn{color:var(--red)}.dato-value.blue{color:var(--blue)}
+.dato-sub{font-size:.68rem;color:var(--muted);margin-top:.2rem}
+.rango-bar{margin-top:.6rem}
+.rango-track{background:var(--bg);height:5px;border-radius:99px;overflow:visible;position:relative;border:1px solid var(--border)}
+.rango-fill{position:absolute;top:-1px;height:7px;background:var(--blue);border-radius:99px;opacity:.5}
+.rango-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:9px;height:9px;background:var(--blue);border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px var(--blue)}
+.rango-labels{display:flex;justify-content:space-between;margin-top:.3rem}
+.rango-lbl{font-size:.62rem;color:var(--muted)}
+/* GASTOS TABLE */
+.gastos-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.gastos-row{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;padding:.85rem 1.4rem;border-bottom:1px solid var(--border);align-items:center}
+.gastos-row:last-child{border-bottom:none}
+.gastos-row.header{background:var(--bg);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.gastos-row:not(.header):hover{background:var(--bg)}
+.gasto-name{font-size:.85rem;font-weight:600;color:var(--text)}
+.gasto-val{font-size:.85rem;font-weight:600;text-align:center}
+.gasto-nota{font-size:.72rem;color:var(--muted);text-align:center}
+.gasto-impact{font-size:.72rem;font-weight:600;padding:.18rem .5rem;border-radius:4px;text-align:center}
+.impact-high{background:var(--red-bg);color:var(--red)}
+.impact-med{background:#fffbeb;color:var(--amber)}
+.impact-low{background:var(--green-bg);color:var(--green)}
+/* END DATOS COMPLETOS */
 .demo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.95rem;margin-bottom:1rem}
 .demo-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem;box-shadow:var(--sh);text-align:center}
 .demo-icon{font-size:1.4rem;margin-bottom:.45rem}
@@ -301,7 +358,129 @@ footer p{font-size:.76rem;color:var(--muted)}
 .season-legend{display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
 .season-leg-item{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--muted)}
 .season-leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-/* CITY IMAGE BANNER */
+/* CASOS DE USO */
+.casos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.caso-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column}
+.caso-header{display:flex;align-items:center;gap:.75rem;padding:1.1rem 1.2rem;border-bottom:1px solid var(--border);background:var(--bg)}
+.caso-emoji{font-size:1.5rem;flex-shrink:0}
+.caso-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.caso-budget{font-size:.95rem;font-weight:800;letter-spacing:-.02em;color:var(--text)}
+.caso-badge{font-size:.62rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;margin-left:auto;flex-shrink:0;white-space:nowrap}
+.caso-badge.viable{background:var(--green-bg);color:var(--green)}
+.caso-badge.no-viable{background:#fffbeb;color:var(--amber)}
+.caso-body{padding:.95rem 1.2rem;flex:1;display:flex;flex-direction:column;gap:.45rem}
+.caso-row{display:flex;justify-content:space-between;align-items:center;font-size:.82rem}
+.caso-rl{color:var(--muted)}
+.caso-rv{font-weight:700;color:var(--text)}
+.caso-footer{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);background:var(--bg)}
+.caso-roi-wrap{padding:.9rem 1.2rem;text-align:center}
+.caso-roi-wrap:first-child{border-right:1px solid var(--border)}
+.caso-roi-val{font-size:1.45rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.caso-roi-label{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:.18rem}
+/* TENDENCIAS EDITORIALES */
+.tend-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.tend-editorial{padding:1.5rem 1.65rem;border-bottom:1px solid var(--border)}
+.tend-p{font-size:.875rem;color:var(--text2);line-height:1.78;margin-bottom:.9rem}
+.tend-p:last-child{margin-bottom:0}
+.tend-perspectiva{background:var(--blue-l);border:1px solid #bfdbfe;border-radius:8px;padding:1rem 1.2rem;margin-top:1.1rem;font-size:.85rem;color:var(--blue);line-height:1.65;font-style:italic}
+.tend-items{padding:1.25rem 1.65rem;display:flex;flex-direction:column;gap:.75rem}
+.tend-item{display:flex;align-items:flex-start;gap:.8rem}
+.tend-icon{font-size:1.1rem;flex-shrink:0;margin-top:.1rem}
+.tend-title{font-size:.85rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.18rem}
+.tend-desc{font-size:.78rem;color:var(--muted);line-height:1.55}
+/* GUÍA DE COMPRA */
+.guia-wrap{display:flex;flex-direction:column;gap:0}
+.guia-paso{display:grid;grid-template-columns:52px 1fr;gap:0}
+.guia-num-wrap{display:flex;flex-direction:column;align-items:center;padding-top:.2rem}
+.guia-num{width:32px;height:32px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:800;flex-shrink:0;z-index:1}
+.guia-line{flex:1;width:2px;background:var(--border);margin:0 auto}
+.guia-paso:last-child .guia-line{display:none}
+.guia-content{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.35rem;margin-bottom:1rem;box-shadow:var(--sh)}
+.guia-paso-header{display:flex;align-items:center;gap:.55rem;margin-bottom:.55rem}
+.guia-icon{font-size:1.1rem}
+.guia-titulo{font-size:.95rem;font-weight:700;letter-spacing:-.02em}
+.guia-desc{font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:.75rem}
+.guia-checks{display:flex;flex-direction:column;gap:.35rem}
+.guia-check{display:flex;align-items:flex-start;gap:.45rem;font-size:.78rem;color:var(--text2);line-height:1.45}
+.guia-check-dot{color:var(--blue);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.guia-resumen{background:var(--blue);border-radius:var(--r);padding:1.4rem 1.65rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.25rem}
+.gr-item{text-align:center}
+.gr-label{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.65);margin-bottom:.28rem}
+.gr-val{font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:-.03em}
+/* RELATED CITIES */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.rel-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);text-decoration:none;color:inherit;transition:all .2s;display:flex;flex-direction:column}
+.rel-card:hover{border-color:var(--blue);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.rel-card-img{height:110px;position:relative;overflow:hidden;background:linear-gradient(135deg,#dbeafe,#eff6ff);flex-shrink:0}
+.rel-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.rel-card:hover .rel-card-img img{transform:scale(1.06)}
+.rel-card-img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,24,40,.45) 0%,transparent 55%)}
+.rel-roi-badge{position:absolute;top:.55rem;right:.55rem;font-size:.78rem;font-weight:800;padding:.22rem .58rem;border-radius:6px;z-index:1}
+.rel-rh{background:rgba(5,150,105,.88);color:#fff}
+.rel-rm{background:rgba(26,86,219,.88);color:#fff}
+.rel-rl{background:rgba(220,38,38,.82);color:#fff}
+.rel-city-name{position:absolute;bottom:.55rem;left:.75rem;font-size:.82rem;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5);z-index:1}
+.rel-card-body{padding:.9rem 1rem;flex:1;display:flex;flex-direction:column;gap:.5rem}
+.rel-motivo{display:flex;align-items:center;gap:.35rem;font-size:.7rem;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.06em}
+.rel-motivo-icon{font-size:.85rem}
+.rel-stats{display:grid;grid-template-columns:1fr 1fr;gap:.35rem}
+.rel-sl{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.08rem}
+.rel-sv{font-size:.85rem;font-weight:600}
+.rel-footer{font-size:.75rem;color:var(--muted);margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:.5rem;border-top:1px solid var(--border)}
+.rel-arrow{color:var(--blue);font-weight:700}
+/* END RELATED */
+/* ITP CARD */
+.itp-card{border-top:3px solid var(--blue)!important}
+.itp-top{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.itp-icon{font-size:1.3rem;flex-shrink:0}
+.itp-val{font-size:2rem;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--text)}
+.itp-pct{font-size:1rem;font-weight:600;color:var(--muted)}
+.itp-badge{margin-left:auto;font-size:.68rem;font-weight:700;padding:.22rem .6rem;border-radius:6px;flex-shrink:0}
+.itp-low{background:var(--green-bg);color:var(--green)}
+.itp-med{background:#fffbeb;color:#d97706}
+.itp-high{background:var(--red-bg);color:var(--red)}
+.itp-desc{font-size:.8rem;color:var(--muted);line-height:1.55;margin-bottom:.65rem;padding:.6rem .75rem;background:var(--bg);border-radius:6px}
+.itp-desc strong{color:var(--text)}
+.itp-compare{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap}
+.itp-chip{font-size:.65rem;font-weight:600;padding:.18rem .5rem;border-radius:20px}
+.itp-chip-low{background:var(--green-bg);color:var(--green)}
+.itp-chip-med{background:#fffbeb;color:#d97706}
+.itp-chip-high{background:var(--red-bg);color:var(--red)}
+/* END ITP */
+.amort-toggle{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-family:var(--font);font-size:.82rem;font-weight:600;padding:.72rem 1rem;cursor:pointer;display:flex;align-items:center;gap:.5rem;margin-top:.85rem;transition:all .15s}
+.amort-toggle:hover{border-color:var(--blue);color:var(--blue)}
+.amort-toggle svg{margin-left:auto;transition:transform .25s}
+.amort-toggle.open svg{transform:rotate(180deg)}
+.amort-controls{display:flex;align-items:center;gap:.45rem;padding:.75rem 0 .6rem;flex-wrap:wrap}
+.amort-ctrl-label{font-size:.72rem;color:var(--muted);font-weight:500}
+.amort-view-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:var(--font);font-size:.75rem;font-weight:500;padding:.28rem .7rem;border-radius:6px;cursor:pointer;transition:all .15s}
+.amort-view-btn:hover{border-color:var(--blue);color:var(--blue)}
+.amort-view-btn.active{background:var(--blue-l);border-color:var(--blue);color:var(--blue);font-weight:600}
+.amort-table-wrap{max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem}
+.amort-table{width:100%;border-collapse:collapse;font-size:.78rem}
+.amort-table thead{position:sticky;top:0;z-index:1}
+.amort-table th{background:var(--bg);padding:.6rem .75rem;text-align:right;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--border);white-space:nowrap}
+.amort-table th:first-child{text-align:left}
+.amort-table td{padding:.55rem .75rem;text-align:right;border-bottom:1px solid var(--border);color:var(--text2)}
+.amort-table td:first-child{text-align:left;font-weight:600;color:var(--text)}
+.amort-table tr:last-child td{border-bottom:none}
+.amort-table tr:hover td{background:#fafbff}
+.amort-table tr.year-highlight td{background:var(--blue-l)}
+.amort-cap{color:var(--blue);font-weight:600}
+.amort-int{color:var(--red)}
+.amort-pct-cell{}
+.pct-bar-wrap{display:flex;align-items:center;gap:.4rem}
+.pct-bar-track{flex:1;background:var(--border);height:5px;border-radius:99px;overflow:hidden;min-width:40px}
+.pct-bar-fill{height:100%;border-radius:99px;background:var(--blue);transition:width .3s}
+.amort-summary{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem}
+.amort-sum-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.6rem}
+.amort-sum-bars{display:flex;flex-direction:column;gap:.45rem}
+.asb-row{display:grid;grid-template-columns:60px 1fr 70px;align-items:center;gap:.6rem}
+.asb-label{font-size:.72rem;color:var(--muted)}
+.asb-track{background:var(--border);height:7px;border-radius:99px;overflow:hidden}
+.asb-fill{height:100%;border-radius:99px}
+.asb-val{font-size:.72rem;font-weight:700;text-align:right}
+/* END AMORTIZATION */
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;gap:1.75rem;padding:1.5rem}
   .info-grid{grid-template-columns:1fr}
@@ -319,6 +498,13 @@ footer p{font-size:.76rem;color:var(--muted)}
   .pfc:first-child{border-right:none;border-bottom:1px solid var(--border)}
   .nb-row{grid-template-columns:80px 1fr 42px}
   .banner{height:220px}
+  .datos-grid{grid-template-columns:repeat(2,1fr)}
+  .gastos-row{grid-template-columns:1.5fr 1fr}
+  .gastos-row .gasto-nota,.gastos-row .gasto-impact{display:none}
+  .demo-grid{grid-template-columns:1fr 1fr}
+  .casos-grid{grid-template-columns:1fr}
+  .guia-resumen{grid-template-columns:1fr 1fr}
+  .rel-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -326,12 +512,11 @@ footer p{font-size:.76rem;color:var(--muted)}
 
 <header>
   <a href="/" class="logo">
-    <div class="logo-wm"><span style="color:#e0e9ff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
+    <div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
   </a>
   <nav>
     <a href="/">Ciudades</a>
-    <a href="/ranking.html">Ranking</a>
-    <a href="/comparador.html">Comparar</a>
+    <a href="calculadora.html">Calculadora</a>
     <a href="/glosario.html">Glosario</a>
     <a href="/guia-inversor.html">Guía</a>
   </nav>
@@ -355,7 +540,23 @@ footer p{font-size:.76rem;color:var(--muted)}
   </div>
 </div>
 
-<div class="bc"><a href="/">Inicio</a> › <a href="#">C. Valenciana</a> › <span>Valencia</span></div>
+<div class="bc"><a href="/">Inicio</a> › <a href="/">C. Valenciana</a> › <span>Valencia</span></div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <div class="sticky-bar-item"><span class="sb-label">ROI bruto</span><span class="sb-val blue">5,5%</span></div>
+  <div class="sb-sep"></div>
+  <div class="sticky-bar-item"><span class="sb-label">Precio m²</span><span class="sb-val">2.700€</span></div>
+  <div class="sb-sep"></div>
+  <div class="sticky-bar-item"><span class="sb-label">Alquiler</span><span class="sb-val">1.200€/mes</span></div>
+  <div class="sb-sep"></div>
+  <div class="sticky-bar-item"><span class="sb-label">ROI neto</span><span class="sb-val">3,8%</span></div>
+  <div class="sb-sep"></div>
+  <div class="sticky-bar-item"><span class="sb-label">Días venta</span><span class="sb-val">16</span></div>
+  <div class="sb-sep"></div>
+  <div class="sticky-bar-item"><span class="sb-label">Mejor zona</span><span class="sb-val blue">Benimaclet · 6,8%</span></div>
+  <a href="#alertas" style="margin-left:auto;background:var(--blue);color:#fff;font-size:.75rem;font-weight:700;padding:.38rem .9rem;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s">Contactar →</a>
+</div>
 
 <div class="hero">
   <div>
@@ -363,6 +564,7 @@ footer p{font-size:.76rem;color:var(--muted)}
     <h1>Rentabilidad del alquiler<br>en <span class="city">Valencia</span></h1>
     <p class="hero-desc">Análisis completo para inversores: precio del m², rentabilidad por barrio, evolución histórica y comparativa nacional. Todo lo que necesitas antes de comprar.</p>
     <div class="hero-acts">
+      <a href="/ranking.html" class="btn-p">Ver ranking ciudades →</a>
       <a href="#zonas" class="btn-s">Ver zonas</a>
     </div>
   </div>
@@ -381,6 +583,24 @@ footer p{font-size:.76rem;color:var(--muted)}
       <div class="sc-inner">
         <div><div class="sl">Zona más rentable</div><div class="sv" style="font-size:1.35rem">Benimaclet</div><div class="ss">6,8% ROI estimado</div></div>
         <span class="badge badge-up">Mejor ROI</span>
+      </div>
+    </div>
+    <!-- ITP CARD -->
+    <div class="sc itp-card">
+      <div class="itp-top">
+        <span class="itp-icon">🏛️</span>
+        <div>
+          <div class="sl">ITP al comprar en C. Valenciana</div>
+          <div class="itp-val">10<span class="itp-pct">%</span></div>
+        </div>
+        <span class="itp-badge itp-high">Elevado</span>
+      </div>
+      <div class="itp-desc">Para un piso de 205.200€ pagarás <strong>20.520€ de ITP</strong></div>
+      <div class="itp-compare">
+        <span style="font-size:.65rem;color:var(--muted)">Otras CCAA:</span>
+        <span class="itp-chip itp-chip-low">Madrid 6%</span>
+        <span class="itp-chip itp-chip-med">Andalucía 7%</span>
+        <span class="itp-chip itp-chip-high">Cataluña 10%</span>
       </div>
     </div>
   </div>
@@ -654,7 +874,7 @@ footer p{font-size:.76rem;color:var(--muted)}
       <!-- Mortgage Calculator -->
       <div class="calc-card">
         <div class="calc-title">🏦 Calculadora de hipoteca</div>
-        <div class="calc-desc">Estima tu cuota mensual y el coste total de la financiación para invertir en Valencia.</div>
+        <div class="calc-desc">Estima tu cuota mensual, coste total y tabla de amortización mes a mes.</div>
         <div class="calc-row">
           <div class="calc-field"><div class="calc-label">Precio de compra (€)</div><input class="calc-input" id="hi-precio" type="number" value="189000" oninput="calcHipo()"></div>
           <div class="calc-field"><div class="calc-label">Entrada (%)</div><input class="calc-input" id="hi-entrada" type="number" value="20" min="10" max="80" oninput="calcHipo()"></div>
@@ -674,6 +894,51 @@ footer p{font-size:.76rem;color:var(--muted)}
             <div class="cr-item"><div class="cr-item-l">Entrada necesaria</div><div class="cr-item-v" id="hi-entr">—</div></div>
             <div class="cr-item"><div class="cr-item-l">Gastos compra (~10%)</div><div class="cr-item-v" id="hi-gast">—</div></div>
           </div>
+          <!-- PROGRESS BAR -->
+          <div style="margin-top:.85rem">
+            <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);margin-bottom:.3rem">
+              <span>Capital</span><span>Intereses totales</span>
+            </div>
+            <div style="background:var(--bg);height:10px;border-radius:99px;overflow:hidden;border:1px solid var(--border)">
+              <div id="hi-prog" style="height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),#60a5fa);transition:width .4s ease;width:0%"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.7rem;margin-top:.28rem">
+              <span style="color:var(--blue);font-weight:600" id="hi-prog-cap">—</span>
+              <span style="color:var(--red);font-weight:600" id="hi-prog-int">—</span>
+            </div>
+          </div>
+        </div>
+        <!-- AMORTIZATION TABLE TOGGLE -->
+        <button class="amort-toggle" id="amortToggle" onclick="toggleAmort()">
+          📊 Ver tabla de amortización completa
+          <svg id="amortArrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="amortWrap" style="display:none">
+          <!-- Year selector -->
+          <div class="amort-controls">
+            <span class="amort-ctrl-label">Ver:</span>
+            <button class="amort-view-btn active" onclick="setAmortView('anual',this)">Por años</button>
+            <button class="amort-view-btn" onclick="setAmortView('mensual',this)">Por meses</button>
+            <div style="margin-left:auto;font-size:.72rem;color:var(--muted)" id="amortInfo"></div>
+          </div>
+          <!-- Table -->
+          <div class="amort-table-wrap">
+            <table class="amort-table" id="amortTable">
+              <thead>
+                <tr>
+                  <th>Año</th>
+                  <th>Cuota</th>
+                  <th>Capital</th>
+                  <th>Intereses</th>
+                  <th>% Capital</th>
+                  <th>Saldo pend.</th>
+                </tr>
+              </thead>
+              <tbody id="amortBody"></tbody>
+            </table>
+          </div>
+          <!-- Summary chart bar -->
+          <div class="amort-summary" id="amortSummary"></div>
         </div>
       </div>
     </div>
@@ -722,10 +987,176 @@ footer p{font-size:.76rem;color:var(--muted)}
     <div class="info-box"><div class="ib-icon">💡</div><h3>Lo que debes saber</h3><p>Una de las mejores ciudades para invertir. Mercado muy dinámico.</p></div>
   </div>
 
-  <!-- DEMOGRAFÍA Y ECONOMÍA -->
+  <!-- DATOS COMPLETOS DE MERCADO -->
   <div class="section">
-    <div class="sec-hdr"><div class="sec-eye">Contexto demográfico y económico</div><h2>Valencia en cifras</h2><p>Datos clave para entender el mercado laboral y el poder adquisitivo de la ciudad.</p></div>
-    
+    <div class="sec-hdr">
+      <div class="sec-eye">Datos completos del mercado</div>
+      <h2>Todos los datos de Valencia para invertir</h2>
+      <p>Precio, rangos, oferta, rentabilidad neta, alquiler turístico y más. Actualizado Q1 2026.</p>
+    </div>
+    <div class="datos-grid">
+      <div class="dato-cell">
+        <div class="dato-icon">💶</div>
+        <div class="dato-label">Precio medio m²</div>
+        <div class="dato-value blue">2.700€</div>
+        <div class="dato-sub">↑ 12,0% anual</div>
+        <div class="rango-bar">
+          <div class="rango-track">
+            <div class="rango-fill" style="left:0;right:0"></div>
+            <div class="rango-dot" style="left:50%"></div>
+          </div>
+          <div class="rango-labels"><span class="rango-lbl">1.998€</span><span class="rango-lbl">3.779€</span></div>
+        </div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">🏠</div>
+        <div class="dato-label">Alquiler mensual medio</div>
+        <div class="dato-value blue">1.200€</div>
+        <div class="dato-sub">Piso de 76 m² típico</div>
+        <div class="dato-sub" style="margin-top:.15rem">↑ 10,3% anual</div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">📈</div>
+        <div class="dato-label">Rentabilidad bruta</div>
+        <div class="dato-value blue">5,5%</div>
+        <div class="dato-sub">Neta estimada: <strong>3,8%</strong></div>
+        <div class="dato-sub" style="margin-top:.15rem">↑ 0,3pp vs año ant.</div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">⏱️</div>
+        <div class="dato-label">Días en mercado</div>
+        <div class="dato-value up">16</div>
+        <div class="dato-sub">Días hasta firma</div>
+        <div class="dato-sub" style="margin-top:.15rem">Mercado muy activo</div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">📦</div>
+        <div class="dato-label">Oferta disponible</div>
+        <div class="dato-value">4.800</div>
+        <div class="dato-sub">Inmuebles en venta</div>
+        <div class="dato-sub" style="margin-top:.15rem">↓ 28,0% vs hace 2 años</div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">📐</div>
+        <div class="dato-label">Superficie media</div>
+        <div class="dato-value">76 m²</div>
+        <div class="dato-sub">Piso tipo en Valencia</div>
+        <div class="dato-sub" style="margin-top:.15rem">Precio est: 205.200€</div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">🌍</div>
+        <div class="dato-label">Compradores extranjeros</div>
+        <div class="dato-value blue">22%</div>
+        <div class="dato-sub">Del total operaciones</div>
+        <div class="dato-sub" style="margin-top:.15rem">Demanda nacional</div>
+      </div>
+      <div class="dato-cell">
+        <div class="dato-icon">🏖️</div>
+        <div class="dato-label">Alquiler turístico</div>
+        <div class="dato-value blue">82€/noche</div>
+        <div class="dato-sub">Ocup. media: 58%</div>
+        <div class="dato-sub" style="margin-top:.15rem">ROI tur. est: 8%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLA DE GASTOS REALES -->
+  <div class="section" id="gastos">
+    <div class="coll-wrap">
+      <button class="coll-trigger" onclick="toggleColl('gastos-body',this)">
+        <div class="coll-trigger-left">
+          <span class="coll-trigger-icon">💸</span>
+          <div class="coll-trigger-text">
+            <span class="coll-trigger-title">Del 5,5% bruto al 3,8% neto — Gastos reales</span>
+            <span class="coll-trigger-sub">IBI, comunidad, mantenimiento, vacancia e IRPF desglosados</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.65rem">
+          <span class="coll-trigger-badge">7 conceptos</span>
+          <svg class="coll-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </button>
+      <div class="coll-body" id="gastos-body">
+        <div class="coll-body-inner">
+    <div class="gastos-card">
+      <div class="gastos-row header">
+        <span>Concepto</span><span>Importe anual</span><span>Por mes</span><span>Impacto ROI</span>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">💰 Ingresos por alquiler</div>
+        <div class="gasto-val" style="color:var(--green)">+14.400€</div>
+        <div class="gasto-val" style="color:var(--green)">+1.200€</div>
+        <div class="gasto-nota">Base de cálculo</div>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">🏛️ IBI (Impuesto sobre Bienes Inmuebles)</div>
+        <div class="gasto-val" style="color:var(--red)">-861€</div>
+        <div class="gasto-val" style="color:var(--red)">-71€</div>
+        <div class="gasto-impact impact-med">Medio</div>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">🏢 Gastos de comunidad</div>
+        <div class="gasto-val" style="color:var(--red)">-672€</div>
+        <div class="gasto-val" style="color:var(--red)">-56€</div>
+        <div class="gasto-impact impact-med">Medio</div>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">🔧 Mantenimiento y reparaciones</div>
+        <div class="gasto-val" style="color:var(--red)">-864€</div>
+        <div class="gasto-val" style="color:var(--red)">-72€</div>
+        <div class="gasto-impact impact-low">Bajo</div>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">🔒 Seguro de hogar e impagos</div>
+        <div class="gasto-val" style="color:var(--red)">-576€</div>
+        <div class="gasto-val" style="color:var(--red)">-48€</div>
+        <div class="gasto-impact impact-low">Bajo</div>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">📅 Vacancia estimada (3,5% del año)</div>
+        <div class="gasto-val" style="color:var(--red)">-504€</div>
+        <div class="gasto-val" style="color:var(--muted)">Variable</div>
+        <div class="gasto-impact impact-low">Bajo</div>
+      </div>
+      <div class="gastos-row">
+        <div class="gasto-name">📊 IRPF sobre rendimientos (estimado 30%)</div>
+        <div class="gasto-val" style="color:var(--red)">-1.728€</div>
+        <div class="gasto-val" style="color:var(--muted)">Variable</div>
+        <div class="gasto-impact impact-high">Alto</div>
+      </div>
+      <div class="gastos-row" style="background:#f0fdf4">
+        <div class="gasto-name" style="font-weight:800;color:var(--green)">✅ Rentabilidad neta estimada</div>
+        <div class="gasto-val" style="color:var(--green);font-size:1rem;font-weight:800">3,8%</div>
+        <div class="gasto-val" style="color:var(--green)">7.797€/año</div>
+        <div class="gasto-impact" style="background:var(--green-bg);color:var(--green)">NETO</div>
+      </div>
+    </div>
+      </div><!-- coll-body-inner -->
+      </div><!-- coll-body -->
+    </div><!-- coll-wrap -->
+  </div>
+
+  <!-- DEMOGRAFÍA + CALIDAD DE VIDA + REGULACIÓN + ESTACIONALIDAD (agrupados en desplegable) -->
+  <div class="section" id="contexto">
+    <div class="coll-wrap">
+      <button class="coll-trigger" onclick="toggleColl('contexto-body',this)">
+        <div class="coll-trigger-left">
+          <span class="coll-trigger-icon">🏙️</span>
+          <div class="coll-trigger-text">
+            <span class="coll-trigger-title">Contexto de Valencia — Demografía, calidad de vida y regulación</span>
+            <span class="coll-trigger-sub">Población, paro, salario, calidad de vida, riesgo regulatorio y demanda estacional</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.65rem">
+          <span class="coll-trigger-badge">4 bloques</span>
+          <svg class="coll-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </button>
+      <div class="coll-body" id="contexto-body">
+        <div class="coll-body-inner">
+          <div style="margin-bottom:1.5rem">
+            <div class="sec-eye" style="margin-bottom:.75rem">Demografía y economía</div>
+            
     <div class="demo-grid">
       <div class="demo-card">
         <div class="demo-icon">👥</div>
@@ -756,15 +1187,11 @@ footer p{font-size:.76rem;color:var(--muted)}
       <span class="drivers-label">🏭 Motores económicos principales:</span>
       <span class="drivers-val">Tecnología, turismo, logística, industria</span>
     </div>
-  </div>
-
-  <!-- CALIDAD DE VIDA + REGULACIÓN + ESTACIONALIDAD -->
-  <div class="section">
-    <div class="sec-hdr"><div class="sec-eye">Vivir e invertir en Valencia</div><h2>Calidad de vida, regulación y estacionalidad</h2><p>Factores clave que afectan a la demanda de alquiler y al valor del inmueble.</p></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem">
-      <div>
-        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Calidad de vida</div>
-        <div class="ql-grid"><div class="ql-item">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem">
+            <div>
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Calidad de vida</div>
+              <div class="ql-grid"><div class="ql-item">
   <div class="ql-top"><span class="ql-icon">☀️</span><div><div class="ql-name">Clima</div><div class="ql-desc">Temperatura y soleamiento anual</div></div><div class="ql-score" style="color:var(--green)">5/5</div></div>
   <div class="ql-track"><div class="ql-fill" style="width:100%;background:var(--green)"></div></div>
 </div><div class="ql-item">
@@ -777,10 +1204,10 @@ footer p{font-size:.76rem;color:var(--muted)}
   <div class="ql-top"><span class="ql-icon">🔒</span><div><div class="ql-name">Seguridad</div><div class="ql-desc">Índice de seguridad ciudadana</div></div><div class="ql-score" style="color:var(--blue)">3/5</div></div>
   <div class="ql-track"><div class="ql-fill" style="width:60%;background:var(--blue)"></div></div>
 </div></div>
-      </div>
-      <div>
-        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Riesgo regulatorio del alquiler</div>
-        <div class="reg-card" style="border-color:#dc262620">
+            </div>
+            <div>
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Riesgo regulatorio del alquiler</div>
+              <div class="reg-card" style="border-color:#dc262620">
   <div class="reg-header" style="background:#fef2f2;border-bottom:1px solid #dc262622">
     <div><div class="reg-badge" style="background:#dc2626;color:#fff">ALTO</div><div class="reg-title">Zona de alta tensión</div></div>
     <div class="reg-icon">⚠️</div>
@@ -790,22 +1217,231 @@ footer p{font-size:.76rem;color:var(--muted)}
     <div class="reg-item">🔴 Posible limitación de subida de alquiler al IPC</div><div class="reg-item">🔴 Restricciones en nuevos contratos en zonas tensionadas</div><div class="reg-item">⚠️ Revisar zona exacta antes de comprar</div><div class="reg-item">ℹ️ Consultar con abogado antes de la operación</div>
   </div>
 </div>
+            </div>
+          </div>
+          <div class="season-wrap">
+            <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Demanda de alquiler por temporada</div>
+            <div style="font-size:.8rem;color:var(--muted);margin-top:.3rem">Meses de mayor y menor demanda de alquiler residencial en Valencia.</div>
+            <div class="season-grid"><div class="season-col"><div class="season-bar season-low"></div><div class="season-m">Ene</div><div class="season-l season-low-t">Baja</div></div><div class="season-col"><div class="season-bar season-low"></div><div class="season-m">Feb</div><div class="season-l season-low-t">Baja</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Mar</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Abr</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">May</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Jun</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Jul</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Ago</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Sep</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Oct</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Nov</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Dic</div><div class="season-l season-med-t">Media</div></div></div>
+            <div class="season-legend">
+              <div class="season-leg-item"><div class="season-leg-dot" style="background:var(--blue)"></div>Demanda alta</div>
+              <div class="season-leg-item"><div class="season-leg-dot" style="background:#93c5fd"></div>Demanda media</div>
+              <div class="season-leg-item"><div class="season-leg-dot" style="background:#e2e8f0"></div>Demanda baja</div>
+            </div>
+          </div>
+        </div><!-- coll-body-inner -->
+      </div><!-- coll-body -->
+    </div><!-- coll-wrap -->
+  </div>
+
+  <!-- CASOS DE USO -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-eye">Casos de uso reales</div>
+      <h2>¿Qué puedes comprar en Valencia con tu presupuesto?</h2>
+      <p>Ejemplos concretos con tres perfiles de inversor. Todos los cálculos incluyen gastos de compra.</p>
+    </div>
+    <div class="casos-grid"><div class="caso-card">
+  <div class="caso-header">
+    <div class="caso-emoji">🌱</div>
+    <div>
+      <div class="caso-label">Inversor inicial</div>
+      <div class="caso-budget">120.000€ presupuesto total</div>
+    </div>
+    <span class="caso-badge viable">Viable</span>
+  </div>
+  <div class="caso-body">
+    <div class="caso-row"><span class="caso-rl">Precio máx. vivienda</span><span class="caso-rv">108.108€</span></div>
+    <div class="caso-row"><span class="caso-rl">Superficie estimada</span><span class="caso-rv">40 m²</span></div>
+    <div class="caso-row"><span class="caso-rl">Gastos compra (~12%)</span><span class="caso-rv" style="color:var(--red)">-12.972€</span></div>
+    <div class="caso-row"><span class="caso-rl">Alquiler estimado</span><span class="caso-rv" style="color:var(--green)">660€/mes</span></div>
+    <div class="caso-row"><span class="caso-rl">Ingresos anuales</span><span class="caso-rv" style="color:var(--green)">7.920€/año</span></div>
+  </div>
+  <div class="caso-footer">
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val" style="color:var(--green)">7.3%</div>
+      <div class="caso-roi-label">ROI estimado</div>
+    </div>
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val">13.7</div>
+      <div class="caso-roi-label">Años recuperación</div>
+    </div>
+  </div>
+</div>
+<div class="caso-card">
+  <div class="caso-header">
+    <div class="caso-emoji">📈</div>
+    <div>
+      <div class="caso-label">Inversor intermedio</div>
+      <div class="caso-budget">220.000€ presupuesto total</div>
+    </div>
+    <span class="caso-badge viable">Viable</span>
+  </div>
+  <div class="caso-body">
+    <div class="caso-row"><span class="caso-rl">Precio máx. vivienda</span><span class="caso-rv">198.198€</span></div>
+    <div class="caso-row"><span class="caso-rl">Superficie estimada</span><span class="caso-rv">73 m²</span></div>
+    <div class="caso-row"><span class="caso-rl">Gastos compra (~12%)</span><span class="caso-rv" style="color:var(--red)">-23.783€</span></div>
+    <div class="caso-row"><span class="caso-rl">Alquiler estimado</span><span class="caso-rv" style="color:var(--green)">1.152€/mes</span></div>
+    <div class="caso-row"><span class="caso-rl">Ingresos anuales</span><span class="caso-rv" style="color:var(--green)">13.824€/año</span></div>
+  </div>
+  <div class="caso-footer">
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val" style="color:var(--green)">7.0%</div>
+      <div class="caso-roi-label">ROI estimado</div>
+    </div>
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val">14.3</div>
+      <div class="caso-roi-label">Años recuperación</div>
+    </div>
+  </div>
+</div>
+<div class="caso-card">
+  <div class="caso-header">
+    <div class="caso-emoji">🏆</div>
+    <div>
+      <div class="caso-label">Inversor avanzado</div>
+      <div class="caso-budget">400.000€ presupuesto total</div>
+    </div>
+    <span class="caso-badge viable">Viable</span>
+  </div>
+  <div class="caso-body">
+    <div class="caso-row"><span class="caso-rl">Precio máx. vivienda</span><span class="caso-rv">360.360€</span></div>
+    <div class="caso-row"><span class="caso-rl">Superficie estimada</span><span class="caso-rv">133 m²</span></div>
+    <div class="caso-row"><span class="caso-rl">Gastos compra (~12%)</span><span class="caso-rv" style="color:var(--red)">-43.243€</span></div>
+    <div class="caso-row"><span class="caso-rl">Alquiler estimado</span><span class="caso-rv" style="color:var(--green)">2.100€/mes</span></div>
+    <div class="caso-row"><span class="caso-rl">Ingresos anuales</span><span class="caso-rv" style="color:var(--green)">25.200€/año</span></div>
+  </div>
+  <div class="caso-footer">
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val" style="color:var(--green)">7.0%</div>
+      <div class="caso-roi-label">ROI estimado</div>
+    </div>
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val">14.3</div>
+      <div class="caso-roi-label">Años recuperación</div>
+    </div>
+  </div>
+</div></div>
+    <div style="margin-top:.85rem;font-size:.75rem;color:var(--muted);background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem">
+      ⚠️ Estimaciones basadas en precio medio de Valencia. ITP C. Valenciana: 10%. La rentabilidad real depende de la zona, estado del inmueble y condiciones del mercado.
+    </div>
+  </div>
+
+  <!-- TENDENCIAS EDITORIALES -->
+  <div class="section" id="analisis">
+    <div class="coll-wrap">
+      <button class="coll-trigger" onclick="toggleColl('tend-body',this)">
+        <div class="coll-trigger-left">
+          <span class="coll-trigger-icon">📰</span>
+          <div class="coll-trigger-text">
+            <span class="coll-trigger-title">Análisis editorial del mercado de Valencia</span>
+            <span class="coll-trigger-sub">Qué está pasando, tendencias clave y perspectiva Ren Data · Abril 2026</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.65rem">
+          <span class="coll-trigger-badge">Análisis</span>
+          <svg class="coll-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </button>
+      <div class="coll-body" id="tend-body">
+        <div class="coll-body-inner">
+          <p class="tend-p">El mercado inmobiliario de Valencia en 2026 se encuentra en un momento muy activo, con los pisos vendiéndose en tan solo 16 días de media. El precio del metro cuadrado ha alcanzado los 2,700€, tras una subida del 12.0% en el último año, reflejando la fuerte presión de la demanda sobre una oferta cada vez más limitada.</p>
+          <p class="tend-p">La rentabilidad bruta del alquiler se sitúa en el 5.5%, cerca de la media nacional. La rentabilidad mejora respecto al año anterior (+0.3 puntos porcentuales). El alquiler medio ha subido un 10.3% en los últimos 12 meses, alcanzando los 1,200€ mensuales para un piso estándar. Este crecimiento del precio del alquiler, superior al de la inflación, favorece a los inversores con inmuebles en cartera.</p>
+          <p class="tend-p">La oferta disponible ha caído un 28% en dos años, lo que presiona los precios al alza y reduce el tiempo de venta. El mercado opera con compradores extranjeros representando el 22% de las operaciones. La rentabilidad neta estimada, una vez descontados IBI, comunidad, mantenimiento y vacancia, se sitúa en torno al 3.8%, lo que sigue siendo atractivo comparado con alternativas como bonos del Estado o depósitos bancarios.</p>
+          <div class="tend-perspectiva">💡 <strong>Perspectiva Ren Data:</strong> Las perspectivas a corto y medio plazo para Valencia son positivas: la combinación de precios en alza, alta demanda y oferta limitada apunta a que los inversores que compren hoy podrían beneficiarse tanto de ingresos por alquiler como de revalorización del activo.</div>
+          <div style="margin-top:1.25rem">
+            <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Tendencias clave</div>
+            <div class="tend-item"><div class="tend-icon">📈</div><div><div class="tend-title">Precio en fuerte alza</div><div class="tend-desc">+12.0% en 12 meses. El mercado lleva varios trimestres de subidas sostenidas.</div></div></div>
+<div class="tend-item"><div class="tend-icon">⚡</div><div><div class="tend-title">Ventas ultrarrápidas</div><div class="tend-desc">Solo 16 días de media. Los buenos inmuebles desaparecen en días.</div></div></div>
+<div class="tend-item"><div class="tend-icon">📦</div><div><div class="tend-title">Escasez de stock</div><div class="tend-desc">La oferta ha caído un 28%. Menos donde elegir = más presión en precios.</div></div></div>
+<div class="tend-item"><div class="tend-icon">↗️</div><div><div class="tend-title">ROI mejorando</div><div class="tend-desc">+0.3 puntos porcentuales vs año anterior. La tendencia es positiva para el inversor.</div></div></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="season-wrap">
-      <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);display:flex;align-items:center;gap:.4rem"><span style="display:block;width:12px;height:2px;background:var(--blue);border-radius:2px"></span>Demanda de alquiler por temporada</div>
-      <div style="font-size:.8rem;color:var(--muted);margin-top:.3rem">Meses de mayor y menor demanda de alquiler residencial en Valencia.</div>
-      <div class="season-grid"><div class="season-col"><div class="season-bar season-low"></div><div class="season-m">Ene</div><div class="season-l season-low-t">Baja</div></div><div class="season-col"><div class="season-bar season-low"></div><div class="season-m">Feb</div><div class="season-l season-low-t">Baja</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Mar</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Abr</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">May</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Jun</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Jul</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Ago</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-high"></div><div class="season-m">Sep</div><div class="season-l season-high-t">Alta</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Oct</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Nov</div><div class="season-l season-med-t">Media</div></div><div class="season-col"><div class="season-bar season-med"></div><div class="season-m">Dic</div><div class="season-l season-med-t">Media</div></div></div>
-      <div class="season-legend">
-        <div class="season-leg-item"><div class="season-leg-dot" style="background:var(--blue)"></div>Demanda alta</div>
-        <div class="season-leg-item"><div class="season-leg-dot" style="background:#93c5fd"></div>Demanda media</div>
-        <div class="season-leg-item"><div class="season-leg-dot" style="background:#e2e8f0"></div>Demanda baja</div>
+  </div>
+
+  <!-- GUÍA DE COMPRA -->
+  <div class="section" id="guia">
+    <div class="coll-wrap">
+      <button class="coll-trigger" onclick="toggleColl('guia-body',this)">
+        <div class="coll-trigger-left">
+          <span class="coll-trigger-icon">📋</span>
+          <div class="coll-trigger-text">
+            <span class="coll-trigger-title">Guía de compra paso a paso en Valencia</span>
+            <span class="coll-trigger-sub">Proceso legal · ITP C. Valenciana 10% · Gastos totales est. 22.766€</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.65rem">
+          <span class="coll-trigger-badge">7 pasos</span>
+          <svg class="coll-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </button>
+      <div class="coll-body" id="guia-body">
+        <div class="coll-body-inner">
+          <div class="guia-resumen" style="margin-bottom:1.5rem">
+            <div class="gr-item"><div class="gr-label">ITP C. Valenciana</div><div class="gr-val">10%</div></div>
+            <div class="gr-item"><div class="gr-label">Notaría est.</div><div class="gr-val">1.026€</div></div>
+            <div class="gr-item"><div class="gr-label">Total gastos est.</div><div class="gr-val">22.766€</div></div>
+            <div class="gr-item"><div class="gr-label">Plazo medio</div><div class="gr-val">~6 sem.</div></div>
+          </div>
+          <div class="guia-wrap"><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">1</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">🔍</span><div class="guia-titulo">Define tu objetivo y presupuesto</div></div>
+    <p class="guia-desc">Decide si buscas rentabilidad por alquiler o revalorización. Para un piso medio de 76 m² en Valencia necesitarás aproximadamente <strong>227.966€</strong> en total, incluyendo todos los gastos.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>Calcula tu capacidad de financiación (máx. 80% del precio)</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Reserva 22.766€ para gastos de compra</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Define si será alquiler residencial, turístico o venta a largo plazo</span></div></div>
+  </div>
+</div><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">2</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">🏘️</span><div class="guia-titulo">Elige la zona correcta</div></div>
+    <p class="guia-desc">No todas las zonas de Valencia tienen la misma rentabilidad. Los barrios periféricos suelen ofrecer mejor ROI que el centro, aunque con menor revalorización potencial.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>Consulta el análisis por zonas más arriba</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Visita la zona en distintos días y horarios</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Comprueba la demanda de alquiler en portales (Idealista, Fotocasa)</span></div></div>
+  </div>
+</div><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">3</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">📋</span><div class="guia-titulo">Due diligence del inmueble</div></div>
+    <p class="guia-desc">Antes de firmar nada, verifica el estado legal y físico del inmueble. Es el paso más importante y el que más se suele saltar.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>Solicita nota simple en el Registro de la Propiedad (9€)</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Verifica que no hay deudas de comunidad ni cargas</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Pide el certificado energético (obligatorio)</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Inspección técnica si el inmueble tiene más de 20 años</span></div></div>
+  </div>
+</div><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">4</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">🤝</span><div class="guia-titulo">Reserva y contrato de arras</div></div>
+    <p class="guia-desc">La señal o arras suele ser el 10% del precio. Con arras penitenciales, si el comprador se echa atrás pierde las arras; si es el vendedor, devuelve el doble.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>Arras confirmatorias vs. penitenciales: elige según tu situación</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Fija plazos claros para la firma de escrituras</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Revisa el contrato con un abogado antes de firmar</span></div></div>
+  </div>
+</div><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">5</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">🏦</span><div class="guia-titulo">Hipoteca (si aplica)</div></div>
+    <p class="guia-desc">Si necesitas financiación, los bancos suelen financiar hasta el 80% del valor de tasación. Para un inmueble de 205.200€ necesitarías una entrada de <strong>41.040€</strong> mínimo.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>Pide ofertas a al menos 3 bancos antes de decidir</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Compara TAE, no solo tipo nominal</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Tipo fijo da seguridad; variable puede ser más barato inicialmente</span></div></div>
+  </div>
+</div><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">6</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">✍️</span><div class="guia-titulo">Firma ante notario</div></div>
+    <p class="guia-desc">El notario da fe pública del acto. Los costes notariales en Valencia son aproximadamente <strong>1.026€</strong> para este precio de referencia.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>ITP (C. Valenciana): 10% del precio = 20.520€</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Notaría: ~1.026€</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Registro: ~820€</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Gestoría: ~400€</span></div></div>
+  </div>
+</div><div class="guia-paso">
+  <div class="guia-num-wrap"><div class="guia-num">7</div><div class="guia-line"></div></div>
+  <div class="guia-content">
+    <div class="guia-paso-header"><span class="guia-icon">🔑</span><div class="guia-titulo">Post-compra: gestión del alquiler</div></div>
+    <p class="guia-desc">Una vez propietario, toca preparar el inmueble para alquilar. Un buen alquiler empieza antes de encontrar inquilino.</p>
+    <div class="guia-checks"><div class="guia-check"><span class="guia-check-dot">✓</span><span>Seguro de hogar e impago de alquiler desde el primer día</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Contrato de alquiler: duración, fianza, garantías adicionales</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Alta en Hacienda como arrendador (modelo 036/037)</span></div><div class="guia-check"><span class="guia-check-dot">✓</span><span>Considera una agencia gestora si no tienes tiempo</span></div></div>
+  </div>
+</div></div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- FAQ -->
-  <div class="section">
+  <div class="section" id="faq">
     <div class="sec-hdr"><div class="sec-eye">Preguntas frecuentes</div><h2>Todo sobre invertir en Valencia</h2><p>Respuestas a las preguntas más habituales de los inversores.</p></div>
     <div class="faq-section"><div class="faq-item" onclick="toggleFaq(0)">
   <div class="faq-q" id="fq-0">
@@ -858,19 +1494,130 @@ footer p{font-size:.76rem;color:var(--muted)}
 </div></div>
   </div>
 
-  <!-- CTA -->
-  <div style="background:var(--blue-l);border:1px solid #bfdbfe;border-radius:14px;padding:1.75rem 2rem;margin-bottom:2rem;text-align:center">
-    <div style="font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:.5rem">¿Eres nuevo invirtiendo en vivienda?</div>
-    <div style="font-size:1.1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem">Lee nuestra guía completa antes de comprar</div>
-    <p style="font-size:.85rem;color:var(--muted);margin-bottom:1rem">Todo el proceso explicado paso a paso, sin tecnicismos.</p>
-    <a href="/guia-inversor.html" style="background:var(--blue);color:#fff;font-weight:700;font-size:.875rem;padding:.72rem 1.4rem;border-radius:8px;text-decoration:none;display:inline-block">Leer la guía →</a>
+    <!-- CIUDADES RELACIONADAS -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-eye">También te puede interesar</div>
+      <h2>Ciudades relacionadas con Valencia</h2>
+      <p>Otras ciudades que inversores como tú también analizan habitualmente.</p>
+    </div>
+    <div class="rel-grid"><a class="rel-card" href="rentabilidad-castellon.html">
+  <div class="rel-card-img">
+    <img loading="lazy" src="https://source.unsplash.com/320x120/?castellón,spain,city" alt="Castellón" onerror="this.style.display='none'">
+    <div class="rel-card-img-ov"></div>
+    <span class="rel-roi-badge rel-rh">7.0%</span>
+    <span class="rel-city-name">Castellón</span>
+  </div>
+  <div class="rel-card-body">
+    <div class="rel-motivo"><span class="rel-motivo-icon">📍</span>Misma zona</div>
+    <div class="rel-stats">
+      <div><div class="rel-sl">Precio m²</div><div class="rel-sv">1.500€</div></div>
+      <div><div class="rel-sl">Alquiler</div><div class="rel-sv">750€/mes</div></div>
+    </div>
+    <div class="rel-footer">C. Valenciana <span class="rel-arrow">→</span></div>
+  </div>
+</a><a class="rel-card" href="rentabilidad-alicante.html">
+  <div class="rel-card-img">
+    <img loading="lazy" src="https://source.unsplash.com/320x120/?alicante,spain,city" alt="Alicante" onerror="this.style.display='none'">
+    <div class="rel-card-img-ov"></div>
+    <span class="rel-roi-badge rel-rm">5.2%</span>
+    <span class="rel-city-name">Alicante</span>
+  </div>
+  <div class="rel-card-body">
+    <div class="rel-motivo"><span class="rel-motivo-icon">📍</span>Misma zona</div>
+    <div class="rel-stats">
+      <div><div class="rel-sl">Precio m²</div><div class="rel-sv">2.250€</div></div>
+      <div><div class="rel-sl">Alquiler</div><div class="rel-sv">990€/mes</div></div>
+    </div>
+    <div class="rel-footer">C. Valenciana <span class="rel-arrow">→</span></div>
+  </div>
+</a><a class="rel-card" href="rentabilidad-gandia.html">
+  <div class="rel-card-img">
+    <img loading="lazy" src="https://source.unsplash.com/320x120/?gandia,spain,city" alt="Gandia" onerror="this.style.display='none'">
+    <div class="rel-card-img-ov"></div>
+    <span class="rel-roi-badge rel-rm">5.7%</span>
+    <span class="rel-city-name">Gandia</span>
+  </div>
+  <div class="rel-card-body">
+    <div class="rel-motivo"><span class="rel-motivo-icon">📍</span>Misma zona</div>
+    <div class="rel-stats">
+      <div><div class="rel-sl">Precio m²</div><div class="rel-sv">1.900€</div></div>
+      <div><div class="rel-sl">Alquiler</div><div class="rel-sv">890€/mes</div></div>
+    </div>
+    <div class="rel-footer">C. Valenciana <span class="rel-arrow">→</span></div>
+  </div>
+</a><a class="rel-card" href="rentabilidad-torrevieja.html">
+  <div class="rel-card-img">
+    <img loading="lazy" src="https://source.unsplash.com/320x120/?torrevieja,spain,city" alt="Torrevieja" onerror="this.style.display='none'">
+    <div class="rel-card-img-ov"></div>
+    <span class="rel-roi-badge rel-rm">6.1%</span>
+    <span class="rel-city-name">Torrevieja</span>
+  </div>
+  <div class="rel-card-body">
+    <div class="rel-motivo"><span class="rel-motivo-icon">📍</span>Misma zona</div>
+    <div class="rel-stats">
+      <div><div class="rel-sl">Precio m²</div><div class="rel-sv">1.800€</div></div>
+      <div><div class="rel-sl">Alquiler</div><div class="rel-sv">900€/mes</div></div>
+    </div>
+    <div class="rel-footer">C. Valenciana <span class="rel-arrow">→</span></div>
+  </div>
+</a><a class="rel-card" href="rentabilidad-benidorm.html">
+  <div class="rel-card-img">
+    <img loading="lazy" src="https://source.unsplash.com/320x120/?benidorm,spain,city" alt="Benidorm" onerror="this.style.display='none'">
+    <div class="rel-card-img-ov"></div>
+    <span class="rel-roi-badge rel-rm">5.7%</span>
+    <span class="rel-city-name">Benidorm</span>
+  </div>
+  <div class="rel-card-body">
+    <div class="rel-motivo"><span class="rel-motivo-icon">🏛️</span>Misma comunidad</div>
+    <div class="rel-stats">
+      <div><div class="rel-sl">Precio m²</div><div class="rel-sv">2.200€</div></div>
+      <div><div class="rel-sl">Alquiler</div><div class="rel-sv">1.050€/mes</div></div>
+    </div>
+    <div class="rel-footer">C. Valenciana <span class="rel-arrow">→</span></div>
+  </div>
+</a><a class="rel-card" href="rentabilidad-elche.html">
+  <div class="rel-card-img">
+    <img loading="lazy" src="https://source.unsplash.com/320x120/?elche,spain,city" alt="Elche" onerror="this.style.display='none'">
+    <div class="rel-card-img-ov"></div>
+    <span class="rel-roi-badge rel-rm">5.9%</span>
+    <span class="rel-city-name">Elche</span>
+  </div>
+  <div class="rel-card-body">
+    <div class="rel-motivo"><span class="rel-motivo-icon">🏛️</span>Misma comunidad</div>
+    <div class="rel-stats">
+      <div><div class="rel-sl">Precio m²</div><div class="rel-sv">1.600€</div></div>
+      <div><div class="rel-sl">Alquiler</div><div class="rel-sv">780€/mes</div></div>
+    </div>
+    <div class="rel-footer">C. Valenciana <span class="rel-arrow">→</span></div>
+  </div>
+</a></div>
+  </div>
+
+  <!-- ALERTAS DE DATOS -->
+  <div class="cta" id="alertas" style="background:linear-gradient(135deg,#0e2a6b 0%,#1a3a7a 100%)">
+    <div style="position:relative;z-index:1">
+      <div class="cta-eye">Mantente actualizado</div>
+      <div class="cta-ttl">Recibe alertas cuando<br>cambien los datos de Valencia</div>
+      <p class="cta-desc">Te avisamos cuando el ROI, el precio m² o la demanda de alquiler en Valencia cambien significativamente. Gratis, sin spam.</p>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem">
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:rgba(255,255,255,.7)"><span style="color:#60a5fa">✓</span> Sin coste</div>
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:rgba(255,255,255,.7)"><span style="color:#60a5fa">✓</span> Datos trimestrales</div>
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:rgba(255,255,255,.7)"><span style="color:#60a5fa">✓</span> Cancela cuando quieras</div>
+      </div>
+    </div>
+    <div class="cta-form">
+      <input type="email" class="cta-inp" placeholder="Tu email">
+      <button class="cta-sub" onclick="this.textContent='¡Apuntado! ✓';this.style.background='#dcfce7';this.style.color='#16a34a'">Recibir alertas de Valencia →</button>
+      <p style="font-size:.72rem;color:rgba(255,255,255,.45);text-align:center;margin-top:.25rem">Solo datos del mercado. Nunca publicidad.</p>
+    </div>
   </div>
 
   <div class="disc"><strong>Aviso legal:</strong> Los datos mostrados son estimaciones basadas en precios de oferta de portales inmobiliarios y fuentes públicas (Ministerio de Vivienda, Idealista, Fotocasa). No constituyen asesoramiento financiero ni de inversión. La rentabilidad real varía según inmueble, estado, zona concreta y condiciones del mercado en el momento de la operación.</div>
 </div>
 
 <footer>
-  <a href="/" class="logo"><svg width="24" height="24" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><span style="color:#e0e9ff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div></a>
+  <a href="/" class="logo"><svg width="24" height="24" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div></a>
   <p>© 2026 rendata.es · Datos actualizados trimestralmente</p>
 </footer>
 
@@ -935,6 +1682,10 @@ function calcROI(){
 calcROI();
 
 // ── MORTGAGE CALCULATOR ─────────────────────────────────
+// ── MORTGAGE + AMORTIZATION ────────────────────────────────
+let amortData = []; // stores monthly schedule
+let amortView = 'anual';
+
 function calcHipo(){
   const precio=parseFloat(document.getElementById('hi-precio').value)||0;
   const entradaPct=parseFloat(document.getElementById('hi-entrada').value)||20;
@@ -949,16 +1700,135 @@ function calcHipo(){
   const totalPagado=cuota*n;
   const totalInt=totalPagado-capital;
   const gastos=precio*0.10;
+  const capPct=Math.round((capital/totalPagado)*100);
+
   document.getElementById('hi-cuota').textContent=fmt2(cuota)+'€/mes';
   document.getElementById('hi-capital').textContent=fmt2(capital)+'€';
   document.getElementById('hi-int').textContent=fmt2(totalInt)+'€';
   document.getElementById('hi-total').textContent=fmt2(totalPagado)+'€';
   document.getElementById('hi-entr').textContent=fmt2(entrada)+'€';
   document.getElementById('hi-gast').textContent='~'+fmt2(gastos)+'€';
+
+  // Progress bar
+  document.getElementById('hi-prog').style.width=capPct+'%';
+  document.getElementById('hi-prog-cap').textContent='Capital: '+capPct+'%';
+  document.getElementById('hi-prog-int').textContent='Intereses: '+(100-capPct)+'%';
+
+  // Build amortization schedule
+  amortData = [];
+  let saldo = capital;
+  for(let m=1; m<=n; m++){
+    const intMes = saldo * r;
+    const capMes = cuota - intMes;
+    saldo -= capMes;
+    amortData.push({ mes:m, cuota, capMes, intMes, saldo:Math.max(0,saldo) });
+  }
+
+  // Rebuild table if open
+  if(document.getElementById('amortWrap').style.display !== 'none') buildAmortTable();
 }
+
+function toggleAmort(){
+  const wrap = document.getElementById('amortWrap');
+  const btn  = document.getElementById('amortToggle');
+  const open = wrap.style.display !== 'none';
+  wrap.style.display = open ? 'none' : 'block';
+  btn.classList.toggle('open', !open);
+  btn.childNodes[0].textContent = open ? '📊 Ver tabla de amortización completa' : '📊 Ocultar tabla de amortización';
+  if(!open) buildAmortTable();
+}
+
+function setAmortView(v, btn){
+  amortView = v;
+  document.querySelectorAll('.amort-view-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  buildAmortTable();
+}
+
+function buildAmortTable(){
+  if(!amortData.length) return;
+  const tbody = document.getElementById('amortBody');
+  const info  = document.getElementById('amortInfo');
+  const plazo = parseInt(document.getElementById('hi-plazo').value)||25;
+
+  let rows = '';
+  let totalCap = 0, totalInt = 0;
+
+  if(amortView === 'anual'){
+    // Group by year
+    for(let y=1; y<=plazo; y++){
+      const yearData = amortData.filter(m => m.mes > (y-1)*12 && m.mes <= y*12);
+      if(!yearData.length) break;
+      const capY  = yearData.reduce((s,m)=>s+m.capMes,0);
+      const intY  = yearData.reduce((s,m)=>s+m.intMes,0);
+      const cuotaY= yearData.reduce((s,m)=>s+m.cuota,0);
+      const saldoY= yearData[yearData.length-1].saldo;
+      const capPct= Math.round((capY/cuotaY)*100);
+      totalCap += capY; totalInt += intY;
+      const isLast = y === plazo;
+      rows += `<tr${isLast?' class="year-highlight"':''}>`+
+        `<td>Año ${y}${isLast?' ✓':''}</td>`+
+        `<td>${fmt2(cuotaY)}€</td>`+
+        `<td class="amort-cap">${fmt2(capY)}€</td>`+
+        `<td class="amort-int">${fmt2(intY)}€</td>`+
+        `<td><div class="pct-bar-wrap"><div class="pct-bar-track"><div class="pct-bar-fill" style="width:${capPct}%"></div></div><span style="font-size:.68rem;color:var(--blue);font-weight:600;white-space:nowrap">${capPct}%</span></div></td>`+
+        `<td style="color:${saldoY<1?'var(--green)':'var(--text2)'};font-weight:${saldoY<1?700:400}">${saldoY<1?'0 ✓':fmt2(saldoY)+'€'}</td>`+
+        `</tr>`;
+    }
+    info.textContent = plazo+' años · '+amortData.length+' cuotas';
+  } else {
+    // Monthly view — show all months
+    amortData.forEach(m=>{
+      const capPct = Math.round((m.capMes/m.cuota)*100);
+      totalCap += m.capMes; totalInt += m.intMes;
+      const isLast = m.mes === amortData.length;
+      rows += `<tr${isLast?' class="year-highlight"':''}>`+
+        `<td>Mes ${m.mes}</td>`+
+        `<td>${fmt2(m.cuota)}€</td>`+
+        `<td class="amort-cap">${fmt2(m.capMes)}€</td>`+
+        `<td class="amort-int">${fmt2(m.intMes)}€</td>`+
+        `<td><div class="pct-bar-wrap"><div class="pct-bar-track"><div class="pct-bar-fill" style="width:${capPct}%"></div></div><span style="font-size:.68rem;color:var(--blue);font-weight:600;white-space:nowrap">${capPct}%</span></div></td>`+
+        `<td style="color:${m.saldo<1?'var(--green)':'var(--text2)'};font-weight:${m.saldo<1?700:400}">${m.saldo<1?'0 ✓':fmt2(m.saldo)+'€'}</td>`+
+        `</tr>`;
+    });
+    info.textContent = amortData.length+' cuotas mensuales';
+  }
+  tbody.innerHTML = rows;
+
+  // Summary bars
+  const total = totalCap + totalInt;
+  document.getElementById('amortSummary').innerHTML = `
+    <div class="amort-sum-title">Distribución total del pago</div>
+    <div class="amort-sum-bars">
+      <div class="asb-row">
+        <span class="asb-label">Capital</span>
+        <div class="asb-track"><div class="asb-fill" style="width:${Math.round(totalCap/total*100)}%;background:var(--blue)"></div></div>
+        <span class="asb-val" style="color:var(--blue)">${fmt2(totalCap)}€</span>
+      </div>
+      <div class="asb-row">
+        <span class="asb-label">Intereses</span>
+        <div class="asb-track"><div class="asb-fill" style="width:${Math.round(totalInt/total*100)}%;background:var(--red)"></div></div>
+        <span class="asb-val" style="color:var(--red)">${fmt2(totalInt)}€</span>
+      </div>
+      <div class="asb-row" style="border-top:1px solid var(--border);padding-top:.4rem;margin-top:.2rem">
+        <span class="asb-label" style="font-weight:700;color:var(--text)">Total</span>
+        <div class="asb-track"><div class="asb-fill" style="width:100%;background:var(--text2)"></div></div>
+        <span class="asb-val" style="color:var(--text)">${fmt2(total)}€</span>
+      </div>
+    </div>`;
+}
+
 calcHipo();
 
-// ── FAQ ─────────────────────────────────────────────────
+// ── COLLAPSIBLES ──────────────────────────────────────
+function toggleColl(id, btn){
+  const body = document.getElementById(id);
+  const arrow = btn.querySelector('.coll-arrow');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+</script>
 function toggleFaq(i){
   const body=document.getElementById('fa-body-'+i);
   const arrow=document.getElementById('fa-'+i);

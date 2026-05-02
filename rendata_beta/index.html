@@ -474,7 +474,6 @@ footer p{font-size:.78rem;color:var(--muted)}
 </footer>
 
 <script>
-const IMG_SET=new Set(["a-coruna","alicante","barcelona","benidorm","bilbao","cordoba","granada","ibiza","madrid","malaga","marbella","murcia","palma","pamplona","san-sebastian","sevilla","torrevieja","valencia","vitoria","zaragoza"]);
 const DATA=[
   {n:"Lleida",cc:"Cataluña",reg:"centro",roi:7.5,p:1300,alq:650,vp:7.5,va:6.8,d:27,sl:"lleida"},
   {n:"Murcia",cc:"R. de Murcia",reg:"levante",roi:7.4,p:1750,alq:860,vp:9,va:8.1,d:27,sl:"murcia"},
@@ -628,7 +627,10 @@ function render(){
   document.getElementById('grid').innerHTML=d.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
       <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
-        ${IMG_SET.has(c.sl)?`<img loading="lazy" src="img/${c.sl}.jpg" alt="${c.n}" onerror="this.style.display='none'">`:''}
+        <img loading="lazy"
+          style="display:none"
+          alt="${c.n}"
+          onerror="this.style.display='none'">
         <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
         <span class="c-city-label">${c.n}</span>
       </div>
@@ -783,7 +785,7 @@ function selectRegion(id) {
   document.getElementById('grid').innerHTML=d.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
       <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
-        ${IMG_SET.has(c.sl)?`<img loading="lazy" src="img/${c.sl}.jpg" alt="${c.n}" onerror="this.style.display='none'">`:''}
+        <img loading="lazy" style="display:none" alt="${c.n}" onerror="this.style.display='none'">
         <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
         <span class="c-city-label">${c.n}</span>
       </div>
