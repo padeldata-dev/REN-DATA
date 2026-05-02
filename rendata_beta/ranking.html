@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="Ranking de rentabilidad inmobiliaria en España 2026. Las 50 ciudades ordenadas por ROI, precio m² y alquiler medio.">
-<title>Ranking Rentabilidad Inmobiliaria España 2026 | Ren Data</title>
+<title>Ranking Rentabilidad Inmobiliaria España 2026 | InvierteZona</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#0e2a6b;--blue-l:#f0f6ff;--text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;--sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);--font:'Plus Jakarta Sans',sans-serif;--r:12px}
+:root{--bg:#f8fafc;--white:#fff;--blue:#1a56db;--blue-d:#1140a6;--blue-l:#eff6ff;--text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;--sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);--font:'Plus Jakarta Sans',sans-serif;--r:12px}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
-header{background:#0e2a6b;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+header{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
 header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue) 0%,#60a5fa 50%,var(--blue) 100%);background-size:200% 100%;animation:sh 4s linear infinite}
 @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
 .logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
@@ -58,14 +58,14 @@ footer p{font-size:.76rem;color:var(--muted)}
 <body>
 <header>
   <a href="/" class="logo">
-    <svg width="28" height="28" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#2563eb"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-    <div class="logo-wm"><span style="color:#e0e9ff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div>
+    <svg width="28" height="28" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <div class="logo-wm"><em>Invierte</em>Zona</div>
   </a>
   <nav style="display:flex;gap:.2rem">
     <a href="/">Ciudades</a>
     <a href="comparador.html">Comparador</a>
     <a href="ranking.html" style="color:var(--blue);font-weight:600">Ranking</a>
-    <a href="guia-inversor.html">Guía</a>
+    <a href="#" class="nav-cta">Alertas</a>
   </nav>
 </header>
 
@@ -103,8 +103,8 @@ footer p{font-size:.76rem;color:var(--muted)}
 </div>
 
 <footer>
-  <a href="/" class="logo"><svg width="22" height="22" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#2563eb"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><span style="color:#e0e9ff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
-  <p>© 2026 Ren Data.es · Fuente: Idealista Q1 2026</p>
+  <a href="/" class="logo"><svg width="22" height="22" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><em>Invierte</em>Zona</div></a>
+  <p>© 2026 InvierteZona.es · Fuente: Idealista Q1 2026</p>
 </footer>
 
 <script>
