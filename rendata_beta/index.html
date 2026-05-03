@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 150 ciudades.">
+<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 75 ciudades.">
 <title>Ren Data — Rentabilidad inmobiliaria por ciudad en España</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -245,7 +245,7 @@ footer p{font-size:.78rem;color:var(--muted)}
 <body>
 
 <header>
-  <a href="/" class="logo"><div class="logo-wm"><span style="color:#e0e9ff;font-weight:800;font-size:1.15rem;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;font-size:1.15rem;letter-spacing:-.03em"> Data</span></div></a>
+  <a href="/" class="logo"><div class="logo-wm"><span style="color:#fff;font-weight:800;font-size:1.15rem;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;font-size:1.15rem;letter-spacing:-.03em"> Data</span></div></a>
   <nav>
     <a href="/">Ciudades</a>
     <a href="ranking.html">Ranking</a>
@@ -280,9 +280,9 @@ footer p{font-size:.78rem;color:var(--muted)}
   <div class="hero-inner">
     <div class="hero-badge"><span class="live-dot"></span>Datos actualizados · Abril 2026</div>
     <h1>¿Dónde invertir en <span class="ul">vivienda</span> en <span class="ac">España?</span></h1>
-    <p class="hero-desc">Análisis de rentabilidad, precio del m² y datos de mercado para más de 150 ciudades. Todo lo que necesitas para invertir con cabeza.</p>
+    <p class="hero-desc">Análisis de rentabilidad, precio del m² y datos de mercado para más de 75 ciudades. Todo lo que necesitas para invertir con cabeza.</p>
     <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">150</span></div><div class="hero-kpi-l">Ciudades</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">75</span></div><div class="hero-kpi-l">Ciudades</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">6,7</span>%</div><div class="hero-kpi-l">ROI medio España</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">7,5</span>%</div><div class="hero-kpi-l">Mejor ROI</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v">↑<span class="c">11</span>%</div><div class="hero-kpi-l">Subida media m²</div></div>
@@ -290,7 +290,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="search-wrap">
       <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
-      <span class="s-hint">150 ciudades</span>
+      <span class="s-hint">75 ciudades</span>
     </div>
   </div>
 </section>
@@ -358,7 +358,7 @@ footer p{font-size:.78rem;color:var(--muted)}
 
         <!-- Aragón -->
         <path id="reg-Aragon" data-ccaa="Aragón" data-name="Aragón"
-          d="M445,44 L565,62 L572,265 L472,280 L442,270 L392,245 L412,160 L392,142 L445,132 Z"/>
+          d="M445,44 L565,62 L572,265 L472,280 L442,270 L412,160 L392,142 L445,132 Z"/>
 
         <!-- Cataluña -->
         <path id="reg-Cataluna" data-ccaa="Cataluña" data-name="Cataluña"
@@ -368,21 +368,21 @@ footer p{font-size:.78rem;color:var(--muted)}
         <path id="reg-CastillaLeon" data-ccaa="Castilla y León" data-name="Castilla y León"
           d="M48,150 L75,195 L155,185 L168,100 L248,115 L272,82 L328,72 L326,118 L350,152 L392,142 L412,160 L392,245 L360,258 L272,264 L238,272 L158,272 L95,282 Z"/>
 
-        <!-- Madrid — incluye punto 472,280 para cerrar triángulo con Aragón y CLaMancha -->
+        <!-- Madrid -->
         <path id="reg-Madrid" data-ccaa="C. de Madrid" data-name="C. de Madrid"
-          d="M272,264 L360,258 L392,245 L442,270 L472,280 L442,315 L375,315 L282,325 L238,315 L238,272 Z"/>
+          d="M272,264 L360,258 L375,315 L282,325 L238,315 L238,272 Z"/>
 
         <!-- Castilla-La Mancha -->
         <path id="reg-CLaMancha" data-ccaa="Castilla-La Mancha" data-name="Castilla-La Mancha"
-          d="M238,315 L282,325 L375,315 L442,315 L472,280 L532,362 L492,412 L432,422 L354,435 L258,422 L248,382 Z"/>
+          d="M238,315 L282,325 L375,315 L398,352 L425,362 L472,342 L532,362 L492,412 L432,422 L354,435 L258,422 L248,382 Z"/>
 
         <!-- Extremadura -->
         <path id="reg-Extremadura" data-ccaa="Extremadura" data-name="Extremadura"
           d="M95,282 L158,272 L238,272 L238,315 L248,382 L258,422 L218,448 L128,455 L88,392 Z"/>
 
-        <!-- Andalucía — extendida al suroeste para cerrar hueco con Extremadura -->
+        <!-- Andalucía -->
         <path id="reg-Andalucia" data-ccaa="Andalucía" data-name="Andalucía"
-          d="M88,392 L128,455 L218,448 L258,422 L354,435 L432,422 L492,412 L512,470 L492,502 L372,540 L198,540 L88,520 Z"/>
+          d="M88,392 L128,455 L218,448 L258,422 L354,435 L432,422 L492,412 L512,470 L492,502 L372,540 L198,540 L96,494 Z"/>
 
         <!-- Murcia -->
         <path id="reg-Murcia" data-ccaa="R. de Murcia" data-name="R. de Murcia"
@@ -476,7 +476,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="s-eyebrow">¿Cómo funciona?</div>
     <h2 class="s-title">La herramienta del inversor inteligente</h2>
     <div class="how-grid">
-      <div class="how-step"><div class="how-num">1</div><h3>Elige tu ciudad</h3><p>Explora más de 150 ciudades con datos reales de precio, alquiler y rentabilidad actualizados cada trimestre.</p></div>
+      <div class="how-step"><div class="how-num">1</div><h3>Elige tu ciudad</h3><p>Explora más de 75 ciudades con datos reales de precio, alquiler y rentabilidad actualizados cada trimestre.</p></div>
       <div class="how-step"><div class="how-num">2</div><h3>Analiza por barrios</h3><p>Cada ciudad incluye análisis detallado por zonas: qué barrio da mejor ROI, distancia al centro y a la playa.</p></div>
       <div class="how-step"><div class="how-num">3</div><h3>Compara y decide</h3><p>Evolución histórica de precios, indicadores clave de mercado y desglose por tipo de inmueble en una sola página.</p></div>
       <div class="how-step"><div class="how-num">4</div><h3>Conecta con expertos</h3><p>¿Ya sabes dónde? Te conectamos con profesionales locales especializados en inversión, sin ningún compromiso.</p></div>
