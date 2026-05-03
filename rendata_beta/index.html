@@ -567,6 +567,7 @@ const gradMap = {
   default:   'linear-gradient(135deg,#5a7abf 0%,#7a9add 50%,#6a8acf 100%)',
 };
 
+const IMG_SET = new Set(['madrid','barcelona','malaga','valencia','sevilla','bilbao','zaragoza','granada','marbella','palma','alicante','murcia','cordoba','san-sebastian','pamplona','torrevieja','benidorm','ibiza','vitoria','a-coruna']);
 let cf='all',cs='roi';
 const rc=r=>r>=6.5?'rh':r>=5.0?'rm':'rl';
 const fmt=n=>n>=1000?n.toLocaleString('es'):n;
@@ -604,10 +605,7 @@ function render(){
   document.getElementById('grid').innerHTML=d.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
       <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
-        <img loading="lazy"
-          style="display:none"
-          alt="${c.n}"
-          onerror="this.style.display='none'">
+        ${IMG_SET.has(c.sl)?`<img loading="lazy" src="img/${c.sl}.jpg" alt="${c.n}" style="width:100%;height:100%;object-fit:cover;display:block">`:''}
         <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
         <span class="c-city-label">${c.n}</span>
       </div>
@@ -762,7 +760,7 @@ function selectRegion(id) {
   document.getElementById('grid').innerHTML=d.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
       <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
-        <img loading="lazy" style="display:none" alt="${c.n}" onerror="this.style.display='none'">
+        ${IMG_SET.has(c.sl)?`<img loading="lazy" src="img/${c.sl}.jpg" alt="${c.n}" style="width:100%;height:100%;object-fit:cover;display:block">`:''}
         <span class="c-roi-badge ${rc(c.roi)}">${c.roi.toFixed(1)}%</span>
         <span class="c-city-label">${c.n}</span>
       </div>
