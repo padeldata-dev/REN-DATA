@@ -7,13 +7,30 @@
 <title>Invertir en Cádiz 2026 — Rentabilidad 4,7% · Precio m² 2.200€ | Ren Data</title>
 <link rel="canonical" href="https://rendata.es/rentabilidad-cadiz">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">{
+<script type="application/ld+json">[{
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "name":"Invertir en Cádiz - Rentabilidad y Precio m² 2026",
   "description":"Análisis de rentabilidad inmobiliaria en Cádiz. Precio m² 2.200€, alquiler medio 1.000€/mes, ROI estimado 4,7%.",
   "mainEntity":[{"@type":"Question","name":'¿Cuál es la rentabilidad del alquiler en Cádiz en 2026?',"acceptedAnswer":{"@type":"Answer","text":'La rentabilidad bruta estimada del alquiler en Cádiz en 2026 se sitúa en el 4.7%, según datos de Idealista Q1 2026. La zona más rentable es La Laguna, con un ROI estimado del 5.8%. Para referencia, la media nacional se encuentra en el 6,5%.'}},{"@type":"Question","name":'¿Cuánto cuesta comprar un piso en Cádiz?',"acceptedAnswer":{"@type":"Answer","text":'El precio medio del metro cuadrado en Cádiz es de 2.200€/m² (Q1 2026). Un piso de 70 m² costaría aproximadamente 154.000€. En los últimos 12 meses el precio ha subido un 9,0%, una de las subidas más significativas del mercado inmobiliario español.'}},{"@type":"Question","name":'¿Cuánto se puede ganar alquilando un piso en Cádiz?',"acceptedAnswer":{"@type":"Answer","text":'El alquiler medio en Cádiz es de 1.000€/mes para un piso estándar. Un piso de una habitación puede alcanzar los 720€/mes, mientras que uno de tres habitaciones puede superar los 1.300€/mes. Los alquileres en Cádiz han subido un 8,1% en el último año.'}},{"@type":"Question","name":'¿En qué barrio de Cádiz es más rentable invertir?',"acceptedAnswer":{"@type":"Answer","text":'El barrio con mayor rentabilidad estimada en Cádiz es La Laguna, con un ROI del 5.8%. En general, los barrios periféricos o de clase media ofrecen mejores rentabilidades que el centro, ya que el precio de compra es más asequible pero la demanda de alquiler es igualmente alta.'}}]
-}</script>
+},{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://rendata.es/"},
+    {"@type":"ListItem","position":2,"name":"Andalucía","item":"https://rendata.es/ccaa-andalucia.html"},
+    {"@type":"ListItem","position":3,"name":"Rentabilidad Cádiz","item":"https://rendata.es/rentabilidad-cadiz.html"}
+  ]
+},{
+  "@context":"https://schema.org",
+  "@type":"Dataset",
+  "name":"Mercado inmobiliario Cádiz 2026",
+  "description":"Datos de precio m², rentabilidad por alquiler y evolución del mercado inmobiliario en Cádiz, Andalucía.",
+  "keywords":["rentabilidad inmobiliaria Cádiz","precio vivienda Cádiz","invertir Cádiz","alquiler Cádiz"],
+  "temporalCoverage":"2026",
+  "spatialCoverage":"Cádiz, Andalucía, España",
+  "publisher":{"@type":"Organization","name":"Ren Data","url":"https://rendata.es"}
+}]</script>
 <style>
 :root{
   --bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#0e2a6b;--blue-l:#f0f6ff;
@@ -36,6 +53,13 @@ header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;ba
 nav{display:flex;align-items:center;gap:.2rem}
 nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
 nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-drop-btn{background:none;border:none;color:rgba(255,255,255,.7);font-family:var(--font);font-size:.82rem;font-weight:500;padding:.42rem .8rem;border-radius:8px;cursor:pointer;transition:all .15s}
+.nav-drop-btn:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#0e2a6b;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.5rem;min-width:220px;z-index:300;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.nav-dropdown:hover .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.nav-drop-menu a{font-size:.78rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.4rem .7rem;border-radius:6px;transition:all .15s;white-space:nowrap}
+.nav-drop-menu a:hover{color:#fff;background:rgba(255,255,255,.12)}
 .nav-cta{background:rgba(255,255,255,.15)!important;color:#fff!important;font-weight:600!important;border:1px solid rgba(255,255,255,.25)!important}
 .nav-cta:hover{background:rgba(255,255,255,.25)!important}
 /* BREADCRUMB */
@@ -513,13 +537,34 @@ footer p{font-size:.76rem;color:var(--muted)}
 <header>
   <a href="/" class="logo">
     <svg width="28" height="28" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 1.9.6 4 1.6 6L24 4.8C22.2 3.4 19.7 2.5 17 2.5z" fill="rgba(255,255,255,.15)"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-    <div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div>
+    <div class="logo-wm"><span style="color:#fff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div>
   </a>
   <nav>
-    <a href="/">Ciudades</a>
-    <a href="calculadora.html">Calculadora</a>
+    <a href="index.html">Ciudades</a>
+    <a href="ranking.html">Ranking</a>
+    <div class="nav-dropdown">
+      <button class="nav-drop-btn">Comunidades ▾</button>
+      <div class="nav-drop-menu">
+        <a href="ccaa-andalucia.html">🌞 Andalucía</a>
+        <a href="ccaa-madrid.html">🏙️ Madrid</a>
+        <a href="ccaa-cataluna.html">🎨 Cataluña</a>
+        <a href="ccaa-comunitat-valenciana.html">🍊 C. Valenciana</a>
+        <a href="ccaa-canarias.html">🌋 Canarias</a>
+        <a href="ccaa-baleares.html">🏖️ Baleares</a>
+        <a href="ccaa-pais-vasco.html">🏭 País Vasco</a>
+        <a href="ccaa-galicia.html">🌧️ Galicia</a>
+        <a href="ccaa-castilla-y-leon.html">🏰 Castilla y León</a>
+        <a href="ccaa-aragon.html">🏔️ Aragón</a>
+        <a href="ccaa-murcia.html">🌶️ Murcia</a>
+        <a href="ccaa-extremadura.html">🐂 Extremadura</a>
+        <a href="ccaa-asturias.html">🌧️ Asturias</a>
+        <a href="ccaa-navarra.html">🐂 Navarra</a>
+        <a href="ccaa-la-rioja.html">🍷 La Rioja</a>
+      </div>
+    </div>
+    <a href="comparador.html">Comparar</a>
     <a href="glosario.html">Glosario</a>
-    <a href="#contacto" class="nav-cta">Hablar con experto</a>
+    <a href="guia-inversor.html">Guía</a>
   </nav>
 </header>
 

@@ -31,6 +31,15 @@ header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;ba
 .logo-wm em{color:var(--blue);font-style:normal}
 
 nav{display:flex;align-items:center;gap:.2rem}
+
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-drop-btn{background:none;border:none;color:rgba(255,255,255,.7);font-family:var(--font);font-size:.82rem;font-weight:500;padding:.42rem .8rem;border-radius:8px;cursor:pointer;transition:all .15s}
+.nav-drop-btn:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nav-drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#0e2a6b;border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.5rem;min-width:220px;z-index:300;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.nav-dropdown:hover .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.nav-drop-menu a{font-size:.78rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.4rem .7rem;border-radius:6px;transition:all .15s;white-space:nowrap}
+.nav-drop-menu a:hover{color:#fff;background:rgba(255,255,255,.12)}
+
 nav a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.45rem .85rem;border-radius:8px;transition:all .15s}
 nav a:hover{color:var(--blue);background:var(--blue-l)}
 .nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600!important;box-shadow:0 1px 4px rgba(26,86,219,.3)!important}
@@ -240,9 +249,30 @@ footer p{font-size:.78rem;color:var(--muted)}
   <nav>
     <a href="/">Ciudades</a>
     <a href="ranking.html">Ranking</a>
+    <div class="nav-dropdown">
+      <button class="nav-drop-btn">Comunidades ▾</button>
+      <div class="nav-drop-menu">
+        <a href="ccaa-andalucia.html">🌞 Andalucía</a>
+        <a href="ccaa-madrid.html">🏙️ Madrid</a>
+        <a href="ccaa-cataluna.html">🎨 Cataluña</a>
+        <a href="ccaa-comunitat-valenciana.html">🍊 C. Valenciana</a>
+        <a href="ccaa-canarias.html">🌋 Canarias</a>
+        <a href="ccaa-baleares.html">🏖️ Baleares</a>
+        <a href="ccaa-pais-vasco.html">🏭 País Vasco</a>
+        <a href="ccaa-galicia.html">🌧️ Galicia</a>
+        <a href="ccaa-castilla-y-leon.html">🏰 Castilla y León</a>
+        <a href="ccaa-aragon.html">🏔️ Aragón</a>
+        <a href="ccaa-murcia.html">🌶️ Murcia</a>
+        <a href="ccaa-castilla-la-mancha.html">⚗️ Castilla-La Mancha</a>
+        <a href="ccaa-extremadura.html">🐂 Extremadura</a>
+        <a href="ccaa-asturias.html">🌧️ Asturias</a>
+        <a href="ccaa-cantabria.html">🌊 Cantabria</a>
+        <a href="ccaa-navarra.html">🐂 Navarra</a>
+        <a href="ccaa-la-rioja.html">🍷 La Rioja</a>
+      </div>
+    </div>
     <a href="comparador.html">Comparar</a>
     <a href="glosario.html">Glosario</a>
-    <a href="#alertas" class="nav-cta">Alertas</a>
   </nav>
 </header>
 
