@@ -936,7 +936,7 @@ footer p{font-size:.76rem;color:var(--muted)}
             <div class="cr-item"><div class="cr-item-l">Total intereses</div><div class="cr-item-v" id="hi-int">—</div></div>
             <div class="cr-item"><div class="cr-item-l">Coste total</div><div class="cr-item-v" id="hi-total">—</div></div>
             <div class="cr-item"><div class="cr-item-l">Entrada necesaria</div><div class="cr-item-v" id="hi-entr">—</div></div>
-            <div class="cr-item"><div class="cr-item-l">Gastos compra (~10%)</div><div class="cr-item-v" id="hi-gast">—</div></div>
+            <div class="cr-item"><div class="cr-item-l">Gastos compra (~9%)</div><div class="cr-item-v" id="hi-gast">—</div></div>
           </div>
           <!-- PROGRESS BAR -->
           <div style="margin-top:.85rem">
@@ -1737,7 +1737,7 @@ function calcHipo(){
   const cuota=r>0?capital*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1):capital/n;
   const totalPagado=cuota*n;
   const totalInt=totalPagado-capital;
-  const gastos=precio*0.10;
+  const gastos=precio*0.09;
   const capPct=Math.round((capital/totalPagado)*100);
 
   document.getElementById('hi-cuota').textContent=fmt2(cuota)+'€/mes';

@@ -555,6 +555,12 @@ footer p{font-size:.76rem;color:var(--muted)}
   .mr-val{font-size:1.3rem}
 }
 
+
+/* Comparar CTA en fichas */
+.cerc-cta{margin-top:1.25rem;text-align:center}
+.cerc-cta-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--blue);color:#fff;font-weight:600;font-size:.88rem;padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;transition:background .15s}
+.cerc-cta-btn:hover{background:var(--blue-d)}
+
 </style>
 </head>
 <body>
@@ -955,6 +961,12 @@ footer p{font-size:.76rem;color:var(--muted)}
   </div>
 </div></div></div>
 
+<div class="cerc-cta">
+  <a href="/comparador.html?a=granada" class="cerc-cta-btn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+    Comparar con otra ciudad
+  </a>
+</div>
   <!-- CALCULADORAS -->
   <div class="section" id="calculadoras">
     <div class="sec-hdr"><div class="sec-eye">Herramientas</div><h2>Calcula tu inversión en Granada</h2><p>Introduce tus datos y obtén estimaciones personalizadas al instante.</p></div>
@@ -1002,7 +1014,7 @@ footer p{font-size:.76rem;color:var(--muted)}
             <div class="cr-item"><div class="cr-item-l">Total intereses</div><div class="cr-item-v" id="hi-int">—</div></div>
             <div class="cr-item"><div class="cr-item-l">Coste total</div><div class="cr-item-v" id="hi-total">—</div></div>
             <div class="cr-item"><div class="cr-item-l">Entrada necesaria</div><div class="cr-item-v" id="hi-entr">—</div></div>
-            <div class="cr-item"><div class="cr-item-l">Gastos compra (~10%)</div><div class="cr-item-v" id="hi-gast">—</div></div>
+            <div class="cr-item"><div class="cr-item-l">Gastos compra (~9%)</div><div class="cr-item-v" id="hi-gast">—</div></div>
           </div>
           <!-- PROGRESS BAR -->
           <div style="margin-top:.85rem">
@@ -1805,7 +1817,7 @@ function calcHipo(){
   const cuota=r>0?capital*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1):capital/n;
   const totalPagado=cuota*n;
   const totalInt=totalPagado-capital;
-  const gastos=precio*0.10;
+  const gastos=precio*0.09;
   const capPct=Math.round((capital/totalPagado)*100);
 
   document.getElementById('hi-cuota').textContent=fmt2(cuota)+'€/mes';

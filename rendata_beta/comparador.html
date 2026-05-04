@@ -72,6 +72,11 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
 footer p{font-size:.76rem;color:var(--muted)}
 @media(max-width:700px){.selectors{grid-template-columns:1fr}.cmp-grid,.cmp-multi,.sum-grid{grid-template-columns:1fr}}
+
+/* Share button */
+.share-btn{background:var(--white);border:1.5px solid var(--border2);color:var(--text2);cursor:pointer;font-family:var(--font);font-size:.85rem;font-weight:600;padding:.6rem 1.1rem;border-radius:8px;transition:all .15s}
+.share-btn:hover{border-color:var(--blue);color:var(--blue)}
+
 </style>
 </head>
 <body>
@@ -98,14 +103,14 @@ footer p{font-size:.76rem;color:var(--muted)}
   <div class="selectors">
     <div class="sel-wrap">
       <div class="sel-label">Ciudad A</div>
-      <select class="city-select" id="selA" onchange="compare()">
+      <select class="city-select" id="selA" onchange="compare();updateURL()">
         <option value="">— Elige ciudad —</option>
       </select>
     </div>
     <div class="vs-badge">VS</div>
     <div class="sel-wrap">
       <div class="sel-label">Ciudad B</div>
-      <select class="city-select" id="selB" onchange="compare()">
+      <select class="city-select" id="selB" onchange="compare();updateURL()">
         <option value="">— Elige ciudad —</option>
       </select>
     </div>
@@ -206,14 +211,31 @@ const fmt=n=>n>=1000?n.toLocaleString('es'):n;
 // Populate selects
 ['selA','selB'].forEach((id,i)=>{
   const sel=document.getElementById(id);
-  DATA.forEach(c=>{
+  // Sort cities alphabetically for easier browsing
+  const sorted=[...DATA].sort((a,b)=>a.n.localeCompare(b.n,'es'));
+  sorted.forEach(c=>{
     const opt=document.createElement('option');
     opt.value=c.sl; opt.textContent=c.n+' — '+c.cc;
     sel.appendChild(opt);
   });
-  // Default selections
   sel.value=i===0?'zaragoza':'madrid';
 });
+
+// DEEPLINK: read ?a=slug&b=slug from URL
+(function(){
+  const p=new URLSearchParams(window.location.search);
+  const a=p.get('a'), b=p.get('b');
+  if(a && DATA.find(c=>c.sl===a)) document.getElementById('selA').value=a;
+  if(b && DATA.find(c=>c.sl===b)) document.getElementById('selB').value=b;
+})();
+
+// Update URL when user changes a city (for bookmarking/sharing)
+function updateURL(){
+  const a=document.getElementById('selA').value;
+  const b=document.getElementById('selB').value;
+  const url=`${window.location.pathname}?a=${a}&b=${b}`;
+  history.replaceState(null,'',url);
+}
 
 function getCity(sl){return DATA.find(c=>c.sl===sl);}
 function liq(d){return d<=16?100:d<=20?80:d<=24?60:d<=28?40:20;}
@@ -263,9 +285,11 @@ function compare(){
     ['Más líquido',mktAw?cA.n:cB.n,`${(mktAw?cA:cB).d} días vs ${(mktAw?cB:cA).d} días`],
   ];
   document.getElementById('sumGrid').innerHTML=cats.map(([cat,winner,detail])=>`<div class="sum-item"><div class="sum-cat">${cat}</div><div class="sum-winner">🏆 ${winner}</div><div class="sum-detail">${detail}</div></div>`).join('');
-  document.getElementById('sumActions').innerHTML=`<a href="rentabilidad-${cA.sl}.html" class="act-btn">Ver análisis ${cA.n} →</a><a href="rentabilidad-${cB.sl}.html" class="act-btn sec">Ver análisis ${cB.n} →</a>`;
+  const shareUrl=`${window.location.origin}/comparador.html?a=${cA.sl}&b=${cB.sl}`;
+  document.getElementById('sumActions').innerHTML=`<a href="rentabilidad-${cA.sl}.html" class="act-btn">Ver análisis ${cA.n} →</a><a href="rentabilidad-${cB.sl}.html" class="act-btn sec">Ver análisis ${cB.n} →</a><button class="act-btn share-btn" onclick="navigator.clipboard.writeText('${shareUrl}').then(()=>{this.textContent='¡Copiado ✓';setTimeout(()=>this.textContent='Copiar enlace',2000)})">Copiar enlace</button>`;
 }
 
 compare();
+updateURL();
 </script>
 </body></html>
