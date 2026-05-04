@@ -289,7 +289,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     </div>
     <div class="search-wrap">
       <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
+      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render();scrollToResults()" autocomplete="off">
       <span class="s-hint">150 ciudades</span>
     </div>
   </div>
@@ -726,6 +726,20 @@ function render(){
       </div>
     </a>`).join('');
 }
+
+// Auto-scroll al grid cuando el usuario empieza a buscar
+let __scrolledOnSearch = false;
+function scrollToResults(){
+  const q = (document.getElementById('searchInput').value||'').trim();
+  if(q && !__scrolledOnSearch){
+    __scrolledOnSearch = true;
+    const target = document.querySelector('.filter-bar') || document.getElementById('grid');
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  } else if(!q){
+    __scrolledOnSearch = false;
+  }
+}
+
 
 render();
 </script>
