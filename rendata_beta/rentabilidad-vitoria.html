@@ -530,6 +530,26 @@ footer p{font-size:.76rem;color:var(--muted)}
   .guia-resumen{grid-template-columns:1fr 1fr}
   .rel-grid{grid-template-columns:1fr 1fr}
 }
+
+/* Mercado residencial block */
+.mr-section{margin:1.5rem 0}
+.mr-sub{color:var(--muted);font-size:.92rem;margin:.25rem 0 1.25rem;line-height:1.5}
+.mr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.95rem;margin-top:.5rem}
+.mr-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.15rem;text-align:center;box-shadow:var(--sh);transition:transform .15s,border-color .15s}
+.mr-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.mr-card.mr-hl{background:linear-gradient(180deg,var(--blue-l) 0%,var(--white) 100%);border-color:var(--blue)}
+.mr-icon{font-size:1.4rem;margin-bottom:.45rem}
+.mr-val{font-size:1.55rem;font-weight:800;color:var(--text);letter-spacing:-.03em;line-height:1}
+.mr-unit{font-size:.85rem;font-weight:600;color:var(--muted);margin-left:.1em}
+.mr-lbl{font-size:.82rem;font-weight:600;color:var(--text);margin-top:.4rem}
+.mr-note{font-size:.7rem;color:var(--muted);margin-top:.3rem;font-style:italic}
+.mr-source{font-size:.78rem;color:var(--muted);margin-top:1.1rem;padding-top:.85rem;border-top:1px solid var(--border);line-height:1.5}
+.mr-source strong{color:var(--text)}
+@media(max-width:640px){
+  .mr-grid{grid-template-columns:repeat(2,1fr)}
+  .mr-val{font-size:1.3rem}
+}
+
 </style>
 </head>
 <body>
@@ -701,6 +721,45 @@ footer p{font-size:.76rem;color:var(--muted)}
       <div class="icard"><div class="iicon">🌍</div><div class="ival">10%</div><div class="ilabel">Compradores extranjeros sobre total operaciones</div><div class="itrend" style="color:var(--blue)">→ Demanda internacional</div></div>
       <div class="icard"><div class="iicon">💡</div><div class="ival">5,6%</div><div class="ilabel">Mejor rentabilidad en Adurza</div><div class="itrend up">↑ Máximo ROI ciudad</div></div>
     </div>
+  </div>
+
+  
+  <!-- MERCADO RESIDENCIAL -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-eye">Mercado residencial</div>
+      <h2>El parque de vivienda en Vitoria</h2>
+      <p class="mr-sub">Densidad, edad media y composición del parque inmobiliario. Datos del INE.</p>
+    </div>
+    <div class="mr-grid">
+      <div class="mr-card">
+        <div class="mr-icon">📍</div>
+        <div class="mr-val">918<span class="mr-unit">/km²</span></div>
+        <div class="mr-lbl">Densidad de población</div>
+        <div class="mr-note">Sobre 276,8 km² · INE</div>
+      </div>
+      <div class="mr-card">
+        <div class="mr-icon">🎂</div>
+        <div class="mr-val">44,1<span class="mr-unit"> años</span></div>
+        <div class="mr-lbl">Edad media</div>
+        <div class="mr-note">Estructura demográfica · INE 2024</div>
+      </div>
+      <div class="mr-card mr-hl">
+        <div class="mr-icon">🏘️</div>
+        <div class="mr-val">21<span class="mr-unit">%</span></div>
+        <div class="mr-lbl">Viviendas en alquiler</div>
+        <div class="mr-note">Sobre el total residencial · Censo 2021</div>
+      </div>
+      <div class="mr-card">
+        <div class="mr-icon">🆕</div>
+        <div class="mr-val">17<span class="mr-unit">%</span></div>
+        <div class="mr-lbl">Vivienda construida tras 2000</div>
+        <div class="mr-note">Modernidad del parque · Censo 2021</div>
+      </div>
+    </div>
+    <p class="mr-source">
+      <strong>Fuentes:</strong> Instituto Nacional de Estadística — Padrón Continuo 2024 y Censo de Población y Viviendas 2021.
+    </p>
   </div>
 
   <!-- TIPOS DE VIVIENDA -->
@@ -1594,7 +1653,7 @@ footer p{font-size:.76rem;color:var(--muted)}
 </div>
 
 <footer>
-  <a href="/" class="logo"><svg width="24" height="24" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><span style="color:#fff;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div></a>
+  <a href="/" class="logo"><svg width="24" height="24" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><span style="color:#0e2a6b;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div></a>
   <p>© 2026 rendata.es · Datos actualizados trimestralmente</p>
 </footer>
 
@@ -1803,6 +1862,7 @@ function toggleColl(id, btn){
   arrow.classList.toggle('open', !isOpen);
 }
 </script>
+<script>
 function toggleFaq(i){
   const body=document.getElementById('fa-body-'+i);
   const arrow=document.getElementById('fa-'+i);
