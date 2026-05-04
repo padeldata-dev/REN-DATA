@@ -68,6 +68,16 @@ h1 .ul{color:#60a5fa}
 .hero-kpi-v .c{color:var(--blue)}
 .hero-kpi-l{font-size:.68rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 
+/* Search section (entre mapa y grid) */
+.search-section{max-width:1200px;margin:2.5rem auto 0;padding:0 1rem}
+.search-section-inner{text-align:center}
+.search-section-title{font-size:1.4rem;font-weight:700;color:var(--text);margin:0 0 1rem;letter-spacing:-.02em}
+.search-section .search-wrap{max-width:540px;margin:0 auto}
+@media(max-width:640px){
+  .search-section{margin-top:1.5rem}
+  .search-section-title{font-size:1.15rem}
+}
+
 /* Search */
 .search-wrap{max-width:480px;margin:0 auto;position:relative}
 .search-box{width:100%;background:var(--white);border:1.5px solid var(--border2);color:var(--text);font-family:var(--font);font-size:.95rem;padding:.9rem 3.5rem .9rem 3rem;border-radius:10px;outline:none;box-shadow:var(--sh-md);transition:border-color .15s,box-shadow .15s}
@@ -287,11 +297,6 @@ footer p{font-size:.78rem;color:var(--muted)}
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">7,5</span>%</div><div class="hero-kpi-l">Mejor ROI</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v">↑<span class="c">11</span>%</div><div class="hero-kpi-l">Subida media m²</div></div>
     </div>
-    <div class="search-wrap">
-      <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render();scrollToResults()" autocomplete="off">
-      <span class="s-hint">150 ciudades</span>
-    </div>
   </div>
 </section>
 
@@ -443,6 +448,18 @@ footer p{font-size:.78rem;color:var(--muted)}
     </div>
   </div>
 </section>
+
+
+<div class="search-section fu d3">
+  <div class="search-section-inner">
+    <h2 class="search-section-title">Encuentra tu ciudad</h2>
+    <div class="search-wrap">
+      <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
+      <span class="s-hint">150 ciudades</span>
+    </div>
+  </div>
+</div>
 
 <div class="filter-bar fu d3">
   <span class="f-label">Filtrar</span>
@@ -726,20 +743,6 @@ function render(){
       </div>
     </a>`).join('');
 }
-
-// Auto-scroll al grid cuando el usuario empieza a buscar
-let __scrolledOnSearch = false;
-function scrollToResults(){
-  const q = (document.getElementById('searchInput').value||'').trim();
-  if(q && !__scrolledOnSearch){
-    __scrolledOnSearch = true;
-    const target = document.querySelector('.filter-bar') || document.getElementById('grid');
-    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-  } else if(!q){
-    __scrolledOnSearch = false;
-  }
-}
-
 
 render();
 </script>
