@@ -1,60 +1,314 @@
-<!DOCTYPE html><html lang="es"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Página no encontrada | Ren Data</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#f8fafc;--white:#fff;--blue:#2563eb;--navy:#0e2a6b;--text:#0f1923;--muted:#6b7a8d;--border:#e5eaf2;--font:'Plus Jakarta Sans',sans-serif}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased}
-header{background:#0e2a6b;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#60a5fa 0%,#fff 50%,#60a5fa 100%);background-size:200% 100%;animation:sh 4s linear infinite}
-@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.logo{text-decoration:none;font-family:var(--font)}
-nav{display:flex;gap:.2rem}
-nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
-nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
-.nav-cta{background:rgba(255,255,255,.15)!important;color:#fff!important;font-weight:600!important;border:1px solid rgba(255,255,255,.25)!important}
-.page-hero{background:var(--white);border-bottom:1px solid var(--border);padding:3rem 2rem 2.5rem}
-.page-hero-inner{max-width:760px;margin:0 auto}
-.page-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
-.page-hero h1{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.04em;margin-bottom:.5rem}
-.page-hero p{font-size:.9rem;color:var(--muted)}
-.content{max-width:760px;margin:2.5rem auto 5rem;padding:0 2rem}
-h2{font-size:1.15rem;font-weight:700;letter-spacing:-.02em;margin:2rem 0 .65rem;color:var(--text)}
-h3{font-size:.95rem;font-weight:600;margin:1.25rem 0 .4rem}
-p{font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:.9rem}
-ul{font-size:.9rem;color:#374151;line-height:1.75;margin-bottom:.9rem;padding-left:1.4rem}
-ul li{margin-bottom:.3rem}
-a{color:var(--blue);text-decoration:none}
-a:hover{text-decoration:underline}
-.highlight-box{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:1rem 1.25rem;margin:1.25rem 0;font-size:.875rem;color:#1e3a8a;line-height:1.65}
-footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;max-width:1100px;margin:0 auto}
-footer p{font-size:.76rem;color:var(--muted)}
-.f-links{display:flex;gap:1.5rem}
-.f-links a{font-size:.76rem;color:var(--muted);text-decoration:none}
-.f-links a:hover{color:var(--blue)}
-</style>
-</head><body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página no encontrada | Ren Data</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#1d4ed8;--blue-l:#eff6ff;--text:#0f1923;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--border2:#cbd5e1;--r:12px;--sh:0 1px 3px rgba(14,24,40,.07);--font:'Plus Jakarta Sans',sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased}
+    /* Header */
+    header{background:#0e2a6b;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+    .logo-wm{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--text);line-height:1;white-space:nowrap}
+    nav{display:flex;align-items:center;gap:.25rem}
+    nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.85rem;font-weight:500;padding:.4rem .75rem;border-radius:7px;transition:all .15s}
+    nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+    .mob-menu-btn{display:none}
+    .mob-nav-links{display:none}
+    /* Main */
+    .e404{max-width:700px;margin:5rem auto;padding:0 2rem;text-align:center}
+    .e404-code{font-size:6rem;font-weight:800;color:var(--blue-l);letter-spacing:-.05em;line-height:1}
+    .e404-title{font-size:1.6rem;font-weight:800;color:var(--text);margin:.5rem 0 .75rem;letter-spacing:-.03em}
+    .e404-desc{color:var(--muted);font-size:.95rem;margin-bottom:2.5rem}
+    /* Search */
+    .e404-search{position:relative;max-width:480px;margin:0 auto 2rem}
+    .e404-input{width:100%;background:var(--white);border:2px solid var(--border2);color:var(--text);font-family:var(--font);font-size:.95rem;padding:.9rem 3rem .9rem 1.1rem;border-radius:10px;outline:none;box-shadow:var(--sh);transition:border-color .15s}
+    .e404-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+    .e404-input::placeholder{color:#a0aec0}
+    .e404-ico{position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+    /* Results */
+    .e404-results{text-align:left;margin-bottom:2.5rem;min-height:60px}
+    .e404-result-item{display:flex;align-items:center;justify-content:space-between;padding:.65rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;margin-bottom:.4rem;transition:border-color .15s}
+    .e404-result-item:hover{border-color:var(--blue)}
+    .e404-ri-name{font-weight:600;font-size:.9rem}
+    .e404-ri-cc{font-size:.75rem;color:var(--muted)}
+    .e404-ri-roi{font-weight:700;color:var(--blue);font-size:.85rem}
+    /* Quick links */
+    .e404-links h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.75rem}
+    .e404-btns{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+    .e404-btn{background:var(--white);border:1px solid var(--border);color:var(--text2);font-size:.82rem;font-weight:500;padding:.4rem .9rem;border-radius:20px;text-decoration:none;transition:all .15s}
+    .e404-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .e404-btn.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+    /* Footer */
+    footer{border-top:1px solid var(--border);padding:1.5rem 2rem;margin-top:4rem;text-align:center}
+    footer p{font-size:.78rem;color:var(--muted)}
+    /* Mobile */
+    @media(max-width:600px){
+      header{padding:0 1.25rem}
+      nav a:not(.mob-menu-btn){display:none}
+      .nav-dropdown{display:none}
+      .logo-wm{white-space:nowrap}
+      .mob-menu-btn{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:none;border:1.5px solid rgba(255,255,255,.3);border-radius:8px;cursor:pointer;color:inherit;flex-shrink:0}
+      nav.open .mob-nav-links{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.75rem 1.25rem;gap:0;z-index:999;box-shadow:0 8px 24px rgba(14,24,40,.12)}
+      .mob-nav-links a{display:block;padding:.75rem .5rem;font-size:.95rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
+      .mob-nav-links a:last-child{border-bottom:none}
+      .e404{margin:3rem auto}
+      .e404-code{font-size:4rem}
+    }
+  </style>
+</head>
+<body>
 <header>
-  <a href="index.html" class="logo"><div style="font-size:1.1rem;line-height:1"><span style="color:#fff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
-  <nav><a href="index.html" >Ciudades</a>
-    <a href="ranking.html" >Ranking</a>
-    <a href="comparador.html" >Comparar</a>
-    <a href="glosario.html" >Glosario</a>
-    <a href="index.html#alertas" class="nav-cta">Alertas</a></nav>
+  <a href="/" class="logo"><div class="logo-wm"><span style="color:var(--text);font-weight:800;font-size:1.15rem;letter-spacing:-.03em">Ren</span><span style="color:var(--blue);font-weight:800;font-size:1.15rem;letter-spacing:-.03em"> Data</span></div></a>
+  <nav>
+    <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="mob-nav-links">
+      <a href="/">🏠 Ciudades</a>
+      <a href="ranking.html">📊 Ranking</a>
+      <a href="comparador.html">⚖️ Comparar</a>
+      <a href="glosario.html">📖 Glosario</a>
+      <a href="guia-inversor.html">🎯 Guía inversor</a>
+    </div>
+        <a href="/">Ciudades</a>
+    <a href="ranking.html">Ranking</a>
+    <div class="nav-dropdown">
+      <button class="nav-drop-btn">Comunidades ▾</button>
+      <div class="nav-drop-menu">
+        <a href="ccaa-andalucia.html">🌞 Andalucía</a>
+        <a href="ccaa-madrid.html">🏙️ Madrid</a>
+        <a href="ccaa-cataluna.html">🎨 Cataluña</a>
+        <a href="ccaa-comunitat-valenciana.html">🍊 C. Valenciana</a>
+        <a href="ccaa-canarias.html">🌋 Canarias</a>
+        <a href="ccaa-baleares.html">🏖️ Baleares</a>
+        <a href="ccaa-pais-vasco.html">🏭 País Vasco</a>
+        <a href="ccaa-galicia.html">🌧️ Galicia</a>
+        <a href="ccaa-castilla-y-leon.html">🏰 Castilla y León</a>
+        <a href="ccaa-aragon.html">🏔️ Aragón</a>
+        <a href="ccaa-murcia.html">🌶️ Murcia</a>
+        <a href="ccaa-castilla-la-mancha.html">⚗️ Castilla-La Mancha</a>
+        <a href="ccaa-extremadura.html">🐂 Extremadura</a>
+        <a href="ccaa-asturias.html">🌧️ Asturias</a>
+        <a href="ccaa-cantabria.html">🌊 Cantabria</a>
+        <a href="ccaa-navarra.html">🐂 Navarra</a>
+        <a href="ccaa-la-rioja.html">🍷 La Rioja</a>
+      </div>
+    </div>
+    <a href="comparador.html">Comparar</a>
+    <a href="glosario.html">Glosario</a>
+  </nav>
 </header>
-<div style="max-width:560px;margin:6rem auto;text-align:center;padding:0 2rem">
-  <div style="font-size:5rem;margin-bottom:1rem">📍</div>
-  <h1 style="font-size:2rem;font-weight:800;letter-spacing:-.04em;margin-bottom:.75rem">Página no encontrada</h1>
-  <p style="color:var(--muted);margin-bottom:2rem">La página que buscas no existe o ha cambiado de dirección. Vuelve al inicio para explorar las ciudades.</p>
-  <a href="index.html" style="background:#0e2a6b;color:#fff;font-weight:700;font-size:.9rem;padding:.82rem 1.75rem;border-radius:8px;text-decoration:none;display:inline-block;transition:background .15s" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#0e2a6b'">Volver al inicio →</a>
-</div>
-<footer>
-  <a href="index.html" class="logo"><div style="font-size:1rem"><span style="color:#0e2a6b;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#2563eb;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
-  <p>© 2026 rendata.es · Datos de fuentes públicas</p>
-  <div class="f-links">
-    <a href="aviso-legal.html">Aviso legal</a>
-    <a href="privacidad.html">Privacidad</a>
-    <a href="contacto.html">Contacto</a>
+
+<main>
+  <div class="e404">
+    <div class="e404-code">404</div>
+    <h1 class="e404-title">Esta página no existe</h1>
+    <p class="e404-desc">La URL que buscas no está disponible. Pero puedes buscar cualquier ciudad española aquí:</p>
+
+    <div class="e404-search">
+      <input class="e404-input" type="text" id="e404Search" placeholder="Busca una ciudad… ej: Málaga, Vigo, Lleida" oninput="searchCities(this.value)" autocomplete="off">
+      <svg class="e404-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </div>
+
+    <div class="e404-results" id="e404Results"></div>
+
+    <div class="e404-links">
+      <h3>O explora directamente</h3>
+      <div class="e404-btns">
+        <a href="/" class="e404-btn pri">🏠 Todas las ciudades</a>
+        <a href="/ranking.html" class="e404-btn">📊 Ranking ROI</a>
+        <a href="/comparador.html" class="e404-btn">⚖️ Comparador</a>
+        <a href="/glosario.html" class="e404-btn">📖 Glosario</a>
+        <a href="/rentabilidad-madrid.html" class="e404-btn">Madrid</a>
+        <a href="/rentabilidad-barcelona.html" class="e404-btn">Barcelona</a>
+        <a href="/rentabilidad-malaga.html" class="e404-btn">Málaga</a>
+        <a href="/rentabilidad-valencia.html" class="e404-btn">Valencia</a>
+      </div>
+    </div>
   </div>
-</footer></body></html>
+</main>
+
+<footer>
+  <p>© 2026 Ren Data · <a href="/aviso-legal.html" style="color:var(--muted)">Aviso legal</a> · <a href="/privacidad.html" style="color:var(--muted)">Privacidad</a></p>
+</footer>
+
+<script>
+const DATA=[
+  {n:"Lleida",cc:"Cataluña",reg:"centro",roi:7.5,p:1300,alq:650,vp:7.5,va:16.1,d:22,sl:"lleida"},
+  {n:"Murcia",cc:"R. de Murcia",reg:"levante",roi:7.4,p:1750,alq:860,vp:9.0,va:13.0,d:20,sl:"murcia"},
+  {n:"Zamora",cc:"Castilla y León",reg:"centro",roi:7.2,p:960,alq:600,vp:7.0,va:7.8,d:28,sl:"zamora"},
+  {n:"Castellón",cc:"C. Valenciana",reg:"levante",roi:7.0,p:1500,alq:750,vp:8.0,va:13.5,d:23,sl:"castellon"},
+  {n:"Huelva",cc:"Andalucía",reg:"andalucia",roi:7.0,p:1400,alq:700,vp:9.0,va:14.4,d:24,sl:"huelva"},
+  {n:"Jaén",cc:"Andalucía",reg:"andalucia",roi:7.0,p:980,alq:580,vp:8.5,va:6.8,d:26,sl:"jaen"},
+  {n:"Cuenca",cc:"Castilla-La Mancha",reg:"centro",roi:6.8,p:900,alq:560,vp:10.0,va:12.9,d:30,sl:"cuenca"},
+  {n:"Mieres",cc:"Asturias",reg:"norte",roi:6.8,p:750,alq:420,vp:2.8,va:4.0,d:34,sl:"mieres"},
+  {n:"Ávila",cc:"Castilla y León",reg:"centro",roi:6.7,p:1120,alq:660,vp:9.0,va:20.0,d:27,sl:"avila"},
+  {n:"Ferrol",cc:"Galicia",reg:"norte",roi:6.7,p:800,alq:440,vp:2.8,va:4.0,d:32,sl:"ferrol"},
+  {n:"Langreo",cc:"Asturias",reg:"norte",roi:6.7,p:800,alq:440,vp:2.8,va:4.0,d:32,sl:"langreo"},
+  {n:"Las Palmas GC",cc:"Canarias",reg:"islas",roi:6.7,p:2100,alq:980,vp:10.0,va:11.0,d:20,sl:"las-palmas-gc"},
+  {n:"Linares",cc:"Andalucía",reg:"andalucia",roi:6.7,p:780,alq:430,vp:3.5,va:5.0,d:32,sl:"linares"},
+  {n:"Almería",cc:"Andalucía",reg:"andalucia",roi:6.6,p:1380,alq:760,vp:9.5,va:14.0,d:25,sl:"almeria"},
+  {n:"Don Benito",cc:"Extremadura",reg:"centro",roi:6.6,p:880,alq:480,vp:3.5,va:5.0,d:32,sl:"don-benito"},
+  {n:"Lugo",cc:"Galicia",reg:"norte",roi:6.6,p:980,alq:570,vp:7.0,va:8.1,d:30,sl:"lugo"},
+  {n:"Ponferrada",cc:"Castilla y León",reg:"centro",roi:6.6,p:900,alq:490,vp:4.2,va:6.0,d:28,sl:"ponferrada"},
+  {n:"Talavera de la Reina",cc:"Castilla-La Mancha",reg:"centro",roi:6.6,p:880,alq:480,vp:4.2,va:6.0,d:30,sl:"talavera-de-la-reina"},
+  {n:"Aranda de Duero",cc:"Castilla y León",reg:"centro",roi:6.5,p:950,alq:510,vp:4.2,va:6.0,d:30,sl:"aranda-de-duero"},
+  {n:"Badajoz",cc:"Extremadura",reg:"centro",roi:6.5,p:920,alq:530,vp:8.0,va:7.4,d:29,sl:"badajoz"},
+  {n:"Calahorra",cc:"La Rioja",reg:"centro",roi:6.5,p:1000,alq:540,vp:4.2,va:6.0,d:28,sl:"calahorra"},
+  {n:"Ciudad Real",cc:"Castilla-La Mancha",reg:"centro",roi:6.5,p:900,alq:540,vp:10.5,va:14.4,d:28,sl:"ciudad-real"},
+  {n:"Lorca",cc:"R. de Murcia",reg:"levante",roi:6.5,p:900,alq:490,vp:4.9,va:7.0,d:30,sl:"lorca"},
+  {n:"Medina del Campo",cc:"Castilla y León",reg:"centro",roi:6.5,p:950,alq:510,vp:3.5,va:5.0,d:32,sl:"medina-del-campo"},
+  {n:"Plasencia",cc:"Extremadura",reg:"centro",roi:6.5,p:950,alq:510,vp:4.2,va:6.0,d:30,sl:"plasencia"},
+  {n:"Soria",cc:"Castilla y León",reg:"centro",roi:6.5,p:840,alq:500,vp:11.0,va:15.0,d:29,sl:"soria"},
+  {n:"Teruel",cc:"Aragón",reg:"centro",roi:6.5,p:820,alq:490,vp:9.0,va:9.0,d:30,sl:"teruel"},
+  {n:"Elda",cc:"C. Valenciana",reg:"levante",roi:6.4,p:1100,alq:580,vp:5.6,va:8.0,d:26,sl:"elda"},
+  {n:"Mérida",cc:"Extremadura",reg:"centro",roi:6.4,p:1050,alq:560,vp:4.9,va:7.0,d:28,sl:"merida"},
+  {n:"Miranda de Ebro",cc:"Castilla y León",reg:"centro",roi:6.4,p:1000,alq:530,vp:4.2,va:6.0,d:28,sl:"miranda-de-ebro"},
+  {n:"Ourense",cc:"Galicia",reg:"norte",roi:6.4,p:1080,alq:610,vp:8.0,va:8.1,d:29,sl:"ourense"},
+  {n:"Tordesillas",cc:"Castilla y León",reg:"centro",roi:6.4,p:1000,alq:530,vp:4.2,va:6.0,d:30,sl:"tordesillas"},
+  {n:"Torre-Pacheco",cc:"R. de Murcia",reg:"levante",roi:6.4,p:1200,alq:630,vp:6.3,va:9.0,d:25,sl:"torre-pacheco"},
+  {n:"Cáceres",cc:"Extremadura",reg:"centro",roi:6.3,p:960,alq:560,vp:8.5,va:7.5,d:28,sl:"caceres"},
+  {n:"Orense",cc:"Galicia",reg:"norte",roi:6.3,p:1100,alq:580,vp:4.9,va:7.0,d:26,sl:"orense"},
+  {n:"Águilas",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1400,alq:720,vp:7.0,va:10.0,d:24,sl:"aguilas"},
+  {n:"Albacete",cc:"Castilla-La Mancha",reg:"centro",roi:6.2,p:1200,alq:680,vp:8.5,va:13.6,d:26,sl:"albacete"},
+  {n:"Algeciras",cc:"Andalucía",reg:"andalucia",roi:6.2,p:1200,alq:620,vp:5.6,va:8.0,d:26,sl:"algeciras"},
+  {n:"Avilés",cc:"Asturias",reg:"norte",roi:6.2,p:1200,alq:620,vp:4.2,va:6.0,d:28,sl:"aviles"},
+  {n:"Cartagena",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1400,alq:720,vp:7.0,va:10.0,d:22,sl:"cartagena"},
+  {n:"Mazarrón",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1600,alq:830,vp:7.7,va:11.0,d:22,sl:"mazarron"},
+  {n:"Motril",cc:"Andalucía",reg:"andalucia",roi:6.2,p:1400,alq:720,vp:6.3,va:9.0,d:24,sl:"motril"},
+  {n:"Antequera",cc:"Andalucía",reg:"andalucia",roi:6.1,p:1100,alq:560,vp:4.9,va:7.0,d:28,sl:"antequera"},
+  {n:"Orihuela",cc:"C. Valenciana",reg:"levante",roi:6.1,p:1400,alq:700,vp:6.3,va:9.0,d:24,sl:"orihuela"},
+  {n:"Sagunto",cc:"C. Valenciana",reg:"levante",roi:6.1,p:1400,alq:700,vp:6.3,va:9.0,d:25,sl:"sagunto"},
+  {n:"Santa Cruz de Tenerife",cc:"Canarias",reg:"islas",roi:6.1,p:2000,alq:930,vp:6.3,va:9.0,d:22,sl:"santa-cruz-de-tenerife"},
+  {n:"Torrevieja",cc:"C. Valenciana",reg:"levante",roi:6.1,p:1800,alq:900,vp:8.4,va:12.0,d:20,sl:"torrevieja"},
+  {n:"Alcoy",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1400,alq:700,vp:5.6,va:8.0,d:26,sl:"alcoy"},
+  {n:"Alzira",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1350,alq:670,vp:5.6,va:8.0,d:26,sl:"alzira"},
+  {n:"Castellón de la Plana",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1400,alq:700,vp:6.3,va:9.0,d:24,sl:"castellon-de-la-plana"},
+  {n:"Huesca",cc:"Aragón",reg:"centro",roi:6.0,p:1350,alq:740,vp:8.0,va:9.0,d:27,sl:"huesca"},
+  {n:"Palencia",cc:"Castilla y León",reg:"centro",roi:6.0,p:1020,alq:580,vp:7.5,va:13.2,d:28,sl:"palencia"},
+  {n:"Terrassa",cc:"Cataluña",reg:"norte",roi:6.0,p:1750,alq:875,vp:5.6,va:8.0,d:23,sl:"terrassa"},
+  {n:"Toledo",cc:"Castilla-La Mancha",reg:"centro",roi:6.0,p:1600,alq:860,vp:9.0,va:12.9,d:24,sl:"toledo"},
+  {n:"Torrelavega",cc:"Cantabria",reg:"norte",roi:6.0,p:1400,alq:700,vp:4.9,va:7.0,d:26,sl:"torrelavega"},
+  {n:"Tudela",cc:"Navarra",reg:"norte",roi:6.0,p:1400,alq:700,vp:4.9,va:7.0,d:26,sl:"tudela"},
+  {n:"Vélez-Málaga",cc:"Andalucía",reg:"andalucia",roi:6.0,p:1600,alq:800,vp:7.0,va:10.0,d:22,sl:"velez-malaga"},
+  {n:"Zaragoza",cc:"Aragón",reg:"centro",roi:6.0,p:1950,alq:980,vp:8.0,va:12.0,d:24,sl:"zaragoza"},
+  {n:"Alcalá de Guadaíra",cc:"Andalucía",reg:"andalucia",roi:5.9,p:1400,alq:680,vp:5.6,va:8.0,d:26,sl:"alcala-de-guadaira"},
+  {n:"Elche",cc:"C. Valenciana",reg:"levante",roi:5.9,p:1600,alq:780,vp:6.3,va:9.0,d:22,sl:"elche"},
+  {n:"Logroño",cc:"La Rioja",reg:"norte",roi:5.9,p:1560,alq:780,vp:8.0,va:11.5,d:23,sl:"logrono"},
+  {n:"Oliva",cc:"C. Valenciana",reg:"levante",roi:5.9,p:1700,alq:830,vp:7.0,va:10.0,d:22,sl:"oliva"},
+  {n:"Sabadell",cc:"Cataluña",reg:"norte",roi:5.9,p:1800,alq:900,vp:5.6,va:8.0,d:22,sl:"sabadell"},
+  {n:"Telde",cc:"Canarias",reg:"islas",roi:5.9,p:1600,alq:780,vp:6.3,va:9.0,d:24,sl:"telde"},
+  {n:"Valladolid",cc:"Castilla y León",reg:"centro",roi:5.9,p:1600,alq:800,vp:7.0,va:11.0,d:25,sl:"valladolid"},
+  {n:"Córdoba",cc:"Andalucía",reg:"andalucia",roi:5.8,p:1520,alq:740,vp:8.5,va:12.0,d:26,sl:"cordoba"},
+  {n:"Figueres",cc:"Cataluña",reg:"norte",roi:5.8,p:1500,alq:720,vp:5.6,va:8.0,d:22,sl:"figueres"},
+  {n:"León",cc:"Castilla y León",reg:"centro",roi:5.8,p:1400,alq:770,vp:8.0,va:10.0,d:26,sl:"leon"},
+  {n:"Tarragona",cc:"Cataluña",reg:"centro",roi:5.8,p:1780,alq:890,vp:8.0,va:10.0,d:24,sl:"tarragona"},
+  {n:"Alcalá de Henares",cc:"C. de Madrid",reg:"centro",roi:5.7,p:1950,alq:920,vp:7.0,va:10.0,d:20,sl:"alcala-de-henares"},
+  {n:"Benidorm",cc:"C. Valenciana",reg:"levante",roi:5.7,p:2200,alq:1050,vp:7.7,va:11.0,d:18,sl:"benidorm"},
+  {n:"Dos Hermanas",cc:"Andalucía",reg:"andalucia",roi:5.7,p:1600,alq:760,vp:6.3,va:9.0,d:24,sl:"dos-hermanas"},
+  {n:"Gandía",cc:"C. Valenciana",reg:"levante",roi:5.7,p:1900,alq:890,vp:7.0,va:10.0,d:21,sl:"gandia"},
+  {n:"Getafe",cc:"C. de Madrid",reg:"centro",roi:5.7,p:2400,alq:1100,vp:7.7,va:11.0,d:18,sl:"getafe"},
+  {n:"Gijón",cc:"Asturias",reg:"norte",roi:5.7,p:1680,alq:800,vp:6.5,va:10.0,d:27,sl:"gijon"},
+  {n:"Jerez de la Frontera",cc:"Andalucía",reg:"andalucia",roi:5.7,p:1600,alq:760,vp:6.3,va:9.0,d:25,sl:"jerez-de-la-frontera"},
+  {n:"Parla",cc:"C. de Madrid",reg:"centro",roi:5.7,p:1750,alq:820,vp:7.0,va:10.0,d:23,sl:"parla"},
+  {n:"Reus",cc:"Cataluña",reg:"norte",roi:5.7,p:1600,alq:760,vp:5.6,va:8.0,d:22,sl:"reus"},
+  {n:"Santa Pola",cc:"C. Valenciana",reg:"levante",roi:5.7,p:2000,alq:950,vp:7.0,va:10.0,d:22,sl:"santa-pola"},
+  {n:"Burgos",cc:"Castilla y León",reg:"centro",roi:5.6,p:1720,alq:890,vp:8.0,va:12.0,d:25,sl:"burgos"},
+  {n:"Fuenlabrada",cc:"C. de Madrid",reg:"centro",roi:5.6,p:1900,alq:880,vp:7.0,va:10.0,d:22,sl:"fuenlabrada"},
+  {n:"Fuerteventura (Pjto.Rosario)",cc:"Canarias",reg:"islas",roi:5.6,p:2000,alq:920,vp:7.0,va:10.0,d:22,sl:"fuerteventura-pjto-rosario"},
+  {n:"Manresa",cc:"Cataluña",reg:"norte",roi:5.6,p:1800,alq:840,vp:5.6,va:8.0,d:22,sl:"manresa"},
+  {n:"Badalona",cc:"Cataluña",reg:"norte",roi:5.5,p:2600,alq:1200,vp:6.3,va:9.0,d:20,sl:"badalona"},
+  {n:"Blanes",cc:"Cataluña",reg:"norte",roi:5.5,p:2200,alq:1000,vp:6.3,va:9.0,d:21,sl:"blanes"},
+  {n:"Burjassot",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2100,alq:960,vp:7.0,va:10.0,d:21,sl:"burjassot"},
+  {n:"Granada",cc:"Andalucía",reg:"andalucia",roi:5.5,p:1980,alq:910,vp:9.0,va:12.0,d:21,sl:"granada"},
+  {n:"La Laguna",cc:"Canarias",reg:"islas",roi:5.5,p:2000,alq:920,vp:6.3,va:9.0,d:22,sl:"la-laguna"},
+  {n:"Leganés",cc:"C. de Madrid",reg:"centro",roi:5.5,p:2200,alq:1000,vp:7.0,va:10.0,d:20,sl:"leganes"},
+  {n:"Mataró",cc:"Cataluña",reg:"norte",roi:5.5,p:2200,alq:1000,vp:5.6,va:8.0,d:22,sl:"mataro"},
+  {n:"Móstoles",cc:"C. de Madrid",reg:"centro",roi:5.5,p:2100,alq:960,vp:7.0,va:10.0,d:21,sl:"mostoles"},
+  {n:"Oviedo",cc:"Asturias",reg:"norte",roi:5.5,p:1850,alq:880,vp:7.0,va:8.0,d:26,sl:"oviedo"},
+  {n:"Paterna",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2200,alq:1000,vp:7.0,va:10.0,d:20,sl:"paterna"},
+  {n:"Ronda",cc:"Andalucía",reg:"andalucia",roi:5.5,p:1800,alq:820,vp:6.3,va:9.0,d:24,sl:"ronda"},
+  {n:"Torremolinos",cc:"Andalucía",reg:"andalucia",roi:5.5,p:2400,alq:1050,vp:7.7,va:11.0,d:18,sl:"torremolinos"},
+  {n:"Torrent",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2000,alq:920,vp:7.0,va:10.0,d:20,sl:"torrent"},
+  {n:"Valencia",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2700,alq:1200,vp:12.0,va:10.3,d:16,sl:"valencia"},
+  {n:"Vic",cc:"Cataluña",reg:"norte",roi:5.5,p:2000,alq:920,vp:5.6,va:8.0,d:20,sl:"vic"},
+  {n:"Arganda del Rey",cc:"C. de Madrid",reg:"centro",roi:5.4,p:2000,alq:900,vp:7.7,va:11.0,d:20,sl:"arganda-del-rey"},
+  {n:"Benalmádena",cc:"Andalucía",reg:"andalucia",roi:5.4,p:2200,alq:980,vp:8.4,va:12.0,d:19,sl:"benalmadena"},
+  {n:"Benissa",cc:"C. Valenciana",reg:"levante",roi:5.4,p:2400,alq:1080,vp:7.7,va:11.0,d:22,sl:"benissa"},
+  {n:"Cornellà de Llobregat",cc:"Cataluña",reg:"norte",roi:5.4,p:2800,alq:1250,vp:5.6,va:8.0,d:21,sl:"cornell-de-llobregat"},
+  {n:"Lanzarote (Arrecife)",cc:"Canarias",reg:"islas",roi:5.4,p:2200,alq:980,vp:7.0,va:10.0,d:22,sl:"lanzarote-arrecife"},
+  {n:"Navalcarnero",cc:"C. de Madrid",reg:"centro",roi:5.4,p:2100,alq:940,vp:7.7,va:11.0,d:20,sl:"navalcarnero"},
+  {n:"Puerto de la Cruz",cc:"Canarias",reg:"islas",roi:5.4,p:2400,alq:1050,vp:7.0,va:10.0,d:20,sl:"puerto-de-la-cruz"},
+  {n:"Salamanca",cc:"Castilla y León",reg:"centro",roi:5.4,p:1750,alq:880,vp:7.5,va:9.0,d:25,sl:"salamanca"},
+  {n:"Santiago de Compostela",cc:"Galicia",reg:"norte",roi:5.4,p:2200,alq:980,vp:5.6,va:8.0,d:24,sl:"santiago-de-compostela"},
+  {n:"Alcorcón",cc:"C. de Madrid",reg:"centro",roi:5.3,p:2300,alq:1020,vp:7.0,va:10.0,d:21,sl:"alcorcon"},
+  {n:"Cambrils",cc:"Cataluña",reg:"norte",roi:5.3,p:2400,alq:1050,vp:7.0,va:10.0,d:20,sl:"cambrils"},
+  {n:"Estepona",cc:"Andalucía",reg:"andalucia",roi:5.3,p:2800,alq:1180,vp:9.8,va:14.0,d:16,sl:"estepona"},
+  {n:"Guadalajara",cc:"Castilla-La Mancha",reg:"centro",roi:5.3,p:1750,alq:860,vp:10.0,va:10.0,d:23,sl:"guadalajara"},
+  {n:"Illescas",cc:"C. de Madrid",reg:"centro",roi:5.3,p:2200,alq:980,vp:8.4,va:12.0,d:18,sl:"illescas"},
+  {n:"L'Hospitalet de Llobregat",cc:"Cataluña",reg:"norte",roi:5.3,p:3400,alq:1500,vp:5.6,va:8.0,d:20,sl:"l-hospitalet-de-llobregat"},
+  {n:"Lloret de Mar",cc:"Cataluña",reg:"norte",roi:5.3,p:2400,alq:1050,vp:7.0,va:10.0,d:20,sl:"lloret-de-mar"},
+  {n:"Sevilla",cc:"Andalucía",reg:"andalucia",roi:5.3,p:2450,alq:1080,vp:9.5,va:6.8,d:22,sl:"sevilla"},
+  {n:"Alicante",cc:"C. Valenciana",reg:"levante",roi:5.2,p:2250,alq:990,vp:13.0,va:9.0,d:19,sl:"alicante"},
+  {n:"Arona (Tenerife Sur)",cc:"Canarias",reg:"islas",roi:5.2,p:3200,alq:1380,vp:7.7,va:11.0,d:16,sl:"arona-tenerife-sur"},
+  {n:"Calpe",cc:"C. Valenciana",reg:"levante",roi:5.2,p:2800,alq:1200,vp:8.4,va:12.0,d:21,sl:"calpe"},
+  {n:"Dénia",cc:"C. Valenciana",reg:"levante",roi:5.2,p:2600,alq:1120,vp:7.7,va:11.0,d:20,sl:"denia"},
+  {n:"Fuengirola",cc:"Andalucía",reg:"andalucia",roi:5.2,p:2600,alq:1100,vp:8.4,va:12.0,d:20,sl:"fuengirola"},
+  {n:"Girona",cc:"Cataluña",reg:"centro",roi:5.2,p:2300,alq:1050,vp:8.0,va:8.0,d:22,sl:"girona"},
+  {n:"Irun",cc:"País Vasco",reg:"norte",roi:5.2,p:2600,alq:1120,vp:4.9,va:7.0,d:22,sl:"irun"},
+  {n:"Vigo",cc:"Galicia",reg:"norte",roi:5.2,p:1850,alq:890,vp:8.0,va:8.0,d:25,sl:"vigo"},
+  {n:"Altea",cc:"C. Valenciana",reg:"levante",roi:5.1,p:3200,alq:1350,vp:8.4,va:12.0,d:22,sl:"altea"},
+  {n:"Barakaldo",cc:"País Vasco",reg:"norte",roi:5.1,p:2800,alq:1200,vp:4.9,va:7.0,d:22,sl:"barakaldo"},
+  {n:"Mijas",cc:"Andalucía",reg:"andalucia",roi:5.1,p:2800,alq:1180,vp:9.1,va:13.0,d:21,sl:"mijas"},
+  {n:"Roses",cc:"Cataluña",reg:"norte",roi:5.1,p:2800,alq:1200,vp:7.0,va:10.0,d:20,sl:"roses"},
+  {n:"Salou",cc:"Cataluña",reg:"norte",roi:5.1,p:2600,alq:1100,vp:7.0,va:10.0,d:19,sl:"salou"},
+  {n:"Nerja",cc:"Andalucía",reg:"andalucia",roi:5.0,p:3200,alq:1280,vp:9.8,va:14.0,d:18,sl:"nerja"},
+  {n:"Castelldefels",cc:"Cataluña",reg:"norte",roi:4.9,p:3200,alq:1320,vp:7.0,va:10.0,d:18,sl:"castelldefels"},
+  {n:"Inca",cc:"Islas Baleares",reg:"islas",roi:4.9,p:2800,alq:1160,vp:6.3,va:9.0,d:21,sl:"inca"},
+  {n:"Marbella",cc:"Andalucía",reg:"andalucia",roi:4.9,p:4200,alq:1680,vp:9.1,va:13.0,d:14,sl:"marbella"},
+  {n:"Getxo",cc:"País Vasco",reg:"norte",roi:4.8,p:3500,alq:1400,vp:4.9,va:7.0,d:22,sl:"getxo"},
+  {n:"Málaga",cc:"Andalucía",reg:"andalucia",roi:4.8,p:3180,alq:1340,vp:11.0,va:6.4,d:18,sl:"malaga"},
+  {n:"Manacor",cc:"Islas Baleares",reg:"islas",roi:4.8,p:3200,alq:1280,vp:7.0,va:10.0,d:20,sl:"manacor"},
+  {n:"Vitoria",cc:"País Vasco",reg:"norte",roi:4.8,p:2700,alq:1150,vp:7.0,va:5.0,d:27,sl:"vitoria"},
+  {n:"Bilbao",cc:"País Vasco",reg:"norte",roi:4.7,p:3150,alq:1270,vp:7.5,va:5.4,d:28,sl:"bilbao"},
+  {n:"Cádiz",cc:"Andalucía",reg:"andalucia",roi:4.7,p:2200,alq:1000,vp:9.0,va:9.0,d:23,sl:"cadiz"},
+  {n:"Madrid",cc:"C. de Madrid",reg:"centro",roi:4.7,p:5960,alq:1750,vp:12.0,va:9.4,d:15,sl:"madrid"},
+  {n:"Pamplona",cc:"Navarra",reg:"norte",roi:4.7,p:2950,alq:1170,vp:7.5,va:10.0,d:24,sl:"pamplona"},
+  {n:"Santander",cc:"Cantabria",reg:"norte",roi:4.7,p:2250,alq:940,vp:7.0,va:10.5,d:26,sl:"santander"},
+  {n:"Sitges",cc:"Cataluña",reg:"norte",roi:4.6,p:4800,alq:1850,vp:7.0,va:10.0,d:18,sl:"sitges"},
+  {n:"A Coruña",cc:"Galicia",reg:"norte",roi:4.5,p:2100,alq:880,vp:7.5,va:8.0,d:26,sl:"a-coruna"},
+  {n:"Barcelona",cc:"Cataluña",reg:"norte",roi:4.5,p:4900,alq:1880,vp:4.2,va:6.0,d:18,sl:"barcelona"},
+  {n:"Palma",cc:"Islas Baleares",reg:"islas",roi:4.3,p:4200,alq:1650,vp:9.0,va:7.6,d:22,sl:"palma"},
+  {n:"Mahón (Menorca)",cc:"Islas Baleares",reg:"islas",roi:4.2,p:3800,alq:1500,vp:7.0,va:10.0,d:22,sl:"mahon-menorca"},
+  {n:"Pontevedra",cc:"Galicia",reg:"norte",roi:4.0,p:1700,alq:760,vp:7.5,va:7.5,d:28,sl:"pontevedra"},
+  {n:"Ibiza",cc:"Islas Baleares",reg:"islas",roi:3.9,p:6800,alq:2200,vp:6.3,va:9.0,d:18,sl:"ibiza"},
+  {n:"San Sebastián",cc:"País Vasco",reg:"norte",roi:3.3,p:5200,alq:1880,vp:6.5,va:6.1,d:30,sl:"san-sebastian"}
+];
+
+function searchCities(q){
+  const res = document.getElementById('e404Results');
+  if(!q || q.length < 2){ res.innerHTML=''; return; }
+  const matches = DATA.filter(c=>
+    c.n.toLowerCase().includes(q.toLowerCase()) ||
+    c.cc.toLowerCase().includes(q.toLowerCase())
+  ).slice(0,6);
+  if(!matches.length){
+    res.innerHTML='<p style="color:var(--muted);font-size:.85rem;padding:.5rem 0">No encontrada. <a href="/" style="color:var(--blue)">Ver todas las ciudades</a></p>';
+    return;
+  }
+  res.innerHTML = matches.map(c=>
+    `<a href="/rentabilidad-${c.sl}.html" class="e404-result-item">
+      <div><div class="e404-ri-name">${c.n}</div><div class="e404-ri-cc">${c.cc}</div></div>
+      <div class="e404-ri-roi">${c.roi.toString().replace('.',',')+' % ROI'}</div>
+    </a>`
+  ).join('');
+}
+</script>
+</body>
+</html>
