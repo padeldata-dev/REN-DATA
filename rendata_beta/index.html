@@ -261,6 +261,34 @@ footer p{font-size:.78rem;color:var(--muted)}
   .mob-nav-links a:last-child{border-bottom:none}
 }
 
+
+/* === FILTRO PRESUPUESTO === */
+.budget-section{max-width:1100px;margin:2rem auto 0;padding:0 2rem}
+.budget-inner{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.5rem 2rem;box-shadow:var(--sh)}
+.budget-title{font-size:1.05rem;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem}
+.budget-title svg{color:var(--blue);flex-shrink:0}
+.budget-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.budget-presets{display:flex;gap:.45rem;flex-wrap:wrap}
+.budget-preset{background:var(--bg);border:1.5px solid var(--border);color:var(--text2);font-family:var(--font);font-size:.8rem;font-weight:600;padding:.4rem .9rem;border-radius:20px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.budget-preset:hover{border-color:var(--blue);color:var(--blue)}
+.budget-preset.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.budget-input-wrap{display:flex;align-items:center;gap:.4rem;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:.35rem .8rem;transition:border-color .15s}
+.budget-input-wrap:focus-within{border-color:var(--blue)}
+.budget-input-wrap span{font-size:.85rem;color:var(--muted);font-weight:500}
+.budget-input{background:none;border:none;font-family:var(--font);font-size:.9rem;font-weight:600;color:var(--text);width:90px;outline:none}
+.budget-clear{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.8rem;font-weight:500;padding:.2rem .5rem;border-radius:6px;transition:color .15s;font-family:var(--font)}
+.budget-clear:hover{color:var(--red)}
+.budget-result{font-size:.82rem;color:var(--muted);margin-top:.85rem;min-height:1.2em}
+.budget-result strong{color:var(--text)}
+.budget-result .br-ok{color:var(--green);font-weight:700}
+.budget-result .br-none{color:var(--red)}
+@media(max-width:640px){
+  .budget-inner{padding:1.25rem}
+  .budget-row{gap:.5rem}
+  .budget-presets{gap:.35rem}
+  .budget-preset{font-size:.75rem;padding:.35rem .75rem}
+}
+
 </style>
 <meta property="og:title" content="Ren Data — Rentabilidad inmobiliaria en España">
 <meta property="og:description" content="Análisis de precio m², alquiler y ROI para 150 ciudades españolas. Gratuito y actualizado trimestralmente.">
@@ -490,6 +518,31 @@ footer p{font-size:.78rem;color:var(--muted)}
   </div>
 </div>
 
+
+<div class="budget-section fu d2">
+  <div class="budget-inner">
+    <div class="budget-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      ¿Cuánto tienes para invertir?
+    </div>
+    <div class="budget-row">
+      <div class="budget-presets">
+        <button class="budget-preset" onclick="setBudget(100000,this)">100k</button>
+        <button class="budget-preset" onclick="setBudget(150000,this)">150k</button>
+        <button class="budget-preset" onclick="setBudget(200000,this)">200k</button>
+        <button class="budget-preset" onclick="setBudget(300000,this)">300k</button>
+        <button class="budget-preset" onclick="setBudget(500000,this)">500k</button>
+      </div>
+      <div class="budget-input-wrap">
+        <span>€</span>
+        <input class="budget-input" type="number" id="budgetInput" placeholder="Otro importe" min="50000" max="2000000" step="10000" oninput="setBudget(this.value?parseInt(this.value):0,null)">
+      </div>
+      <button class="budget-clear" onclick="clearBudget()" id="budgetClear" style="display:none">✕ Quitar filtro</button>
+    </div>
+    <div class="budget-result" id="budgetResult"></div>
+  </div>
+</div>
+
 <div class="filter-bar fu d3">
   <span class="f-label">Filtrar</span>
   <button class="f-btn active" onclick="flt('all',this)">Todas</button>
@@ -710,6 +763,7 @@ const gradMap = {
 
 const IMG_SET=new Set(['a-coruna','albacete','alicante','almeria','badajoz','badalona','barcelona','benidorm','bilbao','burgos','cadiz','cartagena','castellon-de-la-plana','cordoba','elche','gijon','granada','huelva','ibiza','jerez-de-la-frontera','las-palmas-gc','leon','lleida','logrono','lugo','madrid','malaga','marbella','murcia','orense','oviedo','palma','pamplona','pontevedra','reus','salamanca','san-sebastian','santa-cruz-de-tenerife','santander','santiago-de-compostela','sevilla','tarragona','torrevieja','valencia','valladolid','vigo','vitoria','zaragoza']);
 let cf='all',cs='roi';
+let budget=0; // filtro por presupuesto total (€)
 const rc=r=>r>=6.5?'rh':r>=5.0?'rm':'rl';
 const fmt=n=>n>=1000?n.toLocaleString('es'):n;
 function flt(f,b){cf=f;document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
@@ -729,6 +783,8 @@ function render(){
   else if(cf==='norte') d=d.filter(c=>c.reg==='norte');
   else if(cf==='islas') d=d.filter(c=>c.reg==='islas');
   else if(cf==='roi-alto') d=d.filter(c=>c.roi>=6.0);
+  // Filtro presupuesto: coste total = p*70m² + 9.5% gastos medios
+  if(budget>0) d=d.filter(c=>(c.p*70*1.095)<=budget);
   if(cs==='roi') d.sort((a,b)=>b.roi-a.roi);
   else if(cs==='pa') d.sort((a,b)=>a.p-b.p);
   else if(cs==='pd') d.sort((a,b)=>b.p-a.p);
@@ -772,6 +828,43 @@ function render(){
       </div>
     </a>`).join('');
 }
+
+function setBudget(val, btn){
+  budget = parseInt(val) || 0;
+  // Update presets UI
+  document.querySelectorAll('.budget-preset').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  // Show/hide clear button
+  const clearBtn = document.getElementById('budgetClear');
+  if(clearBtn) clearBtn.style.display = budget > 0 ? 'inline-block' : 'none';
+  // Update result text
+  const res = document.getElementById('budgetResult');
+  if(res && budget > 0){
+    const eligible = DATA.filter(c=>(c.p*70*1.095)<=budget);
+    const topRoi = eligible.length > 0 ? eligible.sort((a,b)=>b.roi-a.roi)[0] : null;
+    if(eligible.length > 0){
+      res.innerHTML = `Con <strong>${(budget/1000).toFixed(0)}k €</strong> puedes comprar en <span class="br-ok">${eligible.length} ciudades</span>. Mejor ROI disponible: <strong>${topRoi.n}</strong> (${topRoi.roi}%)`;
+    } else {
+      res.innerHTML = `<span class="br-none">Sin ciudades en ese presupuesto.</span> Prueba con un importe mayor.`;
+    }
+  } else if(res){
+    res.innerHTML = '';
+  }
+  render();
+}
+
+function clearBudget(){
+  budget = 0;
+  document.querySelectorAll('.budget-preset').forEach(b=>b.classList.remove('active'));
+  const input = document.getElementById('budgetInput');
+  if(input) input.value = '';
+  const clearBtn = document.getElementById('budgetClear');
+  if(clearBtn) clearBtn.style.display = 'none';
+  const res = document.getElementById('budgetResult');
+  if(res) res.innerHTML = '';
+  render();
+}
+
 
 render();
 </script>
