@@ -578,6 +578,18 @@ footer p{font-size:.76rem;color:var(--muted)}
   .mob-nav-links a:last-child{border-bottom:none}
 }
 
+
+/* Ciudades similares */
+.sim-section{margin:2.5rem 0}
+.sim-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:1rem}
+.sim-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1rem;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s;display:block}
+.sim-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.sim-name{font-size:.9rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.sim-cc{font-size:.72rem;color:var(--muted);margin-top:.1rem}
+.sim-roi{font-size:1.1rem;font-weight:800;color:var(--blue);margin:.5rem 0 .2rem;letter-spacing:-.02em}
+.sim-price{font-size:.75rem;color:var(--muted)}
+@media(max-width:640px){.sim-grid{grid-template-columns:repeat(2,1fr)}}
+
 </style>
 </head>
 <body>
@@ -1670,6 +1682,42 @@ footer p{font-size:.76rem;color:var(--muted)}
 
   <div class="disc"><strong>Aviso legal:</strong> Los datos mostrados son estimaciones basadas en precios de oferta de portales inmobiliarios y fuentes públicas (Ministerio de Vivienda, Idealista, Fotocasa). No constituyen asesoramiento financiero ni de inversión. La rentabilidad real varía según inmueble, estado, zona concreta y condiciones del mercado en el momento de la operación.</div>
 </div>
+
+
+  <!-- CIUDADES SIMILARES -->
+  <div class="section sim-section">
+    <div class="sec-hdr">
+      <div class="sec-eye">Alternativas con ROI similar</div>
+      <h2>Ciudades parecidas a Reus</h2>
+      <p>Misma franja de rentabilidad, perfil de inversión comparable.</p>
+    </div>
+    <div class="sim-grid">
+      <a href="/rentabilidad-terrassa.html" class="sim-card">
+        <div class="sim-name">Terrassa</div>
+        <div class="sim-cc">Cataluña</div>
+        <div class="sim-roi">6,0% ROI</div>
+        <div class="sim-price">1.750€/m²</div>
+      </a>
+      <a href="/rentabilidad-sabadell.html" class="sim-card">
+        <div class="sim-name">Sabadell</div>
+        <div class="sim-cc">Cataluña</div>
+        <div class="sim-roi">5,9% ROI</div>
+        <div class="sim-price">1.800€/m²</div>
+      </a>
+      <a href="/rentabilidad-figueres.html" class="sim-card">
+        <div class="sim-name">Figueres</div>
+        <div class="sim-cc">Cataluña</div>
+        <div class="sim-roi">5,8% ROI</div>
+        <div class="sim-price">1.500€/m²</div>
+      </a>
+      <a href="/rentabilidad-tarragona.html" class="sim-card">
+        <div class="sim-name">Tarragona</div>
+        <div class="sim-cc">Cataluña</div>
+        <div class="sim-roi">5,8% ROI</div>
+        <div class="sim-price">1.780€/m²</div>
+      </a>
+    </div>
+  </div>
 
 <footer>
   <a href="/" class="logo"><svg width="24" height="24" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="20.2,8.5 22.2,8.5 22.2,10.5" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div class="logo-wm"><span style="color:#0e2a6b;font-weight:800">Ren</span><span style="color:#60a5fa;font-weight:800"> Data</span></div></a>
