@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sobre Ren Data — Quiénes somos y cómo calculamos la rentabilidad</title>
+  <meta name="description" content="Ren Data es una herramienta gratuita de análisis de rentabilidad inmobiliaria en España. Conoce nuestra metodología, fuentes de datos y el equipo detrás del proyecto.">
+  <link rel="canonical" href="https://rendata.es/sobre.html">
+  <meta property="og:title" content="Sobre Ren Data — Quiénes somos">
+  <meta property="og:description" content="Herramienta gratuita de análisis de rentabilidad inmobiliaria en España. Metodología, fuentes y equipo.">
+  <meta property="og:url" content="https://rendata.es/sobre.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f8fafc;--white:#fff;--blue:#2563eb;--blue-d:#1d4ed8;--blue-l:#eff6ff;--text:#0f1923;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--r:12px;--sh:0 1px 3px rgba(14,24,40,.07);--font:'Plus Jakarta Sans',sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased}
+    header{background:#0e2a6b;padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .logo{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+    .logo-wm{white-space:nowrap;font-size:1.12rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+    nav{display:flex;align-items:center;gap:.25rem}
+    nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.85rem;font-weight:500;padding:.4rem .75rem;border-radius:7px;transition:all .15s}
+    nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+    .nav-flag{width:22px;height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;margin-right:5px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+    .nav-dropdown{position:relative}
+    .nav-drop-btn{background:none;border:none;color:rgba(255,255,255,.75);font-family:var(--font);font-size:.85rem;font-weight:500;padding:.4rem .75rem;border-radius:7px;cursor:pointer;transition:all .15s}
+    .nav-drop-btn:hover{color:#fff;background:rgba(255,255,255,.1)}
+    .nav-drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.5rem;min-width:200px;box-shadow:0 8px 24px rgba(14,24,40,.12);z-index:200}
+    .nav-dropdown:hover .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+    .nav-drop-menu a{color:var(--text2);text-decoration:none;font-size:.8rem;font-weight:500;padding:.45rem .6rem;border-radius:7px;display:flex;align-items:center;gap:.4rem;transition:background .1s}
+    .nav-drop-menu a:hover{background:var(--blue-l);color:var(--blue)}
+    .mob-menu-btn{display:none}
+    .mob-nav-links{display:none}
+
+    /* Page layout */
+    .page-wrap{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem}
+    .page-hero{margin-bottom:3rem}
+    .page-eyebrow{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:.75rem}
+    .page-hero h1{font-size:2.2rem;font-weight:800;letter-spacing:-.04em;color:var(--text);line-height:1.15;margin-bottom:1rem}
+    .page-hero p{font-size:1.05rem;color:var(--text2);line-height:1.8;max-width:680px}
+
+    /* Sections */
+    .sobre-section{margin-bottom:3rem}
+    .sobre-section h2{font-size:1.2rem;font-weight:800;color:var(--text);letter-spacing:-.03em;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--border)}
+    .sobre-section p{color:var(--text2);font-size:.95rem;line-height:1.8;margin-bottom:.9rem}
+    .sobre-section p:last-child{margin-bottom:0}
+    .sobre-section strong{color:var(--text)}
+
+    /* Fuentes grid */
+    .fuentes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.25rem}
+    .fuente-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.25rem;box-shadow:var(--sh)}
+    .fuente-nombre{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
+    .fuente-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+
+    /* Valores */
+    .valores-list{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:.75rem}
+    .valores-list li{display:flex;gap:.9rem;align-items:flex-start}
+    .valor-icon{width:36px;height:36px;background:var(--blue-l);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;margin-top:.1rem}
+    .valor-body strong{display:block;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
+    .valor-body span{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+    /* Disclaimer box */
+    .disclaimer-box{background:var(--blue-l);border:1px solid #bfdbfe;border-radius:var(--r);padding:1.25rem 1.5rem;margin-top:1.25rem}
+    .disclaimer-box p{font-size:.85rem;color:#1e40af;line-height:1.7;margin:0}
+
+    /* CTA */
+    .sobre-cta{background:#0e2a6b;border-radius:16px;padding:2.5rem;text-align:center;margin-top:3rem}
+    .sobre-cta h3{font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:.6rem;letter-spacing:-.03em}
+    .sobre-cta p{color:rgba(255,255,255,.75);font-size:.9rem;margin-bottom:1.5rem}
+    .sobre-cta a{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:.9rem;padding:.75rem 2rem;border-radius:10px;text-decoration:none;transition:background .15s}
+    .sobre-cta a:hover{background:var(--blue-d)}
+
+    footer{border-top:1px solid var(--border);padding:1.5rem 2.5rem;text-align:center}
+    footer p{font-size:.78rem;color:var(--muted)}
+    footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{color:var(--blue)}
+
+    @media(max-width:640px){
+      header{padding:0 1.25rem}
+      nav>a:not(.mob-menu-btn){display:none}
+      .nav-dropdown{display:none}
+      .logo-wm{white-space:nowrap}
+      .mob-menu-btn{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:none;border:1.5px solid rgba(255,255,255,.3);border-radius:8px;cursor:pointer;color:inherit;flex-shrink:0}
+      nav.open .mob-nav-links{display:flex;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.75rem 1.25rem;gap:0;z-index:999;box-shadow:0 8px 24px rgba(14,24,40,.12)}
+      .mob-nav-links a{display:block;padding:.75rem .5rem;font-size:.95rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
+      .mob-nav-links a:last-child{border-bottom:none}
+      .page-wrap{padding:2rem 1.25rem 4rem}
+      .page-hero h1{font-size:1.65rem}
+      .fuentes-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">
+    <div class="logo-wm"><span style="color:var(--text);font-weight:800;font-size:1.15rem;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;font-size:1.15rem;letter-spacing:-.03em"> Data</span></div>
+  </a>
+  <nav>
+    <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="mob-nav-links">
+      <a href="/">🏠 Ciudades</a>
+      <a href="ranking.html">📊 Ranking</a>
+      <a href="comparador.html">⚖️ Comparar</a>
+      <a href="glosario.html">📖 Glosario</a>
+      <a href="guia-inversor.html">🎯 Guía inversor</a>
+    </div>
+    <a href="/">Ciudades</a>
+    <a href="ranking.html">Ranking</a>
+    <div class="nav-dropdown">
+      <button class="nav-drop-btn">Comunidades ▾</button>
+      <div class="nav-drop-menu">
+        <a href="ccaa-andalucia.html"><img src="img/flags/andalucia.png" class="nav-flag" alt=""> Andalucía</a>
+        <a href="ccaa-madrid.html"><img src="img/flags/madrid.png" class="nav-flag" alt=""> Madrid</a>
+        <a href="ccaa-cataluna.html"><img src="img/flags/cataluna.png" class="nav-flag" alt=""> Cataluña</a>
+        <a href="ccaa-comunitat-valenciana.html"><img src="img/flags/comunitat-valenciana.png" class="nav-flag" alt=""> C. Valenciana</a>
+        <a href="ccaa-canarias.html"><img src="img/flags/canarias.png" class="nav-flag" alt=""> Canarias</a>
+        <a href="ccaa-baleares.html"><img src="img/flags/baleares.png" class="nav-flag" alt=""> Baleares</a>
+        <a href="ccaa-pais-vasco.html"><img src="img/flags/pais-vasco.png" class="nav-flag" alt=""> País Vasco</a>
+        <a href="ccaa-galicia.html"><img src="img/flags/galicia.png" class="nav-flag" alt=""> Galicia</a>
+        <a href="ccaa-castilla-y-leon.html"><img src="img/flags/castilla-y-leon.png" class="nav-flag" alt=""> Castilla y León</a>
+        <a href="ccaa-aragon.html"><img src="img/flags/aragon.png" class="nav-flag" alt=""> Aragón</a>
+        <a href="ccaa-murcia.html"><img src="img/flags/murcia.png" class="nav-flag" alt=""> Murcia</a>
+        <a href="ccaa-castilla-la-mancha.html"><img src="img/flags/castilla-la-mancha.png" class="nav-flag" alt=""> Castilla-La Mancha</a>
+        <a href="ccaa-extremadura.html"><img src="img/flags/extremadura.png" class="nav-flag" alt=""> Extremadura</a>
+        <a href="ccaa-asturias.html"><img src="img/flags/asturias.png" class="nav-flag" alt=""> Asturias</a>
+        <a href="ccaa-cantabria.html"><img src="img/flags/cantabria.png" class="nav-flag" alt=""> Cantabria</a>
+        <a href="ccaa-navarra.html"><img src="img/flags/navarra.png" class="nav-flag" alt=""> Navarra</a>
+        <a href="ccaa-la-rioja.html"><img src="img/flags/la-rioja.png" class="nav-flag" alt=""> La Rioja</a>
+      </div>
+    </div>
+    <a href="comparador.html">Comparar</a>
+    <a href="glosario.html">Glosario</a>
+    <a href="sobre.html" style="color:#fff;font-weight:600">Sobre nosotros</a>
+  </nav>
+</header>
+
+<main class="page-wrap">
+
+  <div class="page-hero">
+    <div class="page-eyebrow">Sobre el proyecto</div>
+    <h1>Datos claros para invertir mejor en vivienda</h1>
+    <p>Ren Data es una herramienta gratuita de análisis de rentabilidad inmobiliaria en España. Reunimos datos públicos de precio, alquiler y fiscalidad en un solo lugar para que cualquier persona pueda evaluar si comprar para alquilar tiene sentido en una ciudad concreta antes de tomar una decisión.</p>
+  </div>
+
+  <div class="sobre-section">
+    <h2>Por qué existe Ren Data</h2>
+    <p>Cuando alguien se plantea comprar un piso para alquilar, la información está dispersa en múltiples fuentes — portales inmobiliarios, la web de Hacienda, el INE, estudios de consultoras — y el análisis final requiere horas de trabajo. Ren Data automatiza ese proceso: consolida los datos relevantes por ciudad y los presenta de forma que cualquier persona pueda entenderlos en minutos, sin necesidad de conocimientos financieros avanzados.</p>
+    <p>No somos una agencia inmobiliaria, ni un asesor financiero, ni un portal de compraventa. Somos una herramienta de información. Nuestra única función es ayudarte a entender los números antes de que hables con quien te venda o financie el inmueble.</p>
+  </div>
+
+  <div class="sobre-section">
+    <h2>Fuentes de datos</h2>
+    <p>Todos los datos publicados en Ren Data provienen de fuentes públicas oficiales o de los principales portales del mercado inmobiliario español. Actualizamos los datos periódicamente para reflejar la situación más reciente del mercado.</p>
+    <div class="fuentes-grid">
+      <div class="fuente-card">
+        <div class="fuente-nombre">INE — Padrón Municipal 2025</div>
+        <div class="fuente-desc">Población oficial de cada municipio. Datos del Instituto Nacional de Estadística, revisión del Padrón continuo 2025.</div>
+      </div>
+      <div class="fuente-card">
+        <div class="fuente-nombre">Idealista / Fotocasa</div>
+        <div class="fuente-desc">Precio medio de venta y alquiler por ciudad. Datos de Q1 2026, basados en el análisis de anuncios activos en portales líderes.</div>
+      </div>
+      <div class="fuente-card">
+        <div class="fuente-nombre">Ministerio de Hacienda</div>
+        <div class="fuente-desc">Tipos del Impuesto de Transmisiones Patrimoniales (ITP) por Comunidad Autónoma, actualizados para el ejercicio 2026.</div>
+      </div>
+      <div class="fuente-card">
+        <div class="fuente-nombre">Ministerio de Vivienda</div>
+        <div class="fuente-desc">Datos de evolución del precio de la vivienda, índice de precios del alquiler y estadísticas del parque inmobiliario.</div>
+      </div>
+      <div class="fuente-card">
+        <div class="fuente-nombre">Censo de Población 2021</div>
+        <div class="fuente-desc">Datos demográficos por municipio: edad media, porcentaje de viviendas en alquiler y estructura del parque residencial.</div>
+      </div>
+      <div class="fuente-card">
+        <div class="fuente-nombre">AEAT — Estadísticas Tributarias</div>
+        <div class="fuente-desc">Salario medio anual y renta media por municipio, utilizados para el análisis de la capacidad de pago del inquilino local.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sobre-section">
+    <h2>Cómo calculamos la rentabilidad</h2>
+    <p>La <strong>rentabilidad bruta estimada</strong> que publicamos en cada ficha es el cociente entre el ingreso anual de alquiler y el precio de compra del inmueble, expresado en porcentaje:</p>
+    <p style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.9rem 1.1rem;font-family:monospace;font-size:.9rem;color:var(--text)">
+      Rentabilidad bruta = (Alquiler mensual × 12) / Precio de compra × 100
+    </p>
+    <p>Este dato parte de los precios medios de venta y alquiler de la ciudad, aplicados a un inmueble tipo de <strong>70m²</strong>. Es una estimación orientativa — la rentabilidad real de un inmueble concreto depende del precio de compra específico, los gastos de comunidad, el IBI, los períodos de vacancia y otros factores que varían caso a caso.</p>
+    <p>No publicamos rentabilidad neta porque depende de variables individuales (financiación, fiscalidad personal, gastos de gestión) que no podemos estandarizar de forma honesta para todas las ciudades. La rentabilidad bruta es el punto de partida — el inversor debe restar sus costes específicos para obtener el retorno real.</p>
+  </div>
+
+  <div class="sobre-section">
+    <h2>Nuestros principios</h2>
+    <ul class="valores-list">
+      <li>
+        <div class="valor-icon">📊</div>
+        <div class="valor-body">
+          <strong>Datos, no opiniones</strong>
+          <span>Publicamos números verificables de fuentes públicas. No recomendamos comprar ni vender en ninguna ciudad. El análisis e interpretación de los datos es responsabilidad del usuario.</span>
+        </div>
+      </li>
+      <li>
+        <div class="valor-icon">🆓</div>
+        <div class="valor-body">
+          <strong>Siempre gratuito</strong>
+          <span>Toda la información de Ren Data es de acceso libre, sin registro y sin suscripción. Creemos que el acceso a datos para tomar mejores decisiones financieras no debería estar detrás de un muro de pago.</span>
+        </div>
+      </li>
+      <li>
+        <div class="valor-icon">🔄</div>
+        <div class="valor-body">
+          <strong>Actualización periódica</strong>
+          <span>Los mercados inmobiliarios cambian. Actualizamos los datos de precio, alquiler y rentabilidad con periodicidad trimestral para reflejar la situación real del mercado.</span>
+        </div>
+      </li>
+      <li>
+        <div class="valor-icon">⚖️</div>
+        <div class="valor-body">
+          <strong>Transparencia metodológica</strong>
+          <span>Explicamos de dónde vienen los datos y cómo se calculan. Si hay incertidumbre o limitaciones en un dato, lo indicamos explícitamente en la ficha correspondiente.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sobre-section">
+    <h2>Aviso importante</h2>
+    <div class="disclaimer-box">
+      <p>La información publicada en Ren Data tiene carácter exclusivamente informativo y no constituye asesoramiento financiero, fiscal ni jurídico. La inversión inmobiliaria conlleva riesgos y la rentabilidad pasada o estimada no garantiza resultados futuros. Antes de tomar cualquier decisión de inversión, consulta con un profesional cualificado. Ren Data no se hace responsable de las decisiones tomadas en base a la información publicada en esta web.</p>
+    </div>
+  </div>
+
+  <div class="sobre-cta">
+    <h3>Explora las 209 ciudades</h3>
+    <p>Compara rentabilidades, filtra por presupuesto y encuentra tu próxima inversión.</p>
+    <a href="/">Ver todas las ciudades →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Ren Data · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="glosario.html">Glosario</a> · <a href="sobre.html">Sobre nosotros</a></p>
+</footer>
+
+</body>
+</html>
