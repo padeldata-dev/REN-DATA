@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 200 ciudades.">
+<meta name="description" content="Análisis de rentabilidad inmobiliaria por ciudad en España. Precio m², alquiler y ROI estimado para más de 150 ciudades.">
 <title>Ren Data — Rentabilidad inmobiliaria por ciudad en España</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -277,6 +277,10 @@ footer p{font-size:.78rem;color:var(--muted)}
   .budget-preset{font-size:.75rem;padding:.35rem .75rem}
 }
 
+
+/* Nav flags */
+.nav-flag{width:22px;height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;margin-right:5px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+
 </style>
 <meta property="og:title" content="Ren Data — Rentabilidad inmobiliaria en España">
 <meta property="og:description" content="Análisis de precio m², alquiler y ROI para 150 ciudades españolas. Gratuito y actualizado trimestralmente.">
@@ -307,23 +311,23 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="nav-dropdown">
       <button class="nav-drop-btn">Comunidades ▾</button>
       <div class="nav-drop-menu">
-        <a href="ccaa-andalucia.html">🌞 Andalucía</a>
-        <a href="ccaa-madrid.html">🏙️ Madrid</a>
-        <a href="ccaa-cataluna.html">🎨 Cataluña</a>
-        <a href="ccaa-comunitat-valenciana.html">🍊 C. Valenciana</a>
-        <a href="ccaa-canarias.html">🌋 Canarias</a>
-        <a href="ccaa-baleares.html">🏖️ Baleares</a>
-        <a href="ccaa-pais-vasco.html">🏭 País Vasco</a>
-        <a href="ccaa-galicia.html">🌧️ Galicia</a>
-        <a href="ccaa-castilla-y-leon.html">🏰 Castilla y León</a>
-        <a href="ccaa-aragon.html">🏔️ Aragón</a>
-        <a href="ccaa-murcia.html">🌶️ Murcia</a>
-        <a href="ccaa-castilla-la-mancha.html">⚗️ Castilla-La Mancha</a>
-        <a href="ccaa-extremadura.html">🐂 Extremadura</a>
-        <a href="ccaa-asturias.html">🌧️ Asturias</a>
-        <a href="ccaa-cantabria.html">🌊 Cantabria</a>
-        <a href="ccaa-navarra.html">🐂 Navarra</a>
-        <a href="ccaa-la-rioja.html">🍷 La Rioja</a>
+        <a href="ccaa-andalucia.html"><img src="img/flags/andalucia.png" class="nav-flag" alt="Andalucía"> Andalucía</a>
+        <a href="ccaa-madrid.html"><img src="img/flags/madrid.png" class="nav-flag" alt="Madrid"> Madrid</a>
+        <a href="ccaa-cataluna.html"><img src="img/flags/cataluna.png" class="nav-flag" alt="Cataluña"> Cataluña</a>
+        <a href="ccaa-comunitat-valenciana.html"><img src="img/flags/comunitat-valenciana.png" class="nav-flag" alt="C. Valenciana"> C. Valenciana</a>
+        <a href="ccaa-canarias.html"><img src="img/flags/canarias.png" class="nav-flag" alt="Canarias"> Canarias</a>
+        <a href="ccaa-baleares.html"><img src="img/flags/baleares.png" class="nav-flag" alt="Baleares"> Baleares</a>
+        <a href="ccaa-pais-vasco.html"><img src="img/flags/pais-vasco.png" class="nav-flag" alt="País Vasco"> País Vasco</a>
+        <a href="ccaa-galicia.html"><img src="img/flags/galicia.png" class="nav-flag" alt="Galicia"> Galicia</a>
+        <a href="ccaa-castilla-y-leon.html"><img src="img/flags/castilla-y-leon.png" class="nav-flag" alt="Castilla y León"> Castilla y León</a>
+        <a href="ccaa-aragon.html"><img src="img/flags/aragon.png" class="nav-flag" alt="Aragón"> Aragón</a>
+        <a href="ccaa-murcia.html"><img src="img/flags/murcia.png" class="nav-flag" alt="Murcia"> Murcia</a>
+        <a href="ccaa-castilla-la-mancha.html"><img src="img/flags/castilla-la-mancha.png" class="nav-flag" alt="Castilla-La Mancha"> Castilla-La Mancha</a>
+        <a href="ccaa-extremadura.html"><img src="img/flags/extremadura.png" class="nav-flag" alt="Extremadura"> Extremadura</a>
+        <a href="ccaa-asturias.html"><img src="img/flags/asturias.png" class="nav-flag" alt="Asturias"> Asturias</a>
+        <a href="ccaa-cantabria.html"><img src="img/flags/cantabria.png" class="nav-flag" alt="Cantabria"> Cantabria</a>
+        <a href="ccaa-navarra.html"><img src="img/flags/navarra.png" class="nav-flag" alt="Navarra"> Navarra</a>
+        <a href="ccaa-la-rioja.html"><img src="img/flags/la-rioja.png" class="nav-flag" alt="La Rioja"> La Rioja</a>
       </div>
     </div>
     <a href="comparador.html">Comparar</a>
@@ -337,7 +341,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     <h1>¿Dónde invertir en <span class="ul">vivienda</span> en <span class="ac">España?</span></h1>
     <p class="hero-desc">Análisis de rentabilidad, precio del m² y datos de mercado para más de 150 ciudades. Todo lo que necesitas para invertir con cabeza.</p>
     <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">209</span></div><div class="hero-kpi-l">Ciudades</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">150</span></div><div class="hero-kpi-l">Ciudades</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">6,7</span>%</div><div class="hero-kpi-l">ROI medio España</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v"><span class="c">7,5</span>%</div><div class="hero-kpi-l">Mejor ROI</div></div>
       <div class="hero-kpi"><div class="hero-kpi-v">↑<span class="c">11</span>%</div><div class="hero-kpi-l">Subida media m²</div></div>
@@ -501,7 +505,7 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="search-wrap">
       <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
-      <span class="s-hint">209 ciudades</span>
+      <span class="s-hint">150 ciudades</span>
     </div>
   </div>
 </div>
@@ -605,22 +609,14 @@ const DATA=[
   {n:"Plasencia",cc:"Extremadura",reg:"centro",roi:6.5,p:950,alq:510,vp:4.2,va:6.0,d:30,sl:"plasencia"},
   {n:"Soria",cc:"Castilla y León",reg:"centro",roi:6.5,p:840,alq:500,vp:11.0,va:15.0,d:29,sl:"soria"},
   {n:"Teruel",cc:"Aragón",reg:"centro",roi:6.5,p:820,alq:490,vp:9.0,va:9.0,d:30,sl:"teruel"},
-  {n:"Écija",cc:"Andalucía",reg:"andalucia",roi:6.5,p:850,alq:460,vp:7.0,va:10.5,d:28,sl:"ecija"},
   {n:"Elda",cc:"C. Valenciana",reg:"levante",roi:6.4,p:1100,alq:580,vp:5.6,va:8.0,d:26,sl:"elda"},
   {n:"Mérida",cc:"Extremadura",reg:"centro",roi:6.4,p:1050,alq:560,vp:4.9,va:7.0,d:28,sl:"merida"},
   {n:"Miranda de Ebro",cc:"Castilla y León",reg:"centro",roi:6.4,p:1000,alq:530,vp:4.2,va:6.0,d:28,sl:"miranda-de-ebro"},
   {n:"Ourense",cc:"Galicia",reg:"norte",roi:6.4,p:1080,alq:610,vp:8.0,va:8.1,d:29,sl:"ourense"},
   {n:"Tordesillas",cc:"Castilla y León",reg:"centro",roi:6.4,p:1000,alq:530,vp:4.2,va:6.0,d:30,sl:"tordesillas"},
   {n:"Torre-Pacheco",cc:"R. de Murcia",reg:"levante",roi:6.4,p:1200,alq:630,vp:6.3,va:9.0,d:25,sl:"torre-pacheco"},
-  {n:"Lucena",cc:"Andalucía",reg:"andalucia",roi:6.4,p:900,alq:480,vp:7.0,va:10.0,d:27,sl:"lucena"},
-  {n:"Puertollano",cc:"Castilla-La Mancha",reg:"centro",roi:6.4,p:750,alq:400,vp:6.5,va:8.0,d:28,sl:"puertollano"},
-  {n:"Villena",cc:"C. Valenciana",reg:"levante",roi:6.4,p:750,alq:400,vp:7.0,va:9.0,d:28,sl:"villena"},
   {n:"Cáceres",cc:"Extremadura",reg:"centro",roi:6.3,p:960,alq:560,vp:8.5,va:7.5,d:28,sl:"caceres"},
   {n:"Orense",cc:"Galicia",reg:"norte",roi:6.3,p:1100,alq:580,vp:4.9,va:7.0,d:26,sl:"orense"},
-  {n:"Alcantarilla",cc:"R. de Murcia",reg:"levante",roi:6.3,p:1100,alq:580,vp:7.5,va:10.5,d:23,sl:"alcantarilla"},
-  {n:"Andújar",cc:"Andalucía",reg:"andalucia",roi:6.3,p:1000,alq:520,vp:7.5,va:10.0,d:27,sl:"andujar"},
-  {n:"Yecla",cc:"R. de Murcia",reg:"levante",roi:6.3,p:950,alq:500,vp:7.5,va:9.5,d:26,sl:"yecla"},
-  {n:"Almendralejo",cc:"Extremadura",reg:"centro",roi:6.3,p:900,alq:470,vp:7.0,va:9.0,d:28,sl:"almendralejo"},
   {n:"Águilas",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1400,alq:720,vp:7.0,va:10.0,d:24,sl:"aguilas"},
   {n:"Albacete",cc:"Castilla-La Mancha",reg:"centro",roi:6.2,p:1200,alq:680,vp:8.5,va:13.6,d:26,sl:"albacete"},
   {n:"Algeciras",cc:"Andalucía",reg:"andalucia",roi:6.2,p:1200,alq:620,vp:5.6,va:8.0,d:26,sl:"algeciras"},
@@ -628,17 +624,11 @@ const DATA=[
   {n:"Cartagena",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1400,alq:720,vp:7.0,va:10.0,d:22,sl:"cartagena"},
   {n:"Mazarrón",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1600,alq:830,vp:7.7,va:11.0,d:22,sl:"mazarron"},
   {n:"Motril",cc:"Andalucía",reg:"andalucia",roi:6.2,p:1400,alq:720,vp:6.3,va:9.0,d:24,sl:"motril"},
-  {n:"Narón",cc:"Galicia",reg:"norte",roi:6.2,p:1200,alq:620,vp:7.0,va:9.5,d:25,sl:"naron"},
-  {n:"La Rinconada",cc:"Andalucía",reg:"andalucia",roi:6.2,p:1300,alq:670,vp:9.0,va:13.5,d:22,sl:"la-rinconada"},
-  {n:"El Ejido",cc:"Andalucía",reg:"andalucia",roi:6.2,p:1100,alq:570,vp:9.0,va:12.0,d:23,sl:"el-ejido"},
-  {n:"Cieza",cc:"R. de Murcia",reg:"levante",roi:6.2,p:1000,alq:520,vp:8.0,va:10.0,d:25,sl:"cieza"},
-  {n:"Ontinyent",cc:"C. Valenciana",reg:"levante",roi:6.2,p:1050,alq:540,vp:8.5,va:10.5,d:25,sl:"ontinyent"},
   {n:"Antequera",cc:"Andalucía",reg:"andalucia",roi:6.1,p:1100,alq:560,vp:4.9,va:7.0,d:28,sl:"antequera"},
   {n:"Orihuela",cc:"C. Valenciana",reg:"levante",roi:6.1,p:1400,alq:700,vp:6.3,va:9.0,d:24,sl:"orihuela"},
   {n:"Sagunto",cc:"C. Valenciana",reg:"levante",roi:6.1,p:1400,alq:700,vp:6.3,va:9.0,d:25,sl:"sagunto"},
   {n:"Santa Cruz de Tenerife",cc:"Canarias",reg:"islas",roi:6.1,p:2000,alq:930,vp:6.3,va:9.0,d:22,sl:"santa-cruz-de-tenerife"},
   {n:"Torrevieja",cc:"C. Valenciana",reg:"levante",roi:6.1,p:1800,alq:900,vp:8.4,va:12.0,d:20,sl:"torrevieja"},
-  {n:"Totana",cc:"R. de Murcia",reg:"levante",roi:6.1,p:1100,alq:560,vp:8.0,va:10.5,d:24,sl:"totana"},
   {n:"Alcoy",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1400,alq:700,vp:5.6,va:8.0,d:26,sl:"alcoy"},
   {n:"Alzira",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1350,alq:670,vp:5.6,va:8.0,d:26,sl:"alzira"},
   {n:"Castellón de la Plana",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1400,alq:700,vp:6.3,va:9.0,d:24,sl:"castellon-de-la-plana"},
@@ -650,8 +640,6 @@ const DATA=[
   {n:"Tudela",cc:"Navarra",reg:"norte",roi:6.0,p:1400,alq:700,vp:4.9,va:7.0,d:26,sl:"tudela"},
   {n:"Vélez-Málaga",cc:"Andalucía",reg:"andalucia",roi:6.0,p:1600,alq:800,vp:7.0,va:10.0,d:22,sl:"velez-malaga"},
   {n:"Zaragoza",cc:"Aragón",reg:"centro",roi:6.0,p:1950,alq:980,vp:8.0,va:12.0,d:24,sl:"zaragoza"},
-  {n:"La Línea de la Concepción",cc:"Andalucía",reg:"andalucia",roi:6.0,p:1200,alq:600,vp:7.5,va:11.0,d:25,sl:"la-linea-de-la-concepcion"},
-  {n:"Xàtiva",cc:"C. Valenciana",reg:"levante",roi:6.0,p:1100,alq:550,vp:8.0,va:10.0,d:26,sl:"xativa"},
   {n:"Alcalá de Guadaíra",cc:"Andalucía",reg:"andalucia",roi:5.9,p:1400,alq:680,vp:5.6,va:8.0,d:26,sl:"alcala-de-guadaira"},
   {n:"Elche",cc:"C. Valenciana",reg:"levante",roi:5.9,p:1600,alq:780,vp:6.3,va:9.0,d:22,sl:"elche"},
   {n:"Logroño",cc:"La Rioja",reg:"norte",roi:5.9,p:1560,alq:780,vp:8.0,va:11.5,d:23,sl:"logrono"},
@@ -659,16 +647,10 @@ const DATA=[
   {n:"Sabadell",cc:"Cataluña",reg:"norte",roi:5.9,p:1800,alq:900,vp:5.6,va:8.0,d:22,sl:"sabadell"},
   {n:"Telde",cc:"Canarias",reg:"islas",roi:5.9,p:1600,alq:780,vp:6.3,va:9.0,d:24,sl:"telde"},
   {n:"Valladolid",cc:"Castilla y León",reg:"centro",roi:5.9,p:1600,alq:800,vp:7.0,va:11.0,d:25,sl:"valladolid"},
-  {n:"Castrillón",cc:"Asturias",reg:"norte",roi:5.9,p:1300,alq:640,vp:7.5,va:9.5,d:24,sl:"castrillon"},
   {n:"Córdoba",cc:"Andalucía",reg:"andalucia",roi:5.8,p:1520,alq:740,vp:8.5,va:12.0,d:26,sl:"cordoba"},
   {n:"Figueres",cc:"Cataluña",reg:"norte",roi:5.8,p:1500,alq:720,vp:5.6,va:8.0,d:22,sl:"figueres"},
   {n:"León",cc:"Castilla y León",reg:"centro",roi:5.8,p:1400,alq:770,vp:8.0,va:10.0,d:26,sl:"leon"},
   {n:"Tarragona",cc:"Cataluña",reg:"centro",roi:5.8,p:1780,alq:890,vp:8.0,va:10.0,d:24,sl:"tarragona"},
-  {n:"San Fernando",cc:"Andalucía",reg:"andalucia",roi:5.8,p:1500,alq:720,vp:8.5,va:12.0,d:22,sl:"san-fernando-cadiz"},
-  {n:"Molina de Segura",cc:"R. de Murcia",reg:"levante",roi:5.8,p:1400,alq:680,vp:8.0,va:11.5,d:22,sl:"molina-de-segura"},
-  {n:"Siero",cc:"Asturias",reg:"norte",roi:5.8,p:1400,alq:680,vp:7.5,va:10.0,d:24,sl:"siero"},
-  {n:"Úbeda",cc:"Andalucía",reg:"andalucia",roi:5.8,p:1200,alq:580,vp:8.0,va:10.0,d:25,sl:"ubeda"},
-  {n:"Granadilla de Abona",cc:"Canarias",reg:"islas",roi:5.8,p:2200,alq:1060,vp:11.0,va:14.5,d:18,sl:"granadilla-de-abona"},
   {n:"Alcalá de Henares",cc:"C. de Madrid",reg:"centro",roi:5.7,p:1950,alq:920,vp:7.0,va:10.0,d:20,sl:"alcala-de-henares"},
   {n:"Benidorm",cc:"C. Valenciana",reg:"levante",roi:5.7,p:2200,alq:1050,vp:7.7,va:11.0,d:18,sl:"benidorm"},
   {n:"Dos Hermanas",cc:"Andalucía",reg:"andalucia",roi:5.7,p:1600,alq:760,vp:6.3,va:9.0,d:24,sl:"dos-hermanas"},
@@ -679,17 +661,10 @@ const DATA=[
   {n:"Parla",cc:"C. de Madrid",reg:"centro",roi:5.7,p:1750,alq:820,vp:7.0,va:10.0,d:23,sl:"parla"},
   {n:"Reus",cc:"Cataluña",reg:"norte",roi:5.7,p:1600,alq:760,vp:5.6,va:8.0,d:22,sl:"reus"},
   {n:"Santa Pola",cc:"C. Valenciana",reg:"levante",roi:5.7,p:2000,alq:950,vp:7.0,va:10.0,d:22,sl:"santa-pola"},
-  {n:"El Puerto de Santa María",cc:"Andalucía",reg:"andalucia",roi:5.7,p:1800,alq:860,vp:9.0,va:12.5,d:22,sl:"el-puerto-de-santa-maria"},
-  {n:"Segovia",cc:"Castilla y León",reg:"centro",roi:5.7,p:1600,alq:760,vp:7.5,va:10.0,d:24,sl:"segovia"},
   {n:"Burgos",cc:"Castilla y León",reg:"centro",roi:5.6,p:1720,alq:890,vp:8.0,va:12.0,d:25,sl:"burgos"},
   {n:"Fuenlabrada",cc:"C. de Madrid",reg:"centro",roi:5.6,p:1900,alq:880,vp:7.0,va:10.0,d:22,sl:"fuenlabrada"},
   {n:"Fuerteventura (Pjto.Rosario)",cc:"Canarias",reg:"islas",roi:5.6,p:2000,alq:920,vp:7.0,va:10.0,d:22,sl:"fuerteventura-pjto-rosario"},
   {n:"Manresa",cc:"Cataluña",reg:"norte",roi:5.6,p:1800,alq:840,vp:5.6,va:8.0,d:22,sl:"manresa"},
-  {n:"Granollers",cc:"Cataluña",reg:"norte",roi:5.6,p:2200,alq:1020,vp:8.0,va:11.5,d:19,sl:"granollers"},
-  {n:"Mollet del Vallès",cc:"Cataluña",reg:"norte",roi:5.6,p:2100,alq:980,vp:8.2,va:11.2,d:19,sl:"mollet-del-valles"},
-  {n:"Torrejón de Ardoz",cc:"C. de Madrid",reg:"centro",roi:5.6,p:2600,alq:1210,vp:7.0,va:12.8,d:14,sl:"torrejon-de-ardoz"},
-  {n:"Vilanova i la Geltrú",cc:"Cataluña",reg:"norte",roi:5.6,p:2400,alq:1120,vp:8.5,va:12.0,d:18,sl:"vilanova-i-la-geltru"},
-  {n:"Marratxí",cc:"Islas Baleares",reg:"islas",roi:5.6,p:3200,alq:1490,vp:9.5,va:13.5,d:16,sl:"marratxi"},
   {n:"Badalona",cc:"Cataluña",reg:"norte",roi:5.5,p:2600,alq:1200,vp:6.3,va:9.0,d:20,sl:"badalona"},
   {n:"Blanes",cc:"Cataluña",reg:"norte",roi:5.5,p:2200,alq:1000,vp:6.3,va:9.0,d:21,sl:"blanes"},
   {n:"Burjassot",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2100,alq:960,vp:7.0,va:10.0,d:21,sl:"burjassot"},
@@ -705,13 +680,6 @@ const DATA=[
   {n:"Torrent",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2000,alq:920,vp:7.0,va:10.0,d:20,sl:"torrent"},
   {n:"Valencia",cc:"C. Valenciana",reg:"levante",roi:5.5,p:2700,alq:1200,vp:12.0,va:10.3,d:16,sl:"valencia"},
   {n:"Vic",cc:"Cataluña",reg:"norte",roi:5.5,p:2000,alq:920,vp:5.6,va:8.0,d:20,sl:"vic"},
-  {n:"Coslada",cc:"C. de Madrid",reg:"centro",roi:5.5,p:2600,alq:1200,vp:6.5,va:12.0,d:15,sl:"coslada"},
-  {n:"Rubí",cc:"Cataluña",reg:"norte",roi:5.5,p:2400,alq:1100,vp:8.5,va:11.0,d:18,sl:"rubi"},
-  {n:"Chiclana de la Frontera",cc:"Andalucía",reg:"andalucia",roi:5.5,p:2000,alq:920,vp:9.5,va:13.0,d:23,sl:"chiclana-de-la-frontera"},
-  {n:"San Javier",cc:"R. de Murcia",reg:"levante",roi:5.5,p:1800,alq:820,vp:8.5,va:12.0,d:22,sl:"san-javier"},
-  {n:"Eibar",cc:"País Vasco",reg:"norte",roi:5.5,p:1800,alq:820,vp:7.2,va:9.5,d:21,sl:"eibar"},
-  {n:"Pinto",cc:"C. de Madrid",reg:"centro",roi:5.5,p:2200,alq:1010,vp:6.8,va:11.5,d:16,sl:"pinto"},
-  {n:"La Orotava",cc:"Canarias",reg:"islas",roi:5.5,p:2000,alq:920,vp:10.0,va:13.0,d:20,sl:"la-orotava"},
   {n:"Arganda del Rey",cc:"C. de Madrid",reg:"centro",roi:5.4,p:2000,alq:900,vp:7.7,va:11.0,d:20,sl:"arganda-del-rey"},
   {n:"Benalmádena",cc:"Andalucía",reg:"andalucia",roi:5.4,p:2200,alq:980,vp:8.4,va:12.0,d:19,sl:"benalmadena"},
   {n:"Benissa",cc:"C. Valenciana",reg:"levante",roi:5.4,p:2400,alq:1080,vp:7.7,va:11.0,d:22,sl:"benissa"},
@@ -721,13 +689,6 @@ const DATA=[
   {n:"Puerto de la Cruz",cc:"Canarias",reg:"islas",roi:5.4,p:2400,alq:1050,vp:7.0,va:10.0,d:20,sl:"puerto-de-la-cruz"},
   {n:"Salamanca",cc:"Castilla y León",reg:"centro",roi:5.4,p:1750,alq:880,vp:7.5,va:9.0,d:25,sl:"salamanca"},
   {n:"Santiago de Compostela",cc:"Galicia",reg:"norte",roi:5.4,p:2200,alq:980,vp:5.6,va:8.0,d:24,sl:"santiago-de-compostela"},
-  {n:"Alcobendas",cc:"C. de Madrid",reg:"centro",roi:5.4,p:3200,alq:1450,vp:6.2,va:11.5,d:16,sl:"alcobendas"},
-  {n:"San Sebastián de los Reyes",cc:"C. de Madrid",reg:"centro",roi:5.4,p:2900,alq:1310,vp:6.0,va:11.2,d:16,sl:"san-sebastian-de-los-reyes"},
-  {n:"San Bartolomé de Tirajana",cc:"Canarias",reg:"islas",roi:5.4,p:2400,alq:1080,vp:10.0,va:13.5,d:19,sl:"san-bartolome-de-tirajana"},
-  {n:"Rivas-Vaciamadrid",cc:"C. de Madrid",reg:"centro",roi:5.4,p:2800,alq:1260,vp:7.0,va:12.5,d:15,sl:"rivas-vaciamadrid"},
-  {n:"El Prat de Llobregat",cc:"Cataluña",reg:"norte",roi:5.4,p:2500,alq:1120,vp:8.0,va:10.5,d:18,sl:"el-prat-de-llobregat"},
-  {n:"Sant Feliu de Llobregat",cc:"Cataluña",reg:"norte",roi:5.4,p:2600,alq:1160,vp:8.0,va:10.8,d:18,sl:"sant-feliu-de-llobregat"},
-  {n:"Durango",cc:"País Vasco",reg:"norte",roi:5.4,p:2400,alq:1080,vp:7.0,va:9.0,d:21,sl:"durango"},
   {n:"Alcorcón",cc:"C. de Madrid",reg:"centro",roi:5.3,p:2300,alq:1020,vp:7.0,va:10.0,d:21,sl:"alcorcon"},
   {n:"Cambrils",cc:"Cataluña",reg:"norte",roi:5.3,p:2400,alq:1050,vp:7.0,va:10.0,d:20,sl:"cambrils"},
   {n:"Estepona",cc:"Andalucía",reg:"andalucia",roi:5.3,p:2800,alq:1180,vp:9.8,va:14.0,d:16,sl:"estepona"},
@@ -736,12 +697,6 @@ const DATA=[
   {n:"L'Hospitalet de Llobregat",cc:"Cataluña",reg:"norte",roi:5.3,p:3400,alq:1500,vp:5.6,va:8.0,d:20,sl:"l-hospitalet-de-llobregat"},
   {n:"Lloret de Mar",cc:"Cataluña",reg:"norte",roi:5.3,p:2400,alq:1050,vp:7.0,va:10.0,d:20,sl:"lloret-de-mar"},
   {n:"Sevilla",cc:"Andalucía",reg:"andalucia",roi:5.3,p:2450,alq:1080,vp:9.5,va:6.8,d:22,sl:"sevilla"},
-  {n:"Viladecans",cc:"Cataluña",reg:"norte",roi:5.3,p:2600,alq:1150,vp:8.2,va:10.8,d:18,sl:"viladecans"},
-  {n:"Sant Boi de Llobregat",cc:"Cataluña",reg:"norte",roi:5.3,p:2700,alq:1200,vp:8.0,va:10.5,d:18,sl:"sant-boi-de-llobregat"},
-  {n:"Adeje",cc:"Canarias",reg:"islas",roi:5.3,p:3200,alq:1400,vp:10.5,va:14.0,d:18,sl:"adeje"},
-  {n:"Basauri",cc:"País Vasco",reg:"norte",roi:5.3,p:2200,alq:980,vp:7.0,va:9.0,d:20,sl:"basauri"},
-  {n:"Gavà",cc:"Cataluña",reg:"norte",roi:5.3,p:3200,alq:1400,vp:9.0,va:11.5,d:17,sl:"gava"},
-  {n:"Castro-Urdiales",cc:"Cantabria",reg:"norte",roi:5.3,p:2400,alq:1060,vp:7.0,va:9.5,d:22,sl:"castro-urdiales"},
   {n:"Alicante",cc:"C. Valenciana",reg:"levante",roi:5.2,p:2250,alq:990,vp:13.0,va:9.0,d:19,sl:"alicante"},
   {n:"Arona (Tenerife Sur)",cc:"Canarias",reg:"islas",roi:5.2,p:3200,alq:1380,vp:7.7,va:11.0,d:16,sl:"arona-tenerife-sur"},
   {n:"Calpe",cc:"C. Valenciana",reg:"levante",roi:5.2,p:2800,alq:1200,vp:8.4,va:12.0,d:21,sl:"calpe"},
@@ -750,35 +705,24 @@ const DATA=[
   {n:"Girona",cc:"Cataluña",reg:"centro",roi:5.2,p:2300,alq:1050,vp:8.0,va:8.0,d:22,sl:"girona"},
   {n:"Irun",cc:"País Vasco",reg:"norte",roi:5.2,p:2600,alq:1120,vp:4.9,va:7.0,d:22,sl:"irun"},
   {n:"Vigo",cc:"Galicia",reg:"norte",roi:5.2,p:1850,alq:890,vp:8.0,va:8.0,d:25,sl:"vigo"},
-  {n:"Majadahonda",cc:"C. de Madrid",reg:"centro",roi:5.2,p:3600,alq:1560,vp:5.8,va:10.5,d:17,sl:"majadahonda"},
-  {n:"Tres Cantos",cc:"C. de Madrid",reg:"centro",roi:5.2,p:3200,alq:1380,vp:5.5,va:10.2,d:17,sl:"tres-cantos"},
-  {n:"Cerdanyola del Vallès",cc:"Cataluña",reg:"norte",roi:5.2,p:2800,alq:1220,vp:7.5,va:9.8,d:19,sl:"cerdanyola-del-valles"},
-  {n:"Llucmajor",cc:"Islas Baleares",reg:"islas",roi:5.2,p:3600,alq:1560,vp:8.5,va:12.0,d:18,sl:"llucmajor"},
-  {n:"Zarautz",cc:"País Vasco",reg:"norte",roi:5.2,p:4200,alq:1820,vp:7.5,va:9.0,d:18,sl:"zarautz"},
   {n:"Altea",cc:"C. Valenciana",reg:"levante",roi:5.1,p:3200,alq:1350,vp:8.4,va:12.0,d:22,sl:"altea"},
   {n:"Barakaldo",cc:"País Vasco",reg:"norte",roi:5.1,p:2800,alq:1200,vp:4.9,va:7.0,d:22,sl:"barakaldo"},
   {n:"Mijas",cc:"Andalucía",reg:"andalucia",roi:5.1,p:2800,alq:1180,vp:9.1,va:13.0,d:21,sl:"mijas"},
   {n:"Roses",cc:"Cataluña",reg:"norte",roi:5.1,p:2800,alq:1200,vp:7.0,va:10.0,d:20,sl:"roses"},
   {n:"Salou",cc:"Cataluña",reg:"norte",roi:5.1,p:2600,alq:1100,vp:7.0,va:10.0,d:19,sl:"salou"},
-  {n:"Las Rozas",cc:"C. de Madrid",reg:"centro",roi:5.1,p:3800,alq:1620,vp:5.8,va:10.2,d:17,sl:"las-rozas"},
-  {n:"Esplugues de Llobregat",cc:"Cataluña",reg:"norte",roi:5.1,p:3000,alq:1280,vp:7.5,va:9.5,d:18,sl:"esplugues-de-llobregat"},
   {n:"Nerja",cc:"Andalucía",reg:"andalucia",roi:5.0,p:3200,alq:1280,vp:9.8,va:14.0,d:18,sl:"nerja"},
-  {n:"Collado Villalba",cc:"C. de Madrid",reg:"centro",roi:5.0,p:2400,alq:1000,vp:6.0,va:10.0,d:18,sl:"collado-villalba"},
   {n:"Castelldefels",cc:"Cataluña",reg:"norte",roi:4.9,p:3200,alq:1320,vp:7.0,va:10.0,d:18,sl:"castelldefels"},
   {n:"Inca",cc:"Islas Baleares",reg:"islas",roi:4.9,p:2800,alq:1160,vp:6.3,va:9.0,d:21,sl:"inca"},
   {n:"Marbella",cc:"Andalucía",reg:"andalucia",roi:4.9,p:4200,alq:1680,vp:9.1,va:13.0,d:14,sl:"marbella"},
-  {n:"Pozuelo de Alarcón",cc:"C. de Madrid",reg:"centro",roi:4.9,p:4200,alq:1720,vp:5.5,va:9.8,d:18,sl:"pozuelo-de-alarcon"},
   {n:"Getxo",cc:"País Vasco",reg:"norte",roi:4.8,p:3500,alq:1400,vp:4.9,va:7.0,d:22,sl:"getxo"},
   {n:"Málaga",cc:"Andalucía",reg:"andalucia",roi:4.8,p:3180,alq:1340,vp:11.0,va:6.4,d:18,sl:"malaga"},
   {n:"Manacor",cc:"Islas Baleares",reg:"islas",roi:4.8,p:3200,alq:1280,vp:7.0,va:10.0,d:20,sl:"manacor"},
   {n:"Vitoria",cc:"País Vasco",reg:"norte",roi:4.8,p:2700,alq:1150,vp:7.0,va:5.0,d:27,sl:"vitoria"},
-  {n:"Sant Cugat del Vallès",cc:"Cataluña",reg:"norte",roi:4.8,p:4500,alq:1800,vp:7.2,va:9.5,d:18,sl:"sant-cugat-del-valles"},
   {n:"Bilbao",cc:"País Vasco",reg:"norte",roi:4.7,p:3150,alq:1270,vp:7.5,va:5.4,d:28,sl:"bilbao"},
   {n:"Cádiz",cc:"Andalucía",reg:"andalucia",roi:4.7,p:2200,alq:1000,vp:9.0,va:9.0,d:23,sl:"cadiz"},
   {n:"Madrid",cc:"C. de Madrid",reg:"centro",roi:4.7,p:5960,alq:1750,vp:12.0,va:9.4,d:15,sl:"madrid"},
   {n:"Pamplona",cc:"Navarra",reg:"norte",roi:4.7,p:2950,alq:1170,vp:7.5,va:10.0,d:24,sl:"pamplona"},
   {n:"Santander",cc:"Cantabria",reg:"norte",roi:4.7,p:2250,alq:940,vp:7.0,va:10.5,d:26,sl:"santander"},
-  {n:"Calvià",cc:"Islas Baleares",reg:"islas",roi:4.7,p:4800,alq:1880,vp:9.5,va:13.0,d:16,sl:"calvia"},
   {n:"Sitges",cc:"Cataluña",reg:"norte",roi:4.6,p:4800,alq:1850,vp:7.0,va:10.0,d:18,sl:"sitges"},
   {n:"A Coruña",cc:"Galicia",reg:"norte",roi:4.5,p:2100,alq:880,vp:7.5,va:8.0,d:26,sl:"a-coruna"},
   {n:"Barcelona",cc:"Cataluña",reg:"norte",roi:4.5,p:4900,alq:1880,vp:4.2,va:6.0,d:18,sl:"barcelona"},
