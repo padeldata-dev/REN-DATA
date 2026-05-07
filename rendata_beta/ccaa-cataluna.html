@@ -54,6 +54,32 @@ footer p{font-size:.76rem;color:var(--muted)}
 .bc{max-width:900px;margin:.8rem auto 0;padding:0 2rem;font-size:.76rem;color:var(--muted)}
 .bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
 @media(max-width:600px){nav a:not(:first-child):not(:last-child){display:none}.hero{padding:2.5rem 1.5rem}}
+
+/* Footer */
+footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2.5rem 1.5rem;margin-top:4rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1.2fr 1.2fr 1.2fr;gap:2.5rem;margin-bottom:2.5rem}
+.footer-brand .footer-logo{text-decoration:none;display:inline-block;margin-bottom:.9rem}
+.footer-desc{font-size:.8rem;color:var(--muted);line-height:1.65;margin-bottom:.6rem}
+.footer-disclaimer{font-size:.75rem;color:var(--border2,#cbd5e1);line-height:1.5;color:#94a3b8}
+.footer-col{display:flex;flex-direction:column;gap:.45rem}
+.footer-col-title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text);margin-bottom:.3rem}
+.footer-col a{font-size:.82rem;color:var(--muted);text-decoration:none;transition:color .15s;line-height:1.4}
+.footer-col a:hover{color:var(--blue)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding-top:1.5rem;border-top:1px solid var(--border)}
+.footer-bottom p{font-size:.75rem;color:var(--muted);text-align:center}
+.footer-bottom a{color:var(--muted);text-decoration:none}
+.footer-bottom a:hover{color:var(--blue)}
+@media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:600px){footer{padding:2rem 1.25rem 1.25rem}.footer-inner{grid-template-columns:1fr;gap:1.5rem}}
+
+
+/* CCAA analysis section */
+.ccaa-analysis{background:var(--white);border-left:4px solid var(--blue);border-radius:0 12px 12px 0;padding:1.75rem 2rem;margin:2rem 0;box-shadow:0 1px 3px rgba(14,24,40,.07)}
+.ccaa-analysis h2{font-size:1.1rem;font-weight:800;color:var(--text);letter-spacing:-.03em;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--border)}
+.ccaa-analysis p{color:#374151;font-size:.93rem;line-height:1.8;margin-bottom:.9rem}
+.ccaa-analysis p:last-child{margin-bottom:0}
+.ccaa-analysis strong{color:var(--text)}
+
 </style>
 </head>
 <body>
@@ -198,12 +224,50 @@ footer p{font-size:.76rem;color:var(--muted)}
   </div>
 </div>
 <footer>
-  <a href="/" class="logo"><div style="font-size:1rem"><span style="color:#0e2a6b;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#2563eb;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
-  <p>© 2026 rendata.es · Datos de fuentes públicas</p>
-  <div class="f-links">
-    <a href="/aviso-legal.html">Aviso legal</a>
-    <a href="/privacidad.html">Privacidad</a>
-    <a href="/contacto.html">Contacto</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <span style="color:var(--text);font-weight:800;font-size:1.1rem;letter-spacing:-.03em">Ren</span><span style="color:var(--blue);font-weight:800;font-size:1.1rem;letter-spacing:-.03em"> Data</span>
+      </a>
+      <p class="footer-desc">Análisis de rentabilidad inmobiliaria en España. Datos de fuentes públicas, actualizados trimestralmente. Gratuito y sin registro.</p>
+      <p class="footer-disclaimer">No somos asesores financieros. La información publicada es orientativa y no constituye asesoramiento de inversión.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Ciudades destacadas</div>
+      <a href="/rentabilidad-madrid.html">Madrid</a>
+      <a href="/rentabilidad-barcelona.html">Barcelona</a>
+      <a href="/rentabilidad-malaga.html">Málaga</a>
+      <a href="/rentabilidad-valencia.html">Valencia</a>
+      <a href="/rentabilidad-sevilla.html">Sevilla</a>
+      <a href="/rentabilidad-bilbao.html">Bilbao</a>
+      <a href="/rentabilidad-zaragoza.html">Zaragoza</a>
+      <a href="/rentabilidad-alicante.html">Alicante</a>
+      <a href="ranking.html">Ver ranking completo →</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Herramientas</div>
+      <a href="/">Todas las ciudades</a>
+      <a href="ranking.html">Ranking de rentabilidad</a>
+      <a href="comparador.html">Comparador de ciudades</a>
+      <a href="glosario.html">Glosario inmobiliario</a>
+      <a href="guia-inversor.html">Guía del inversor</a>
+      <a href="sobre.html">Sobre Ren Data</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Comunidades</div>
+      <a href="ccaa-andalucia.html">Andalucía</a>
+      <a href="ccaa-madrid.html">Madrid</a>
+      <a href="ccaa-cataluna.html">Cataluña</a>
+      <a href="ccaa-comunitat-valenciana.html">C. Valenciana</a>
+      <a href="ccaa-pais-vasco.html">País Vasco</a>
+      <a href="ccaa-canarias.html">Canarias</a>
+      <a href="ccaa-galicia.html">Galicia</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ren Data · rendata.es · Datos de fuentes públicas (INE, Ministerio de Vivienda, Ministerio de Hacienda) · <a href="sobre.html">Metodología</a></p>
   </div>
 </footer>
 </body></html>
