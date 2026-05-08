@@ -605,6 +605,20 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
 .ed-tag{display:inline-block;background:var(--blue-l);color:var(--blue-d);font-size:.75rem;font-weight:700;padding:.25rem .7rem;border-radius:20px;margin:.2rem .15rem}
 @media(max-width:640px){.ed-body{padding:1.25rem}}
 
+
+/* Portal links block */
+.portales-section{margin:2.5rem 0}
+.portales-inner{background:linear-gradient(135deg,var(--blue-l) 0%,#f0f9ff 100%);border:1px solid #bfdbfe;border-radius:var(--r);padding:1.5rem 2rem}
+.portales-title{font-size:.9rem;font-weight:700;color:var(--blue-d);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.portales-btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.portal-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.25rem;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:all .15s;border:2px solid transparent}
+.portal-btn-idealista{background:#fff;color:#ff4f00;border-color:#ff4f00}
+.portal-btn-idealista:hover{background:#ff4f00;color:#fff}
+.portal-btn-fotocasa{background:#fff;color:#00a3e0;border-color:#00a3e0}
+.portal-btn-fotocasa:hover{background:#00a3e0;color:#fff}
+.portal-btn svg{flex-shrink:0}
+@media(max-width:640px){.portales-inner{padding:1.25rem}.portales-btns{flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -1679,6 +1693,31 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
     <div class="rel-footer">Andalucía <span class="rel-arrow">→</span></div>
   </div>
 </a></div>
+  </div>
+
+  
+  <!-- PORTALES -->
+  <div class="section portales-section">
+    <div class="portales-inner">
+      <div class="portales-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        ¿Te interesa comprar en Torrent? Consulta los anuncios disponibles
+      </div>
+      <div class="portales-btns">
+        <a href="https://www.idealista.com/venta-viviendas/torrent/" target="_blank" rel="noopener" class="portal-btn portal-btn-idealista">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Ver pisos en venta en Torrent — Idealista
+        </a>
+        <a href="https://www.fotocasa.es/es/comprar/viviendas/torrent/todas-las-zonas/l" target="_blank" rel="noopener" class="portal-btn portal-btn-fotocasa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Ver pisos en venta en Torrent — Fotocasa
+        </a>
+        <a href="https://www.idealista.com/alquiler-viviendas/torrent/" target="_blank" rel="noopener" class="portal-btn portal-btn-idealista" style="opacity:.8">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+          Ver pisos en alquiler — Idealista
+        </a>
+      </div>
+    </div>
   </div>
 
   <div class="disc"><strong>Aviso legal:</strong> Los datos mostrados son estimaciones basadas en precios de oferta de portales inmobiliarios y fuentes públicas (Ministerio de Vivienda, Idealista, Fotocasa). No constituyen asesoramiento financiero ni de inversión. La rentabilidad real varía según inmueble, estado, zona concreta y condiciones del mercado en el momento de la operación.</div>
