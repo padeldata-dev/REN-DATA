@@ -1,8 +1,4 @@
-# Forzar HTTPS — manejado por Cloudflare automáticamente
-
-# Redirigir URLs sin extensión a URLs con .html
-/rentabilidad-:slug /rentabilidad-:slug.html 301
-/ccaa-:slug /ccaa-:slug.html 301
+# Redirecciones simples (sin wildcards para evitar bucles)
 /ranking /ranking.html 301
 /comparador /comparador.html 301
 /glosario /glosario.html 301
