@@ -1,9 +1,3 @@
-# Redirecciones simples (sin wildcards para evitar bucles)
-/ranking /ranking.html 301
-/comparador /comparador.html 301
-/glosario /glosario.html 301
-/guia-inversor /guia-inversor.html 301
-/sobre /sobre.html 301
-/aviso-legal /aviso-legal.html 301
-/privacidad /privacidad.html 301
-/contacto /contacto.html 301
+# Rewrites internos (200) — no redirect, evitan bucle con html_handling
+/rentabilidad/* /rentabilidad-:splat.html 200
+/ccaa/* /ccaa-:splat.html 200
