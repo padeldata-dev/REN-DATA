@@ -1,0 +1,5 @@
+.claude/
+.wrangler/
+rendata_beta_backup_*/
+*.pyc
+__pycache__/
