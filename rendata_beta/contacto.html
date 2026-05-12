@@ -69,19 +69,19 @@ textarea.form-input{min-height:140px;resize:vertical}
 </div></div>
 <div class="content">
   <div class="contact-grid">
-    <div class="contact-form">
+    <form class="contact-form" action="https://formspree.io/f/xpwzgkjr" method="POST">
       <h2 style="margin-top:0;margin-bottom:1.25rem;font-size:1.05rem">Envíanos un mensaje</h2>
       <div class="form-field">
         <label class="form-label">Tu nombre</label>
-        <input type="text" class="form-input" placeholder="María García">
+        <input type="text" name="nombre" class="form-input" placeholder="María García" required>
       </div>
       <div class="form-field">
         <label class="form-label">Email</label>
-        <input type="email" class="form-input" placeholder="maria@ejemplo.com">
+        <input type="email" name="email" class="form-input" placeholder="maria@ejemplo.com" required>
       </div>
       <div class="form-field">
         <label class="form-label">Asunto</label>
-        <select class="form-input">
+        <select name="asunto" class="form-input">
           <option>Quiero invertir — necesito orientación</option>
           <option>Propuesta de colaboración</option>
           <option>Error en los datos</option>
@@ -90,10 +90,10 @@ textarea.form-input{min-height:140px;resize:vertical}
       </div>
       <div class="form-field">
         <label class="form-label">Mensaje</label>
-        <textarea class="form-input" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+        <textarea name="mensaje" class="form-input" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
       </div>
-      <button class="form-btn">Enviar mensaje →</button>
-    </div>
+      <button type="submit" class="form-btn">Enviar mensaje →</button>
+    </form>
     <div>
       <div class="info-card">
         <div class="info-icon">⏱️</div>
