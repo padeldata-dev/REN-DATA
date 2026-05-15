@@ -606,3 +606,4 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
 .portal-btn-fotocasa:hover{background:#00a3e0;color:#fff}
 .portal-btn svg{flex-shrink:0}
 @media(max-width:640px){.portales-inner{padding:1.25rem}.portales-btns{flex-direction:column}}
+.nav-dropdown.open .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}

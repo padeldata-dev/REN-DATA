@@ -64,11 +64,6 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
 
 
 /* CCAA analysis section */
-.ccaa-analysis{background:var(--white);border-left:4px solid var(--blue);border-radius:0 12px 12px 0;padding:1.75rem 2rem;margin:2rem 0;box-shadow:0 1px 3px rgba(14,24,40,.07)}
-.ccaa-analysis h2{font-size:1.1rem;font-weight:800;color:var(--text);letter-spacing:-.03em;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--border)}
-.ccaa-analysis p{color:#374151;font-size:.93rem;line-height:1.8;margin-bottom:.9rem}
-.ccaa-analysis p:last-child{margin-bottom:0}
-.ccaa-analysis strong{color:var(--text)}
 
 
 /* === MENÚ HAMBURGUESA MÓVIL (CCAA) === */
@@ -82,3 +77,4 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
   .mob-nav-links a:last-child{border-bottom:none}
 }
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav-dropdown.open .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}

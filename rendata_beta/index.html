@@ -40,7 +40,7 @@ nav{display:flex;align-items:center;gap:.2rem}
 .nav-drop-btn{background:none;border:none;color:var(--muted);font-family:var(--font);font-size:.82rem;font-weight:500;padding:.45rem .85rem;border-radius:8px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:.25rem}
 .nav-drop-btn:hover{color:var(--blue);background:var(--blue-l)}
 .nav-dropdown:hover .nav-drop-btn{color:var(--blue);background:var(--blue-l)}
-.nav-drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.5rem;min-width:340px;z-index:300;box-shadow:0 12px 32px rgba(14,24,40,.14)}
+.nav-drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.5rem;min-width:340px;z-index:300;box-shadow:0 12px 32px rgba(14,24,40,.14)}.nav-dropdown.open .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .nav-dropdown:hover .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .nav-drop-menu a{font-size:.78rem;color:var(--text2);text-decoration:none;padding:.45rem .7rem;border-radius:6px;transition:all .15s;white-space:nowrap;display:inline-flex;align-items:center}
 .nav-drop-menu a:hover{color:var(--blue);background:var(--blue-l)}
@@ -316,6 +316,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
 <meta name="twitter:title" content="Ren Data — Rentabilidad inmobiliaria en España">
 <meta name="twitter:description" content="Análisis de rentabilidad inmobiliaria para 329 ciudades. Precio m², alquiler, ROI y más.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230e2a6b'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='16' fill='white'>Rd</text></svg>">
+<script src="/js/nav-dropdown.js" defer></script>
 </head>
 <body>
 
