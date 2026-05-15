@@ -16,55 +16,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Ranking de rentabilidad inmobiliaria España 2026","url":"https://rendata.es/ranking.html","description":"Ranking de las ciudades españolas ordenadas por rentabilidad bruta del alquiler. Filtrable por región y ordenable por ROI, precio o subida.","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es-ES"},{"@context":"https://schema.org","@type":"Dataset","name":"Ranking de rentabilidad por ciudad España 2026","description":"Datos de rentabilidad bruta de alquiler (ROI), precio m² y evolución para las principales ciudades españolas.","keywords":["ranking rentabilidad","ROI alquiler España","mejor ciudad invertir","rentabilidad inmobiliaria"],"temporalCoverage":"2026","spatialCoverage":"España","publisher":{"@type":"Organization","name":"Ren Data","url":"https://rendata.es/"}}]</script>
-<style>
-:root{--bg:#f8fafc;--white:#fff;--blue:#1a56db;--blue-d:#1140a6;--blue-l:#eff6ff;--text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;--sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);--font:'Plus Jakarta Sans',sans-serif;--r:12px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
-header{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
-header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue) 0%,#60a5fa 50%,var(--blue) 100%);background-size:200% 100%;animation:sh 4s linear infinite}
-@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
-.logo-wm{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--text)}
-.logo-wm em{color:var(--blue);font-style:normal}
-nav a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
-nav a:hover{color:var(--blue);background:var(--blue-l)}
-.nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600!important}
-.hero{background:var(--white);border-bottom:1px solid var(--border);padding:3.5rem 2rem 3rem;text-align:center}
-.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-.04em;margin-bottom:.75rem}
-.hero h1 span{color:var(--blue)}
-.hero p{font-size:.95rem;color:var(--muted);max-width:520px;margin:0 auto}
-.page{max-width:1100px;margin:2rem auto 5rem;padding:0 2rem}
-.controls{display:flex;align-items:center;gap:.65rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.ctrl-label{font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.f-btn{background:var(--white);border:1px solid var(--border);color:var(--text2);font-family:var(--font);font-size:.78rem;font-weight:500;padding:.38rem .9rem;border-radius:20px;cursor:pointer;transition:all .15s}
-.f-btn:hover{border-color:var(--blue);color:var(--blue)}
-.f-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
-.sort-sel{margin-left:auto;background:var(--white);border:1px solid var(--border);color:var(--text2);font-family:var(--font);font-size:.78rem;font-weight:500;padding:.4rem .85rem;border-radius:8px;cursor:pointer;outline:none}
-.rank-table{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
-.rank-thead{display:grid;grid-template-columns:50px 1.8fr 1fr 1fr 1fr 1fr 1fr 90px;padding:.7rem 1.25rem;background:var(--bg);border-bottom:1px solid var(--border)}
-.rank-thead span{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);cursor:pointer;user-select:none;transition:color .15s}
-.rank-thead span:hover{color:var(--blue)}
-.rank-row{display:grid;grid-template-columns:50px 1.8fr 1fr 1fr 1fr 1fr 1fr 90px;padding:.9rem 1.25rem;border-bottom:1px solid var(--border);align-items:center;transition:background .15s;text-decoration:none;color:inherit}
-.rank-row:last-child{border-bottom:none}
-.rank-row:hover{background:#fafbff}
-.rank-num{font-size:.82rem;font-weight:800;color:var(--muted);text-align:center}
-.rank-num.gold{color:#d97706}.rank-num.silver{color:#64748b}.rank-num.bronze{color:#b45309}
-.rank-city{font-weight:700;font-size:.92rem;letter-spacing:-.01em}
-.rank-ccaa{font-size:.72rem;color:var(--muted);margin-top:.1rem}
-.rank-cell{font-size:.88rem;font-weight:600;color:var(--text)}
-.rank-cell.muted{color:var(--muted);font-weight:400}
-.roi-pill{display:inline-flex;font-size:.82rem;font-weight:800;padding:.28rem .65rem;border-radius:8px;letter-spacing:-.02em}
-.rh{background:var(--green-bg);color:var(--green)}
-.rm{background:var(--blue-l);color:var(--blue)}
-.rl{background:var(--red-bg);color:var(--red)}
-.rank-link{background:var(--blue);color:#fff;font-family:var(--font);font-size:.75rem;font-weight:700;padding:.35rem .8rem;border-radius:6px;text-decoration:none;white-space:nowrap;transition:all .15s}
-.rank-link:hover{background:var(--blue-d);transform:translateY(-1px)}
-.trend-up{color:var(--green);font-weight:600;font-size:.82rem}
-.trend-dn{color:var(--red);font-weight:600;font-size:.82rem}
-footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
-footer p{font-size:.76rem;color:var(--muted)}
-@media(max-width:768px){.rank-thead,.rank-row{grid-template-columns:36px 1fr 70px 70px 90px}}
-</style>
+
+<link rel="stylesheet" href="/css/ranking.css">
 </head>
 <body>
 <header>

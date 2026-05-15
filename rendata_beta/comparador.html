@@ -16,73 +16,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Comparador de ciudades para invertir","url":"https://rendata.es/comparador.html","description":"Compara dos ciudades de España lado a lado: precio m², alquiler, ROI, demografía y calidad de vida.","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es-ES"},{"@context":"https://schema.org","@type":"Dataset","name":"Mercado inmobiliario España 2026 - Comparativa por ciudades","description":"Datos comparables de precio m², alquiler medio, ROI estimado, demografía y dinamismo del mercado para las principales ciudades españolas.","keywords":["comparador inmobiliario","rentabilidad alquiler","precio vivienda España","ROI inmobiliario"],"temporalCoverage":"2026","spatialCoverage":"España","publisher":{"@type":"Organization","name":"Ren Data","url":"https://rendata.es/"}}]</script>
-<style>
-:root{--bg:#f8fafc;--white:#fff;--blue:#1a56db;--blue-d:#1140a6;--blue-l:#eff6ff;--text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;--amber:#d97706;--sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);--sh-md:0 4px 16px rgba(14,24,40,.1);--font:'Plus Jakarta Sans',sans-serif;--r:12px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
-header{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
-header::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--blue) 0%,#60a5fa 50%,var(--blue) 100%);background-size:200% 100%;animation:sh 4s linear infinite}
-@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
-.logo-wm{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--text)}
-.logo-wm em{color:var(--blue);font-style:normal}
-nav a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
-nav a:hover{color:var(--blue);background:var(--blue-l)}
-.nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600!important}
-.hero{background:var(--white);border-bottom:1px solid var(--border);padding:3.5rem 2rem 3rem;text-align:center}
-.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-.04em;margin-bottom:.75rem}
-.hero h1 span{color:var(--blue)}
-.hero p{font-size:.95rem;color:var(--muted);max-width:480px;margin:0 auto}
-.page{max-width:1100px;margin:2rem auto 5rem;padding:0 2rem}
-/* SELECTOR */
-.selectors{display:grid;grid-template-columns:1fr 60px 1fr;gap:1rem;align-items:center;margin-bottom:2rem}
-.sel-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;box-shadow:var(--sh)}
-.sel-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.6rem}
-.city-select{width:100%;background:var(--bg);border:1.5px solid var(--border);color:var(--text);font-family:var(--font);font-size:.95rem;font-weight:600;padding:.7rem 1rem;border-radius:8px;outline:none;transition:border-color .15s;cursor:pointer}
-.city-select:focus{border-color:var(--blue)}
-.vs-badge{width:44px;height:44px;background:var(--blue);color:#fff;font-weight:800;font-size:.88rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto}
-/* COMPARE GRID */
-.cmp-section{margin-bottom:2rem}
-.cmp-section-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:.9rem;display:flex;align-items:center;gap:.4rem}
-.cmp-section-title::before{content:'';display:block;width:14px;height:2px;background:var(--blue);border-radius:2px}
-.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.cmp-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem;box-shadow:var(--sh);position:relative}
-.cmp-card.winner{border-color:var(--green);box-shadow:0 0 0 2px rgba(5,150,105,.12)}
-.winner-badge{position:absolute;top:.65rem;right:.65rem;background:var(--green);color:#fff;font-size:.62rem;font-weight:800;padding:.18rem .5rem;border-radius:4px;letter-spacing:.04em}
-.cmp-stat-label{font-size:.68rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
-.cmp-stat-value{font-size:1.75rem;font-weight:800;letter-spacing:-.04em;line-height:1}
-.cmp-stat-sub{font-size:.75rem;color:var(--muted);margin-top:.2rem}
-.cmp-bar-wrap{margin-top:.75rem}
-.cmp-bar-track{background:var(--bg);height:8px;border-radius:99px;overflow:hidden;border:1px solid var(--border)}
-.cmp-bar-fill{height:100%;border-radius:99px;background:var(--blue);transition:width .6s ease}
-.cmp-bar-fill.green{background:var(--green)}
-.cmp-multi{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.cmp-row-item{display:flex;flex-direction:column;gap:.2rem}
-.cmp-row-label{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.cmp-row-val{font-size:.92rem;font-weight:700}
-/* SUMMARY */
-.summary-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem 1.75rem;box-shadow:var(--sh);margin-bottom:2rem}
-.sum-title{font-size:1rem;font-weight:800;letter-spacing:-.02em;margin-bottom:1rem}
-.sum-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.sum-item{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem}
-.sum-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.35rem}
-.sum-winner{font-size:.88rem;font-weight:700;color:var(--text)}
-.sum-detail{font-size:.75rem;color:var(--muted);margin-top:.15rem}
-/* ACTIONS */
-.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}
-.act-btn{background:var(--blue);color:#fff;font-family:var(--font);font-weight:700;font-size:.875rem;padding:.72rem 1.4rem;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .15s}
-.act-btn:hover{background:var(--blue-d);transform:translateY(-1px)}
-.act-btn.sec{background:var(--white);color:var(--text);border:1px solid var(--border)}
-.act-btn.sec:hover{border-color:var(--blue);color:var(--blue)}
-footer{border-top:1px solid var(--border);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
-footer p{font-size:.76rem;color:var(--muted)}
-@media(max-width:700px){.selectors{grid-template-columns:1fr}.cmp-grid,.cmp-multi,.sum-grid{grid-template-columns:1fr}}
 
-/* Share button */
-.share-btn{background:var(--white);border:1.5px solid var(--border2);color:var(--text2);cursor:pointer;font-family:var(--font);font-size:.85rem;font-weight:600;padding:.6rem 1.1rem;border-radius:8px;transition:all .15s}
-.share-btn:hover{border-color:var(--blue);color:var(--blue)}
-
-</style>
+<link rel="stylesheet" href="/css/comparador.css">
 </head>
 <body>
 <header>
