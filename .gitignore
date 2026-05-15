@@ -1,5 +1,11 @@
-.claude/
-.wrangler/
-rendata_beta_backup_*/
-*.pyc
+data/raw/*.zip
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.csv
+data/raw/*.pdf
+!data/raw/.gitkeep
+!data/snapshots/.gitkeep
+!data/processed/.gitkeep
 __pycache__/
+*.pyc
+inca_orig_tmp.jpg
