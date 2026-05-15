@@ -1,0 +1,2305 @@
+{
+  "a-coruna": {
+    "ccaa": "galicia",
+    "roi": 4.5,
+    "precio": 2100,
+    "alquiler": 880,
+    "dias": 26
+  },
+  "adeje": {
+    "ccaa": "canarias",
+    "roi": 5.3,
+    "precio": 3200,
+    "alquiler": 1400,
+    "dias": 22
+  },
+  "adra": {
+    "ccaa": "andalucia",
+    "roi": 6.4,
+    "precio": 1300,
+    "alquiler": 693,
+    "dias": 24
+  },
+  "aguilas": {
+    "ccaa": "murcia",
+    "roi": 6.2,
+    "precio": 1400,
+    "alquiler": 720,
+    "dias": 24
+  },
+  "aguimes": {
+    "ccaa": "canarias",
+    "roi": 5.8,
+    "precio": 1900,
+    "alquiler": 918,
+    "dias": 22
+  },
+  "albacete": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.2,
+    "precio": 1200,
+    "alquiler": 680,
+    "dias": 26
+  },
+  "alcala-de-guadaira": {
+    "ccaa": "andalucia",
+    "roi": 5.9,
+    "precio": 1400,
+    "alquiler": 680,
+    "dias": 26
+  },
+  "alcala-de-henares": {
+    "ccaa": "madrid",
+    "roi": 5.7,
+    "precio": 1950,
+    "alquiler": 920,
+    "dias": 20
+  },
+  "alcala-la-real": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 542,
+    "dias": 27
+  },
+  "alcaniz": {
+    "ccaa": "aragon",
+    "roi": 6.8,
+    "precio": 1000,
+    "alquiler": 567,
+    "dias": 27
+  },
+  "alcantarilla": {
+    "ccaa": "murcia",
+    "roi": 6.3,
+    "precio": 1100,
+    "alquiler": 580,
+    "dias": 22
+  },
+  "alcazar-de-san-juan": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 595,
+    "dias": 26
+  },
+  "alcobendas": {
+    "ccaa": "madrid",
+    "roi": 5.4,
+    "precio": 3200,
+    "alquiler": 1450,
+    "dias": 22
+  },
+  "alcorcon": {
+    "ccaa": "madrid",
+    "roi": 5.3,
+    "precio": 2300,
+    "alquiler": 1020,
+    "dias": 21
+  },
+  "alcoy": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 26
+  },
+  "alcudia": {
+    "ccaa": "baleares",
+    "roi": 5.1,
+    "precio": 3800,
+    "alquiler": 1615,
+    "dias": 17
+  },
+  "algeciras": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1200,
+    "alquiler": 620,
+    "dias": 26
+  },
+  "algemesi": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.2,
+    "precio": 1400,
+    "alquiler": 724,
+    "dias": 24
+  },
+  "alhaurin-de-la-torre": {
+    "ccaa": "andalucia",
+    "roi": 5.8,
+    "precio": 2100,
+    "alquiler": 1015,
+    "dias": 22
+  },
+  "alhaurin-el-grande": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1700,
+    "alquiler": 876,
+    "dias": 24
+  },
+  "alicante": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.2,
+    "precio": 2250,
+    "alquiler": 990,
+    "dias": 19
+  },
+  "almansa": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 542,
+    "dias": 27
+  },
+  "almendralejo": {
+    "ccaa": "extremadura",
+    "roi": 6.5,
+    "precio": 900,
+    "alquiler": 470,
+    "dias": 22
+  },
+  "almeria": {
+    "ccaa": "andalucia",
+    "roi": 6.6,
+    "precio": 1380,
+    "alquiler": 760,
+    "dias": 25
+  },
+  "almunecar": {
+    "ccaa": "andalucia",
+    "roi": 5.5,
+    "precio": 2400,
+    "alquiler": 1100,
+    "dias": 22
+  },
+  "altea": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.1,
+    "precio": 3200,
+    "alquiler": 1350,
+    "dias": 22
+  },
+  "alzira": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1350,
+    "alquiler": 670,
+    "dias": 26
+  },
+  "andratx": {
+    "ccaa": "baleares",
+    "roi": 4.5,
+    "precio": 5000,
+    "alquiler": 1875,
+    "dias": 15
+  },
+  "andujar": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 520,
+    "dias": 22
+  },
+  "antequera": {
+    "ccaa": "andalucia",
+    "roi": 6.1,
+    "precio": 1100,
+    "alquiler": 560,
+    "dias": 28
+  },
+  "aranda-de-duero": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.5,
+    "precio": 950,
+    "alquiler": 510,
+    "dias": 30
+  },
+  "aranjuez": {
+    "ccaa": "madrid",
+    "roi": 5.8,
+    "precio": 2000,
+    "alquiler": 966,
+    "dias": 21
+  },
+  "arganda-del-rey": {
+    "ccaa": "madrid",
+    "roi": 5.4,
+    "precio": 2000,
+    "alquiler": 900,
+    "dias": 20
+  },
+  "armilla": {
+    "ccaa": "andalucia",
+    "roi": 5.9,
+    "precio": 1800,
+    "alquiler": 884,
+    "dias": 22
+  },
+  "arona-tenerife-sur": {
+    "ccaa": "canarias",
+    "roi": 5.2,
+    "precio": 3200,
+    "alquiler": 1380,
+    "dias": 16
+  },
+  "arroyomolinos": {
+    "ccaa": "madrid",
+    "roi": 5.6,
+    "precio": 2400,
+    "alquiler": 1120,
+    "dias": 19
+  },
+  "avila": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.7,
+    "precio": 1120,
+    "alquiler": 660,
+    "dias": 27
+  },
+  "aviles": {
+    "ccaa": "asturias",
+    "roi": 6.2,
+    "precio": 1200,
+    "alquiler": 620,
+    "dias": 28
+  },
+  "badajoz": {
+    "ccaa": "extremadura",
+    "roi": 6.5,
+    "precio": 920,
+    "alquiler": 530,
+    "dias": 29
+  },
+  "badalona": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2600,
+    "alquiler": 1200,
+    "dias": 20
+  },
+  "baeza": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1100,
+    "alquiler": 567,
+    "dias": 27
+  },
+  "banyoles": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 2200,
+    "alquiler": 1023,
+    "dias": 22
+  },
+  "barakaldo": {
+    "ccaa": "pais-vasco",
+    "roi": 5.1,
+    "precio": 2800,
+    "alquiler": 1200,
+    "dias": 22
+  },
+  "barbastro": {
+    "ccaa": "aragon",
+    "roi": 6.5,
+    "precio": 1200,
+    "alquiler": 650,
+    "dias": 26
+  },
+  "barcelona": {
+    "ccaa": "cataluna",
+    "roi": 4.5,
+    "precio": 4900,
+    "alquiler": 1880,
+    "dias": 18
+  },
+  "basauri": {
+    "ccaa": "pais-vasco",
+    "roi": 5.3,
+    "precio": 2200,
+    "alquiler": 980,
+    "dias": 22
+  },
+  "baza": {
+    "ccaa": "andalucia",
+    "roi": 7.0,
+    "precio": 900,
+    "alquiler": 525,
+    "dias": 28
+  },
+  "benalmadena": {
+    "ccaa": "andalucia",
+    "roi": 5.4,
+    "precio": 2200,
+    "alquiler": 980,
+    "dias": 19
+  },
+  "benicarlo": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1700,
+    "alquiler": 850,
+    "dias": 23
+  },
+  "benidorm": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.7,
+    "precio": 2200,
+    "alquiler": 1050,
+    "dias": 18
+  },
+  "benissa": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.4,
+    "precio": 2400,
+    "alquiler": 1080,
+    "dias": 22
+  },
+  "bermeo": {
+    "ccaa": "pais-vasco",
+    "roi": 5.5,
+    "precio": 2600,
+    "alquiler": 1190,
+    "dias": 22
+  },
+  "bilbao": {
+    "ccaa": "pais-vasco",
+    "roi": 4.7,
+    "precio": 3150,
+    "alquiler": 1270,
+    "dias": 28
+  },
+  "blanes": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2200,
+    "alquiler": 1000,
+    "dias": 21
+  },
+  "boadilla-del-monte": {
+    "ccaa": "madrid",
+    "roi": 4.8,
+    "precio": 3200,
+    "alquiler": 1280,
+    "dias": 18
+  },
+  "bormujos": {
+    "ccaa": "andalucia",
+    "roi": 5.8,
+    "precio": 2000,
+    "alquiler": 965,
+    "dias": 21
+  },
+  "burgos": {
+    "ccaa": "castilla-y-leon",
+    "roi": 5.6,
+    "precio": 1720,
+    "alquiler": 890,
+    "dias": 25
+  },
+  "burjassot": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.5,
+    "precio": 2100,
+    "alquiler": 960,
+    "dias": 21
+  },
+  "burriana": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1500,
+    "alquiler": 750,
+    "dias": 24
+  },
+  "caceres": {
+    "ccaa": "extremadura",
+    "roi": 6.3,
+    "precio": 960,
+    "alquiler": 560,
+    "dias": 28
+  },
+  "cadiz": {
+    "ccaa": "andalucia",
+    "roi": 4.7,
+    "precio": 2200,
+    "alquiler": 1000,
+    "dias": 23
+  },
+  "calafell": {
+    "ccaa": "cataluna",
+    "roi": 5.7,
+    "precio": 2200,
+    "alquiler": 1045,
+    "dias": 21
+  },
+  "calahorra": {
+    "ccaa": "la-rioja",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 540,
+    "dias": 28
+  },
+  "calatayud": {
+    "ccaa": "aragon",
+    "roi": 7.0,
+    "precio": 900,
+    "alquiler": 525,
+    "dias": 27
+  },
+  "calella": {
+    "ccaa": "cataluna",
+    "roi": 5.7,
+    "precio": 2200,
+    "alquiler": 1045,
+    "dias": 21
+  },
+  "calpe": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.2,
+    "precio": 2800,
+    "alquiler": 1200,
+    "dias": 21
+  },
+  "calvia": {
+    "ccaa": "baleares",
+    "roi": 4.7,
+    "precio": 4800,
+    "alquiler": 1880,
+    "dias": 22
+  },
+  "cambrils": {
+    "ccaa": "cataluna",
+    "roi": 5.3,
+    "precio": 2400,
+    "alquiler": 1050,
+    "dias": 20
+  },
+  "cangas-do-morrazo": {
+    "ccaa": "galicia",
+    "roi": 5.9,
+    "precio": 1800,
+    "alquiler": 886,
+    "dias": 24
+  },
+  "carballo": {
+    "ccaa": "galicia",
+    "roi": 6.2,
+    "precio": 1200,
+    "alquiler": 620,
+    "dias": 26
+  },
+  "carmona": {
+    "ccaa": "andalucia",
+    "roi": 6.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 25
+  },
+  "cartagena": {
+    "ccaa": "murcia",
+    "roi": 6.2,
+    "precio": 1400,
+    "alquiler": 720,
+    "dias": 22
+  },
+  "castelldefels": {
+    "ccaa": "cataluna",
+    "roi": 4.9,
+    "precio": 3200,
+    "alquiler": 1320,
+    "dias": 18
+  },
+  "castello-d-empuries": {
+    "ccaa": "cataluna",
+    "roi": 5.8,
+    "precio": 2400,
+    "alquiler": 1160,
+    "dias": 20
+  },
+  "castellon-de-la-plana": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 24
+  },
+  "castellon": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 7.0,
+    "precio": 1500,
+    "alquiler": 750,
+    "dias": 23
+  },
+  "castrillon": {
+    "ccaa": "asturias",
+    "roi": 6.5,
+    "precio": 1300,
+    "alquiler": 640,
+    "dias": 22
+  },
+  "castro-urdiales": {
+    "ccaa": "cantabria",
+    "roi": 6.5,
+    "precio": 2400,
+    "alquiler": 1060,
+    "dias": 22
+  },
+  "cerdanyola-del-valles": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 2800,
+    "alquiler": 1220,
+    "dias": 22
+  },
+  "chiclana-de-la-frontera": {
+    "ccaa": "andalucia",
+    "roi": 5.5,
+    "precio": 2000,
+    "alquiler": 920,
+    "dias": 22
+  },
+  "chipiona": {
+    "ccaa": "andalucia",
+    "roi": 6.0,
+    "precio": 1600,
+    "alquiler": 800,
+    "dias": 23
+  },
+  "cieza": {
+    "ccaa": "murcia",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 520,
+    "dias": 22
+  },
+  "ciudad-real": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.5,
+    "precio": 900,
+    "alquiler": 540,
+    "dias": 28
+  },
+  "ciudad-rodrigo": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.8,
+    "precio": 1000,
+    "alquiler": 567,
+    "dias": 28
+  },
+  "ciutadella-de-menorca": {
+    "ccaa": "baleares",
+    "roi": 5.2,
+    "precio": 3600,
+    "alquiler": 1560,
+    "dias": 18
+  },
+  "coin": {
+    "ccaa": "andalucia",
+    "roi": 6.0,
+    "precio": 1600,
+    "alquiler": 800,
+    "dias": 25
+  },
+  "collado-villalba": {
+    "ccaa": "madrid",
+    "roi": 6.5,
+    "precio": 2400,
+    "alquiler": 1000,
+    "dias": 22
+  },
+  "conil-de-la-frontera": {
+    "ccaa": "andalucia",
+    "roi": 5.6,
+    "precio": 2200,
+    "alquiler": 1023,
+    "dias": 22
+  },
+  "cordoba": {
+    "ccaa": "andalucia",
+    "roi": 5.8,
+    "precio": 1520,
+    "alquiler": 740,
+    "dias": 26
+  },
+  "cornell-de-llobregat": {
+    "ccaa": "cataluna",
+    "roi": 5.4,
+    "precio": 2800,
+    "alquiler": 1250,
+    "dias": 21
+  },
+  "coslada": {
+    "ccaa": "madrid",
+    "roi": 5.5,
+    "precio": 2600,
+    "alquiler": 1200,
+    "dias": 22
+  },
+  "cuenca": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.8,
+    "precio": 900,
+    "alquiler": 560,
+    "dias": 30
+  },
+  "cullera": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.8,
+    "precio": 2100,
+    "alquiler": 1015,
+    "dias": 21
+  },
+  "denia": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.2,
+    "precio": 2600,
+    "alquiler": 1120,
+    "dias": 20
+  },
+  "don-benito": {
+    "ccaa": "extremadura",
+    "roi": 6.6,
+    "precio": 880,
+    "alquiler": 480,
+    "dias": 32
+  },
+  "dos-hermanas": {
+    "ccaa": "andalucia",
+    "roi": 5.7,
+    "precio": 1600,
+    "alquiler": 760,
+    "dias": 24
+  },
+  "durango": {
+    "ccaa": "pais-vasco",
+    "roi": 6.5,
+    "precio": 2400,
+    "alquiler": 1080,
+    "dias": 22
+  },
+  "ecija": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 850,
+    "alquiler": 460,
+    "dias": 22
+  },
+  "eibar": {
+    "ccaa": "pais-vasco",
+    "roi": 5.5,
+    "precio": 1800,
+    "alquiler": 820,
+    "dias": 22
+  },
+  "el-ejido": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 570,
+    "dias": 22
+  },
+  "el-prat-de-llobregat": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 2500,
+    "alquiler": 1120,
+    "dias": 22
+  },
+  "el-puerto-de-santa-maria": {
+    "ccaa": "andalucia",
+    "roi": 5.7,
+    "precio": 1800,
+    "alquiler": 860,
+    "dias": 22
+  },
+  "elche": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.9,
+    "precio": 1600,
+    "alquiler": 780,
+    "dias": 22
+  },
+  "elda": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.4,
+    "precio": 1100,
+    "alquiler": 580,
+    "dias": 26
+  },
+  "esplugues-de-llobregat": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 3000,
+    "alquiler": 1280,
+    "dias": 22
+  },
+  "estella-lizarra": {
+    "ccaa": "navarra",
+    "roi": 6.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 25
+  },
+  "estepona": {
+    "ccaa": "andalucia",
+    "roi": 5.3,
+    "precio": 2800,
+    "alquiler": 1180,
+    "dias": 16
+  },
+  "felanitx": {
+    "ccaa": "baleares",
+    "roi": 5.5,
+    "precio": 2800,
+    "alquiler": 1283,
+    "dias": 19
+  },
+  "ferrol": {
+    "ccaa": "galicia",
+    "roi": 6.7,
+    "precio": 800,
+    "alquiler": 440,
+    "dias": 32
+  },
+  "figueres": {
+    "ccaa": "cataluna",
+    "roi": 5.8,
+    "precio": 1500,
+    "alquiler": 720,
+    "dias": 22
+  },
+  "fuengirola": {
+    "ccaa": "andalucia",
+    "roi": 5.2,
+    "precio": 2600,
+    "alquiler": 1100,
+    "dias": 20
+  },
+  "fuenlabrada": {
+    "ccaa": "madrid",
+    "roi": 5.6,
+    "precio": 1900,
+    "alquiler": 880,
+    "dias": 22
+  },
+  "fuerteventura-pjto-rosario": {
+    "ccaa": "canarias",
+    "roi": 5.6,
+    "precio": 2000,
+    "alquiler": 920,
+    "dias": 22
+  },
+  "galapagar": {
+    "ccaa": "madrid",
+    "roi": 5.4,
+    "precio": 2600,
+    "alquiler": 1170,
+    "dias": 19
+  },
+  "gandia": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.7,
+    "precio": 1900,
+    "alquiler": 890,
+    "dias": 21
+  },
+  "gava": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 3200,
+    "alquiler": 1400,
+    "dias": 22
+  },
+  "gernika-lumo": {
+    "ccaa": "pais-vasco",
+    "roi": 5.4,
+    "precio": 2400,
+    "alquiler": 1080,
+    "dias": 22
+  },
+  "getafe": {
+    "ccaa": "madrid",
+    "roi": 5.7,
+    "precio": 2400,
+    "alquiler": 1100,
+    "dias": 18
+  },
+  "getxo": {
+    "ccaa": "pais-vasco",
+    "roi": 4.8,
+    "precio": 3500,
+    "alquiler": 1400,
+    "dias": 22
+  },
+  "gijon": {
+    "ccaa": "asturias",
+    "roi": 5.7,
+    "precio": 1680,
+    "alquiler": 800,
+    "dias": 27
+  },
+  "girona": {
+    "ccaa": "cataluna",
+    "roi": 5.2,
+    "precio": 2300,
+    "alquiler": 1050,
+    "dias": 22
+  },
+  "granada": {
+    "ccaa": "andalucia",
+    "roi": 5.5,
+    "precio": 1980,
+    "alquiler": 910,
+    "dias": 21
+  },
+  "granadilla-de-abona": {
+    "ccaa": "canarias",
+    "roi": 6.5,
+    "precio": 2200,
+    "alquiler": 1060,
+    "dias": 22
+  },
+  "granollers": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 2200,
+    "alquiler": 1020,
+    "dias": 22
+  },
+  "guadalajara": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 5.3,
+    "precio": 1750,
+    "alquiler": 860,
+    "dias": 23
+  },
+  "guadix": {
+    "ccaa": "andalucia",
+    "roi": 6.8,
+    "precio": 900,
+    "alquiler": 510,
+    "dias": 27
+  },
+  "guardamar-del-segura": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.2,
+    "precio": 1900,
+    "alquiler": 981,
+    "dias": 20
+  },
+  "guimar": {
+    "ccaa": "canarias",
+    "roi": 5.6,
+    "precio": 1800,
+    "alquiler": 840,
+    "dias": 23
+  },
+  "haro": {
+    "ccaa": "la-rioja",
+    "roi": 6.2,
+    "precio": 1300,
+    "alquiler": 671,
+    "dias": 25
+  },
+  "hellin": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.8,
+    "precio": 900,
+    "alquiler": 510,
+    "dias": 28
+  },
+  "hondarribia": {
+    "ccaa": "pais-vasco",
+    "roi": 5.2,
+    "precio": 3400,
+    "alquiler": 1473,
+    "dias": 20
+  },
+  "huelva": {
+    "ccaa": "andalucia",
+    "roi": 7.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 24
+  },
+  "huercal-overa": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 542,
+    "dias": 27
+  },
+  "huesca": {
+    "ccaa": "aragon",
+    "roi": 6.0,
+    "precio": 1350,
+    "alquiler": 740,
+    "dias": 27
+  },
+  "ibiza": {
+    "ccaa": "baleares",
+    "roi": 3.9,
+    "precio": 6800,
+    "alquiler": 2200,
+    "dias": 18
+  },
+  "igualada": {
+    "ccaa": "cataluna",
+    "roi": 6.0,
+    "precio": 1800,
+    "alquiler": 900,
+    "dias": 23
+  },
+  "illescas": {
+    "ccaa": "madrid",
+    "roi": 5.3,
+    "precio": 2200,
+    "alquiler": 980,
+    "dias": 18
+  },
+  "inca": {
+    "ccaa": "baleares",
+    "roi": 4.9,
+    "precio": 2800,
+    "alquiler": 1160,
+    "dias": 21
+  },
+  "irun": {
+    "ccaa": "pais-vasco",
+    "roi": 5.2,
+    "precio": 2600,
+    "alquiler": 1120,
+    "dias": 22
+  },
+  "isla-cristina": {
+    "ccaa": "andalucia",
+    "roi": 6.4,
+    "precio": 1400,
+    "alquiler": 746,
+    "dias": 24
+  },
+  "jaen": {
+    "ccaa": "andalucia",
+    "roi": 7.0,
+    "precio": 980,
+    "alquiler": 580,
+    "dias": 26
+  },
+  "javea": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.2,
+    "precio": 3200,
+    "alquiler": 1385,
+    "dias": 17
+  },
+  "jerez-de-la-frontera": {
+    "ccaa": "andalucia",
+    "roi": 5.7,
+    "precio": 1600,
+    "alquiler": 760,
+    "dias": 25
+  },
+  "jumilla": {
+    "ccaa": "murcia",
+    "roi": 6.8,
+    "precio": 1000,
+    "alquiler": 567,
+    "dias": 27
+  },
+  "l-escala": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2600,
+    "alquiler": 1190,
+    "dias": 20
+  },
+  "l-hospitalet-de-llobregat": {
+    "ccaa": "cataluna",
+    "roi": 5.3,
+    "precio": 3400,
+    "alquiler": 1500,
+    "dias": 20
+  },
+  "la-laguna": {
+    "ccaa": "canarias",
+    "roi": 5.5,
+    "precio": 2000,
+    "alquiler": 920,
+    "dias": 22
+  },
+  "la-linea-de-la-concepcion": {
+    "ccaa": "andalucia",
+    "roi": 6.0,
+    "precio": 1200,
+    "alquiler": 600,
+    "dias": 22
+  },
+  "la-oliva": {
+    "ccaa": "canarias",
+    "roi": 5.8,
+    "precio": 2400,
+    "alquiler": 1155,
+    "dias": 19
+  },
+  "la-orotava": {
+    "ccaa": "canarias",
+    "roi": 6.5,
+    "precio": 2000,
+    "alquiler": 920,
+    "dias": 22
+  },
+  "la-rinconada": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1300,
+    "alquiler": 670,
+    "dias": 22
+  },
+  "la-union": {
+    "ccaa": "murcia",
+    "roi": 7.2,
+    "precio": 900,
+    "alquiler": 540,
+    "dias": 27
+  },
+  "langreo": {
+    "ccaa": "asturias",
+    "roi": 6.7,
+    "precio": 800,
+    "alquiler": 440,
+    "dias": 32
+  },
+  "lanzarote-arrecife": {
+    "ccaa": "canarias",
+    "roi": 5.4,
+    "precio": 2200,
+    "alquiler": 980,
+    "dias": 22
+  },
+  "laredo": {
+    "ccaa": "cantabria",
+    "roi": 5.8,
+    "precio": 1900,
+    "alquiler": 918,
+    "dias": 23
+  },
+  "las-palmas-gc": {
+    "ccaa": "canarias",
+    "roi": 6.7,
+    "precio": 2100,
+    "alquiler": 980,
+    "dias": 20
+  },
+  "las-rozas": {
+    "ccaa": "madrid",
+    "roi": 5.1,
+    "precio": 3800,
+    "alquiler": 1620,
+    "dias": 22
+  },
+  "lebrija": {
+    "ccaa": "andalucia",
+    "roi": 7.0,
+    "precio": 1000,
+    "alquiler": 583,
+    "dias": 28
+  },
+  "leganes": {
+    "ccaa": "madrid",
+    "roi": 5.5,
+    "precio": 2200,
+    "alquiler": 1000,
+    "dias": 20
+  },
+  "leon": {
+    "ccaa": "castilla-y-leon",
+    "roi": 5.8,
+    "precio": 1400,
+    "alquiler": 770,
+    "dias": 26
+  },
+  "linares": {
+    "ccaa": "andalucia",
+    "roi": 6.7,
+    "precio": 780,
+    "alquiler": 430,
+    "dias": 32
+  },
+  "llanes": {
+    "ccaa": "asturias",
+    "roi": 5.6,
+    "precio": 2000,
+    "alquiler": 933,
+    "dias": 25
+  },
+  "lleida": {
+    "ccaa": "cataluna",
+    "roi": 7.5,
+    "precio": 1300,
+    "alquiler": 650,
+    "dias": 22
+  },
+  "lliria": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1500,
+    "alquiler": 750,
+    "dias": 24
+  },
+  "lloret-de-mar": {
+    "ccaa": "cataluna",
+    "roi": 5.3,
+    "precio": 2400,
+    "alquiler": 1050,
+    "dias": 20
+  },
+  "llucmajor": {
+    "ccaa": "baleares",
+    "roi": 6.5,
+    "precio": 3600,
+    "alquiler": 1560,
+    "dias": 22
+  },
+  "logrono": {
+    "ccaa": "la-rioja",
+    "roi": 5.9,
+    "precio": 1560,
+    "alquiler": 780,
+    "dias": 23
+  },
+  "lorca": {
+    "ccaa": "murcia",
+    "roi": 6.5,
+    "precio": 900,
+    "alquiler": 490,
+    "dias": 30
+  },
+  "los-alcazares": {
+    "ccaa": "murcia",
+    "roi": 6.4,
+    "precio": 1700,
+    "alquiler": 906,
+    "dias": 22
+  },
+  "los-llanos-de-aridane": {
+    "ccaa": "canarias",
+    "roi": 5.6,
+    "precio": 1700,
+    "alquiler": 793,
+    "dias": 24
+  },
+  "luarca": {
+    "ccaa": "asturias",
+    "roi": 5.8,
+    "precio": 1800,
+    "alquiler": 870,
+    "dias": 25
+  },
+  "lucena": {
+    "ccaa": "andalucia",
+    "roi": 6.4,
+    "precio": 900,
+    "alquiler": 480,
+    "dias": 22
+  },
+  "lugo": {
+    "ccaa": "galicia",
+    "roi": 6.6,
+    "precio": 980,
+    "alquiler": 570,
+    "dias": 30
+  },
+  "madrid": {
+    "ccaa": "madrid",
+    "roi": 4.7,
+    "precio": 5960,
+    "alquiler": 1750,
+    "dias": 15
+  },
+  "mahon-menorca": {
+    "ccaa": "baleares",
+    "roi": 4.2,
+    "precio": 3800,
+    "alquiler": 1500,
+    "dias": 22
+  },
+  "mairena-del-alcor": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1600,
+    "alquiler": 827,
+    "dias": 23
+  },
+  "mairena-del-aljarafe": {
+    "ccaa": "andalucia",
+    "roi": 5.9,
+    "precio": 1800,
+    "alquiler": 884,
+    "dias": 21
+  },
+  "majadahonda": {
+    "ccaa": "madrid",
+    "roi": 5.2,
+    "precio": 3600,
+    "alquiler": 1560,
+    "dias": 22
+  },
+  "malaga": {
+    "ccaa": "andalucia",
+    "roi": 4.8,
+    "precio": 3180,
+    "alquiler": 1340,
+    "dias": 18
+  },
+  "manacor": {
+    "ccaa": "baleares",
+    "roi": 4.8,
+    "precio": 3200,
+    "alquiler": 1280,
+    "dias": 20
+  },
+  "manresa": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 1800,
+    "alquiler": 840,
+    "dias": 22
+  },
+  "marbella": {
+    "ccaa": "andalucia",
+    "roi": 4.9,
+    "precio": 4200,
+    "alquiler": 1680,
+    "dias": 14
+  },
+  "marchena": {
+    "ccaa": "andalucia",
+    "roi": 6.8,
+    "precio": 900,
+    "alquiler": 510,
+    "dias": 27
+  },
+  "marratxi": {
+    "ccaa": "baleares",
+    "roi": 6.5,
+    "precio": 3200,
+    "alquiler": 1490,
+    "dias": 22
+  },
+  "martos": {
+    "ccaa": "andalucia",
+    "roi": 6.8,
+    "precio": 900,
+    "alquiler": 510,
+    "dias": 28
+  },
+  "mataro": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2200,
+    "alquiler": 1000,
+    "dias": 22
+  },
+  "mazarron": {
+    "ccaa": "murcia",
+    "roi": 6.2,
+    "precio": 1600,
+    "alquiler": 830,
+    "dias": 22
+  },
+  "medina-del-campo": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.5,
+    "precio": 950,
+    "alquiler": 510,
+    "dias": 32
+  },
+  "merida": {
+    "ccaa": "extremadura",
+    "roi": 6.4,
+    "precio": 1050,
+    "alquiler": 560,
+    "dias": 28
+  },
+  "mieres": {
+    "ccaa": "asturias",
+    "roi": 6.8,
+    "precio": 750,
+    "alquiler": 420,
+    "dias": 34
+  },
+  "mijas": {
+    "ccaa": "andalucia",
+    "roi": 5.1,
+    "precio": 2800,
+    "alquiler": 1180,
+    "dias": 21
+  },
+  "miranda-de-ebro": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.4,
+    "precio": 1000,
+    "alquiler": 530,
+    "dias": 28
+  },
+  "mislata": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.7,
+    "precio": 2100,
+    "alquiler": 998,
+    "dias": 20
+  },
+  "mojacar": {
+    "ccaa": "andalucia",
+    "roi": 5.6,
+    "precio": 2800,
+    "alquiler": 1307,
+    "dias": 19
+  },
+  "molina-de-segura": {
+    "ccaa": "murcia",
+    "roi": 5.8,
+    "precio": 1400,
+    "alquiler": 680,
+    "dias": 22
+  },
+  "mollet-del-valles": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 2100,
+    "alquiler": 980,
+    "dias": 22
+  },
+  "mondragon": {
+    "ccaa": "pais-vasco",
+    "roi": 5.6,
+    "precio": 2200,
+    "alquiler": 1023,
+    "dias": 22
+  },
+  "montilla": {
+    "ccaa": "andalucia",
+    "roi": 6.8,
+    "precio": 1000,
+    "alquiler": 567,
+    "dias": 27
+  },
+  "moron-de-la-frontera": {
+    "ccaa": "andalucia",
+    "roi": 6.8,
+    "precio": 1100,
+    "alquiler": 623,
+    "dias": 27
+  },
+  "mostoles": {
+    "ccaa": "madrid",
+    "roi": 5.5,
+    "precio": 2100,
+    "alquiler": 960,
+    "dias": 21
+  },
+  "motril": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1400,
+    "alquiler": 720,
+    "dias": 24
+  },
+  "murcia": {
+    "ccaa": "murcia",
+    "roi": 7.4,
+    "precio": 1750,
+    "alquiler": 860,
+    "dias": 20
+  },
+  "naron": {
+    "ccaa": "galicia",
+    "roi": 6.2,
+    "precio": 1200,
+    "alquiler": 620,
+    "dias": 22
+  },
+  "navalcarnero": {
+    "ccaa": "madrid",
+    "roi": 5.4,
+    "precio": 2100,
+    "alquiler": 940,
+    "dias": 20
+  },
+  "navalmoral-de-la-mata": {
+    "ccaa": "extremadura",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 542,
+    "dias": 27
+  },
+  "nerja": {
+    "ccaa": "andalucia",
+    "roi": 5.0,
+    "precio": 3200,
+    "alquiler": 1280,
+    "dias": 18
+  },
+  "nules": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.2,
+    "precio": 1400,
+    "alquiler": 724,
+    "dias": 24
+  },
+  "oliva": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.9,
+    "precio": 1700,
+    "alquiler": 830,
+    "dias": 22
+  },
+  "olot": {
+    "ccaa": "cataluna",
+    "roi": 6.0,
+    "precio": 1700,
+    "alquiler": 850,
+    "dias": 23
+  },
+  "ontinyent": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.5,
+    "precio": 1050,
+    "alquiler": 540,
+    "dias": 22
+  },
+  "orense": {
+    "ccaa": "galicia",
+    "roi": 6.3,
+    "precio": 1100,
+    "alquiler": 580,
+    "dias": 26
+  },
+  "orihuela": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.1,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 24
+  },
+  "osuna": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 595,
+    "dias": 27
+  },
+  "ourense": {
+    "ccaa": "galicia",
+    "roi": 6.4,
+    "precio": 1080,
+    "alquiler": 610,
+    "dias": 29
+  },
+  "oviedo": {
+    "ccaa": "asturias",
+    "roi": 5.5,
+    "precio": 1850,
+    "alquiler": 880,
+    "dias": 26
+  },
+  "palafrugell": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2800,
+    "alquiler": 1283,
+    "dias": 21
+  },
+  "palamos": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 2600,
+    "alquiler": 1213,
+    "dias": 21
+  },
+  "palencia": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.0,
+    "precio": 1020,
+    "alquiler": 580,
+    "dias": 28
+  },
+  "palma-del-rio": {
+    "ccaa": "andalucia",
+    "roi": 6.8,
+    "precio": 900,
+    "alquiler": 510,
+    "dias": 27
+  },
+  "palma": {
+    "ccaa": "baleares",
+    "roi": 4.3,
+    "precio": 4200,
+    "alquiler": 1650,
+    "dias": 22
+  },
+  "pamplona": {
+    "ccaa": "navarra",
+    "roi": 4.7,
+    "precio": 2950,
+    "alquiler": 1170,
+    "dias": 24
+  },
+  "paracuellos-de-jarama": {
+    "ccaa": "madrid",
+    "roi": 5.5,
+    "precio": 2600,
+    "alquiler": 1190,
+    "dias": 18
+  },
+  "parla": {
+    "ccaa": "madrid",
+    "roi": 5.7,
+    "precio": 1750,
+    "alquiler": 820,
+    "dias": 23
+  },
+  "paterna": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.5,
+    "precio": 2200,
+    "alquiler": 1000,
+    "dias": 20
+  },
+  "peniscola": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.8,
+    "precio": 2200,
+    "alquiler": 1063,
+    "dias": 21
+  },
+  "pilar-de-la-horadada": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.5,
+    "precio": 1800,
+    "alquiler": 975,
+    "dias": 20
+  },
+  "pineda-de-mar": {
+    "ccaa": "cataluna",
+    "roi": 5.8,
+    "precio": 2000,
+    "alquiler": 966,
+    "dias": 21
+  },
+  "pinto": {
+    "ccaa": "madrid",
+    "roi": 6.5,
+    "precio": 2200,
+    "alquiler": 1010,
+    "dias": 22
+  },
+  "plasencia": {
+    "ccaa": "extremadura",
+    "roi": 6.5,
+    "precio": 950,
+    "alquiler": 510,
+    "dias": 30
+  },
+  "pollenca": {
+    "ccaa": "baleares",
+    "roi": 4.9,
+    "precio": 4200,
+    "alquiler": 1715,
+    "dias": 16
+  },
+  "ponferrada": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.6,
+    "precio": 900,
+    "alquiler": 490,
+    "dias": 28
+  },
+  "pontevedra": {
+    "ccaa": "galicia",
+    "roi": 4.0,
+    "precio": 1700,
+    "alquiler": 760,
+    "dias": 28
+  },
+  "pozuelo-de-alarcon": {
+    "ccaa": "madrid",
+    "roi": 4.9,
+    "precio": 4200,
+    "alquiler": 1720,
+    "dias": 22
+  },
+  "premia-de-mar": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 2600,
+    "alquiler": 1213,
+    "dias": 20
+  },
+  "priego-de-cordoba": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1000,
+    "alquiler": 542,
+    "dias": 27
+  },
+  "puerto-de-la-cruz": {
+    "ccaa": "canarias",
+    "roi": 5.4,
+    "precio": 2400,
+    "alquiler": 1050,
+    "dias": 20
+  },
+  "puertollano": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.4,
+    "precio": 750,
+    "alquiler": 400,
+    "dias": 22
+  },
+  "puigcerda": {
+    "ccaa": "cataluna",
+    "roi": 5.2,
+    "precio": 3000,
+    "alquiler": 1300,
+    "dias": 20
+  },
+  "requena": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 595,
+    "dias": 26
+  },
+  "reus": {
+    "ccaa": "cataluna",
+    "roi": 5.7,
+    "precio": 1600,
+    "alquiler": 760,
+    "dias": 22
+  },
+  "ribadesella": {
+    "ccaa": "asturias",
+    "roi": 5.8,
+    "precio": 2000,
+    "alquiler": 966,
+    "dias": 24
+  },
+  "rincon-de-la-victoria": {
+    "ccaa": "andalucia",
+    "roi": 5.6,
+    "precio": 2000,
+    "alquiler": 933,
+    "dias": 22
+  },
+  "rivas-vaciamadrid": {
+    "ccaa": "madrid",
+    "roi": 6.5,
+    "precio": 2800,
+    "alquiler": 1260,
+    "dias": 22
+  },
+  "ronda": {
+    "ccaa": "andalucia",
+    "roi": 5.5,
+    "precio": 1800,
+    "alquiler": 820,
+    "dias": 24
+  },
+  "roquetas-de-mar": {
+    "ccaa": "andalucia",
+    "roi": 6.4,
+    "precio": 1600,
+    "alquiler": 853,
+    "dias": 22
+  },
+  "roses": {
+    "ccaa": "cataluna",
+    "roi": 5.1,
+    "precio": 2800,
+    "alquiler": 1200,
+    "dias": 20
+  },
+  "rota": {
+    "ccaa": "andalucia",
+    "roi": 5.8,
+    "precio": 1800,
+    "alquiler": 870,
+    "dias": 22
+  },
+  "rubi": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2400,
+    "alquiler": 1100,
+    "dias": 22
+  },
+  "sabadell": {
+    "ccaa": "cataluna",
+    "roi": 5.9,
+    "precio": 1800,
+    "alquiler": 900,
+    "dias": 22
+  },
+  "sagunto": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.1,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 25
+  },
+  "salamanca": {
+    "ccaa": "castilla-y-leon",
+    "roi": 5.4,
+    "precio": 1750,
+    "alquiler": 880,
+    "dias": 25
+  },
+  "salou": {
+    "ccaa": "cataluna",
+    "roi": 5.1,
+    "precio": 2600,
+    "alquiler": 1100,
+    "dias": 19
+  },
+  "san-bartolome-de-tirajana": {
+    "ccaa": "canarias",
+    "roi": 5.4,
+    "precio": 2400,
+    "alquiler": 1080,
+    "dias": 22
+  },
+  "san-fernando-cadiz": {
+    "ccaa": "andalucia",
+    "roi": 5.8,
+    "precio": 1500,
+    "alquiler": 720,
+    "dias": 22
+  },
+  "san-fernando-de-henares": {
+    "ccaa": "madrid",
+    "roi": 5.6,
+    "precio": 2200,
+    "alquiler": 1025,
+    "dias": 19
+  },
+  "san-javier": {
+    "ccaa": "murcia",
+    "roi": 5.5,
+    "precio": 1800,
+    "alquiler": 820,
+    "dias": 22
+  },
+  "san-lorenzo-de-el-escorial": {
+    "ccaa": "madrid",
+    "roi": 5.2,
+    "precio": 2800,
+    "alquiler": 1213,
+    "dias": 20
+  },
+  "san-pedro-del-pinatar": {
+    "ccaa": "murcia",
+    "roi": 6.2,
+    "precio": 1800,
+    "alquiler": 930,
+    "dias": 22
+  },
+  "san-sebastian-de-los-reyes": {
+    "ccaa": "madrid",
+    "roi": 5.4,
+    "precio": 2900,
+    "alquiler": 1310,
+    "dias": 22
+  },
+  "san-sebastian": {
+    "ccaa": "pais-vasco",
+    "roi": 3.3,
+    "precio": 5200,
+    "alquiler": 1880,
+    "dias": 30
+  },
+  "sanlucar-de-barrameda": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1400,
+    "alquiler": 724,
+    "dias": 24
+  },
+  "sant-boi-de-llobregat": {
+    "ccaa": "cataluna",
+    "roi": 5.3,
+    "precio": 2700,
+    "alquiler": 1200,
+    "dias": 22
+  },
+  "sant-cugat-del-valles": {
+    "ccaa": "cataluna",
+    "roi": 4.8,
+    "precio": 4500,
+    "alquiler": 1800,
+    "dias": 22
+  },
+  "sant-feliu-de-llobregat": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 2600,
+    "alquiler": 1160,
+    "dias": 22
+  },
+  "santa-cruz-de-la-palma": {
+    "ccaa": "canarias",
+    "roi": 5.8,
+    "precio": 1800,
+    "alquiler": 870,
+    "dias": 22
+  },
+  "santa-cruz-de-tenerife": {
+    "ccaa": "canarias",
+    "roi": 6.1,
+    "precio": 2000,
+    "alquiler": 930,
+    "dias": 22
+  },
+  "santa-lucia-de-tirajana": {
+    "ccaa": "canarias",
+    "roi": 5.7,
+    "precio": 2000,
+    "alquiler": 950,
+    "dias": 22
+  },
+  "santa-pola": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.7,
+    "precio": 2000,
+    "alquiler": 950,
+    "dias": 22
+  },
+  "santander": {
+    "ccaa": "cantabria",
+    "roi": 4.7,
+    "precio": 2250,
+    "alquiler": 940,
+    "dias": 26
+  },
+  "santiago-de-compostela": {
+    "ccaa": "galicia",
+    "roi": 5.4,
+    "precio": 2200,
+    "alquiler": 980,
+    "dias": 24
+  },
+  "sanxenxo": {
+    "ccaa": "galicia",
+    "roi": 5.4,
+    "precio": 2600,
+    "alquiler": 1170,
+    "dias": 22
+  },
+  "segovia": {
+    "ccaa": "castilla-y-leon",
+    "roi": 5.7,
+    "precio": 1600,
+    "alquiler": 760,
+    "dias": 22
+  },
+  "sevilla": {
+    "ccaa": "andalucia",
+    "roi": 5.3,
+    "precio": 2450,
+    "alquiler": 1080,
+    "dias": 22
+  },
+  "siero": {
+    "ccaa": "asturias",
+    "roi": 5.8,
+    "precio": 1400,
+    "alquiler": 680,
+    "dias": 22
+  },
+  "sitges": {
+    "ccaa": "cataluna",
+    "roi": 4.6,
+    "precio": 4800,
+    "alquiler": 1850,
+    "dias": 18
+  },
+  "soller": {
+    "ccaa": "baleares",
+    "roi": 4.8,
+    "precio": 4500,
+    "alquiler": 1800,
+    "dias": 16
+  },
+  "soria": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.5,
+    "precio": 840,
+    "alquiler": 500,
+    "dias": 29
+  },
+  "suances": {
+    "ccaa": "cantabria",
+    "roi": 5.6,
+    "precio": 2000,
+    "alquiler": 933,
+    "dias": 24
+  },
+  "sueca": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.5,
+    "precio": 1400,
+    "alquiler": 758,
+    "dias": 24
+  },
+  "talavera-de-la-reina": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.6,
+    "precio": 880,
+    "alquiler": 480,
+    "dias": 30
+  },
+  "tarifa": {
+    "ccaa": "andalucia",
+    "roi": 5.4,
+    "precio": 2600,
+    "alquiler": 1170,
+    "dias": 20
+  },
+  "tarragona": {
+    "ccaa": "cataluna",
+    "roi": 5.8,
+    "precio": 1780,
+    "alquiler": 890,
+    "dias": 24
+  },
+  "tavernes-de-la-valldigna": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.0,
+    "precio": 1600,
+    "alquiler": 800,
+    "dias": 23
+  },
+  "teguise": {
+    "ccaa": "canarias",
+    "roi": 5.5,
+    "precio": 2600,
+    "alquiler": 1190,
+    "dias": 20
+  },
+  "telde": {
+    "ccaa": "canarias",
+    "roi": 5.9,
+    "precio": 1600,
+    "alquiler": 780,
+    "dias": 24
+  },
+  "terrassa": {
+    "ccaa": "cataluna",
+    "roi": 6.0,
+    "precio": 1750,
+    "alquiler": 875,
+    "dias": 23
+  },
+  "teruel": {
+    "ccaa": "aragon",
+    "roi": 6.5,
+    "precio": 820,
+    "alquiler": 490,
+    "dias": 30
+  },
+  "toledo": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.0,
+    "precio": 1600,
+    "alquiler": 860,
+    "dias": 24
+  },
+  "tolosa": {
+    "ccaa": "pais-vasco",
+    "roi": 5.4,
+    "precio": 2400,
+    "alquiler": 1080,
+    "dias": 22
+  },
+  "tomares": {
+    "ccaa": "andalucia",
+    "roi": 5.4,
+    "precio": 2200,
+    "alquiler": 990,
+    "dias": 21
+  },
+  "tomelloso": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 595,
+    "dias": 26
+  },
+  "tordesillas": {
+    "ccaa": "castilla-y-leon",
+    "roi": 6.4,
+    "precio": 1000,
+    "alquiler": 530,
+    "dias": 30
+  },
+  "torre-pacheco": {
+    "ccaa": "murcia",
+    "roi": 6.4,
+    "precio": 1200,
+    "alquiler": 630,
+    "dias": 25
+  },
+  "torrejon-de-ardoz": {
+    "ccaa": "madrid",
+    "roi": 6.5,
+    "precio": 2600,
+    "alquiler": 1210,
+    "dias": 22
+  },
+  "torrelavega": {
+    "ccaa": "cantabria",
+    "roi": 6.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 26
+  },
+  "torrelodones": {
+    "ccaa": "madrid",
+    "roi": 5.1,
+    "precio": 3000,
+    "alquiler": 1275,
+    "dias": 19
+  },
+  "torremolinos": {
+    "ccaa": "andalucia",
+    "roi": 5.5,
+    "precio": 2400,
+    "alquiler": 1050,
+    "dias": 18
+  },
+  "torrent": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.5,
+    "precio": 2000,
+    "alquiler": 920,
+    "dias": 20
+  },
+  "torrevieja": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.1,
+    "precio": 1800,
+    "alquiler": 900,
+    "dias": 20
+  },
+  "torrox": {
+    "ccaa": "andalucia",
+    "roi": 5.8,
+    "precio": 2200,
+    "alquiler": 1063,
+    "dias": 22
+  },
+  "tortosa": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 1300,
+    "alquiler": 703,
+    "dias": 25
+  },
+  "tossa-de-mar": {
+    "ccaa": "cataluna",
+    "roi": 5.2,
+    "precio": 3200,
+    "alquiler": 1387,
+    "dias": 19
+  },
+  "totana": {
+    "ccaa": "murcia",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 560,
+    "dias": 22
+  },
+  "tres-cantos": {
+    "ccaa": "madrid",
+    "roi": 6.5,
+    "precio": 3200,
+    "alquiler": 1380,
+    "dias": 22
+  },
+  "tudela": {
+    "ccaa": "navarra",
+    "roi": 6.0,
+    "precio": 1400,
+    "alquiler": 700,
+    "dias": 26
+  },
+  "ubeda": {
+    "ccaa": "andalucia",
+    "roi": 6.5,
+    "precio": 1200,
+    "alquiler": 580,
+    "dias": 22
+  },
+  "utrera": {
+    "ccaa": "andalucia",
+    "roi": 6.4,
+    "precio": 1300,
+    "alquiler": 694,
+    "dias": 25
+  },
+  "valdepenas": {
+    "ccaa": "castilla-la-mancha",
+    "roi": 6.8,
+    "precio": 1000,
+    "alquiler": 567,
+    "dias": 27
+  },
+  "valencia": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 5.5,
+    "precio": 2700,
+    "alquiler": 1200,
+    "dias": 16
+  },
+  "valladolid": {
+    "ccaa": "castilla-y-leon",
+    "roi": 5.9,
+    "precio": 1600,
+    "alquiler": 800,
+    "dias": 25
+  },
+  "velez-blanco": {
+    "ccaa": "andalucia",
+    "roi": 7.0,
+    "precio": 800,
+    "alquiler": 467,
+    "dias": 28
+  },
+  "velez-malaga": {
+    "ccaa": "andalucia",
+    "roi": 6.0,
+    "precio": 1600,
+    "alquiler": 800,
+    "dias": 22
+  },
+  "vera": {
+    "ccaa": "andalucia",
+    "roi": 6.2,
+    "precio": 1800,
+    "alquiler": 930,
+    "dias": 22
+  },
+  "vic": {
+    "ccaa": "cataluna",
+    "roi": 5.5,
+    "precio": 2000,
+    "alquiler": 920,
+    "dias": 20
+  },
+  "vigo": {
+    "ccaa": "galicia",
+    "roi": 5.2,
+    "precio": 1850,
+    "alquiler": 890,
+    "dias": 25
+  },
+  "vila-seca": {
+    "ccaa": "cataluna",
+    "roi": 5.6,
+    "precio": 2400,
+    "alquiler": 1120,
+    "dias": 21
+  },
+  "viladecans": {
+    "ccaa": "cataluna",
+    "roi": 5.3,
+    "precio": 2600,
+    "alquiler": 1150,
+    "dias": 22
+  },
+  "vilagarcia-de-arousa": {
+    "ccaa": "galicia",
+    "roi": 5.8,
+    "precio": 1800,
+    "alquiler": 870,
+    "dias": 24
+  },
+  "vilanova-i-la-geltru": {
+    "ccaa": "cataluna",
+    "roi": 6.5,
+    "precio": 2400,
+    "alquiler": 1120,
+    "dias": 22
+  },
+  "villena": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.4,
+    "precio": 750,
+    "alquiler": 400,
+    "dias": 22
+  },
+  "vinaros": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.2,
+    "precio": 1700,
+    "alquiler": 878,
+    "dias": 23
+  },
+  "vitoria": {
+    "ccaa": "pais-vasco",
+    "roi": 4.8,
+    "precio": 2700,
+    "alquiler": 1150,
+    "dias": 27
+  },
+  "xativa": {
+    "ccaa": "comunitat-valenciana",
+    "roi": 6.5,
+    "precio": 1100,
+    "alquiler": 550,
+    "dias": 22
+  },
+  "yaiza": {
+    "ccaa": "canarias",
+    "roi": 5.7,
+    "precio": 2800,
+    "alquiler": 1330,
+    "dias": 19
+  },
+  "yecla": {
+    "ccaa": "murcia",
+    "roi": 6.5,
+    "precio": 950,
+    "alquiler": 500,
+    "dias": 22
+  },
+  "zafra": {
+    "ccaa": "extremadura",
+    "roi": 6.8,
+    "precio": 1000,
+    "alquiler": 567,
+    "dias": 27
+  },
+  "zamora": {
+    "ccaa": "castilla-y-leon",
+    "roi": 7.2,
+    "precio": 960,
+    "alquiler": 600,
+    "dias": 28
+  },
+  "zaragoza": {
+    "ccaa": "aragon",
+    "roi": 6.0,
+    "precio": 1950,
+    "alquiler": 980,
+    "dias": 24
+  },
+  "zarautz": {
+    "ccaa": "pais-vasco",
+    "roi": 6.5,
+    "precio": 4200,
+    "alquiler": 1820,
+    "dias": 22
+  }
+}
