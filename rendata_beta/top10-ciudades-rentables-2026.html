@@ -49,13 +49,21 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rendata.es/"},
-    {"@type": "ListItem", "position": 2, "name": "Top 10 ciudades rentables 2026", "item": "https://rendata.es/top10-ciudades-rentables-2026.html"}
+    {"@type": "ListItem", "position": 2, "name": "Análisis", "item": "https://rendata.es/analisis.html"},
+    {"@type": "ListItem", "position": 3, "name": "Top 10 ciudades más rentables 2026", "item": "https://rendata.es/top10-ciudades-rentables-2026.html"}
   ]
 }</script>
 
 <script src="/js/nav-dropdown.js" defer></script>
 
 <link rel="stylesheet" href="/css/top10.css">
+<style>
+.bc{max-width:880px;margin:0 auto;padding:.9rem 2rem 0;font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem}
+.bc a{color:var(--muted);text-decoration:none;font-weight:500;transition:color .15s}
+.bc a:hover{color:var(--blue);text-decoration:underline}
+.bc-sep{color:#cbd5e1}
+.bc-cur{color:var(--text);font-weight:600}
+</style>
 </head>
 <body>
 
@@ -67,7 +75,7 @@
   <nav>
     <a href="/">Ciudades</a>
     <a href="ranking.html">Ranking</a>
-    <a href="top10-ciudades-rentables-2026.html" class="active">Top 10</a>
+    <a href="analisis.html">Análisis</a>
     <div class="nav-dropdown">
       <button class="nav-drop-btn">Comunidades ▾</button>
       <div class="nav-drop-menu">
@@ -95,6 +103,14 @@
     <a href="sobre.html">Sobre</a>
   </nav>
 </header>
+
+<nav class="bc" aria-label="Breadcrumb">
+  <a href="/">Inicio</a>
+  <span class="bc-sep">›</span>
+  <a href="analisis.html">Análisis</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-cur">Top 10 ciudades más rentables 2026</span>
+</nav>
 
 <section class="art-hero">
   <div class="art-hero-inner">
