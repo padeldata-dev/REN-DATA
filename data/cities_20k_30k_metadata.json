@@ -1,0 +1,3702 @@
+[
+  {
+    "slug": "puente-genil",
+    "name": "Puente Genil",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Córdoba",
+    "pop": 29963,
+    "twin": "lucena",
+    "precio": 1100,
+    "alq": 580,
+    "roi": 6.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 28,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Miragenil",
+      "El Llano",
+      "La Estación"
+    ],
+    "drivers": "Industria agroalimentaria (aceite, membrillo), cementeras, servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Lucena",
+        "lucena"
+      ],
+      [
+        "Montilla",
+        "montilla"
+      ]
+    ],
+    "arquetipo": "villa agroindustrial Campiña Sur cordobesa",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector aceitero y servicios"
+  },
+  {
+    "slug": "san-andres-del-rabanedo",
+    "name": "San Andrés del Rabanedo",
+    "ccaa": "Castilla y León",
+    "ccaa_slug": "castilla-y-leon",
+    "prov": "León",
+    "pop": 29944,
+    "twin": "ponferrada",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Trobajo del Camino",
+      "Centro",
+      "Pinilla",
+      "La Sal"
+    ],
+    "drivers": "Suburbio León metropolitana, servicios, comercio, residencial",
+    "mejor_zona": "Trobajo del Camino",
+    "alt": [
+      [
+        "León",
+        "leon"
+      ],
+      [
+        "Ponferrada",
+        "ponferrada"
+      ]
+    ],
+    "arquetipo": "suburbio residencial León metropolitana",
+    "tesis": "piso en Trobajo del Camino o Pinilla para alquiler estable a familias trabajadoras y profesionales que trabajan en León"
+  },
+  {
+    "slug": "sant-josep-de-sa-talaia",
+    "name": "Sant Josep de sa Talaia",
+    "ccaa": "Islas Baleares",
+    "ccaa_slug": "baleares",
+    "prov": "Ibiza",
+    "pop": 29761,
+    "twin": "santa-eularia-des-riu",
+    "precio": 3700,
+    "alq": 1420,
+    "roi": 4.6,
+    "vp": 7.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 11,
+    "region": "islas",
+    "barrios": [
+      "Sant Josep",
+      "Cala de Bou",
+      "Sant Jordi",
+      "Es Cubells"
+    ],
+    "drivers": "Turismo Ibiza oeste, residencial extranjero, servicios, aeropuerto",
+    "mejor_zona": "Sant Josep",
+    "alt": [
+      [
+        "Sant Antoni",
+        "sant-antoni-de-portmany"
+      ],
+      [
+        "Ibiza",
+        "ibiza"
+      ]
+    ],
+    "arquetipo": "municipio turístico residencial Ibiza oeste",
+    "tesis": "apartamento en Cala de Bou o Sant Jordi para alquiler vacacional regulado y residencial premium con demanda extranjera estable"
+  },
+  {
+    "slug": "lepe",
+    "name": "Lepe",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Huelva",
+    "pop": 29677,
+    "twin": "isla-cristina",
+    "precio": 1300,
+    "alq": 680,
+    "roi": 6.3,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 26,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "La Antilla",
+      "Islantilla",
+      "Polígono"
+    ],
+    "drivers": "Agricultura (fresa, frutos rojos), turismo costero, pesquero",
+    "mejor_zona": "La Antilla",
+    "alt": [
+      [
+        "Isla Cristina",
+        "isla-cristina"
+      ],
+      [
+        "Ayamonte",
+        "ayamonte"
+      ]
+    ],
+    "arquetipo": "villa agrofresera-costera Costa de la Luz",
+    "tesis": "piso en La Antilla o apartamento en Islantilla para alquiler mixto turístico de verano + residencial anual a trabajadores del sector hortofrutícola"
+  },
+  {
+    "slug": "vicar",
+    "name": "Vícar",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Almería",
+    "pop": 29342,
+    "twin": "el-ejido",
+    "precio": 1100,
+    "alq": 580,
+    "roi": 6.3,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 28,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "La Gangosa",
+      "Puebla de Vícar",
+      "Las Cabañuelas",
+      "La Envía"
+    ],
+    "drivers": "Agricultura intensiva bajo plástico, servicios al sector hortofrutícola",
+    "mejor_zona": "La Gangosa",
+    "alt": [
+      [
+        "El Ejido",
+        "el-ejido"
+      ],
+      [
+        "Roquetas de Mar",
+        "roquetas-de-mar"
+      ]
+    ],
+    "arquetipo": "villa del mar de plástico almeriense",
+    "tesis": "piso económico en La Gangosa para alquiler estable a trabajadores agrícolas con contratos estables y demanda recurrente"
+  },
+  {
+    "slug": "cartama",
+    "name": "Cártama",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Málaga",
+    "pop": 29333,
+    "twin": "alhaurin-de-la-torre",
+    "precio": 1900,
+    "alq": 900,
+    "roi": 5.7,
+    "vp": 6.0,
+    "va": 8.0,
+    "dias": 24,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Cártama Estación",
+      "Cártama Pueblo",
+      "Los Llanos",
+      "El Sexmo"
+    ],
+    "drivers": "Residencial Málaga metropolitana, agricultura cítricos, logística",
+    "mejor_zona": "Cártama Estación",
+    "alt": [
+      [
+        "Alhaurín de la Torre",
+        "alhaurin-de-la-torre"
+      ],
+      [
+        "Coín",
+        "coin"
+      ]
+    ],
+    "arquetipo": "suburbio Málaga metropolitana Valle del Guadalhorce",
+    "tesis": "piso en Cártama Estación cerca de Cercanías C-2 para alquiler a familias y profesionales que trabajan en Málaga a 20 minutos"
+  },
+  {
+    "slug": "martorell",
+    "name": "Martorell",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 29175,
+    "twin": "esplugues-de-llobregat",
+    "precio": 2200,
+    "alq": 960,
+    "roi": 5.2,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Buenos Aires",
+      "Camí Fondo",
+      "Torrent de Llops"
+    ],
+    "drivers": "Industria automotriz (SEAT/Volkswagen), logística, química, ferrocarril",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Esparreguera",
+        "esparreguera"
+      ],
+      [
+        "Sant Andreu de la Barca",
+        "sant-andreu-de-la-barca"
+      ]
+    ],
+    "arquetipo": "polo industrial automotriz Baix Llobregat",
+    "tesis": "piso de 2-3 dorm cerca del centro para alquiler estable a trabajadores y técnicos de SEAT y proveedores del automóvil"
+  },
+  {
+    "slug": "almassora",
+    "name": "Almassora",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Castellón",
+    "pop": 29159,
+    "twin": "burriana",
+    "precio": 1200,
+    "alq": 610,
+    "roi": 6.1,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Boverals",
+      "Castillo",
+      "Sant Vicent"
+    ],
+    "drivers": "Industria cerámica (azulejo) Plana Baixa, agricultura cítricos, servicios",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Burriana",
+        "burriana"
+      ],
+      [
+        "Castellón",
+        "castellon-de-la-plana"
+      ]
+    ],
+    "arquetipo": "villa industrial cerámica Plana Baixa",
+    "tesis": "piso económico cerca del centro para alquiler estable a trabajadores del cluster cerámico de Castellón"
+  },
+  {
+    "slug": "sant-antoni-de-portmany",
+    "name": "Sant Antoni de Portmany",
+    "ccaa": "Islas Baleares",
+    "ccaa_slug": "baleares",
+    "prov": "Ibiza",
+    "pop": 29132,
+    "twin": "santa-eularia-des-riu",
+    "precio": 3500,
+    "alq": 1380,
+    "roi": 4.7,
+    "vp": 7.0,
+    "va": 8.5,
+    "dias": 21,
+    "itp_pct": 11,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Cala Tarida",
+      "Port des Torrent",
+      "S'Arenal"
+    ],
+    "drivers": "Turismo masivo Ibiza oeste, ocio nocturno, residencial estacional",
+    "mejor_zona": "Port des Torrent",
+    "alt": [
+      [
+        "Sant Josep",
+        "sant-josep-de-sa-talaia"
+      ],
+      [
+        "Ibiza",
+        "ibiza"
+      ]
+    ],
+    "arquetipo": "capital turística Ibiza oeste",
+    "tesis": "apartamento en zona portuaria o Port des Torrent para alquiler vacacional con licencia regulada y alta ocupación de mayo a octubre"
+  },
+  {
+    "slug": "camas",
+    "name": "Camas",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Sevilla",
+    "pop": 29089,
+    "twin": "mairena-del-aljarafe",
+    "precio": 1500,
+    "alq": 770,
+    "roi": 6.2,
+    "vp": 6.0,
+    "va": 8.0,
+    "dias": 24,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "El Carambolo",
+      "La Pañoleta",
+      "Los Pinos"
+    ],
+    "drivers": "Suburbio Sevilla metropolitana Aljarafe, servicios, comercio",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "San Juan de Aznalfarache",
+        "san-juan-de-aznalfarache"
+      ],
+      [
+        "Mairena del Aljarafe",
+        "mairena-del-aljarafe"
+      ]
+    ],
+    "arquetipo": "suburbio metropolitano sevillano Aljarafe",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Sevilla a 10 minutos en metro o coche"
+  },
+  {
+    "slug": "candelaria",
+    "name": "Candelaria",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Santa Cruz de Tenerife",
+    "pop": 29023,
+    "twin": "guimar",
+    "precio": 1900,
+    "alq": 830,
+    "roi": 5.2,
+    "vp": 5.5,
+    "va": 7.5,
+    "dias": 24,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Las Caletillas",
+      "Igueste",
+      "Punta Larga"
+    ],
+    "drivers": "Turismo religioso (Basílica), residencial Tenerife metropolitana, servicios",
+    "mejor_zona": "Las Caletillas",
+    "alt": [
+      [
+        "Güímar",
+        "guimar"
+      ],
+      [
+        "Santa Cruz",
+        "santa-cruz-de-tenerife"
+      ]
+    ],
+    "arquetipo": "villa religiosa-residencial costa este Tenerife",
+    "tesis": "piso en Las Caletillas o Punta Larga para alquiler estable a familias y profesionales que trabajan en Santa Cruz a 15 minutos"
+  },
+  {
+    "slug": "redondela",
+    "name": "Redondela",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 28874,
+    "twin": "cangas-do-morrazo",
+    "precio": 1500,
+    "alq": 700,
+    "roi": 5.6,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 25,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Cesantes",
+      "Chapela",
+      "Reboreda"
+    ],
+    "drivers": "Industria, residencial Vigo metropolitana, viaductos, servicios",
+    "mejor_zona": "Cesantes",
+    "alt": [
+      [
+        "Vigo",
+        "vigo"
+      ],
+      [
+        "Cangas",
+        "cangas"
+      ]
+    ],
+    "arquetipo": "villa metropolitana ría de Vigo",
+    "tesis": "piso en Cesantes o Chapela para alquiler estable a familias trabajadoras y profesionales que trabajan en Vigo a 10-15 minutos"
+  },
+  {
+    "slug": "sant-vicenc-dels-horts",
+    "name": "Sant Vicenç dels Horts",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 28746,
+    "twin": "esplugues-de-llobregat",
+    "precio": 2200,
+    "alq": 960,
+    "roi": 5.2,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Mas Picó",
+      "Sant Josep",
+      "Vall de Sant Joan"
+    ],
+    "drivers": "Industria, logística, residencial Barcelona metropolitana sur",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Sant Andreu de la Barca",
+        "sant-andreu-de-la-barca"
+      ],
+      [
+        "Molins de Rei",
+        "molins-de-rei"
+      ]
+    ],
+    "arquetipo": "suburbio industrial Baix Llobregat",
+    "tesis": "piso compacto cerca de la estación de FGC para alquiler a familias y profesionales que trabajan en Barcelona o el corredor industrial"
+  },
+  {
+    "slug": "mutxamel",
+    "name": "Mutxamel",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 28621,
+    "twin": "sant-vicent-del-raspeig",
+    "precio": 1900,
+    "alq": 900,
+    "roi": 5.7,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Bonalba",
+      "Río Park",
+      "La Huerta"
+    ],
+    "drivers": "Residencial Alicante metropolitana, servicios, urbanizaciones premium",
+    "mejor_zona": "Bonalba",
+    "alt": [
+      [
+        "Sant Vicent del Raspeig",
+        "sant-vicent-del-raspeig"
+      ],
+      [
+        "El Campello",
+        "el-campello"
+      ]
+    ],
+    "arquetipo": "suburbio residencial Alicante metropolitana",
+    "tesis": "piso o chalet en Bonalba o Centre para alquiler a familias clase media-alta que trabajan en Alicante a 15 minutos"
+  },
+  {
+    "slug": "betera",
+    "name": "Bétera",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 28560,
+    "twin": "paterna",
+    "precio": 1800,
+    "alq": 860,
+    "roi": 5.7,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Torre en Conill",
+      "Lloma del Mas",
+      "Mont Calvo"
+    ],
+    "drivers": "Residencial Valencia metropolitana, agricultura, urbanizaciones, golf",
+    "mejor_zona": "Torre en Conill",
+    "alt": [
+      [
+        "Paterna",
+        "paterna"
+      ],
+      [
+        "L'Eliana",
+        "lliria"
+      ]
+    ],
+    "arquetipo": "municipio residencial premium Camp de Túria",
+    "tesis": "chalet o piso amplio en Torre en Conill o Lloma del Mas para alquiler a familias clase media-alta que trabajan en Valencia"
+  },
+  {
+    "slug": "sestao",
+    "name": "Sestao",
+    "ccaa": "País Vasco",
+    "ccaa_slug": "pais-vasco",
+    "prov": "Bizkaia",
+    "pop": 28512,
+    "twin": "barakaldo",
+    "precio": 1900,
+    "alq": 920,
+    "roi": 5.8,
+    "vp": 4.5,
+    "va": 7.0,
+    "dias": 24,
+    "itp_pct": 4,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Las Llanas",
+      "La Iberia",
+      "Vega Nueva"
+    ],
+    "drivers": "Industria siderúrgica (Sestao Aceria), servicios, transformación industrial",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Barakaldo",
+        "barakaldo"
+      ],
+      [
+        "Portugalete",
+        "portugalete"
+      ]
+    ],
+    "arquetipo": "villa industrial siderúrgica margen izquierda Bilbao",
+    "tesis": "piso compacto cerca del metro L2 para alquiler estable a trabajadores industriales y profesionales del cinturón Bilbao"
+  },
+  {
+    "slug": "paiporta",
+    "name": "Paiporta",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 28136,
+    "twin": "mislata",
+    "precio": 1700,
+    "alq": 820,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Mestre Serrano",
+      "El Palmar",
+      "La Pasarella"
+    ],
+    "drivers": "Servicios, residencial L'Horta Sud Valencia metropolitana, reconstrucción post-DANA",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Mislata",
+        "mislata"
+      ],
+      [
+        "Catarroja",
+        "catarroja"
+      ]
+    ],
+    "arquetipo": "suburbio L'Horta Sud Valencia",
+    "tesis": "piso cerca del metro L1 para alquiler a familias y profesionales que trabajan en Valencia, con oportunidades en obra nueva post-DANA"
+  },
+  {
+    "slug": "calp",
+    "name": "Calp",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 27616,
+    "twin": "calpe",
+    "precio": 2400,
+    "alq": 1050,
+    "roi": 5.3,
+    "vp": 6.5,
+    "va": 9.0,
+    "dias": 21,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "Maryvilla",
+      "La Manzanera",
+      "Sol Park"
+    ],
+    "drivers": "Turismo Costa Blanca norte, Peñón de Ifach, residencial extranjero",
+    "mejor_zona": "Maryvilla",
+    "alt": [
+      [
+        "Calpe",
+        "calpe"
+      ],
+      [
+        "Benissa",
+        "benissa"
+      ]
+    ],
+    "arquetipo": "villa turística Costa Blanca norte",
+    "tesis": "apartamento con vistas al Peñón en Maryvilla o La Manzanera para alquiler vacacional alto y residencial premium extranjero"
+  },
+  {
+    "slug": "la-pobla-de-vallbona",
+    "name": "La Pobla de Vallbona",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 27471,
+    "twin": "paterna",
+    "precio": 1700,
+    "alq": 820,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Mas de Tous",
+      "La Llometa",
+      "Maravisa"
+    ],
+    "drivers": "Residencial Valencia metropolitana, agricultura, urbanizaciones, metro",
+    "mejor_zona": "Mas de Tous",
+    "alt": [
+      [
+        "Bétera",
+        "betera"
+      ],
+      [
+        "Paterna",
+        "paterna"
+      ]
+    ],
+    "arquetipo": "municipio residencial Camp de Túria",
+    "tesis": "piso o chalet en Mas de Tous para alquiler a familias que trabajan en Valencia y prefieren entorno residencial con metro L1"
+  },
+  {
+    "slug": "molins-de-rei",
+    "name": "Molins de Rei",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 27300,
+    "twin": "sant-feliu-de-llobregat",
+    "precio": 2700,
+    "alq": 1140,
+    "roi": 5.1,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 21,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "La Granja",
+      "El Molí",
+      "Riera Bonet"
+    ],
+    "drivers": "Industria, servicios, residencial Baix Llobregat con buena conexión BCN",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Sant Feliu de Llobregat",
+        "sant-feliu-de-llobregat"
+      ],
+      [
+        "Sant Just Desvern",
+        "sant-just-desvern"
+      ]
+    ],
+    "arquetipo": "villa residencial Baix Llobregat",
+    "tesis": "piso cerca de Renfe R4 para alquiler estable a profesionales que trabajan en Barcelona a 12 minutos y demanda residencial"
+  },
+  {
+    "slug": "ribeira",
+    "name": "Ribeira",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "A Coruña",
+    "pop": 27102,
+    "twin": "vilagarcia-de-arousa",
+    "precio": 1300,
+    "alq": 640,
+    "roi": 5.9,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Aguiño",
+      "Castiñeiras",
+      "Palmeira"
+    ],
+    "drivers": "Pesquero (capital pesquera Galicia), conservera, naval, servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Vilagarcía de Arousa",
+        "vilagarcia-de-arousa"
+      ],
+      [
+        "Boiro",
+        "vilagarcia-de-arousa"
+      ]
+    ],
+    "arquetipo": "capital pesquera-conservera Barbanza",
+    "tesis": "piso cerca del puerto para alquiler estable a trabajadores pesqueros, conserveros y profesionales del sector naval"
+  },
+  {
+    "slug": "sant-andreu-de-la-barca",
+    "name": "Sant Andreu de la Barca",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 27094,
+    "twin": "esplugues-de-llobregat",
+    "precio": 2100,
+    "alq": 920,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Can Sunyer",
+      "El Mirador",
+      "El Palau"
+    ],
+    "drivers": "Industria automotriz, logística, química, residencial Baix Llobregat",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Esparreguera",
+        "esparreguera"
+      ],
+      [
+        "Martorell",
+        "martorell"
+      ]
+    ],
+    "arquetipo": "suburbio industrial Baix Llobregat",
+    "tesis": "piso de 2-3 dorm cerca de Renfe R4 para alquiler a familias y trabajadores del corredor industrial Martorell-SEAT"
+  },
+  {
+    "slug": "quart-de-poblet",
+    "name": "Quart de Poblet",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 26967,
+    "twin": "manises",
+    "precio": 1700,
+    "alq": 810,
+    "roi": 5.7,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "El Camí Nou",
+      "Sant Onofre",
+      "Casablanca"
+    ],
+    "drivers": "Industria, logística, residencial L'Horta Oest, polígono Fuente del Jarro próximo",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Manises",
+        "manises"
+      ],
+      [
+        "Paterna",
+        "paterna"
+      ]
+    ],
+    "arquetipo": "suburbio industrial L'Horta Oest",
+    "tesis": "piso cerca del metro L3/L5 para alquiler estable a trabajadores del polígono y profesionales que trabajan en Valencia"
+  },
+  {
+    "slug": "pielagos",
+    "name": "Piélagos",
+    "ccaa": "Cantabria",
+    "ccaa_slug": "cantabria",
+    "prov": "Cantabria",
+    "pop": 26901,
+    "twin": "camargo",
+    "precio": 1900,
+    "alq": 860,
+    "roi": 5.4,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Renedo",
+      "Liencres",
+      "Boo",
+      "Vioño"
+    ],
+    "drivers": "Residencial Santander metropolitana, costa (Liencres), servicios",
+    "mejor_zona": "Liencres",
+    "alt": [
+      [
+        "Camargo",
+        "camargo"
+      ],
+      [
+        "Santander",
+        "santander"
+      ]
+    ],
+    "arquetipo": "municipio residencial costa Santander metropolitana",
+    "tesis": "piso en Renedo o casa en Liencres para alquiler a familias que trabajan en Santander a 15 minutos y demanda costera estacional"
+  },
+  {
+    "slug": "sant-joan-d-alacant",
+    "name": "Sant Joan d'Alacant",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 26834,
+    "twin": "sant-vicent-del-raspeig",
+    "precio": 2100,
+    "alq": 960,
+    "roi": 5.5,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 21,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Reyes Católicos",
+      "Fabraquer",
+      "Benalua"
+    ],
+    "drivers": "Residencial Alicante metropolitana, hospital universitario, universidad Miguel Hernández",
+    "mejor_zona": "Reyes Católicos",
+    "alt": [
+      [
+        "Mutxamel",
+        "mutxamel"
+      ],
+      [
+        "Sant Vicent del Raspeig",
+        "sant-vicent-del-raspeig"
+      ]
+    ],
+    "arquetipo": "municipio universitario-residencial Alicante",
+    "tesis": "piso en Reyes Católicos o Centre para alquiler a profesionales sanitarios del hospital universitario y estudiantes"
+  },
+  {
+    "slug": "cangas",
+    "name": "Cangas",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 26711,
+    "twin": "cangas-do-morrazo",
+    "precio": 1500,
+    "alq": 700,
+    "roi": 5.6,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 25,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "O Hío",
+      "Coiro",
+      "Aldán"
+    ],
+    "drivers": "Pesquero, residencial Vigo metropolitana, turismo costero ría",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Cangas do Morrazo",
+        "cangas-do-morrazo"
+      ],
+      [
+        "Vigo",
+        "vigo"
+      ]
+    ],
+    "arquetipo": "villa pesquera-residencial ría de Vigo",
+    "tesis": "piso cerca del puerto para alquiler estable a pescadores y profesionales que trabajan en Vigo cruzando la ría en 20 minutos"
+  },
+  {
+    "slug": "novelda",
+    "name": "Novelda",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 26606,
+    "twin": "elda",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "La Magdalena",
+      "San Roque",
+      "Santa María"
+    ],
+    "drivers": "Industria mármol y piedra natural (capital del mármol), uva de mesa",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Elda",
+        "elda"
+      ],
+      [
+        "Aspe",
+        "aspe"
+      ]
+    ],
+    "arquetipo": "capital del mármol Medio Vinalopó",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector mármol y servicios"
+  },
+  {
+    "slug": "ciempozuelos",
+    "name": "Ciempozuelos",
+    "ccaa": "C. de Madrid",
+    "ccaa_slug": "madrid",
+    "prov": "Madrid",
+    "pop": 26350,
+    "twin": "aranjuez",
+    "precio": 1800,
+    "alq": 890,
+    "roi": 5.9,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 6,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "Las Fresas",
+      "Eras de San Pedro",
+      "La Estación"
+    ],
+    "drivers": "Suburbio Madrid sur, industria, agricultura cebada, hospital psiquiátrico histórico",
+    "mejor_zona": "Las Fresas",
+    "alt": [
+      [
+        "Aranjuez",
+        "aranjuez"
+      ],
+      [
+        "Valdemoro",
+        "valdemoro"
+      ]
+    ],
+    "arquetipo": "suburbio sur Madrid corredor A-4",
+    "tesis": "piso en Las Fresas o cerca de Cercanías C-3 para alquiler a familias jóvenes que trabajan en Madrid sur o industria local"
+  },
+  {
+    "slug": "alboraia",
+    "name": "Alboraia",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 26273,
+    "twin": "burjassot",
+    "precio": 2000,
+    "alq": 960,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Patacona",
+      "Port Saplaya",
+      "La Lloma"
+    ],
+    "drivers": "Residencial premium Valencia metropolitana, agricultura chufa, frente marítimo",
+    "mejor_zona": "Patacona",
+    "alt": [
+      [
+        "Burjassot",
+        "burjassot"
+      ],
+      [
+        "Valencia",
+        "valencia"
+      ]
+    ],
+    "arquetipo": "municipio residencial premium L'Horta Nord",
+    "tesis": "piso o apartamento en Patacona o Port Saplaya para alquiler residencial premium con frente marítimo a 10 minutos de Valencia capital"
+  },
+  {
+    "slug": "onda",
+    "name": "Onda",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Castellón",
+    "pop": 26190,
+    "twin": "burriana",
+    "precio": 1100,
+    "alq": 570,
+    "roi": 6.2,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "El Cau",
+      "Sant Cristòfol",
+      "El Pla"
+    ],
+    "drivers": "Industria cerámica (azulejo Porcelanosa, Keraben), industria juguete",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Burriana",
+        "burriana"
+      ],
+      [
+        "Almassora",
+        "almassora"
+      ]
+    ],
+    "arquetipo": "villa industrial cerámica Plana Baixa interior",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del cluster cerámico de Castellón y técnicos especializados"
+  },
+  {
+    "slug": "santa-perpetua-de-mogoda",
+    "name": "Santa Perpètua de Mogoda",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 26130,
+    "twin": "barbera-del-valles",
+    "precio": 2400,
+    "alq": 1050,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "La Florida",
+      "El Mas Costa",
+      "Can Folguera"
+    ],
+    "drivers": "Industria, logística, polígonos Can Folguera, residencial Vallès",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Barberà del Vallès",
+        "barbera-del-valles"
+      ],
+      [
+        "Mollet del Vallès",
+        "mollet-del-valles"
+      ]
+    ],
+    "arquetipo": "suburbio industrial Vallès Occidental",
+    "tesis": "piso de 2-3 dorm cerca del centro para alquiler estable a trabajadores del corredor industrial Vallès"
+  },
+  {
+    "slug": "caravaca-de-la-cruz",
+    "name": "Caravaca de la Cruz",
+    "ccaa": "R. de Murcia",
+    "ccaa_slug": "murcia",
+    "prov": "Murcia",
+    "pop": 26126,
+    "twin": "cieza",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.0,
+    "dias": 28,
+    "itp_pct": 8,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "El Rincón",
+      "Las Pinas",
+      "La Encarnación"
+    ],
+    "drivers": "Turismo religioso (Año Jubilar perpetuo), agricultura, servicios comarcales",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Cieza",
+        "cieza"
+      ],
+      [
+        "Lorca",
+        "lorca"
+      ]
+    ],
+    "arquetipo": "ciudad santa Año Jubilar Murcia interior",
+    "tesis": "piso económico cerca del Santuario o casco antiguo para alquiler mixto turístico de peregrinación y residencial estable"
+  },
+  {
+    "slug": "villanueva-de-la-serena",
+    "name": "Villanueva de la Serena",
+    "ccaa": "Extremadura",
+    "ccaa_slug": "extremadura",
+    "prov": "Badajoz",
+    "pop": 25773,
+    "twin": "don-benito",
+    "precio": 1000,
+    "alq": 520,
+    "roi": 6.2,
+    "vp": 4.0,
+    "va": 6.0,
+    "dias": 30,
+    "itp_pct": 8,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "La Estación",
+      "Las Cumbres",
+      "San Isidro"
+    ],
+    "drivers": "Agricultura (Vegas Altas Guadiana), industria agroalimentaria, servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Don Benito",
+        "don-benito"
+      ],
+      [
+        "Mérida",
+        "merida"
+      ]
+    ],
+    "arquetipo": "capital agroindustrial Vegas Altas",
+    "tesis": "piso económico en el centro para alquiler estable a profesionales del sector agroalimentario y servicios comarcales"
+  },
+  {
+    "slug": "valls",
+    "name": "Valls",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Tarragona",
+    "pop": 25518,
+    "twin": "vila-seca",
+    "precio": 1600,
+    "alq": 750,
+    "roi": 5.6,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 24,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "El Vilar",
+      "Sant Antoni",
+      "Fornás"
+    ],
+    "drivers": "Industria química (Repsol cercana), agroalimentaria (calçots), polígonos",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Vila-seca",
+        "vila-seca"
+      ],
+      [
+        "Tarragona",
+        "tarragona"
+      ]
+    ],
+    "arquetipo": "capital comarcal Alt Camp del calçot",
+    "tesis": "piso cerca del centro para alquiler estable a trabajadores del polo químico de Tarragona y profesionales locales"
+  },
+  {
+    "slug": "castellar-del-valles",
+    "name": "Castellar del Vallès",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 25422,
+    "twin": "cerdanyola-del-valles",
+    "precio": 2200,
+    "alq": 960,
+    "roi": 5.2,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Sant Feliu del Racó",
+      "Can Carner",
+      "El Pla"
+    ],
+    "drivers": "Industria, residencial Vallès Occidental con buena conexión Sabadell",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Sant Quirze del Vallès",
+        "sant-quirze-del-valles"
+      ],
+      [
+        "Sabadell",
+        "sabadell"
+      ]
+    ],
+    "arquetipo": "municipio residencial Vallès Occidental",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Sabadell o Terrassa"
+  },
+  {
+    "slug": "villarrobledo",
+    "name": "Villarrobledo",
+    "ccaa": "Castilla-La Mancha",
+    "ccaa_slug": "castilla-la-mancha",
+    "prov": "Albacete",
+    "pop": 25400,
+    "twin": "tomelloso",
+    "precio": 900,
+    "alq": 480,
+    "roi": 6.4,
+    "vp": 4.0,
+    "va": 6.0,
+    "dias": 30,
+    "itp_pct": 9,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "Las Cuevas",
+      "San Sebastián",
+      "El Cristo"
+    ],
+    "drivers": "Industria vinícola (Mancha), tinajas, agricultura cereal, servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Tomelloso",
+        "tomelloso"
+      ],
+      [
+        "Albacete",
+        "albacete"
+      ]
+    ],
+    "arquetipo": "capital vinícola Mancha albaceteña",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector vinícola y servicios comarcales"
+  },
+  {
+    "slug": "galdar",
+    "name": "Gáldar",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Las Palmas",
+    "pop": 25108,
+    "twin": "arucas",
+    "precio": 1700,
+    "alq": 760,
+    "roi": 5.4,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Sardina",
+      "La Atalaya",
+      "Caideros"
+    ],
+    "drivers": "Agricultura (tomate, plátano), turismo cultural (Cueva Pintada), pesquero",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Arucas",
+        "arucas"
+      ],
+      [
+        "Las Palmas GC",
+        "las-palmas-gc"
+      ]
+    ],
+    "arquetipo": "ciudad histórica norte Gran Canaria",
+    "tesis": "piso en el centro histórico o Sardina para alquiler residencial estable a familias y trabajadores agrícolas"
+  },
+  {
+    "slug": "mejorada-del-campo",
+    "name": "Mejorada del Campo",
+    "ccaa": "C. de Madrid",
+    "ccaa_slug": "madrid",
+    "prov": "Madrid",
+    "pop": 25049,
+    "twin": "san-fernando-de-henares",
+    "precio": 1900,
+    "alq": 920,
+    "roi": 5.8,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 21,
+    "itp_pct": 6,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "La Catedral",
+      "Vegas",
+      "Las Acacias"
+    ],
+    "drivers": "Industria, residencial Madrid Corredor Henares, comercio",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "San Fernando de Henares",
+        "san-fernando-de-henares"
+      ],
+      [
+        "Torrejón de Ardoz",
+        "torrejon-de-ardoz"
+      ]
+    ],
+    "arquetipo": "suburbio industrial Corredor Henares",
+    "tesis": "piso cerca del centro para alquiler a familias trabajadoras y profesionales del corredor industrial Madrid-Alcalá"
+  },
+  {
+    "slug": "olesa-de-montserrat",
+    "name": "Olesa de Montserrat",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 24966,
+    "twin": "sant-feliu-de-llobregat",
+    "precio": 2000,
+    "alq": 880,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Sant Pere",
+      "Collbaix",
+      "La Rambla"
+    ],
+    "drivers": "Industria, residencial Baix Llobregat alto, turismo religioso Montserrat",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Esparreguera",
+        "esparreguera"
+      ],
+      [
+        "Martorell",
+        "martorell"
+      ]
+    ],
+    "arquetipo": "villa residencial-industrial Baix Llobregat",
+    "tesis": "piso cerca del centro para alquiler estable a familias y trabajadores del corredor industrial Llobregat"
+  },
+  {
+    "slug": "almonte",
+    "name": "Almonte",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Huelva",
+    "pop": 24864,
+    "twin": "isla-cristina",
+    "precio": 1500,
+    "alq": 750,
+    "roi": 6.0,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 26,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Matalascañas",
+      "El Rocío",
+      "La Aldea"
+    ],
+    "drivers": "Agricultura (fresa), turismo (Rocío, Doñana, Matalascañas), pesquero",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Lepe",
+        "lepe"
+      ],
+      [
+        "Isla Cristina",
+        "isla-cristina"
+      ]
+    ],
+    "arquetipo": "villa rociera Doñana-Costa de la Luz",
+    "tesis": "piso en el centro o apartamento en Matalascañas para alquiler mixto residencial a trabajadores agrícolas y vacacional turístico"
+  },
+  {
+    "slug": "galdakao",
+    "name": "Galdakao",
+    "ccaa": "País Vasco",
+    "ccaa_slug": "pais-vasco",
+    "prov": "Bizkaia",
+    "pop": 24776,
+    "twin": "basauri",
+    "precio": 2400,
+    "alq": 1080,
+    "roi": 5.4,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 23,
+    "itp_pct": 4,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Bengoetxe",
+      "Aperribai",
+      "Labe"
+    ],
+    "drivers": "Industria química (Petronor cercana), hospital Galdakao, residencial Bilbao metropolitana",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Basauri",
+        "basauri"
+      ],
+      [
+        "Bilbao",
+        "bilbao"
+      ]
+    ],
+    "arquetipo": "suburbio industrial-sanitario Bilbao metropolitana",
+    "tesis": "piso cerca del hospital de Galdakao para alquiler estable a profesionales sanitarios y trabajadores del polo químico de Vizcaya"
+  },
+  {
+    "slug": "cambre",
+    "name": "Cambre",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "A Coruña",
+    "pop": 24765,
+    "twin": "culleredo",
+    "precio": 1900,
+    "alq": 840,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 24,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "O Temple",
+      "El Graxal",
+      "Sigrás",
+      "Cecebre"
+    ],
+    "drivers": "Residencial A Coruña metropolitana, polígono industrial, servicios",
+    "mejor_zona": "O Temple",
+    "alt": [
+      [
+        "Culleredo",
+        "culleredo"
+      ],
+      [
+        "A Coruña",
+        "a-coruna"
+      ]
+    ],
+    "arquetipo": "municipio residencial A Coruña metropolitana",
+    "tesis": "piso en O Temple para alquiler a profesionales que trabajan en A Coruña a 10-15 minutos y prefieren entorno residencial"
+  },
+  {
+    "slug": "el-masnou",
+    "name": "El Masnou",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 24761,
+    "twin": "premia-de-mar",
+    "precio": 3100,
+    "alq": 1280,
+    "roi": 5.0,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 21,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Ocata",
+      "Camil-Fabra",
+      "Maresme"
+    ],
+    "drivers": "Residencial premium Maresme, frente marítimo, servicios, comercio",
+    "mejor_zona": "Ocata",
+    "alt": [
+      [
+        "Premià de Mar",
+        "premia-de-mar"
+      ],
+      [
+        "Vilassar de Mar",
+        "vilassar-de-mar"
+      ]
+    ],
+    "arquetipo": "villa residencial premium Maresme sur",
+    "tesis": "piso en Ocata o Camil-Fabra para alquiler residencial premium a familias que trabajan en Barcelona a 20 minutos en Renfe R1"
+  },
+  {
+    "slug": "erandio",
+    "name": "Erandio",
+    "ccaa": "País Vasco",
+    "ccaa_slug": "pais-vasco",
+    "prov": "Bizkaia",
+    "pop": 24659,
+    "twin": "leioa",
+    "precio": 2400,
+    "alq": 1080,
+    "roi": 5.4,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 23,
+    "itp_pct": 4,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Astrabudua",
+      "Altzaga",
+      "Lutxana"
+    ],
+    "drivers": "Industria, residencial Bilbao metropolitana margen derecha, aeropuerto",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Leioa",
+        "leioa"
+      ],
+      [
+        "Bilbao",
+        "bilbao"
+      ]
+    ],
+    "arquetipo": "suburbio industrial margen derecha Bilbao",
+    "tesis": "piso cerca del metro L1 para alquiler estable a trabajadores industriales y profesionales que trabajan en Bilbao a 10 minutos"
+  },
+  {
+    "slug": "tacoronte",
+    "name": "Tacoronte",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Santa Cruz de Tenerife",
+    "pop": 24619,
+    "twin": "la-orotava",
+    "precio": 1800,
+    "alq": 790,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 25,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "La Caridad",
+      "San Juan",
+      "Mesa del Mar"
+    ],
+    "drivers": "Agricultura viticultura (DO Tacoronte-Acentejo), residencial, servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "La Orotava",
+        "la-orotava"
+      ],
+      [
+        "La Laguna",
+        "la-laguna"
+      ]
+    ],
+    "arquetipo": "villa vitivinícola Tenerife norte",
+    "tesis": "piso en el centro para alquiler estable a familias y profesionales que trabajan en La Laguna o Santa Cruz a 15-20 minutos"
+  },
+  {
+    "slug": "icod-de-los-vinos",
+    "name": "Icod de los Vinos",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Santa Cruz de Tenerife",
+    "pop": 24616,
+    "twin": "la-orotava",
+    "precio": 1700,
+    "alq": 770,
+    "roi": 5.4,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "La Vega",
+      "San Marcos",
+      "San Felipe"
+    ],
+    "drivers": "Turismo (drago milenario), agricultura, viticultura, servicios comarcales",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "La Orotava",
+        "la-orotava"
+      ],
+      [
+        "Los Realejos",
+        "los-realejos"
+      ]
+    ],
+    "arquetipo": "villa histórica del drago Tenerife noroeste",
+    "tesis": "piso o casa en el centro histórico para alquiler mixto residencial estable y turístico cultural"
+  },
+  {
+    "slug": "riba-roja-de-turia",
+    "name": "Riba-roja de Túria",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 24616,
+    "twin": "paterna",
+    "precio": 1700,
+    "alq": 820,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Mas de Tous",
+      "La Reva",
+      "Masía de Traver"
+    ],
+    "drivers": "Polígono industrial (Mercadona, Power Electronics), logística, residencial",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Paterna",
+        "paterna"
+      ],
+      [
+        "Bétera",
+        "betera"
+      ]
+    ],
+    "arquetipo": "polo logístico industrial Camp de Túria",
+    "tesis": "piso cerca del centro para alquiler estable a profesionales del polígono industrial (sede Mercadona) y residencial familias"
+  },
+  {
+    "slug": "ibi",
+    "name": "Ibi",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 24500,
+    "twin": "villena",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 27,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "Sant Pasqual",
+      "La Plana",
+      "El Castell"
+    ],
+    "drivers": "Industria juguete (capital nacional juguete), helados, plástico",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Villena",
+        "villena"
+      ],
+      [
+        "Alcoy",
+        "alcoy"
+      ]
+    ],
+    "arquetipo": "capital del juguete Foia de Castalla",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector juguetero y servicios"
+  },
+  {
+    "slug": "los-barrios",
+    "name": "Los Barrios",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Cádiz",
+    "pop": 24449,
+    "twin": "san-roque",
+    "precio": 1400,
+    "alq": 720,
+    "roi": 6.2,
+    "vp": 5.5,
+    "va": 7.5,
+    "dias": 24,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Palmones",
+      "Guadacorte",
+      "Pozos Dulces"
+    ],
+    "drivers": "Polo industrial Bahía de Algeciras (Acerinox, Cepsa), logística portuaria",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "San Roque",
+        "san-roque"
+      ],
+      [
+        "Algeciras",
+        "algeciras"
+      ]
+    ],
+    "arquetipo": "villa industrial Campo de Gibraltar",
+    "tesis": "piso en el centro o Palmones para alquiler estable a trabajadores petroquímicos, siderúrgicos y portuarios de Algeciras"
+  },
+  {
+    "slug": "alhama-de-murcia",
+    "name": "Alhama de Murcia",
+    "ccaa": "R. de Murcia",
+    "ccaa_slug": "murcia",
+    "prov": "Murcia",
+    "pop": 24163,
+    "twin": "totana",
+    "precio": 1100,
+    "alq": 570,
+    "roi": 6.2,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 26,
+    "itp_pct": 8,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "Las Tetas",
+      "Condado de Alhama",
+      "La Costera"
+    ],
+    "drivers": "Agricultura intensiva, balneario, polígono Las Salinas (ElPozo), golf turístico",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Totana",
+        "totana"
+      ],
+      [
+        "Lorca",
+        "lorca"
+      ]
+    ],
+    "arquetipo": "villa agroindustrial-balnearia Sierra Espuña",
+    "tesis": "piso en el centro o apartamento en Condado de Alhama para alquiler estable a trabajadores agroindustriales y residencial turístico"
+  },
+  {
+    "slug": "moguer",
+    "name": "Moguer",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Huelva",
+    "pop": 24083,
+    "twin": "isla-cristina",
+    "precio": 1300,
+    "alq": 680,
+    "roi": 6.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 27,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Mazagón",
+      "San Antonio",
+      "La Vista"
+    ],
+    "drivers": "Agricultura (fresa, frutos rojos), pesquero, turismo (Mazagón), Lugares Colombinos",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Almonte",
+        "almonte"
+      ],
+      [
+        "Palos de la Frontera",
+        "huelva"
+      ]
+    ],
+    "arquetipo": "villa colombina-agrofresera Costa Onubense",
+    "tesis": "piso en el centro histórico para alquiler mixto residencial estable a trabajadores agrícolas y turístico cultural"
+  },
+  {
+    "slug": "villanueva-de-la-canada",
+    "name": "Villanueva de la Cañada",
+    "ccaa": "C. de Madrid",
+    "ccaa_slug": "madrid",
+    "prov": "Madrid",
+    "pop": 24028,
+    "twin": "villaviciosa-de-odon",
+    "precio": 2800,
+    "alq": 1200,
+    "roi": 5.1,
+    "vp": 5.5,
+    "va": 8.5,
+    "dias": 20,
+    "itp_pct": 6,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "El Castillo",
+      "Villafranca",
+      "Santa María"
+    ],
+    "drivers": "Residencial premium Madrid oeste, universidad Alfonso X, urbanizaciones",
+    "mejor_zona": "El Castillo",
+    "alt": [
+      [
+        "Villaviciosa de Odón",
+        "villaviciosa-de-odon"
+      ],
+      [
+        "Boadilla del Monte",
+        "boadilla-del-monte"
+      ]
+    ],
+    "arquetipo": "municipio residencial premium suroeste Madrid",
+    "tesis": "chalet o piso amplio en El Castillo o Centro para alquiler a familias clase media-alta y profesionales que trabajan en Madrid"
+  },
+  {
+    "slug": "marin",
+    "name": "Marín",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 23991,
+    "twin": "cangas-do-morrazo",
+    "precio": 1400,
+    "alq": 680,
+    "roi": 5.8,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 25,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Mogor",
+      "Seixo",
+      "San Xulián"
+    ],
+    "drivers": "Escuela Naval Militar, puerto comercial, pesquero, industria",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Pontevedra",
+        "pontevedra"
+      ],
+      [
+        "Cangas do Morrazo",
+        "cangas-do-morrazo"
+      ]
+    ],
+    "arquetipo": "villa naval militar ría de Pontevedra",
+    "tesis": "piso cerca del centro para alquiler estable a personal militar de la Escuela Naval, trabajadores portuarios y profesionales que trabajan en Pontevedra"
+  },
+  {
+    "slug": "san-miguel-de-abona",
+    "name": "San Miguel de Abona",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Santa Cruz de Tenerife",
+    "pop": 23960,
+    "twin": "granadilla-de-abona",
+    "precio": 1900,
+    "alq": 840,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 24,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Las Chafiras",
+      "Aldea Blanca",
+      "El Roque"
+    ],
+    "drivers": "Turismo sur Tenerife, polígono industrial Las Chafiras, servicios",
+    "mejor_zona": "Las Chafiras",
+    "alt": [
+      [
+        "Granadilla de Abona",
+        "granadilla-de-abona"
+      ],
+      [
+        "Adeje",
+        "adeje"
+      ]
+    ],
+    "arquetipo": "municipio turístico-industrial Tenerife sur",
+    "tesis": "piso en Las Chafiras para alquiler residencial estable a trabajadores del polígono y del cluster turístico (Costa Adeje a 10 min)"
+  },
+  {
+    "slug": "las-gabias",
+    "name": "Las Gabias",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Granada",
+    "pop": 23584,
+    "twin": "armilla",
+    "precio": 1600,
+    "alq": 800,
+    "roi": 6.0,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Híjar",
+      "Gabia Grande",
+      "Gabia Chica",
+      "La Higuera"
+    ],
+    "drivers": "Residencial Granada metropolitana, servicios, agricultura vega",
+    "mejor_zona": "Gabia Grande",
+    "alt": [
+      [
+        "Armilla",
+        "armilla"
+      ],
+      [
+        "Granada",
+        "granada"
+      ]
+    ],
+    "arquetipo": "suburbio residencial Granada vega",
+    "tesis": "piso en Gabia Grande para alquiler estable a familias jóvenes y profesionales que trabajan en Granada capital a 15 minutos"
+  },
+  {
+    "slug": "san-juan-de-aznalfarache",
+    "name": "San Juan de Aznalfarache",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Sevilla",
+    "pop": 23408,
+    "twin": "mairena-del-aljarafe",
+    "precio": 1600,
+    "alq": 820,
+    "roi": 6.2,
+    "vp": 6.0,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "La Cuesta",
+      "El Patriarca",
+      "Las Erillas"
+    ],
+    "drivers": "Suburbio Sevilla metropolitana Aljarafe, servicios, comercio",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Mairena del Aljarafe",
+        "mairena-del-aljarafe"
+      ],
+      [
+        "Camas",
+        "camas"
+      ]
+    ],
+    "arquetipo": "suburbio metropolitano sevillano Aljarafe",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Sevilla a 10 minutos por metro o coche"
+  },
+  {
+    "slug": "ponteareas",
+    "name": "Ponteareas",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 23211,
+    "twin": "vilagarcia-de-arousa",
+    "precio": 1300,
+    "alq": 620,
+    "roi": 5.7,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Padróns",
+      "Cumiar",
+      "Areas"
+    ],
+    "drivers": "Agricultura (Albariño Condado), industria, capital comarcal, festival flores",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Vilagarcía de Arousa",
+        "vilagarcia-de-arousa"
+      ],
+      [
+        "Vigo",
+        "vigo"
+      ]
+    ],
+    "arquetipo": "capital comarcal Condado de Tea",
+    "tesis": "piso en el centro para alquiler estable a profesionales del sector vinícola y servicios de la comarca"
+  },
+  {
+    "slug": "picassent",
+    "name": "Picassent",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 23202,
+    "twin": "catarroja",
+    "precio": 1600,
+    "alq": 780,
+    "roi": 5.9,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "El Realón",
+      "Tous",
+      "La Marquesa"
+    ],
+    "drivers": "Agricultura, industria agroalimentaria, centro penitenciario, residencial",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Catarroja",
+        "catarroja"
+      ],
+      [
+        "Silla",
+        "silla"
+      ]
+    ],
+    "arquetipo": "villa agroindustrial L'Horta Sud",
+    "tesis": "piso en el centro para alquiler estable a familias trabajadoras y profesionales que trabajan en Valencia a 20 minutos"
+  },
+  {
+    "slug": "sant-feliu-de-guixols",
+    "name": "Sant Feliu de Guíxols",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Girona",
+    "pop": 23141,
+    "twin": "palafrugell",
+    "precio": 2700,
+    "alq": 1100,
+    "roi": 4.9,
+    "vp": 5.5,
+    "va": 7.5,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "La Pedralta",
+      "Sant Pol",
+      "Sant Amanç"
+    ],
+    "drivers": "Turismo Costa Brava, pesquero histórico, residencial vacacional",
+    "mejor_zona": "Sant Pol",
+    "alt": [
+      [
+        "Palafrugell",
+        "palafrugell"
+      ],
+      [
+        "Palamós",
+        "palamos"
+      ]
+    ],
+    "arquetipo": "villa turística Costa Brava sur",
+    "tesis": "apartamento en Sant Pol o Centre para alquiler mixto vacacional alto en verano y residencial anual con frente marítimo"
+  },
+  {
+    "slug": "amposta",
+    "name": "Amposta",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Tarragona",
+    "pop": 23080,
+    "twin": "tortosa",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 28,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Eucaliptus",
+      "Poble Nou",
+      "Balada"
+    ],
+    "drivers": "Capital comarcal Montsià, agricultura arroz Delta del Ebro, turismo",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Tortosa",
+        "tortosa"
+      ],
+      [
+        "Vinaròs",
+        "vinaros"
+      ]
+    ],
+    "arquetipo": "capital comarcal Delta del Ebro",
+    "tesis": "piso económico en el centro para alquiler estable a profesionales del sector agroalimentario del Delta y servicios comarcales"
+  },
+  {
+    "slug": "almoradi",
+    "name": "Almoradí",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 22965,
+    "twin": "orihuela",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "La Hoya",
+      "La Heredad",
+      "San Emigdio"
+    ],
+    "drivers": "Agricultura (alcachofa, cítricos Vega Baja), muebles, servicios comarcales",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Orihuela",
+        "orihuela"
+      ],
+      [
+        "Callosa",
+        "orihuela"
+      ]
+    ],
+    "arquetipo": "villa agroindustrial Vega Baja",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector hortofrutícola y servicios"
+  },
+  {
+    "slug": "laguna-de-duero",
+    "name": "Laguna de Duero",
+    "ccaa": "Castilla y León",
+    "ccaa_slug": "castilla-y-leon",
+    "prov": "Valladolid",
+    "pop": 22965,
+    "twin": "medina-del-campo",
+    "precio": 1500,
+    "alq": 730,
+    "roi": 5.8,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 24,
+    "itp_pct": 8,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "Torrelago",
+      "El Lago",
+      "La Esperanza"
+    ],
+    "drivers": "Suburbio Valladolid metropolitana, industria automotriz cercana, servicios",
+    "mejor_zona": "Torrelago",
+    "alt": [
+      [
+        "Medina del Campo",
+        "medina-del-campo"
+      ],
+      [
+        "Valladolid",
+        "valladolid"
+      ]
+    ],
+    "arquetipo": "suburbio residencial Valladolid metropolitana",
+    "tesis": "piso en Torrelago o Centro para alquiler estable a familias y profesionales que trabajan en Valladolid a 10 minutos"
+  },
+  {
+    "slug": "valle-de-egues",
+    "name": "Valle de Egüés",
+    "ccaa": "Navarra",
+    "ccaa_slug": "navarra",
+    "prov": "Navarra",
+    "pop": 22825,
+    "twin": "pamplona",
+    "precio": 2300,
+    "alq": 1050,
+    "roi": 5.5,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 22,
+    "itp_pct": 6,
+    "region": "norte",
+    "barrios": [
+      "Sarriguren",
+      "Gorraiz",
+      "Egüés",
+      "Olaz"
+    ],
+    "drivers": "Residencial Pamplona metropolitana, polígono industrial, servicios",
+    "mejor_zona": "Sarriguren",
+    "alt": [
+      [
+        "Burlada",
+        "burlada"
+      ],
+      [
+        "Pamplona",
+        "pamplona"
+      ]
+    ],
+    "arquetipo": "municipio residencial Pamplona metropolitana",
+    "tesis": "piso en Sarriguren para alquiler estable a familias jóvenes y profesionales que trabajan en Pamplona a 10 minutos"
+  },
+  {
+    "slug": "arroyo-de-la-encomienda",
+    "name": "Arroyo de la Encomienda",
+    "ccaa": "Castilla y León",
+    "ccaa_slug": "castilla-y-leon",
+    "prov": "Valladolid",
+    "pop": 22800,
+    "twin": "medina-del-campo",
+    "precio": 1700,
+    "alq": 800,
+    "roi": 5.6,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 22,
+    "itp_pct": 8,
+    "region": "centro",
+    "barrios": [
+      "Arroyo",
+      "La Vega",
+      "La Flecha",
+      "Sotoverde"
+    ],
+    "drivers": "Residencial premium Valladolid metropolitana, servicios, comercio",
+    "mejor_zona": "La Flecha",
+    "alt": [
+      [
+        "Laguna de Duero",
+        "laguna-de-duero"
+      ],
+      [
+        "Valladolid",
+        "valladolid"
+      ]
+    ],
+    "arquetipo": "suburbio residencial premium Valladolid",
+    "tesis": "piso en La Flecha o Sotoverde para alquiler a familias clase media-alta y profesionales que trabajan en Valladolid capital"
+  },
+  {
+    "slug": "aljaraque",
+    "name": "Aljaraque",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Huelva",
+    "pop": 22737,
+    "twin": "bormujos",
+    "precio": 1500,
+    "alq": 760,
+    "roi": 6.1,
+    "vp": 5.5,
+    "va": 7.5,
+    "dias": 24,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Aljaraque",
+      "La Monacilla",
+      "Bellavista",
+      "Corrales"
+    ],
+    "drivers": "Residencial Huelva metropolitana, servicios, comercio",
+    "mejor_zona": "La Monacilla",
+    "alt": [
+      [
+        "Huelva",
+        "huelva"
+      ],
+      [
+        "Cartaya",
+        "cartaya"
+      ]
+    ],
+    "arquetipo": "suburbio residencial Huelva metropolitana",
+    "tesis": "piso en La Monacilla o Bellavista para alquiler estable a familias y profesionales que trabajan en Huelva a 10 minutos"
+  },
+  {
+    "slug": "las-torres-de-cotillas",
+    "name": "Las Torres de Cotillas",
+    "ccaa": "R. de Murcia",
+    "ccaa_slug": "murcia",
+    "prov": "Murcia",
+    "pop": 22676,
+    "twin": "molina-de-segura",
+    "precio": 1200,
+    "alq": 620,
+    "roi": 6.2,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 25,
+    "itp_pct": 8,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "Los Pulpites",
+      "Las Tres Bes",
+      "La Loma"
+    ],
+    "drivers": "Agricultura, industria agroalimentaria (Vega del Segura), residencial Murcia metropolitana",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Molina de Segura",
+        "molina-de-segura"
+      ],
+      [
+        "Murcia",
+        "murcia"
+      ]
+    ],
+    "arquetipo": "villa agroindustrial Vega Media Segura",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores agroindustriales y profesionales que trabajan en Murcia a 15 minutos"
+  },
+  {
+    "slug": "esparreguera",
+    "name": "Esparreguera",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 22665,
+    "twin": "sant-feliu-de-llobregat",
+    "precio": 1900,
+    "alq": 840,
+    "roi": 5.3,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Sant Salvador",
+      "Can Vinyals",
+      "El Castell"
+    ],
+    "drivers": "Industria, residencial Baix Llobregat alto, La Passió teatro popular",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Olesa de Montserrat",
+        "olesa-de-montserrat"
+      ],
+      [
+        "Martorell",
+        "martorell"
+      ]
+    ],
+    "arquetipo": "villa industrial-residencial Baix Llobregat alto",
+    "tesis": "piso cerca del centro para alquiler estable a familias trabajadoras y profesionales del corredor industrial Martorell"
+  },
+  {
+    "slug": "guia-de-isora",
+    "name": "Guía de Isora",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Santa Cruz de Tenerife",
+    "pop": 22654,
+    "twin": "adeje",
+    "precio": 2300,
+    "alq": 960,
+    "roi": 5.0,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Playa San Juan",
+      "Alcalá",
+      "Tejina"
+    ],
+    "drivers": "Turismo Costa Adeje, agricultura plátano, observatorio Teide, hoteles premium",
+    "mejor_zona": "Playa San Juan",
+    "alt": [
+      [
+        "Adeje",
+        "adeje"
+      ],
+      [
+        "Santiago del Teide",
+        "adeje"
+      ]
+    ],
+    "arquetipo": "municipio turístico-agrícola Tenerife suroeste",
+    "tesis": "apartamento en Playa San Juan o Alcalá para alquiler vacacional con demanda turística estable y residencial a trabajadores hoteleros"
+  },
+  {
+    "slug": "barbate",
+    "name": "Barbate",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Cádiz",
+    "pop": 22635,
+    "twin": "chipiona",
+    "precio": 1500,
+    "alq": 760,
+    "roi": 6.1,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 24,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Zahara de los Atunes",
+      "Caños de Meca",
+      "La Higuerita"
+    ],
+    "drivers": "Pesquero (atún rojo, almadraba), turismo Costa de la Luz, conservera",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Conil de la Frontera",
+        "conil-de-la-frontera"
+      ],
+      [
+        "Tarifa",
+        "tarifa"
+      ]
+    ],
+    "arquetipo": "villa pesquera-turística Costa de la Luz gaditana",
+    "tesis": "piso en el centro o apartamento en Zahara/Caños para alquiler mixto vacacional alto en verano y residencial estable a pescadores"
+  },
+  {
+    "slug": "aspe",
+    "name": "Aspe",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 22397,
+    "twin": "elda",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 26,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "El Castillo",
+      "La Salud",
+      "Las Fuentes"
+    ],
+    "drivers": "Agricultura uva de mesa (DO Vinalopó), industria calzado, mármol",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Novelda",
+        "novelda"
+      ],
+      [
+        "Elda",
+        "elda"
+      ]
+    ],
+    "arquetipo": "villa agrícola del moscatel Medio Vinalopó",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores agrícolas y del sector calzado/mármol"
+  },
+  {
+    "slug": "maracena",
+    "name": "Maracena",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Granada",
+    "pop": 22294,
+    "twin": "armilla",
+    "precio": 1700,
+    "alq": 830,
+    "roi": 5.9,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Las Lomas",
+      "La Estación",
+      "El Albaicín"
+    ],
+    "drivers": "Suburbio Granada metropolitana, servicios, comercio, residencial",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Armilla",
+        "armilla"
+      ],
+      [
+        "Granada",
+        "granada"
+      ]
+    ],
+    "arquetipo": "suburbio Granada vega",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Granada a 10 minutos"
+  },
+  {
+    "slug": "alfafar",
+    "name": "Alfafar",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 22270,
+    "twin": "catarroja",
+    "precio": 1700,
+    "alq": 820,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Lloma Llarga",
+      "Parque Alcosa",
+      "Orba"
+    ],
+    "drivers": "Comercial (parque Alcampo, MN4), residencial L'Horta Sud, servicios",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Catarroja",
+        "catarroja"
+      ],
+      [
+        "Sedaví",
+        "catarroja"
+      ]
+    ],
+    "arquetipo": "suburbio comercial L'Horta Sud Valencia",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales del sector comercial-servicios con buena conexión a Valencia"
+  },
+  {
+    "slug": "montcada",
+    "name": "Montcada",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 22213,
+    "twin": "burjassot",
+    "precio": 1700,
+    "alq": 820,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "La Pedrera",
+      "Masies",
+      "Polígono"
+    ],
+    "drivers": "Residencial Valencia metropolitana, agricultura, polígono industrial",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Burjassot",
+        "burjassot"
+      ],
+      [
+        "Alboraia",
+        "alboraia"
+      ]
+    ],
+    "arquetipo": "suburbio L'Horta Nord Valencia",
+    "tesis": "piso en el centro para alquiler estable a familias y profesionales que trabajan en Valencia a 15 minutos"
+  },
+  {
+    "slug": "ayamonte",
+    "name": "Ayamonte",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Huelva",
+    "pop": 22001,
+    "twin": "isla-cristina",
+    "precio": 1400,
+    "alq": 730,
+    "roi": 6.3,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 25,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Punta del Moral",
+      "Isla Canela",
+      "Costa Esuri"
+    ],
+    "drivers": "Pesquero, frontera Portugal, turismo Costa de la Luz, Isla Canela",
+    "mejor_zona": "Isla Canela",
+    "alt": [
+      [
+        "Isla Cristina",
+        "isla-cristina"
+      ],
+      [
+        "Lepe",
+        "lepe"
+      ]
+    ],
+    "arquetipo": "villa fronteriza-turística Costa de la Luz",
+    "tesis": "piso en el centro o apartamento en Isla Canela para alquiler mixto vacacional turístico (mercado portugués) y residencial estable"
+  },
+  {
+    "slug": "carcaixent",
+    "name": "Carcaixent",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 21934,
+    "twin": "alzira",
+    "precio": 1100,
+    "alq": 560,
+    "roi": 6.1,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 27,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "La Vila",
+      "Sant Bonaventura",
+      "La Muntanyeta"
+    ],
+    "drivers": "Agricultura (cuna de la naranja), industria agroalimentaria, servicios comarcales",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Alzira",
+        "alzira"
+      ],
+      [
+        "Algemesí",
+        "algemesi"
+      ]
+    ],
+    "arquetipo": "villa naranjera Ribera Alta",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector citrícola y servicios"
+  },
+  {
+    "slug": "pucol",
+    "name": "Puçol",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 21659,
+    "twin": "sagunto",
+    "precio": 1700,
+    "alq": 820,
+    "roi": 5.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "La Cruz",
+      "Mar i Sol",
+      "Casas Verdes"
+    ],
+    "drivers": "Residencial Valencia metropolitana, frente marítimo, agricultura cítricos",
+    "mejor_zona": "Mar i Sol",
+    "alt": [
+      [
+        "Sagunto",
+        "sagunto"
+      ],
+      [
+        "Alboraia",
+        "alboraia"
+      ]
+    ],
+    "arquetipo": "villa residencial costera L'Horta Nord",
+    "tesis": "apartamento en Mar i Sol o piso en el centro para alquiler mixto residencial anual y vacacional con frente marítimo a 15 min de Valencia"
+  },
+  {
+    "slug": "tias",
+    "name": "Tías",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Las Palmas",
+    "pop": 21613,
+    "twin": "san-bartolome-de-tirajana",
+    "precio": 2200,
+    "alq": 960,
+    "roi": 5.2,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Puerto del Carmen",
+      "La Tiñosa",
+      "Conil"
+    ],
+    "drivers": "Turismo Puerto del Carmen (capital turística Lanzarote), residencial estacional",
+    "mejor_zona": "Puerto del Carmen",
+    "alt": [
+      [
+        "Yaiza",
+        "yaiza"
+      ],
+      [
+        "Teguise",
+        "teguise"
+      ]
+    ],
+    "arquetipo": "municipio turístico Puerto del Carmen Lanzarote",
+    "tesis": "apartamento en Puerto del Carmen para alquiler vacacional con licencia y residencial a trabajadores hoteleros del cluster Lanzarote"
+  },
+  {
+    "slug": "pajara",
+    "name": "Pájara",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Las Palmas",
+    "pop": 21570,
+    "twin": "la-oliva",
+    "precio": 2300,
+    "alq": 1000,
+    "roi": 5.2,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Morro Jable",
+      "Costa Calma",
+      "La Lajita"
+    ],
+    "drivers": "Turismo masivo sur Fuerteventura, hoteles all-inclusive, residencial estacional",
+    "mejor_zona": "Costa Calma",
+    "alt": [
+      [
+        "La Oliva",
+        "la-oliva"
+      ],
+      [
+        "Puerto del Rosario",
+        "fuerteventura-pjto-rosario"
+      ]
+    ],
+    "arquetipo": "municipio turístico sur Fuerteventura",
+    "tesis": "apartamento en Costa Calma o Morro Jable para alquiler vacacional con demanda alemana/británica estable y residencial trabajadores hoteleros"
+  },
+  {
+    "slug": "cartaya",
+    "name": "Cartaya",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Huelva",
+    "pop": 21471,
+    "twin": "isla-cristina",
+    "precio": 1300,
+    "alq": 680,
+    "roi": 6.3,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 26,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "El Rompido",
+      "Nuevo Portil",
+      "La Antilla"
+    ],
+    "drivers": "Agricultura (fresa, naranja), pesquero, turismo (El Rompido, Nuevo Portil)",
+    "mejor_zona": "El Rompido",
+    "alt": [
+      [
+        "Lepe",
+        "lepe"
+      ],
+      [
+        "Isla Cristina",
+        "isla-cristina"
+      ]
+    ],
+    "arquetipo": "villa agrofresera-costera Costa de la Luz",
+    "tesis": "piso en el centro o apartamento en El Rompido para alquiler mixto residencial agrícola y turístico vacacional"
+  },
+  {
+    "slug": "manlleu",
+    "name": "Manlleu",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 21425,
+    "twin": "vic",
+    "precio": 1500,
+    "alq": 700,
+    "roi": 5.6,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 25,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Vista Alegre",
+      "Dalmau",
+      "Puig-Agut"
+    ],
+    "drivers": "Industria textil y papel, agroindustria, residencial Osona",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Vic",
+        "vic"
+      ],
+      [
+        "Roda de Ter",
+        "vic"
+      ]
+    ],
+    "arquetipo": "villa industrial textil Osona",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores industriales y profesionales que trabajan en Vic a 10 minutos"
+  },
+  {
+    "slug": "burlada",
+    "name": "Burlada",
+    "ccaa": "Navarra",
+    "ccaa_slug": "navarra",
+    "prov": "Navarra",
+    "pop": 21280,
+    "twin": "pamplona",
+    "precio": 2200,
+    "alq": 1000,
+    "roi": 5.5,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 22,
+    "itp_pct": 6,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Magdalena",
+      "Soto Lezkairu",
+      "La Morea"
+    ],
+    "drivers": "Suburbio Pamplona metropolitana, servicios, comercio, residencial",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Pamplona",
+        "pamplona"
+      ],
+      [
+        "Valle de Egüés",
+        "valle-de-egues"
+      ]
+    ],
+    "arquetipo": "suburbio residencial Pamplona",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Pamplona a 5 minutos en transporte público"
+  },
+  {
+    "slug": "vilassar-de-mar",
+    "name": "Vilassar de Mar",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 21227,
+    "twin": "premia-de-mar",
+    "precio": 3100,
+    "alq": 1280,
+    "roi": 5.0,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 21,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "El Sant Crist",
+      "El Cementiri",
+      "La Cisa"
+    ],
+    "drivers": "Residencial premium Maresme, frente marítimo, viveros (flor cortada)",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "El Masnou",
+        "el-masnou"
+      ],
+      [
+        "Premià de Mar",
+        "premia-de-mar"
+      ]
+    ],
+    "arquetipo": "villa residencial premium Maresme",
+    "tesis": "piso en el centro o frente marítimo para alquiler residencial premium a familias que trabajan en Barcelona a 25 minutos en Renfe R1"
+  },
+  {
+    "slug": "mogan",
+    "name": "Mogán",
+    "ccaa": "Canarias",
+    "ccaa_slug": "canarias",
+    "prov": "Las Palmas",
+    "pop": 21172,
+    "twin": "san-bartolome-de-tirajana",
+    "precio": 2700,
+    "alq": 1090,
+    "roi": 4.8,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 6.5,
+    "region": "islas",
+    "barrios": [
+      "Centro",
+      "Puerto Rico",
+      "Puerto de Mogán",
+      "Anfi del Mar"
+    ],
+    "drivers": "Turismo premium sur Gran Canaria, Puerto Rico, Anfi, residencial alto",
+    "mejor_zona": "Puerto Rico",
+    "alt": [
+      [
+        "San Bartolomé de Tirajana",
+        "san-bartolome-de-tirajana"
+      ],
+      [
+        "Las Palmas GC",
+        "las-palmas-gc"
+      ]
+    ],
+    "arquetipo": "municipio turístico premium suroeste Gran Canaria",
+    "tesis": "apartamento en Puerto Rico o Anfi para alquiler vacacional premium con licencia y residencial extranjero estable"
+  },
+  {
+    "slug": "algete",
+    "name": "Algete",
+    "ccaa": "C. de Madrid",
+    "ccaa_slug": "madrid",
+    "prov": "Madrid",
+    "pop": 21144,
+    "twin": "paracuellos-de-jarama",
+    "precio": 2200,
+    "alq": 1000,
+    "roi": 5.5,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 22,
+    "itp_pct": 6,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "Santo Domingo",
+      "Prado Norte",
+      "La Bañeza"
+    ],
+    "drivers": "Residencial Madrid norte, industria, polígono cercano, urbanizaciones",
+    "mejor_zona": "Santo Domingo",
+    "alt": [
+      [
+        "Paracuellos de Jarama",
+        "paracuellos-de-jarama"
+      ],
+      [
+        "San Sebastián de los Reyes",
+        "san-sebastian-de-los-reyes"
+      ]
+    ],
+    "arquetipo": "municipio residencial Madrid norte",
+    "tesis": "piso o chalet en Santo Domingo para alquiler a familias clase media-alta y profesionales que trabajan en Madrid o el corredor A-1"
+  },
+  {
+    "slug": "l-alfas-del-pi",
+    "name": "L'Alfàs del Pi",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Alicante",
+    "pop": 21080,
+    "twin": "altea",
+    "precio": 2300,
+    "alq": 1010,
+    "roi": 5.3,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "Albir",
+      "Sant Just",
+      "Romeral"
+    ],
+    "drivers": "Turismo residencial extranjero (noruegos), Costa Blanca, festival cine",
+    "mejor_zona": "Albir",
+    "alt": [
+      [
+        "Altea",
+        "altea"
+      ],
+      [
+        "Benidorm",
+        "benidorm"
+      ]
+    ],
+    "arquetipo": "villa turística-residencial extranjera Costa Blanca",
+    "tesis": "apartamento en Albir o piso en el centro para alquiler residencial extranjero estable (mercado nórdico) y vacacional turístico"
+  },
+  {
+    "slug": "sant-just-desvern",
+    "name": "Sant Just Desvern",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 21037,
+    "twin": "sant-joan-despi",
+    "precio": 3500,
+    "alq": 1430,
+    "roi": 4.9,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 20,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Mas Lluí",
+      "La Plana Padrosa",
+      "Bellsoleig"
+    ],
+    "drivers": "Residencial premium Baix Llobregat, sedes corporativas, servicios alto",
+    "mejor_zona": "Mas Lluí",
+    "alt": [
+      [
+        "Sant Joan Despí",
+        "sant-joan-despi"
+      ],
+      [
+        "Esplugues de Llobregat",
+        "esplugues-de-llobregat"
+      ]
+    ],
+    "arquetipo": "municipio residencial premium Baix Llobregat",
+    "tesis": "piso amplio en Mas Lluí o Centre para alquiler residencial premium a familias y ejecutivos que trabajan en Barcelona a 10 minutos"
+  },
+  {
+    "slug": "san-martin-de-la-vega",
+    "name": "San Martín de la Vega",
+    "ccaa": "C. de Madrid",
+    "ccaa_slug": "madrid",
+    "prov": "Madrid",
+    "pop": 21010,
+    "twin": "aranjuez",
+    "precio": 1700,
+    "alq": 850,
+    "roi": 6.0,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 22,
+    "itp_pct": 6,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "El Quiñón",
+      "La Estación",
+      "Warner"
+    ],
+    "drivers": "Suburbio Madrid sureste, Warner Park, agricultura, logística",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Ciempozuelos",
+        "ciempozuelos"
+      ],
+      [
+        "Aranjuez",
+        "aranjuez"
+      ]
+    ],
+    "arquetipo": "suburbio sureste Madrid Warner Park",
+    "tesis": "piso en el centro para alquiler estable a familias jóvenes y trabajadores del parque Warner y polígonos industriales"
+  },
+  {
+    "slug": "o-porrino",
+    "name": "O Porriño",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 20965,
+    "twin": "cangas-do-morrazo",
+    "precio": 1300,
+    "alq": 640,
+    "roi": 5.9,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 25,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Atios",
+      "Mosende",
+      "Torneiros"
+    ],
+    "drivers": "Polígono industrial (uno mayores Galicia), industria automotriz, granito",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Redondela",
+        "redondela"
+      ],
+      [
+        "Vigo",
+        "vigo"
+      ]
+    ],
+    "arquetipo": "polo industrial-granito Baixo Miño",
+    "tesis": "piso en el centro para alquiler estable a trabajadores del polígono industrial y profesionales que trabajan en Vigo a 15 minutos"
+  },
+  {
+    "slug": "loja",
+    "name": "Loja",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Granada",
+    "pop": 20951,
+    "twin": "baza",
+    "precio": 1100,
+    "alq": 580,
+    "roi": 6.3,
+    "vp": 4.5,
+    "va": 6.5,
+    "dias": 28,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "La Esperanza",
+      "San Francisco",
+      "Riofrío"
+    ],
+    "drivers": "Agroalimentaria, industria, estación esquí cercana (Sierra Nevada), servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Baza",
+        "baza"
+      ],
+      [
+        "Granada",
+        "granada"
+      ]
+    ],
+    "arquetipo": "villa agroindustrial Poniente Granadino",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector agroalimentario y servicios comarcales"
+  },
+  {
+    "slug": "atarfe",
+    "name": "Atarfe",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Granada",
+    "pop": 20914,
+    "twin": "armilla",
+    "precio": 1500,
+    "alq": 770,
+    "roi": 6.2,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 24,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Sierra Elvira",
+      "Villas Blancas",
+      "Caparacena"
+    ],
+    "drivers": "Suburbio Granada metropolitana, industria, residencial, servicios",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Armilla",
+        "armilla"
+      ],
+      [
+        "Maracena",
+        "maracena"
+      ]
+    ],
+    "arquetipo": "suburbio Granada Vega norte",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Granada a 15 minutos"
+  },
+  {
+    "slug": "archena",
+    "name": "Archena",
+    "ccaa": "R. de Murcia",
+    "ccaa_slug": "murcia",
+    "prov": "Murcia",
+    "pop": 20908,
+    "twin": "cieza",
+    "precio": 1100,
+    "alq": 580,
+    "roi": 6.3,
+    "vp": 5.0,
+    "va": 7.0,
+    "dias": 26,
+    "itp_pct": 8,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "La Algaida",
+      "El Balneario",
+      "La Estación"
+    ],
+    "drivers": "Balneario histórico (termalismo), agricultura cítricos, conservera",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Cieza",
+        "cieza"
+      ],
+      [
+        "Molina de Segura",
+        "molina-de-segura"
+      ]
+    ],
+    "arquetipo": "villa termal Valle de Ricote",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores agroalimentarios y residencial estacional vinculado al balneario"
+  },
+  {
+    "slug": "franqueses-del-valles-les",
+    "name": "Les Franqueses del Vallès",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 20881,
+    "twin": "granollers",
+    "precio": 2200,
+    "alq": 960,
+    "roi": 5.2,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Bellavista",
+      "Llerona",
+      "Corró d'Avall"
+    ],
+    "drivers": "Industria, logística, residencial Vallès Oriental con conexión Granollers",
+    "mejor_zona": "Bellavista",
+    "alt": [
+      [
+        "Granollers",
+        "granollers"
+      ],
+      [
+        "Mollet del Vallès",
+        "mollet-del-valles"
+      ]
+    ],
+    "arquetipo": "suburbio industrial-residencial Vallès Oriental",
+    "tesis": "piso cerca del centro para alquiler estable a familias y profesionales que trabajan en Granollers o el corredor industrial Vallès"
+  },
+  {
+    "slug": "benicassim",
+    "name": "Benicàssim",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Castellón",
+    "pop": 20539,
+    "twin": "peniscola",
+    "precio": 2200,
+    "alq": 960,
+    "roi": 5.2,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 22,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centro",
+      "Benicàssim Playa",
+      "Las Villas",
+      "El Pla"
+    ],
+    "drivers": "Turismo (FIB festival, Vacaciones de Verano), residencial, frente marítimo",
+    "mejor_zona": "Benicàssim Playa",
+    "alt": [
+      [
+        "Peñíscola",
+        "peniscola"
+      ],
+      [
+        "Oropesa",
+        "peniscola"
+      ]
+    ],
+    "arquetipo": "villa turística Costa Azahar",
+    "tesis": "apartamento en Benicàssim Playa o Las Villas para alquiler mixto vacacional estival alto y residencial premium con playa"
+  },
+  {
+    "slug": "humanes-de-madrid",
+    "name": "Humanes de Madrid",
+    "ccaa": "C. de Madrid",
+    "ccaa_slug": "madrid",
+    "prov": "Madrid",
+    "pop": 20500,
+    "twin": "navalcarnero",
+    "precio": 1700,
+    "alq": 840,
+    "roi": 5.9,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 22,
+    "itp_pct": 6,
+    "region": "centro",
+    "barrios": [
+      "Centro",
+      "La Solana",
+      "La Estación",
+      "La Cabaña"
+    ],
+    "drivers": "Industria, logística, residencial Madrid sur, polígonos cercanos",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Navalcarnero",
+        "navalcarnero"
+      ],
+      [
+        "Fuenlabrada",
+        "fuenlabrada"
+      ]
+    ],
+    "arquetipo": "suburbio industrial sur Madrid",
+    "tesis": "piso en el centro para alquiler estable a familias y trabajadores del corredor industrial Madrid sur (Fuenlabrada-Móstoles)"
+  },
+  {
+    "slug": "silla",
+    "name": "Silla",
+    "ccaa": "C. Valenciana",
+    "ccaa_slug": "comunitat-valenciana",
+    "prov": "Valencia",
+    "pop": 20482,
+    "twin": "catarroja",
+    "precio": 1600,
+    "alq": 760,
+    "roi": 5.7,
+    "vp": 6.0,
+    "va": 8.5,
+    "dias": 23,
+    "itp_pct": 10,
+    "region": "levante",
+    "barrios": [
+      "Centre",
+      "Sant Roc",
+      "Vint d'Octubre",
+      "La Mansa"
+    ],
+    "drivers": "Nudo ferroviario, industria, agricultura Albufera, residencial L'Horta Sud",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Catarroja",
+        "catarroja"
+      ],
+      [
+        "Picassent",
+        "picassent"
+      ]
+    ],
+    "arquetipo": "nudo ferroviario L'Horta Sud Valencia",
+    "tesis": "piso cerca de la estación de Renfe Cercanías para alquiler estable a profesionales que trabajan en Valencia a 15 minutos"
+  },
+  {
+    "slug": "la-zubia",
+    "name": "La Zubia",
+    "ccaa": "Andalucía",
+    "ccaa_slug": "andalucia",
+    "prov": "Granada",
+    "pop": 20389,
+    "twin": "armilla",
+    "precio": 1600,
+    "alq": 810,
+    "roi": 6.1,
+    "vp": 5.5,
+    "va": 8.0,
+    "dias": 23,
+    "itp_pct": 7,
+    "region": "andalucia",
+    "barrios": [
+      "Centro",
+      "Cumbres Verdes",
+      "Llano de la Perdiz",
+      "Camino del Sahor"
+    ],
+    "drivers": "Residencial Granada metropolitana, falda Sierra Nevada, servicios",
+    "mejor_zona": "Cumbres Verdes",
+    "alt": [
+      [
+        "Armilla",
+        "armilla"
+      ],
+      [
+        "Granada",
+        "granada"
+      ]
+    ],
+    "arquetipo": "suburbio residencial Granada falda Sierra",
+    "tesis": "piso o chalet en Cumbres Verdes para alquiler a familias clase media-alta que trabajan en Granada a 10 minutos con entorno natural"
+  },
+  {
+    "slug": "hernani",
+    "name": "Hernani",
+    "ccaa": "País Vasco",
+    "ccaa_slug": "pais-vasco",
+    "prov": "Gipuzkoa",
+    "pop": 20375,
+    "twin": "errenteria",
+    "precio": 2500,
+    "alq": 1100,
+    "roi": 5.3,
+    "vp": 4.0,
+    "va": 6.5,
+    "dias": 23,
+    "itp_pct": 4,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Florida",
+      "Galarreta",
+      "Antziola"
+    ],
+    "drivers": "Industria papel y máquina-herramienta, residencial Donostia metropolitana",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Errenteria",
+        "errenteria"
+      ],
+      [
+        "San Sebastián",
+        "san-sebastian"
+      ]
+    ],
+    "arquetipo": "suburbio industrial Donostialdea",
+    "tesis": "piso cerca del Topo o Renfe para alquiler estable a profesionales que trabajan en San Sebastián a 10 minutos y trabajadores industriales"
+  },
+  {
+    "slug": "lalin",
+    "name": "Lalín",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 20292,
+    "twin": "vilagarcia-de-arousa",
+    "precio": 1100,
+    "alq": 540,
+    "roi": 5.9,
+    "vp": 4.0,
+    "va": 6.0,
+    "dias": 28,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "Pontiñas",
+      "A Xesta",
+      "Donsión"
+    ],
+    "drivers": "Capital comarcal Deza, agroindustria (cocido), textil, transporte",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Pontevedra",
+        "pontevedra"
+      ],
+      [
+        "Vilagarcía de Arousa",
+        "vilagarcia-de-arousa"
+      ]
+    ],
+    "arquetipo": "capital comarcal centro Galicia",
+    "tesis": "piso económico en el centro para alquiler estable a profesionales del sector agroindustrial y servicios comarcales"
+  },
+  {
+    "slug": "sant-quirze-del-valles",
+    "name": "Sant Quirze del Vallès",
+    "ccaa": "Cataluña",
+    "ccaa_slug": "cataluna",
+    "prov": "Barcelona",
+    "pop": 20209,
+    "twin": "sabadell",
+    "precio": 2400,
+    "alq": 1040,
+    "roi": 5.2,
+    "vp": 5.0,
+    "va": 7.5,
+    "dias": 21,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centre",
+      "Les Fonts",
+      "La Forja",
+      "Can Pallàs"
+    ],
+    "drivers": "Residencial premium Vallès, sedes corporativas, servicios alto",
+    "mejor_zona": "Centre",
+    "alt": [
+      [
+        "Castellar del Vallès",
+        "castellar-del-valles"
+      ],
+      [
+        "Sabadell",
+        "sabadell"
+      ]
+    ],
+    "arquetipo": "municipio residencial premium Vallès Occidental",
+    "tesis": "piso amplio o chalet en Centre o Les Fonts para alquiler a familias clase media-alta y profesionales que trabajan en Sabadell o Barcelona"
+  },
+  {
+    "slug": "a-estrada",
+    "name": "A Estrada",
+    "ccaa": "Galicia",
+    "ccaa_slug": "galicia",
+    "prov": "Pontevedra",
+    "pop": 20112,
+    "twin": "vilagarcia-de-arousa",
+    "precio": 1100,
+    "alq": 540,
+    "roi": 5.9,
+    "vp": 4.0,
+    "va": 6.0,
+    "dias": 28,
+    "itp_pct": 10,
+    "region": "norte",
+    "barrios": [
+      "Centro",
+      "San Martiño",
+      "Souto",
+      "Olives"
+    ],
+    "drivers": "Capital comarcal Tabeirós-Terra de Montes, mueble (industria), agroindustria",
+    "mejor_zona": "Centro",
+    "alt": [
+      [
+        "Lalín",
+        "lalin"
+      ],
+      [
+        "Pontevedra",
+        "pontevedra"
+      ]
+    ],
+    "arquetipo": "capital comarcal Tabeirós-Terra de Montes",
+    "tesis": "piso económico en el centro para alquiler estable a trabajadores del sector mueble y servicios comarcales"
+  }
+]

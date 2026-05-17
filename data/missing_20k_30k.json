@@ -1,0 +1,802 @@
+[
+  {
+    "slug": "puente-genil",
+    "nombre": "Puente Genil",
+    "ccaa": "Andalucía",
+    "provincia": "Córdoba",
+    "poblacion": 29963,
+    "cpro": "14"
+  },
+  {
+    "slug": "san-andres-del-rabanedo",
+    "nombre": "San Andrés del Rabanedo",
+    "ccaa": "Castilla y León",
+    "provincia": "León",
+    "poblacion": 29944,
+    "cpro": "24"
+  },
+  {
+    "slug": "sant-josep-de-sa-talaia",
+    "nombre": "Sant Josep de sa Talaia",
+    "ccaa": "Islas Baleares",
+    "provincia": "Balears, Illes",
+    "poblacion": 29761,
+    "cpro": "07"
+  },
+  {
+    "slug": "lepe",
+    "nombre": "Lepe",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 29677,
+    "cpro": "21"
+  },
+  {
+    "slug": "vicar",
+    "nombre": "Vícar",
+    "ccaa": "Andalucía",
+    "provincia": "Almería",
+    "poblacion": 29342,
+    "cpro": "04"
+  },
+  {
+    "slug": "cartama",
+    "nombre": "Cártama",
+    "ccaa": "Andalucía",
+    "provincia": "Málaga",
+    "poblacion": 29333,
+    "cpro": "29"
+  },
+  {
+    "slug": "martorell",
+    "nombre": "Martorell",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 29175,
+    "cpro": "08"
+  },
+  {
+    "slug": "almassora",
+    "nombre": "Almassora",
+    "ccaa": "C. Valenciana",
+    "provincia": "Castellón/Castelló",
+    "poblacion": 29159,
+    "cpro": "12"
+  },
+  {
+    "slug": "sant-antoni-de-portmany",
+    "nombre": "Sant Antoni de Portmany",
+    "ccaa": "Islas Baleares",
+    "provincia": "Balears, Illes",
+    "poblacion": 29132,
+    "cpro": "07"
+  },
+  {
+    "slug": "camas",
+    "nombre": "Camas",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 29089,
+    "cpro": "41"
+  },
+  {
+    "slug": "candelaria",
+    "nombre": "Candelaria",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 29023,
+    "cpro": "38"
+  },
+  {
+    "slug": "redondela",
+    "nombre": "Redondela",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 28874,
+    "cpro": "36"
+  },
+  {
+    "slug": "sant-vicenc-dels-horts",
+    "nombre": "Sant Vicenç dels Horts",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 28746,
+    "cpro": "08"
+  },
+  {
+    "slug": "mutxamel",
+    "nombre": "Mutxamel",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 28621,
+    "cpro": "03"
+  },
+  {
+    "slug": "betera",
+    "nombre": "Bétera",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 28560,
+    "cpro": "46"
+  },
+  {
+    "slug": "sestao",
+    "nombre": "Sestao",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 28512,
+    "cpro": "48"
+  },
+  {
+    "slug": "paiporta",
+    "nombre": "Paiporta",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 28136,
+    "cpro": "46"
+  },
+  {
+    "slug": "calp",
+    "nombre": "Calp",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 27616,
+    "cpro": "03"
+  },
+  {
+    "slug": "la-pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona, la",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 27471,
+    "cpro": "46"
+  },
+  {
+    "slug": "molins-de-rei",
+    "nombre": "Molins de Rei",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 27300,
+    "cpro": "08"
+  },
+  {
+    "slug": "ribeira",
+    "nombre": "Ribeira",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 27102,
+    "cpro": "15"
+  },
+  {
+    "slug": "sant-andreu-de-la-barca",
+    "nombre": "Sant Andreu de la Barca",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 27094,
+    "cpro": "08"
+  },
+  {
+    "slug": "quart-de-poblet",
+    "nombre": "Quart de Poblet",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 26967,
+    "cpro": "46"
+  },
+  {
+    "slug": "pielagos",
+    "nombre": "Piélagos",
+    "ccaa": "Cantabria",
+    "provincia": "Cantabria",
+    "poblacion": 26901,
+    "cpro": "39"
+  },
+  {
+    "slug": "sant-joan-d-alacant",
+    "nombre": "Sant Joan d'Alacant",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 26834,
+    "cpro": "03"
+  },
+  {
+    "slug": "cangas",
+    "nombre": "Cangas",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 26711,
+    "cpro": "36"
+  },
+  {
+    "slug": "novelda",
+    "nombre": "Novelda",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 26606,
+    "cpro": "03"
+  },
+  {
+    "slug": "ciempozuelos",
+    "nombre": "Ciempozuelos",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 26350,
+    "cpro": "28"
+  },
+  {
+    "slug": "alboraia",
+    "nombre": "Alboraia",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 26273,
+    "cpro": "46"
+  },
+  {
+    "slug": "onda",
+    "nombre": "Onda",
+    "ccaa": "C. Valenciana",
+    "provincia": "Castellón/Castelló",
+    "poblacion": 26190,
+    "cpro": "12"
+  },
+  {
+    "slug": "santa-perpetua-de-mogoda",
+    "nombre": "Santa Perpètua de Mogoda",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 26130,
+    "cpro": "08"
+  },
+  {
+    "slug": "caravaca-de-la-cruz",
+    "nombre": "Caravaca de la Cruz",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 26126,
+    "cpro": "30"
+  },
+  {
+    "slug": "villanueva-de-la-serena",
+    "nombre": "Villanueva de la Serena",
+    "ccaa": "Extremadura",
+    "provincia": "Badajoz",
+    "poblacion": 25773,
+    "cpro": "06"
+  },
+  {
+    "slug": "valls",
+    "nombre": "Valls",
+    "ccaa": "Cataluña",
+    "provincia": "Tarragona",
+    "poblacion": 25518,
+    "cpro": "43"
+  },
+  {
+    "slug": "castellar-del-valles",
+    "nombre": "Castellar del Vallès",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 25422,
+    "cpro": "08"
+  },
+  {
+    "slug": "villarrobledo",
+    "nombre": "Villarrobledo",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Albacete",
+    "poblacion": 25400,
+    "cpro": "02"
+  },
+  {
+    "slug": "galdar",
+    "nombre": "Gáldar",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 25108,
+    "cpro": "35"
+  },
+  {
+    "slug": "mejorada-del-campo",
+    "nombre": "Mejorada del Campo",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 25049,
+    "cpro": "28"
+  },
+  {
+    "slug": "olesa-de-montserrat",
+    "nombre": "Olesa de Montserrat",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 24966,
+    "cpro": "08"
+  },
+  {
+    "slug": "almonte",
+    "nombre": "Almonte",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 24864,
+    "cpro": "21"
+  },
+  {
+    "slug": "galdakao",
+    "nombre": "Galdakao",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 24776,
+    "cpro": "48"
+  },
+  {
+    "slug": "cambre",
+    "nombre": "Cambre",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 24765,
+    "cpro": "15"
+  },
+  {
+    "slug": "el-masnou",
+    "nombre": "Masnou, El",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 24761,
+    "cpro": "08"
+  },
+  {
+    "slug": "erandio",
+    "nombre": "Erandio",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 24659,
+    "cpro": "48"
+  },
+  {
+    "slug": "tacoronte",
+    "nombre": "Tacoronte",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 24619,
+    "cpro": "38"
+  },
+  {
+    "slug": "icod-de-los-vinos",
+    "nombre": "Icod de los Vinos",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 24616,
+    "cpro": "38"
+  },
+  {
+    "slug": "riba-roja-de-turia",
+    "nombre": "Riba-roja de Túria",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 24616,
+    "cpro": "46"
+  },
+  {
+    "slug": "ibi",
+    "nombre": "Ibi",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 24500,
+    "cpro": "03"
+  },
+  {
+    "slug": "los-barrios",
+    "nombre": "Barrios, Los",
+    "ccaa": "Andalucía",
+    "provincia": "Cádiz",
+    "poblacion": 24449,
+    "cpro": "11"
+  },
+  {
+    "slug": "alhama-de-murcia",
+    "nombre": "Alhama de Murcia",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 24163,
+    "cpro": "30"
+  },
+  {
+    "slug": "moguer",
+    "nombre": "Moguer",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 24083,
+    "cpro": "21"
+  },
+  {
+    "slug": "villanueva-de-la-canada",
+    "nombre": "Villanueva de la Cañada",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 24028,
+    "cpro": "28"
+  },
+  {
+    "slug": "marin",
+    "nombre": "Marín",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 23991,
+    "cpro": "36"
+  },
+  {
+    "slug": "san-miguel-de-abona",
+    "nombre": "San Miguel de Abona",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 23960,
+    "cpro": "38"
+  },
+  {
+    "slug": "las-gabias",
+    "nombre": "Gabias, Las",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 23584,
+    "cpro": "18"
+  },
+  {
+    "slug": "san-juan-de-aznalfarache",
+    "nombre": "San Juan de Aznalfarache",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 23408,
+    "cpro": "41"
+  },
+  {
+    "slug": "ponteareas",
+    "nombre": "Ponteareas",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 23211,
+    "cpro": "36"
+  },
+  {
+    "slug": "picassent",
+    "nombre": "Picassent",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 23202,
+    "cpro": "46"
+  },
+  {
+    "slug": "sant-feliu-de-guixols",
+    "nombre": "Sant Feliu de Guíxols",
+    "ccaa": "Cataluña",
+    "provincia": "Girona",
+    "poblacion": 23141,
+    "cpro": "17"
+  },
+  {
+    "slug": "amposta",
+    "nombre": "Amposta",
+    "ccaa": "Cataluña",
+    "provincia": "Tarragona",
+    "poblacion": 23080,
+    "cpro": "43"
+  },
+  {
+    "slug": "almoradi",
+    "nombre": "Almoradí",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 22965,
+    "cpro": "03"
+  },
+  {
+    "slug": "laguna-de-duero",
+    "nombre": "Laguna de Duero",
+    "ccaa": "Castilla y León",
+    "provincia": "Valladolid",
+    "poblacion": 22965,
+    "cpro": "47"
+  },
+  {
+    "slug": "valle-de-egues",
+    "nombre": "Valle de Egüés",
+    "ccaa": "Navarra",
+    "provincia": "Navarra",
+    "poblacion": 22825,
+    "cpro": "31"
+  },
+  {
+    "slug": "arroyo-de-la-encomienda",
+    "nombre": "Arroyo de la Encomienda",
+    "ccaa": "Castilla y León",
+    "provincia": "Valladolid",
+    "poblacion": 22800,
+    "cpro": "47"
+  },
+  {
+    "slug": "aljaraque",
+    "nombre": "Aljaraque",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 22737,
+    "cpro": "21"
+  },
+  {
+    "slug": "las-torres-de-cotillas",
+    "nombre": "Torres de Cotillas, Las",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 22676,
+    "cpro": "30"
+  },
+  {
+    "slug": "esparreguera",
+    "nombre": "Esparreguera",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 22665,
+    "cpro": "08"
+  },
+  {
+    "slug": "guia-de-isora",
+    "nombre": "Guía de Isora",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 22654,
+    "cpro": "38"
+  },
+  {
+    "slug": "barbate",
+    "nombre": "Barbate",
+    "ccaa": "Andalucía",
+    "provincia": "Cádiz",
+    "poblacion": 22635,
+    "cpro": "11"
+  },
+  {
+    "slug": "aspe",
+    "nombre": "Aspe",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 22397,
+    "cpro": "03"
+  },
+  {
+    "slug": "maracena",
+    "nombre": "Maracena",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 22294,
+    "cpro": "18"
+  },
+  {
+    "slug": "alfafar",
+    "nombre": "Alfafar",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 22270,
+    "cpro": "46"
+  },
+  {
+    "slug": "montcada",
+    "nombre": "Montcada",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 22213,
+    "cpro": "46"
+  },
+  {
+    "slug": "ayamonte",
+    "nombre": "Ayamonte",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 22001,
+    "cpro": "21"
+  },
+  {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 21934,
+    "cpro": "46"
+  },
+  {
+    "slug": "pucol",
+    "nombre": "Puçol",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 21659,
+    "cpro": "46"
+  },
+  {
+    "slug": "tias",
+    "nombre": "Tías",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 21613,
+    "cpro": "35"
+  },
+  {
+    "slug": "pajara",
+    "nombre": "Pájara",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 21570,
+    "cpro": "35"
+  },
+  {
+    "slug": "cartaya",
+    "nombre": "Cartaya",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 21471,
+    "cpro": "21"
+  },
+  {
+    "slug": "manlleu",
+    "nombre": "Manlleu",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 21425,
+    "cpro": "08"
+  },
+  {
+    "slug": "burlada",
+    "nombre": "Burlada",
+    "ccaa": "Navarra",
+    "provincia": "Navarra",
+    "poblacion": 21280,
+    "cpro": "31"
+  },
+  {
+    "slug": "vilassar-de-mar",
+    "nombre": "Vilassar de Mar",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 21227,
+    "cpro": "08"
+  },
+  {
+    "slug": "mogan",
+    "nombre": "Mogán",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 21172,
+    "cpro": "35"
+  },
+  {
+    "slug": "algete",
+    "nombre": "Algete",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 21144,
+    "cpro": "28"
+  },
+  {
+    "slug": "l-alfas-del-pi",
+    "nombre": "Alfàs del Pi, l'",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 21080,
+    "cpro": "03"
+  },
+  {
+    "slug": "sant-just-desvern",
+    "nombre": "Sant Just Desvern",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 21037,
+    "cpro": "08"
+  },
+  {
+    "slug": "san-martin-de-la-vega",
+    "nombre": "San Martín de la Vega",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 21010,
+    "cpro": "28"
+  },
+  {
+    "slug": "o-porrino",
+    "nombre": "Porriño, O",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 20965,
+    "cpro": "36"
+  },
+  {
+    "slug": "loja",
+    "nombre": "Loja",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 20951,
+    "cpro": "18"
+  },
+  {
+    "slug": "atarfe",
+    "nombre": "Atarfe",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 20914,
+    "cpro": "18"
+  },
+  {
+    "slug": "archena",
+    "nombre": "Archena",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 20908,
+    "cpro": "30"
+  },
+  {
+    "slug": "franqueses-del-valles-les",
+    "nombre": "Franqueses del Vallès, Les",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 20881,
+    "cpro": "08"
+  },
+  {
+    "slug": "benicassim",
+    "nombre": "Benicàssim",
+    "ccaa": "C. Valenciana",
+    "provincia": "Castellón/Castelló",
+    "poblacion": 20539,
+    "cpro": "12"
+  },
+  {
+    "slug": "humanes-de-madrid",
+    "nombre": "Humanes de Madrid",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 20500,
+    "cpro": "28"
+  },
+  {
+    "slug": "silla",
+    "nombre": "Silla",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 20482,
+    "cpro": "46"
+  },
+  {
+    "slug": "la-zubia",
+    "nombre": "Zubia, La",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 20389,
+    "cpro": "18"
+  },
+  {
+    "slug": "hernani",
+    "nombre": "Hernani",
+    "ccaa": "País Vasco",
+    "provincia": "Gipuzkoa",
+    "poblacion": 20375,
+    "cpro": "20"
+  },
+  {
+    "slug": "lalin",
+    "nombre": "Lalín",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 20292,
+    "cpro": "36"
+  },
+  {
+    "slug": "sant-quirze-del-valles",
+    "nombre": "Sant Quirze del Vallès",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 20209,
+    "cpro": "08"
+  },
+  {
+    "slug": "a-estrada",
+    "nombre": "Estrada, A",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 20112,
+    "cpro": "36"
+  }
+]

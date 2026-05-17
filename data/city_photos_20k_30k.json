@@ -1,0 +1,802 @@
+{
+  "puente-genil": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Estaci%C3%B3n_de_Puente_Genil%2C_vista_general.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 3000,
+    "title": "File:Estación de Puente Genil, vista general.jpg",
+    "query": "vista Puente Genil Córdoba",
+    "score": 13
+  },
+  "san-andres-del-rabanedo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Ayuntamiento_San_Andr%C3%A9s_del_Rabanedo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2816,
+    "height": 2112,
+    "title": "File:Ayuntamiento San Andrés del Rabanedo.jpg",
+    "query": "San Andrés del Rabanedo León",
+    "score": 13
+  },
+  "sant-josep-de-sa-talaia": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Sant_Josep_de_sa_Talaia%2C_Balearic_Islands%2C_Spain_-_panoramio_%2816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3648,
+    "height": 2736,
+    "title": "File:Sant Josep de sa Talaia, Balearic Islands, Spain - panoramio (16).jpg",
+    "query": "Sant Josep de sa Talaia Ibiza",
+    "score": 13
+  },
+  "lepe": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Lepe_%28Huelva%29_%28Spain%29_-_33211914861.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3963,
+    "height": 2860,
+    "title": "File:Lepe (Huelva) (Spain) - 33211914861.jpg",
+    "query": "Lepe Huelva",
+    "score": 10
+  },
+  "vicar": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Centro_de_Salud_de_V%C3%ADcar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4160,
+    "height": 3120,
+    "title": "File:Centro de Salud de Vícar.jpg",
+    "query": "Vícar Almería centro",
+    "score": 13
+  },
+  "cartama": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/View_of_C%C3%A1rtama_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3816,
+    "height": 1573,
+    "title": "File:View of Cártama (cropped).jpg",
+    "query": "Cártama Málaga",
+    "score": 18
+  },
+  "martorell": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Vista_de_Martorell_des_de_la_Torre_Fossada_de_Castellbisbal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4026,
+    "height": 2707,
+    "title": "File:Vista de Martorell des de la Torre Fossada de Castellbisbal.jpg",
+    "query": "Martorell Barcelona",
+    "score": 13
+  },
+  "almassora": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Almassora%2C_Castell%C3%B3n%2C_Spain_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 2448,
+    "title": "File:Almassora, Castellón, Spain - panoramio (2).jpg",
+    "query": "Almassora Castellón",
+    "score": 13
+  },
+  "sant-antoni-de-portmany": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Sant_Antoni_de_Portmany._Buscastell._Vista.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 3000,
+    "title": "File:Sant Antoni de Portmany. Buscastell. Vista.jpg",
+    "query": "vista Sant Antoni de Portmany",
+    "score": 13
+  },
+  "camas": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Noria_%C3%A1rabe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4080,
+    "height": 1840,
+    "title": "File:Noria árabe.jpg",
+    "query": "Camas Sevilla",
+    "score": 15
+  },
+  "candelaria": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Vistas_de_Candelaria%2C_Tenerife%2C_Espa%C3%B1a%2C_2012-12-12%2C_DD_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5472,
+    "height": 2779,
+    "title": "File:Vistas de Candelaria, Tenerife, España, 2012-12-12, DD 01.jpg",
+    "query": "Candelaria Tenerife",
+    "score": 15
+  },
+  "redondela": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Vista_xeral_de_Redondela_desde_o_viaduto_do_tren.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3008,
+    "height": 2000,
+    "title": "File:Vista xeral de Redondela desde o viaduto do tren.jpg",
+    "query": "Redondela Pontevedra",
+    "score": 15
+  },
+  "sant-vicenc-dels-horts": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Cimentera_de_Sant_Vicen%C3%A7_dels_Horts_vista_des_de_Collserola_P1040308.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 2448,
+    "title": "File:Cimentera de Sant Vicenç dels Horts vista des de Collserola P1040308.jpg",
+    "query": "vista Sant Vicenç dels Horts",
+    "score": 13
+  },
+  "mutxamel": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/MTN25-0872c1-2008-El_Campello.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 7874,
+    "height": 5156,
+    "title": "File:MTN25-0872c1-2008-El Campello.jpg",
+    "query": "Mutxamel Alicante centro",
+    "score": 12
+  },
+  "betera": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Vista_del_jaciment_rom%C3%A0_de_l%27Horta_Vella%2C_B%C3%A9tera%2C_Val%C3%A8ncia_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3072,
+    "height": 2304,
+    "title": "File:Vista del jaciment romà de l'Horta Vella, Bétera, València 02.jpg",
+    "query": "vista Bétera Valencia",
+    "score": 13
+  },
+  "sestao": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Lamiako-crismi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 8312,
+    "height": 1591,
+    "title": "File:Lamiako-crismi.jpg",
+    "query": "Sestao Bizkaia panorámica",
+    "score": 15
+  },
+  "paiporta": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/A%C3%A8ria._Cementeri_General_Val%C3%A8ncia_-_Rio_Turia_-_La_Torre_de_Valencia_-_Benet%C3%BAsser_-_Paiporta_-_Val%C3%A8ncia_Sud_station_-_railway_lines_-_Rambla_del_Poyo_agriculture_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3592,
+    "height": 1567,
+    "title": "File:Aèria. Cementeri General València - Rio Turia - La Torre de Valencia - Benetússer - Paiporta - València Sud station - railway lines - Rambla del Poyo agriculture (cropped).jpg",
+    "query": "vista Paiporta Valencia",
+    "score": 15
+  },
+  "calp": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Calp%2C_Alicante%2C_Spain_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 3000,
+    "title": "File:Calp, Alicante, Spain - panoramio (2).jpg",
+    "query": "Calp Alicante",
+    "score": 13
+  },
+  "la-pobla-de-vallbona": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Benaguasil._Vista_des_de_la_Pobla_de_Vallbona.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5152,
+    "height": 3864,
+    "title": "File:Benaguasil. Vista des de la Pobla de Vallbona.jpg",
+    "query": "vista Pobla de Vallbona",
+    "score": 13
+  },
+  "molins-de-rei": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Molins_de_Rei%2C_palau_dels_Requesens%2C_vista_lateral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3872,
+    "height": 2592,
+    "title": "File:Molins de Rei, palau dels Requesens, vista lateral.jpg",
+    "query": "vista Molins de Rei",
+    "score": 13
+  },
+  "ribeira": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Dornas_no_porto_de_Agui%C3%B1o._Ribeira._Galiza_R31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5616,
+    "height": 1626,
+    "title": "File:Dornas no porto de Aguiño. Ribeira. Galiza R31.jpg",
+    "query": "Ribeira A Coruña",
+    "score": 15
+  },
+  "sant-andreu-de-la-barca": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sant_Andreu_de_la_Barca_vista.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4512,
+    "height": 3000,
+    "title": "File:Sant Andreu de la Barca vista.JPG",
+    "query": "Sant Andreu de la Barca",
+    "score": 15
+  },
+  "quart-de-poblet": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Vista_de_las_instalaciones_de_la_empresa_Elcano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4608,
+    "height": 3456,
+    "title": "File:Vista de las instalaciones de la empresa Elcano.jpg",
+    "query": "vista Quart de Poblet",
+    "score": 13
+  },
+  "pielagos": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Cantabria_1979_55.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5413,
+    "height": 2074,
+    "title": "File:Cantabria 1979 55.jpg",
+    "query": "Piélagos Cantabria",
+    "score": 15
+  },
+  "sant-joan-d-alacant": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/03550_Sant_Joan_d%27Alacant%2C_Alicante%2C_Spain_-_panoramio_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3680,
+    "height": 2070,
+    "title": "File:03550 Sant Joan d'Alacant, Alicante, Spain - panoramio (8).jpg",
+    "query": "Sant Joan d'Alacant",
+    "score": 15
+  },
+  "cangas": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Cangas_panor%C3%A1mica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 11900,
+    "height": 3300,
+    "title": "File:Cangas panorámica.jpg",
+    "query": "Cangas Pontevedra panorámica",
+    "score": 15
+  },
+  "novelda": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ayuntamiento_de_Novelda%2C_Plaza_de_Espa%C3%B1a%2C_Novelda%2C_Alicante_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4752,
+    "height": 3168,
+    "title": "File:Ayuntamiento de Novelda, Plaza de España, Novelda, Alicante - panoramio.jpg",
+    "query": "Novelda Alicante",
+    "score": 15
+  },
+  "ciempozuelos": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/FC_ARANJUEZ_26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3729,
+    "height": 2229,
+    "title": "File:FC ARANJUEZ 26.jpg",
+    "query": "vista Ciempozuelos Madrid",
+    "score": 12
+  },
+  "alboraia": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/MTN25-0722c2-2016-Valencia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 9843,
+    "height": 5214,
+    "title": "File:MTN25-0722c2-2016-Valencia.jpg",
+    "query": "Alboraia Valencia centro",
+    "score": 12
+  },
+  "onda": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Centro_Social_de_Artesa_%28Onda%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3072,
+    "height": 2304,
+    "title": "File:Centro Social de Artesa (Onda).jpg",
+    "query": "Onda Castellón",
+    "score": 13
+  },
+  "santa-perpetua-de-mogoda": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Vista_de_sota_el_tur%C3%B3_de_Can_Filu%C3%A0_-_P1080102.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4320,
+    "height": 3240,
+    "title": "File:Vista de sota el turó de Can Filuà - P1080102.jpg",
+    "query": "vista Santa Perpètua de Mogoda",
+    "score": 13
+  },
+  "caravaca-de-la-cruz": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Plaza_del_Arco_in_Caravaca_de_la_Cruz%2C_Noroeste%2C_Murcia%2C_Spain%2C_2025_February.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5000,
+    "height": 3355,
+    "title": "File:Plaza del Arco in Caravaca de la Cruz, Noroeste, Murcia, Spain, 2025 February.jpg",
+    "query": "Caravaca de la Cruz",
+    "score": 13
+  },
+  "villanueva-de-la-serena": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Villanueva_de_la_Serena_-_Centro_de_Salud_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2500,
+    "height": 1234,
+    "title": "File:Villanueva de la Serena - Centro de Salud 1.jpg",
+    "query": "Villanueva de la Serena Badajoz centro",
+    "score": 18
+  },
+  "valls": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Pla%C3%A7a_del_Pati_03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3648,
+    "height": 2736,
+    "title": "File:Plaça del Pati 03.JPG",
+    "query": "Valls Tarragona",
+    "score": 10
+  },
+  "castellar-del-valles": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Castellar_del_Vall%C3%A9s_VistaGeneral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 1447,
+    "title": "File:Castellar del Vallés VistaGeneral.jpg",
+    "query": "vista Castellar del Vallès",
+    "score": 18
+  },
+  "villarrobledo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Estaci%C3%B3n_Villarrobledo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3456,
+    "height": 2304,
+    "title": "File:Estación Villarrobledo.jpg",
+    "query": "Villarrobledo Albacete",
+    "score": 12
+  },
+  "galdar": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/S_90%2C_Gran_Canaria%2C_view_of_the_north_coast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 3000,
+    "title": "File:S 90, Gran Canaria, view of the north coast.jpg",
+    "query": "Gáldar Gran Canaria",
+    "score": 13
+  },
+  "mejorada-del-campo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Mejorada_del_Campo-Vista_a%C3%A9rea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2816,
+    "height": 1951,
+    "title": "File:Mejorada del Campo-Vista aérea.jpg",
+    "query": "vista Mejorada del Campo Madrid",
+    "score": 13
+  },
+  "olesa-de-montserrat": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Olesa_de_Montserrat_desde_Montserrat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4064,
+    "height": 911,
+    "title": "File:Olesa de Montserrat desde Montserrat.jpg",
+    "query": "Olesa de Montserrat",
+    "score": 15
+  },
+  "almonte": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ayuntamiento%2C_Almonte%2C_Huelva%2C_Espa%C3%B1a%2C_2015-12-07%2C_DD_07.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 6979,
+    "height": 4884,
+    "title": "File:Ayuntamiento, Almonte, Huelva, España, 2015-12-07, DD 07.JPG",
+    "query": "Almonte Huelva",
+    "score": 13
+  },
+  "galdakao": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Brillantes_actos_en_Galdakao_en_1935.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3840,
+    "height": 2160,
+    "title": "File:Brillantes actos en Galdakao en 1935.jpg",
+    "query": "Galdakao Bizkaia",
+    "score": 12
+  },
+  "cambre": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Estaci%C3%B3n_de_Cambre_A_Coru%C3%B1a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3792,
+    "height": 1828,
+    "title": "File:Estación de Cambre A Coruña.jpg",
+    "query": "Cambre A Coruña",
+    "score": 15
+  },
+  "el-masnou": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Vista_de_Cabrils_al_Masnou_-_P1130913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4320,
+    "height": 3240,
+    "title": "File:Vista de Cabrils al Masnou - P1130913.jpg",
+    "query": "vista El Masnou Maresme",
+    "score": 13
+  },
+  "erandio": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Erandio_Meso_San_Kristobal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2820,
+    "height": 1730,
+    "title": "File:Erandio Meso San Kristobal.jpg",
+    "query": "Erandio Bizkaia",
+    "score": 12
+  },
+  "tacoronte": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/38350_Tacoronte%2C_Santa_Cruz_de_Tenerife%2C_Spain_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4608,
+    "height": 2592,
+    "title": "File:38350 Tacoronte, Santa Cruz de Tenerife, Spain - panoramio.jpg",
+    "query": "Tacoronte Tenerife",
+    "score": 15
+  },
+  "icod-de-los-vinos": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Iglesia_del_Amparo%2C_vista_desde_la_parte_baja.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3669,
+    "height": 2592,
+    "title": "File:Iglesia del Amparo, vista desde la parte baja.jpg",
+    "query": "vista Icod de los Vinos",
+    "score": 13
+  },
+  "riba-roja-de-turia": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Riba-roja._Vista_des_del_pont_vell_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5152,
+    "height": 3864,
+    "title": "File:Riba-roja. Vista des del pont vell 2.jpg",
+    "query": "vista Riba-roja de Túria",
+    "score": 13
+  },
+  "ibi": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Moros_y_Cristianos_Ibi_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 2448,
+    "title": "File:Moros y Cristianos Ibi 1.JPG",
+    "query": "Ibi Alicante",
+    "score": 10
+  },
+  "los-barrios": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/11370_Los_Barrios%2C_C%C3%A1diz%2C_Spain_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3072,
+    "height": 2304,
+    "title": "File:11370 Los Barrios, Cádiz, Spain - panoramio.jpg",
+    "query": "Los Barrios Cádiz",
+    "score": 13
+  },
+  "alhama-de-murcia": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Castillo_y_casco_urbano_de_Alhama_de_Murcia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 8000,
+    "height": 6000,
+    "title": "File:Castillo y casco urbano de Alhama de Murcia.jpg",
+    "query": "Alhama de Murcia",
+    "score": 13
+  },
+  "moguer": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/14.09.01-Ayuntamiento_Moguer-1-Huelva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4928,
+    "height": 3280,
+    "title": "File:14.09.01-Ayuntamiento Moguer-1-Huelva.jpg",
+    "query": "Moguer Huelva",
+    "score": 15
+  },
+  "villanueva-de-la-canada": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/MTN25-0272c1-2009-Villalon_de_Campos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 8858,
+    "height": 5171,
+    "title": "File:MTN25-0272c1-2009-Villalon de Campos.jpg",
+    "query": "Villanueva de la Cañada Madrid centro",
+    "score": 12
+  },
+  "marin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Mar%C3%ADn_Panoramic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4715,
+    "height": 890,
+    "title": "File:Marín Panoramic.jpg",
+    "query": "Marín Pontevedra panorámica",
+    "score": 18
+  },
+  "san-miguel-de-abona": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/San_Miguel_de_Abona_IMG_6523_Las_Chafiras%2C_Caldera_de_las_Canadas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4438,
+    "height": 1884,
+    "title": "File:San Miguel de Abona IMG 6523 Las Chafiras, Caldera de las Canadas.jpg",
+    "query": "San Miguel de Abona Tenerife",
+    "score": 15
+  },
+  "las-gabias": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Gabia_Grande_%28Granada%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 2250,
+    "title": "File:Gabia Grande (Granada).jpg",
+    "query": "vista Las Gabias Granada",
+    "score": 12
+  },
+  "san-juan-de-aznalfarache": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/1806-1820%2C_Voyage_pittoresque_et_historique_de_l%27Espagne%2C_tomo_II%2C_Vista_de_Sevilla_tomada_desde_San_Juan_de_Alfarache_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 6190,
+    "height": 4118,
+    "title": "File:1806-1820, Voyage pittoresque et historique de l'Espagne, tomo II, Vista de Sevilla tomada desde San Juan de Alfarache (cropped).jpg",
+    "query": "vista San Juan de Aznalfarache",
+    "score": 15
+  },
+  "ponteareas": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ponteareas_-_panoramica_%28Pontevedra%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 7280,
+    "height": 1351,
+    "title": "File:Ponteareas - panoramica (Pontevedra).jpg",
+    "query": "Ponteareas Pontevedra",
+    "score": 18
+  },
+  "picassent": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Camino_Viejo_de_Picasent%2C_en_Valencia_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4608,
+    "height": 3456,
+    "title": "File:Camino Viejo de Picasent, en Valencia 01.jpg",
+    "query": "Picassent Valencia",
+    "score": 10
+  },
+  "sant-feliu-de-guixols": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/View_of_Sant_Feliu_de_Gu%C3%ADxols_beach_and_marina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4032,
+    "height": 3024,
+    "title": "File:View of Sant Feliu de Guíxols beach and marina.jpg",
+    "query": "Sant Feliu de Guíxols",
+    "score": 13
+  },
+  "amposta": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Amposta_-_53112907224.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5988,
+    "height": 3368,
+    "title": "File:Amposta - 53112907224.jpg",
+    "query": "Amposta Tarragona",
+    "score": 12
+  },
+  "almoradi": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Vista_aerea_Almoradi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2692,
+    "height": 2000,
+    "title": "File:Vista aerea Almoradi.jpg",
+    "query": "Almoradí Alicante",
+    "score": 13
+  },
+  "laguna-de-duero": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Laguna_de_Duero_panor%C3%A1mica_lago.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 1120,
+    "title": "File:Laguna de Duero panorámica lago.JPG",
+    "query": "Laguna de Duero Valladolid",
+    "score": 15
+  },
+  "valle-de-egues": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Sarriguren_%28Eg%C3%BC%C3%A9s%29_-_Parque_de_la_Innovaci%C3%B3n_de_Navarra-Enclave_Energ%C3%ADa_y_Medio_Ambiente%2C_Centro_Nacional_de_Energ%C3%ADas_Renovables_%28CENER%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2042,
+    "height": 1338,
+    "title": "File:Sarriguren (Egüés) - Parque de la Innovación de Navarra-Enclave Energía y Medio Ambiente, Centro Nacional de Energías Renovables (CENER) 1.jpg",
+    "query": "Sarriguren Navarra centro",
+    "score": 11
+  },
+  "arroyo-de-la-encomienda": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Arroyo_de_la_Encomienda%2C_barrio_de_La_Flecha%2C_Centro_de_Salud_Pisuerga_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2042,
+    "height": 936,
+    "title": "File:Arroyo de la Encomienda, barrio de La Flecha, Centro de Salud Pisuerga 1.jpg",
+    "query": "Arroyo de la Encomienda Valladolid centro",
+    "score": 14
+  },
+  "aljaraque": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Panoramica_de_Bellavista%2C_Huelva.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3072,
+    "height": 2304,
+    "title": "File:Panoramica de Bellavista, Huelva.JPG",
+    "query": "Aljaraque Huelva panorámica",
+    "score": 13
+  },
+  "las-torres-de-cotillas": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Badlands_en_Las_Torres_de_Cotillas..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2560,
+    "height": 1920,
+    "title": "File:Badlands en Las Torres de Cotillas..jpg",
+    "query": "Las Torres de Cotillas",
+    "score": 10
+  },
+  "esparreguera": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Coloniasedopanoramica.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3701,
+    "height": 987,
+    "title": "File:Coloniasedopanoramica.JPG",
+    "query": "Esparreguera Barcelona panorámica",
+    "score": 18
+  },
+  "guia-de-isora": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/20250708_Mirador_de_S%C3%A1mara%2C_Gu%C3%ADa_de_Isora_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 6016,
+    "height": 4016,
+    "title": "File:20250708 Mirador de Sámara, Guía de Isora 01.jpg",
+    "query": "Guía de Isora Tenerife",
+    "score": 10
+  },
+  "barbate": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Faro_de_Punta_Camarinal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3888,
+    "height": 2592,
+    "title": "File:Faro de Punta Camarinal.jpg",
+    "query": "vista Barbate Cádiz",
+    "score": 12
+  },
+  "aspe": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Sala_Exposiciones_Jos%C3%A9_Terol_Romero._Teatro_Wagner_de_Aspe_%28Alicante%29._Dic2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4624,
+    "height": 2084,
+    "title": "File:Sala Exposiciones José Terol Romero. Teatro Wagner de Aspe (Alicante). Dic2022.jpg",
+    "query": "Aspe Alicante",
+    "score": 15
+  },
+  "maracena": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Foto_a%C3%A9rea_Villasol_%28Maracena%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4608,
+    "height": 2159,
+    "title": "File:Foto aérea Villasol (Maracena).jpg",
+    "query": "Maracena Granada",
+    "score": 15
+  },
+  "alfafar": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/MTN25-0722c2-2016-Valencia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 9843,
+    "height": 5214,
+    "title": "File:MTN25-0722c2-2016-Valencia.jpg",
+    "query": "Alfafar Valencia centro",
+    "score": 12
+  },
+  "montcada": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Seminari_Valencia_Principal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5354,
+    "height": 4104,
+    "title": "File:Seminari Valencia Principal.jpg",
+    "query": "Moncada Valencia",
+    "score": 10
+  },
+  "ayamonte": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Ayamonte%2C_Huelva_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3840,
+    "height": 2160,
+    "title": "File:Ayamonte, Huelva - panoramio.jpg",
+    "query": "Ayamonte Huelva",
+    "score": 15
+  },
+  "carcaixent": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mercat_de_Carcaixent_%28Pa%C3%ADs_Valenci%C3%A0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3616,
+    "height": 1654,
+    "title": "File:Mercat de Carcaixent (País Valencià).jpg",
+    "query": "Carcaixent Valencia",
+    "score": 15
+  },
+  "pucol": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Pu%C3%A7ol_-_8.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 2448,
+    "title": "File:Puçol - 8.jpeg",
+    "query": "Puçol Valencia",
+    "score": 10
+  },
+  "tias": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Puerto-Carmen-Panoramica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2500,
+    "height": 374,
+    "title": "File:Puerto-Carmen-Panoramica.jpg",
+    "query": "Puerto del Carmen Lanzarote panorámica",
+    "score": 18
+  },
+  "pajara": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Guarder%C3%ADa_de_tortugas_Sodade_de_Morro_Jable_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4599,
+    "height": 2118,
+    "title": "File:Guardería de tortugas Sodade de Morro Jable 01.jpg",
+    "query": "Morro Jable Fuerteventura",
+    "score": 15
+  },
+  "cartaya": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Plaza_-_Cartaya_%28Huelva%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3962,
+    "height": 2849,
+    "title": "File:Plaza - Cartaya (Huelva).jpg",
+    "query": "Cartaya Huelva",
+    "score": 13
+  },
+  "manlleu": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Santuari_de_Puig-agut_de_Manlleu_%28Osona%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 5152,
+    "height": 3864,
+    "title": "File:Santuari de Puig-agut de Manlleu (Osona) (2).jpg",
+    "query": "Manlleu Osona",
+    "score": 10
+  },
+  "burlada": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Burlada_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2048,
+    "height": 1536,
+    "title": "File:Burlada 01.jpg",
+    "query": "Burlada Navarra",
+    "score": 6
+  },
+  "vilassar-de-mar": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Vista_de_los_astilleros_%C2%ABEmpresas_y_Construcciones_Navales%C2%BB_%28bibliotecammb4707%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2592,
+    "height": 1708,
+    "title": "File:Vista de los astilleros «Empresas y Construcciones Navales» (bibliotecammb4707).jpg",
+    "query": "vista Vilassar de Mar",
+    "score": 15
+  },
+  "mogan": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Puerto_Rico%2C_Gran_Canaria_D81_7937_%2832176485414%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 6546,
+    "height": 2182,
+    "title": "File:Puerto Rico, Gran Canaria D81 7937 (32176485414).jpg",
+    "query": "Puerto Rico Gran Canaria",
+    "score": 15
+  },
+  "algete": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Algete_ayuntamiento_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 2448,
+    "title": "File:Algete ayuntamiento 2.jpg",
+    "query": "Algete Madrid",
+    "score": 13
+  },
+  "l-alfas-del-pi": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Altea_faro_del_cabo_de_Estufador_JMM.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3456,
+    "height": 2304,
+    "title": "File:Altea faro del cabo de Estufador JMM.JPG",
+    "query": "Albir Alfàs del Pi",
+    "score": 12
+  },
+  "sant-just-desvern": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Vista_des_de_can_Candeler_P1510377.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3072,
+    "height": 2304,
+    "title": "File:Vista des de can Candeler P1510377.jpg",
+    "query": "vista Sant Just Desvern",
+    "score": 13
+  },
+  "san-martin-de-la-vega": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Museo_Arqueol%C3%B3gico_Regional_-_Vista_general_del_esqueleto_%28G%C3%B3zquez_de_Arriba_-_San_Mart%C3%ADn_de_la_Vega%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4608,
+    "height": 3072,
+    "title": "File:Museo Arqueológico Regional - Vista general del esqueleto (Gózquez de Arriba - San Martín de la Vega).jpg",
+    "query": "vista San Martín de la Vega Madrid",
+    "score": 15
+  },
+  "o-porrino": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Capela_de_San_Sebasti%C3%A1n_-_O_Porri%C3%B1o_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4128,
+    "height": 3096,
+    "title": "File:Capela de San Sebastián - O Porriño 02.jpg",
+    "query": "O Porriño Pontevedra",
+    "score": 10
+  },
+  "loja": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Loja_%28Granada%29-Fuente_de_los_25_ca%C3%B1os.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4000,
+    "height": 3000,
+    "title": "File:Loja (Granada)-Fuente de los 25 caños.JPG",
+    "query": "Loja Granada",
+    "score": 10
+  },
+  "atarfe": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Atarfe%2C_Granada%2C_Spain_-_panoramio_-_gusssss2002_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2816,
+    "height": 2112,
+    "title": "File:Atarfe, Granada, Spain - panoramio - gusssss2002 (1).jpg",
+    "query": "vista Atarfe Granada",
+    "score": 13
+  },
+  "archena": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/1889%2C_Espa%C3%B1a%2C_sus_monumentos_y_artes%2C_su_naturaleza_e_historia%2C_Murcia_y_Albacete%2C_Archena.%E2%80%94Establecimiento_balneario.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2640,
+    "height": 1660,
+    "title": "File:1889, España, sus monumentos y artes, su naturaleza e historia, Murcia y Albacete, Archena.—Establecimiento balneario.jpg",
+    "query": "Archena Murcia",
+    "score": 12
+  },
+  "franqueses-del-valles-les": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Les_Franqueses_estacio_RENFE_6444.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2400,
+    "height": 1600,
+    "title": "File:Les Franqueses estacio RENFE 6444.jpg",
+    "query": "Les Franqueses del Vallès",
+    "score": 12
+  },
+  "benicassim": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Benic%C3%A0ssim%2C_Castell%C3%B3n%2C_Spain_-_panoramio_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3264,
+    "height": 2448,
+    "title": "File:Benicàssim, Castellón, Spain - panoramio (6).jpg",
+    "query": "Benicàssim Castellón",
+    "score": 13
+  },
+  "humanes-de-madrid": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Humanes_de_Madrid_-_Plaza_de_la_Constituci%C3%B3n_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2558,
+    "height": 1606,
+    "title": "File:Humanes de Madrid - Plaza de la Constitución 3.jpg",
+    "query": "Humanes de Madrid",
+    "score": 15
+  },
+  "silla": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Vista_de_Silla%2C_Valencia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 1887,
+    "height": 1216,
+    "title": "File:Vista de Silla, Valencia.JPG",
+    "query": "Silla Valencia",
+    "score": 11
+  },
+  "la-zubia": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Parque_infantil_en_la_calle_Mirador_de_la_Reina_esquina_con_Laurel_de_la_Reina_%28La_Zubia%2C_Granada%29_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 6000,
+    "height": 4000,
+    "title": "File:Parque infantil en la calle Mirador de la Reina esquina con Laurel de la Reina (La Zubia, Granada) 06.jpg",
+    "query": "La Zubia Granada",
+    "score": 12
+  },
+  "hernani": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Iparraldeko_trenbideak-Irungo_nazioarteko_geltokia._Biltegi_baten_bista_%28ELDE20230167519%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 3464,
+    "height": 2286,
+    "title": "File:Iparraldeko trenbideak-Irungo nazioarteko geltokia. Biltegi baten bista (ELDE20230167519).jpg",
+    "query": "vista Hernani Gipuzkoa",
+    "score": 12
+  },
+  "lalin": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Panoramica_ANZO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 9856,
+    "height": 2304,
+    "title": "File:Panoramica ANZO.jpg",
+    "query": "Lalín Pontevedra panorámica",
+    "score": 18
+  },
+  "sant-quirze-del-valles": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Mas_Duran_%28Sant_Quirze_del_Vall%C3%A8s%29_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 4912,
+    "height": 3264,
+    "title": "File:Mas Duran (Sant Quirze del Vallès) 01.JPG",
+    "query": "Sant Quirze del Vallès",
+    "score": 12
+  },
+  "a-estrada": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Xos%C3%A9_Luna%2C_Padri%C5%88o_da_VIII_Festa_das_palabras_organizada_por_todos_os_centros_de_ensino_da_Estrada%2C_Dinamiza_Estrada._2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "width": 2016,
+    "height": 954,
+    "title": "File:Xosé Luna, Padriňo da VIII Festa das palabras organizada por todos os centros de ensino da Estrada, Dinamiza Estrada. 2021.jpg",
+    "query": "A Estrada Pontevedra centro",
+    "score": 14
+  }
+}
