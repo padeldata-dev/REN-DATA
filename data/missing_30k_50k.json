@@ -1,0 +1,338 @@
+[
+  {
+    "slug": "santurtzi",
+    "nombre": "Santurtzi",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 46442,
+    "cpro": "48"
+  },
+  {
+    "slug": "portugalete",
+    "nombre": "Portugalete",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 44843,
+    "cpro": "48"
+  },
+  {
+    "slug": "vilafranca-del-penedes",
+    "nombre": "Vilafranca del Penedès",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 42607,
+    "cpro": "08"
+  },
+  {
+    "slug": "puerto-real",
+    "nombre": "Puerto Real",
+    "ccaa": "Andalucía",
+    "provincia": "Cádiz",
+    "poblacion": 42527,
+    "cpro": "11"
+  },
+  {
+    "slug": "santa-eularia-des-riu",
+    "nombre": "Santa Eulària des Riu",
+    "ccaa": "Islas Baleares",
+    "provincia": "Balears, Illes",
+    "poblacion": 42479,
+    "cpro": "07"
+  },
+  {
+    "slug": "el-vendrell",
+    "nombre": "Vendrell, El",
+    "ccaa": "Cataluña",
+    "provincia": "Tarragona",
+    "poblacion": 41133,
+    "cpro": "43"
+  },
+  {
+    "slug": "ripollet",
+    "nombre": "Ripollet",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 39897,
+    "cpro": "08"
+  },
+  {
+    "slug": "errenteria",
+    "nombre": "Errenteria",
+    "ccaa": "País Vasco",
+    "provincia": "Gipuzkoa",
+    "poblacion": 39363,
+    "cpro": "20"
+  },
+  {
+    "slug": "sant-adria-de-besos",
+    "nombre": "Sant Adrià de Besòs",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 39323,
+    "cpro": "08"
+  },
+  {
+    "slug": "arucas",
+    "nombre": "Arucas",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 39232,
+    "cpro": "35"
+  },
+  {
+    "slug": "oleiros",
+    "nombre": "Oleiros",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 38793,
+    "cpro": "15"
+  },
+  {
+    "slug": "los-palacios-y-villafranca",
+    "nombre": "Palacios y Villafranca, Los",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 38761,
+    "cpro": "41"
+  },
+  {
+    "slug": "los-realejos",
+    "nombre": "Realejos, Los",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 37867,
+    "cpro": "38"
+  },
+  {
+    "slug": "montcada-i-reixac",
+    "nombre": "Montcada i Reixac",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 37460,
+    "cpro": "08"
+  },
+  {
+    "slug": "la-vila-joiosa",
+    "nombre": "Vila Joiosa, la",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 37449,
+    "cpro": "03"
+  },
+  {
+    "slug": "sant-joan-despi",
+    "nombre": "Sant Joan Despí",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 35926,
+    "cpro": "08"
+  },
+  {
+    "slug": "azuqueca-de-henares",
+    "nombre": "Azuqueca de Henares",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Guadalajara",
+    "poblacion": 35924,
+    "cpro": "19"
+  },
+  {
+    "slug": "aldaia",
+    "nombre": "Aldaia",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 34630,
+    "cpro": "46"
+  },
+  {
+    "slug": "salt",
+    "nombre": "Salt",
+    "ccaa": "Cataluña",
+    "provincia": "Girona",
+    "poblacion": 34491,
+    "cpro": "17"
+  },
+  {
+    "slug": "arteixo",
+    "nombre": "Arteixo",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 34403,
+    "cpro": "15"
+  },
+  {
+    "slug": "san-roque",
+    "nombre": "San Roque",
+    "ccaa": "Andalucía",
+    "provincia": "Cádiz",
+    "poblacion": 34310,
+    "cpro": "11"
+  },
+  {
+    "slug": "petrer",
+    "nombre": "Petrer",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 34022,
+    "cpro": "03"
+  },
+  {
+    "slug": "barbera-del-valles",
+    "nombre": "Barberà del Vallès",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 33987,
+    "cpro": "08"
+  },
+  {
+    "slug": "nijar",
+    "nombre": "Níjar",
+    "ccaa": "Andalucía",
+    "provincia": "Almería",
+    "poblacion": 33319,
+    "cpro": "04"
+  },
+  {
+    "slug": "ames",
+    "nombre": "Ames",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 33276,
+    "cpro": "15"
+  },
+  {
+    "slug": "ingenio",
+    "nombre": "Ingenio",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 32905,
+    "cpro": "35"
+  },
+  {
+    "slug": "leioa",
+    "nombre": "Leioa",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 32748,
+    "cpro": "48"
+  },
+  {
+    "slug": "sant-pere-de-ribes",
+    "nombre": "Sant Pere de Ribes",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 32705,
+    "cpro": "08"
+  },
+  {
+    "slug": "manises",
+    "nombre": "Manises",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 32609,
+    "cpro": "46"
+  },
+  {
+    "slug": "la-vall-d-uixo",
+    "nombre": "Vall d'Uixó, la",
+    "ccaa": "C. Valenciana",
+    "provincia": "Castellón/Castelló",
+    "poblacion": 32242,
+    "cpro": "12"
+  },
+  {
+    "slug": "xirivella",
+    "nombre": "Xirivella",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 32093,
+    "cpro": "46"
+  },
+  {
+    "slug": "el-campello",
+    "nombre": "Campello, el",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 31419,
+    "cpro": "03"
+  },
+  {
+    "slug": "coria-del-rio",
+    "nombre": "Coria del Río",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 31278,
+    "cpro": "41"
+  },
+  {
+    "slug": "arcos-de-la-frontera",
+    "nombre": "Arcos de la Frontera",
+    "ccaa": "Andalucía",
+    "provincia": "Cádiz",
+    "poblacion": 31267,
+    "cpro": "11"
+  },
+  {
+    "slug": "culleredo",
+    "nombre": "Culleredo",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 31254,
+    "cpro": "15"
+  },
+  {
+    "slug": "crevillent",
+    "nombre": "Crevillent",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 30921,
+    "cpro": "03"
+  },
+  {
+    "slug": "sesena",
+    "nombre": "Seseña",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Toledo",
+    "poblacion": 30907,
+    "cpro": "45"
+  },
+  {
+    "slug": "mao",
+    "nombre": "Maó",
+    "ccaa": "Islas Baleares",
+    "provincia": "Balears, Illes",
+    "poblacion": 30666,
+    "cpro": "07"
+  },
+  {
+    "slug": "catarroja",
+    "nombre": "Catarroja",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 30604,
+    "cpro": "46"
+  },
+  {
+    "slug": "camargo",
+    "nombre": "Camargo",
+    "ccaa": "Cantabria",
+    "provincia": "Cantabria",
+    "poblacion": 30577,
+    "cpro": "39"
+  },
+  {
+    "slug": "alaquas",
+    "nombre": "Alaquàs",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 30166,
+    "cpro": "46"
+  },
+  {
+    "slug": "villaviciosa-de-odon",
+    "nombre": "Villaviciosa de Odón",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 30127,
+    "cpro": "28"
+  }
+]
