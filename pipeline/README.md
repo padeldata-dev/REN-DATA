@@ -1,6 +1,6 @@
 # REN DATA Pipeline
 
-Pipeline de actualización trimestral del dataset de las 329 ciudades de
+Pipeline de actualización trimestral del dataset de las 477 ciudades de
 [rendata.es](https://rendata.es) usando **únicamente fuentes oficiales y
 abiertas** (INE, MIVAU, Notariado, Observatorios CCAA).
 
@@ -18,9 +18,9 @@ pipeline/
 ├── config.py            # Paths, doctrine ROI, user-agent
 ├── cities.py            # Carga master CSV
 ├── aggregator.py        # Combina fuentes → CSV final
-├── updater.py           # Aplica CSV → DATA[] + 329 fichas HTML
+├── updater.py           # Aplica CSV → DATA[] + 477 fichas HTML
 ├── data/
-│   └── cities_master.csv  # Fuente de verdad: 329 slugs + valores actuales
+│   └── cities_master.csv  # Fuente de verdad: 477 slugs + valores actuales
 └── sources/
     ├── ine.py           # ✅ Población — pobmun.zip — automático
     ├── mivau.py         # ⚠️ Precio €/m² — descarga manual
@@ -56,12 +56,12 @@ python -m pipeline audit
 
 | Fuente | Acceso | Cobertura | Datos |
 |---|---|--:|---|
-| INE pobmun.zip | ✅ Auto | **329/329 (100%)** | Población |
-| MIVAU Excel | ⚠️ Manual | ~250/329 (~75%) si descargado | Precio €/m² compra |
+| INE pobmun.zip | ✅ Auto | **477/477 (100%)** | Población |
+| MIVAU Excel | ⚠️ Manual | ~280/477 (~59%) si descargado | Precio €/m² compra |
 | Notariado | ⚠️ Manual | ~80 capitales/provincias | Validación cruzada |
-| Madrid Obs. | ⚠️ Manual | ~19 municipios CAM | Precio + alquiler |
-| Cataluña Obs. | ⚠️ Manual | ~27 municipios CAT | Alquiler |
-| Andalucía Obs. | ⚠️ Manual | ~30 municipios AND | Precio + alquiler |
+| Madrid Obs. | ⚠️ Manual | ~30 municipios CAM | Precio + alquiler |
+| Cataluña Obs. | ⚠️ Manual | ~55 municipios CAT | Alquiler |
+| Andalucía Obs. | ⚠️ Manual | ~65 municipios AND | Precio + alquiler |
 | **Días mercado** | ❌ | 0% | Marcado "Estimado" en HTML — no actualizable sin scraping |
 
 Sin descargas manuales, el pipeline solo refresca **población**. Los demás campos quedan con valor histórico.
