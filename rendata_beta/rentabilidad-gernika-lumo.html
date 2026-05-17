@@ -14,6 +14,7 @@
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"FAQPage","name":"Invertir en Gernika-Lumo - Rentabilidad y Precio m² 2026","description":"Análisis de rentabilidad inmobiliaria en Gernika-Lumo. Precio m² 2520€, alquiler medio 1128€/mes, ROI estimado 5,4%.","mainEntity":[{"@type":"Question","name":"¿Cuál es la rentabilidad del alquiler en Gernika-Lumo en 2026?","acceptedAnswer":{"@type":"Answer","text":"La rentabilidad bruta estimada del alquiler en Gernika-Lumo en 2026 se sitúa en el 5.3%, según datos del Ministerio de Vivienda Q1 2026. La zona más rentable es El Centro, con un ROI estimado del 5.7%. Para referencia, la media nacional se encuentra en el 5,4%."}},{"@type":"Question","name":"¿Cuánto cuesta comprar un piso en Gernika-Lumo?","acceptedAnswer":{"@type":"Answer","text":"El precio medio del metro cuadrado en Gernika-Lumo es de 2400€/m² (Q1 2026). Un piso de 100 m² costaría aproximadamente 252.000€. En los últimos 12 meses el precio ha subido un 8,0%, una de las subidas más significativas del mercado inmobiliario español."}},{"@type":"Question","name":"¿Cuánto se puede ganar alquilando un piso en Gernika-Lumo?","acceptedAnswer":{"@type":"Answer","text":"El alquiler medio en Gernika-Lumo es de 1080€/mes para un piso estándar. Un piso de una habitación puede alcanzar los 360€/mes, mientras que uno de tres habitaciones puede superar los 650€/mes. Los alquileres en Gernika-Lumo han subido un 9,9% en el último año."}},{"@type":"Question","name":"¿En qué barrio de Gernika-Lumo es más rentable invertir?","acceptedAnswer":{"@type":"Answer","text":"El barrio con mayor rentabilidad estimada en Gernika-Lumo es El Centro, con un ROI del 5.7%. En general, los barrios periféricos o de clase media ofrecen mejores rentabilidades que el centro, ya que el precio de compra es más asequible pero la demanda de alquiler es igualmente alta."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://rendata.es/"},{"@type":"ListItem","position":2,"name":"País Vasco","item":"https://rendata.es/ccaa-pais-vasco.html"},{"@type":"ListItem","position":3,"name":"Rentabilidad Gernika-Lumo","item":"https://rendata.es/rentabilidad-gernika-lumo.html"}]},{"@context":"https://schema.org","@type":"Dataset","name":"Mercado inmobiliario Gernika-Lumo 2026","description":"Datos de precio m², rentabilidad por alquiler y evolución del mercado inmobiliario en Gernika-Lumo, País Vasco.","keywords":["rentabilidad inmobiliaria Gernika-Lumo","precio vivienda Gernika-Lumo","invertir Gernika-Lumo","alquiler Gernika-Lumo"],"temporalCoverage":"2026","spatialCoverage":"Gernika-Lumo, País Vasco, España","publisher":{"@type":"Organization","name":"Ren Data","url":"https://rendata.es"}}]</script>
 <link rel="stylesheet" href="/css/ficha.css">
 <script src="/js/nav-dropdown.js" defer></script>
+<link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
 
@@ -23,41 +24,67 @@
     <div class="logo-wm"><span style="color:#fff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div>
   </a>
   <nav>
-    <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="mob-nav-links">
       <a href="/">🏠 Ciudades</a>
-      <a href="ranking.html">📊 Ranking</a>
-      <a href="comparador.html">⚖️ Comparar</a>
-      <a href="glosario.html">📖 Glosario</a>
-      <a href="guia-inversor.html">🎯 Guía inversor</a>
+      <a href="/ranking.html">📊 Ranking</a>
+      <a href="/analisis.html">📈 Análisis</a>
+      <a href="/comparador.html">⚖️ Comparar</a>
+      <a href="/glosario.html">📖 Glosario</a>
+      <a href="/guia-inversor.html">🎯 Guía inversor</a>
+      <a href="/sobre.html">ℹ️ Sobre</a>
+      <details class="mob-nav-details">
+        <summary>🗺️ Comunidades</summary>
+        <a href="/ccaa-andalucia.html"><img src="/img/flags/andalucia.png" class="nav-flag" alt="" loading="lazy"> Andalucía</a>
+        <a href="/ccaa-aragon.html"><img src="/img/flags/aragon.png" class="nav-flag" alt="" loading="lazy"> Aragón</a>
+        <a href="/ccaa-asturias.html"><img src="/img/flags/asturias.png" class="nav-flag" alt="" loading="lazy"> Asturias</a>
+        <a href="/ccaa-baleares.html"><img src="/img/flags/baleares.png" class="nav-flag" alt="" loading="lazy"> Baleares</a>
+        <a href="/ccaa-canarias.html"><img src="/img/flags/canarias.png" class="nav-flag" alt="" loading="lazy"> Canarias</a>
+        <a href="/ccaa-cantabria.html"><img src="/img/flags/cantabria.png" class="nav-flag" alt="" loading="lazy"> Cantabria</a>
+        <a href="/ccaa-castilla-la-mancha.html"><img src="/img/flags/castilla-la-mancha.png" class="nav-flag" alt="" loading="lazy"> Castilla-La Mancha</a>
+        <a href="/ccaa-castilla-y-leon.html"><img src="/img/flags/castilla-y-leon.png" class="nav-flag" alt="" loading="lazy"> Castilla y León</a>
+        <a href="/ccaa-cataluna.html"><img src="/img/flags/cataluna.png" class="nav-flag" alt="" loading="lazy"> Cataluña</a>
+        <a href="/ccaa-comunitat-valenciana.html"><img src="/img/flags/comunitat-valenciana.png" class="nav-flag" alt="" loading="lazy"> C. Valenciana</a>
+        <a href="/ccaa-extremadura.html"><img src="/img/flags/extremadura.png" class="nav-flag" alt="" loading="lazy"> Extremadura</a>
+        <a href="/ccaa-galicia.html"><img src="/img/flags/galicia.png" class="nav-flag" alt="" loading="lazy"> Galicia</a>
+        <a href="/ccaa-la-rioja.html"><img src="/img/flags/la-rioja.png" class="nav-flag" alt="" loading="lazy"> La Rioja</a>
+        <a href="/ccaa-madrid.html"><img src="/img/flags/madrid.png" class="nav-flag" alt="" loading="lazy"> Madrid</a>
+        <a href="/ccaa-murcia.html"><img src="/img/flags/murcia.png" class="nav-flag" alt="" loading="lazy"> Murcia</a>
+        <a href="/ccaa-navarra.html"><img src="/img/flags/navarra.png" class="nav-flag" alt="" loading="lazy"> Navarra</a>
+        <a href="/ccaa-pais-vasco.html"><img src="/img/flags/pais-vasco.png" class="nav-flag" alt="" loading="lazy"> País Vasco</a>
+      </details>
     </div>
-        <a href="index.html">Ciudades</a>
-    <a href="ranking.html">Ranking</a><a href="analisis.html">Análisis</a>
+    <a href="/">Ciudades</a>
+    <a href="/ranking.html">Ranking</a>
+    <a href="/analisis.html">Análisis</a>
     <div class="nav-dropdown">
-      <button class="nav-drop-btn">Comunidades ▾</button>
+      <button class="nav-drop-btn" type="button" aria-expanded="false">Comunidades ▾</button>
       <div class="nav-drop-menu">
-        <a href="ccaa-andalucia.html">🌞 Andalucía</a>
-        <a href="ccaa-madrid.html">🏙️ Madrid</a>
-        <a href="ccaa-cataluna.html">🎨 Cataluña</a>
-        <a href="ccaa-comunitat-valenciana.html">🍊 C. Valenciana</a>
-        <a href="ccaa-pais-vasco.html">🌋 País Vasco</a>
-        <a href="ccaa-baleares.html">🏖️ Baleares</a>
-        <a href="ccaa-pais-vasco.html">🏭 País Vasco</a>
-        <a href="ccaa-galicia.html">🌧️ Galicia</a>
-        <a href="ccaa-pais-vasco.html">🏰 País Vasco</a>
-        <a href="ccaa-aragon.html">🏔️ Aragón</a>
-        <a href="ccaa-murcia.html">🌶️ Murcia</a>
-        <a href="ccaa-extremadura.html">🐂 Extremadura</a>
-        <a href="ccaa-asturias.html">🌧️ Asturias</a>
-        <a href="ccaa-navarra.html">🐂 Navarra</a>
-        <a href="ccaa-la-rioja.html">🍷 La Rioja</a>
+        <a href="/ccaa-andalucia.html"><img src="/img/flags/andalucia.png" class="nav-flag" alt="" loading="lazy"> Andalucía</a>
+        <a href="/ccaa-madrid.html"><img src="/img/flags/madrid.png" class="nav-flag" alt="" loading="lazy"> Madrid</a>
+        <a href="/ccaa-cataluna.html"><img src="/img/flags/cataluna.png" class="nav-flag" alt="" loading="lazy"> Cataluña</a>
+        <a href="/ccaa-comunitat-valenciana.html"><img src="/img/flags/comunitat-valenciana.png" class="nav-flag" alt="" loading="lazy"> C. Valenciana</a>
+        <a href="/ccaa-canarias.html"><img src="/img/flags/canarias.png" class="nav-flag" alt="" loading="lazy"> Canarias</a>
+        <a href="/ccaa-baleares.html"><img src="/img/flags/baleares.png" class="nav-flag" alt="" loading="lazy"> Baleares</a>
+        <a href="/ccaa-pais-vasco.html"><img src="/img/flags/pais-vasco.png" class="nav-flag" alt="" loading="lazy"> País Vasco</a>
+        <a href="/ccaa-galicia.html"><img src="/img/flags/galicia.png" class="nav-flag" alt="" loading="lazy"> Galicia</a>
+        <a href="/ccaa-castilla-y-leon.html"><img src="/img/flags/castilla-y-leon.png" class="nav-flag" alt="" loading="lazy"> Castilla y León</a>
+        <a href="/ccaa-aragon.html"><img src="/img/flags/aragon.png" class="nav-flag" alt="" loading="lazy"> Aragón</a>
+        <a href="/ccaa-murcia.html"><img src="/img/flags/murcia.png" class="nav-flag" alt="" loading="lazy"> Murcia</a>
+        <a href="/ccaa-castilla-la-mancha.html"><img src="/img/flags/castilla-la-mancha.png" class="nav-flag" alt="" loading="lazy"> Castilla-La Mancha</a>
+        <a href="/ccaa-extremadura.html"><img src="/img/flags/extremadura.png" class="nav-flag" alt="" loading="lazy"> Extremadura</a>
+        <a href="/ccaa-asturias.html"><img src="/img/flags/asturias.png" class="nav-flag" alt="" loading="lazy"> Asturias</a>
+        <a href="/ccaa-cantabria.html"><img src="/img/flags/cantabria.png" class="nav-flag" alt="" loading="lazy"> Cantabria</a>
+        <a href="/ccaa-navarra.html"><img src="/img/flags/navarra.png" class="nav-flag" alt="" loading="lazy"> Navarra</a>
+        <a href="/ccaa-la-rioja.html"><img src="/img/flags/la-rioja.png" class="nav-flag" alt="" loading="lazy"> La Rioja</a>
       </div>
     </div>
-    <a href="comparador.html">Comparar</a>
-    <a href="glosario.html">Glosario</a>
-    <a href="guia-inversor.html">Guía</a>
+    <a href="/comparador.html">Comparador</a>
+    <a href="/glosario.html">Glosario</a>
+    <a href="/guia-inversor.html">Guía</a>
+    <a href="/sobre.html">Sobre</a>
   </nav>
 </header>
 

@@ -1,18 +1,18 @@
-<!DOCTYPE html><html lang="es"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contacto | Ren Data</title>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="canonical" href="https://rendata.es/contacto.html">
-<link rel="stylesheet" href="/css/fonts.css">
+#!/usr/bin/env python3
+"""
+Migración masiva de navegación para rendata_beta/.
+- Reemplaza <nav>...</nav> con bloque canónico unificado
+- Inyecta <link href="/css/nav.css"> al final del <head> si no existe
+- Inyecta <script src="/js/nav-dropdown.js" defer> si no existe
+"""
+import os
+import re
+import sys
+from pathlib import Path
 
-<link rel="stylesheet" href="/css/contacto.css">
-<link rel="stylesheet" href="/css/nav.css">
-<script src="/js/nav-dropdown.js" defer></script>
-</head><body>
-<header>
-  <a href="index.html" class="logo"><div style="font-size:1.1rem;line-height:1"><span style="color:#fff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
-  <nav>
+ROOT = Path(__file__).resolve().parent.parent / "rendata_beta"
+
+CANONICAL_NAV = '''<nav>
     <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
@@ -74,70 +74,73 @@
     <a href="/glosario.html">Glosario</a>
     <a href="/guia-inversor.html">Guía</a>
     <a href="/sobre.html">Sobre</a>
-  </nav>
-</header>
-<div class="page-hero"><div class="page-hero-inner">
-  <div class="page-eyebrow">Contacto</div>
-  <h1>Hablemos</h1>
-  <p>¿Tienes dudas, quieres colaborar o necesitas información? Escríbenos.</p>
-</div></div>
-<div class="content">
-  <div class="contact-grid">
-    <form class="contact-form" action="https://formspree.io/f/xpwzgkjr" method="POST">
-      <h2 style="margin-top:0;margin-bottom:1.25rem;font-size:1.05rem">Envíanos un mensaje</h2>
-      <div class="form-field">
-        <label class="form-label">Tu nombre</label>
-        <input type="text" name="nombre" class="form-input" placeholder="María García" required>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Email</label>
-        <input type="email" name="email" class="form-input" placeholder="maria@ejemplo.com" required>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Asunto</label>
-        <select name="asunto" class="form-input">
-          <option>Quiero invertir — necesito orientación</option>
-          <option>Propuesta de colaboración</option>
-          <option>Error en los datos</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Mensaje</label>
-        <textarea name="mensaje" class="form-input" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
-      </div>
-      <button type="submit" class="form-btn">Enviar mensaje →</button>
-    </form>
-    <div>
-      <div class="info-card">
-        <div class="info-icon">⏱️</div>
-        <div class="info-title">Tiempo de respuesta</div>
-        <div class="info-text">Respondemos en menos de 48 horas en días laborables.</div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🤝</div>
-        <div class="info-title">Colaboraciones</div>
-        <div class="info-text">Si eres agencia inmobiliaria, portal o medio de comunicación y quieres colaborar, escríbenos indicando tu propuesta.</div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">⚠️</div>
-        <div class="info-title">Error en los datos</div>
-        <div class="info-text">Si detectas algún dato incorrecto en alguna ciudad, indícanos ciudad, dato y la fuente que usas de referencia.</div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">📊</div>
-        <div class="info-title">Datos y API</div>
-        <div class="info-text">Si eres empresa y necesitas acceso a nuestros datos de rentabilidad para tu plataforma, contáctanos para hablar de condiciones.</div>
-      </div>
-    </div>
-  </div>
-</div>
-<footer>
-  <a href="index.html" class="logo"><div style="font-size:1rem"><span style="color:#0e2a6b;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#2563eb;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
-  <p>© 2026 rendata.es · Datos de fuentes públicas</p>
-  <div class="f-links">
-    <a href="aviso-legal.html">Aviso legal</a>
-    <a href="privacidad.html">Privacidad</a>
-    <a href="contacto.html">Contacto</a>
-  </div>
-</footer></body></html>
+  </nav>'''
+
+NAV_CSS_LINK = '<link rel="stylesheet" href="/css/nav.css">'
+NAV_JS_SCRIPT = '<script src="/js/nav-dropdown.js" defer></script>'
+
+NAV_RE = re.compile(r"<nav\b[^>]*>.*?</nav>", re.DOTALL | re.IGNORECASE)
+HEAD_END_RE = re.compile(r"</head>", re.IGNORECASE)
+
+
+def process_file(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    original = text
+    actions = []
+
+    # 1) Replace <nav>...</nav>
+    matches = NAV_RE.findall(text)
+    if matches:
+        text = NAV_RE.sub(CANONICAL_NAV, text, count=1)
+        # If multiple nav tags (rare), warn
+        if len(matches) > 1:
+            actions.append(f"WARN: {len(matches)} nav tags found, only first replaced")
+        else:
+            actions.append("nav-replaced")
+    else:
+        actions.append("WARN: no nav found")
+
+    # 2) Inject nav.css link if not present
+    if 'href="/css/nav.css"' not in text and "href='/css/nav.css'" not in text:
+        text = HEAD_END_RE.sub(f"{NAV_CSS_LINK}\n</head>", text, count=1)
+        actions.append("nav-css-injected")
+
+    # 3) Inject nav-dropdown.js if not present
+    if 'src="/js/nav-dropdown.js"' not in text and "src='/js/nav-dropdown.js'" not in text:
+        text = HEAD_END_RE.sub(f"{NAV_JS_SCRIPT}\n</head>", text, count=1)
+        actions.append("nav-js-injected")
+
+    if text != original:
+        path.write_text(text, encoding="utf-8")
+        return {"path": str(path.relative_to(ROOT)), "actions": actions, "changed": True}
+    return {"path": str(path.relative_to(ROOT)), "actions": actions, "changed": False}
+
+
+def main():
+    if not ROOT.is_dir():
+        print(f"ERROR: {ROOT} not found", file=sys.stderr)
+        sys.exit(1)
+
+    html_files = sorted(ROOT.glob("*.html"))
+    total = len(html_files)
+    changed = 0
+    warnings = []
+    print(f"Found {total} HTML files in {ROOT}")
+
+    for p in html_files:
+        r = process_file(p)
+        if r["changed"]:
+            changed += 1
+        for a in r["actions"]:
+            if a.startswith("WARN"):
+                warnings.append(f"{r['path']}: {a}")
+
+    print(f"Changed: {changed}/{total}")
+    if warnings:
+        print(f"\nWarnings ({len(warnings)}):")
+        for w in warnings:
+            print(f"  - {w}")
+
+
+if __name__ == "__main__":
+    main()

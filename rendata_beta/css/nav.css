@@ -1,0 +1,201 @@
+/* =========================================================
+   nav.css — Navegación unificada (cargar AL FINAL del <head>)
+   ========================================================= */
+
+nav{display:flex;align-items:center;gap:.2rem}
+
+/* Estructura compartida del dropdown */
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-flag{width:22px;height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;margin-right:5px;box-shadow:0 0 0 1px rgba(0,0,0,.12);flex-shrink:0}
+
+/* Defaults para .nav-drop-btn — :where() = especificidad 0, página gana siempre */
+:where(.nav-drop-btn){background:none;border:none;color:inherit;font-family:inherit;font-size:.82rem;font-weight:500;padding:.42rem .8rem;border-radius:8px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:.25rem}
+:where(.nav-drop-btn):hover{background:rgba(127,127,127,.08)}
+
+/* Hamburguesa: oculta por defecto */
+.mob-menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:1.5px solid currentColor;border-radius:8px;cursor:pointer;color:inherit;flex-shrink:0;opacity:.7;padding:0;transition:opacity .15s,background .15s;font-family:inherit}
+.mob-menu-btn:hover,.mob-menu-btn:focus-visible{opacity:1;background:rgba(127,127,127,.08)}
+
+/* Slide-out móvil: oculto por defecto */
+.mob-nav-links{display:none}
+.mob-nav-details{display:none}
+
+/* ====== MOBILE BREAKPOINT (≤740px) ====== */
+@media (max-width:740px){
+  /* Oculta TODOS los <a> y dropdown directos del nav */
+  nav>a,nav>.nav-dropdown,nav>button:not(.mob-menu-btn){display:none !important}
+  .mob-menu-btn{display:flex !important}
+
+  /* Panel desplegable cuando nav.open */
+  nav.open .mob-nav-links{
+    display:flex;flex-direction:column;
+    position:fixed;top:64px;left:0;right:0;bottom:0;
+    background:rgba(255,255,255,.98);
+    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    padding:.5rem 1.25rem 3rem;
+    gap:0;z-index:999;
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+    box-shadow:0 8px 24px rgba(14,24,40,.18);
+    border-top:1px solid #e5eaf2;
+  }
+  /* Cada enlace móvil — touch target ≥44px */
+  .mob-nav-links>a{
+    display:flex;align-items:center;gap:.6rem;
+    padding:.95rem .5rem;
+    font-size:1rem;font-weight:500;line-height:1.3;
+    color:#0e1828 !important;background:transparent !important;
+    text-decoration:none !important;
+    border-bottom:1px solid #e5eaf2;
+    border-radius:0;
+    min-height:48px;
+  }
+  .mob-nav-links>a:active{background:#eff6ff !important}
+
+  /* <details> para subsección Comunidades */
+  nav.open .mob-nav-details{display:block;border-bottom:1px solid #e5eaf2}
+  .mob-nav-details>summary{
+    display:flex;align-items:center;gap:.6rem;
+    padding:.95rem .5rem;
+    font-size:1rem;font-weight:500;line-height:1.3;
+    color:#0e1828;cursor:pointer;
+    list-style:none;
+    min-height:48px;
+    user-select:none;
+  }
+  .mob-nav-details>summary::-webkit-details-marker{display:none}
+  .mob-nav-details>summary::after{
+    content:'▾';margin-left:auto;color:#6b7a8d;font-size:.9rem;
+    transition:transform .2s;
+  }
+  .mob-nav-details[open]>summary::after{transform:rotate(180deg)}
+  .mob-nav-details>a{
+    display:flex;align-items:center;gap:.45rem;
+    padding:.75rem .75rem .75rem 2.2rem;
+    font-size:.92rem;color:#374151 !important;
+    text-decoration:none;
+    border-top:1px solid #f1f5f9;
+    min-height:44px;
+    background:#fafbff;
+  }
+  .mob-nav-details>a:active{background:#eff6ff !important}
+  .mob-nav-details>a .nav-flag{width:20px;height:14px}
+}
+
+/* ====== DESKTOP DROPDOWN (>740px) ======
+   :where() = especificidad 0, así las páginas que ya definen estilos ganan */
+@media (min-width:741px){
+  :where(.nav-drop-menu){
+    display:none;
+    position:absolute;top:calc(100% + 8px);left:0;
+    background:#fff;
+    border:1px solid #e5eaf2;
+    border-radius:10px;padding:.5rem;min-width:340px;
+    z-index:300;
+    box-shadow:0 12px 32px rgba(14,24,40,.14);
+  }
+  .nav-dropdown.open .nav-drop-menu,
+  .nav-dropdown:hover .nav-drop-menu{
+    display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  }
+  :where(.nav-drop-menu a){
+    font-size:.8rem;color:#374151;text-decoration:none;
+    padding:.5rem .7rem;border-radius:6px;
+    display:inline-flex;align-items:center;
+    transition:all .15s;white-space:nowrap;
+    min-height:36px;
+  }
+  :where(.nav-drop-menu a):hover{color:#2563eb;background:#eff6ff}
+}
+
+/* =========================================================
+   TOUCH TARGETS ≥44px en mobile (WCAG 2.5.5)
+   ========================================================= */
+@media (max-width:640px){
+  .f-btn,.ztab,.sbtn,.budget-preset,.lf-btn,
+  .amort-view-btn,.mip-reset,.share-btn,
+  .btn-p,.btn-s,.act-btn,.form-btn,.cta-sub,
+  .coll-trigger,.faq-q,.cerc-cta-btn,
+  .nav-drop-btn,.an-card-link,.rank-link,
+  .portal-btn,.amort-toggle{
+    min-height:44px;
+  }
+  .letter-link{width:44px;height:44px;font-size:.85rem}
+  .f-sort,.sort-sel,.city-select,.f-btn,.budget-preset{
+    padding-top:.65rem;padding-bottom:.65rem;
+  }
+}
+
+/* =========================================================
+   PREVENIR ZOOM AUTOMÁTICO iOS Safari (inputs <16px)
+   ========================================================= */
+@media (max-width:740px){
+  input,select,textarea,
+  .search-box,.calc-input,.budget-input,.cta-inp,.glos-search,
+  .city-select,.form-input{
+    font-size:16px !important;
+  }
+}
+
+/* =========================================================
+   INDICADOR VISUAL DE SCROLL HORIZONTAL
+   En contenedores con overflow-x:auto, sombra/fade a la derecha
+   ========================================================= */
+.sticky-bar,.tbl-wrap,.table-wrap,.amort-table-wrap,.sec-progress{
+  position:relative;
+}
+.sticky-bar::after,
+.tbl-wrap::after,
+.table-wrap::after,
+.amort-table-wrap::after,
+.sec-progress::after{
+  content:'';
+  position:absolute;
+  top:0;right:0;bottom:0;
+  width:32px;
+  background:linear-gradient(to right,transparent,rgba(248,250,252,.95));
+  pointer-events:none;
+  opacity:1;
+  transition:opacity .2s;
+}
+@media (min-width:1100px){
+  .sticky-bar::after,.tbl-wrap::after,.table-wrap::after,
+  .amort-table-wrap::after,.sec-progress::after{
+    display:none;
+  }
+}
+.tbl-wrap,.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* =========================================================
+   FIX: tabla gastos-row header desalineado en móvil
+   ========================================================= */
+@media (max-width:768px){
+  .gastos-row.header{
+    grid-template-columns:1.5fr 1fr !important;
+  }
+  .gastos-row.header>span:nth-child(n+3){
+    display:none;
+  }
+}
+
+/* =========================================================
+   FIX: limita header del ranking en móvil a 5 columnas
+   y oculta las cells extras del row
+   ========================================================= */
+@media (max-width:768px){
+  .rank-thead>span:nth-child(6),
+  .rank-thead>span:nth-child(7),
+  .rank-thead>span:nth-child(8),
+  .rank-row>*:nth-child(6),
+  .rank-row>*:nth-child(7),
+  .rank-row>*:nth-child(8){
+    display:none !important;
+  }
+}
+
+/* =========================================================
+   Prevenir scroll horizontal global
+   overflow-x:clip no rompe position:sticky (a diferencia de hidden)
+   ========================================================= */
+@media (max-width:740px){
+  html,body{overflow-x:clip;max-width:100vw}
+}
