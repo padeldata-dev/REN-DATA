@@ -1,0 +1,882 @@
+[
+  {
+    "slug": "cabra",
+    "nombre": "Cabra",
+    "ccaa": "Andalucía",
+    "provincia": "Córdoba",
+    "poblacion": 19995,
+    "cpro": "14"
+  },
+  {
+    "slug": "callosa-de-segura",
+    "nombre": "Callosa de Segura",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 19988,
+    "cpro": "03"
+  },
+  {
+    "slug": "l-eliana",
+    "nombre": "Eliana, l'",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 19839,
+    "cpro": "46"
+  },
+  {
+    "slug": "albolote",
+    "nombre": "Albolote",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 19768,
+    "cpro": "18"
+  },
+  {
+    "slug": "malgrat-de-mar",
+    "nombre": "Malgrat de Mar",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 19714,
+    "cpro": "08"
+  },
+  {
+    "slug": "amorebieta-etxano",
+    "nombre": "Amorebieta-Etxano",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 19660,
+    "cpro": "48"
+  },
+  {
+    "slug": "baranain",
+    "nombre": "Barañáin",
+    "ccaa": "Navarra",
+    "provincia": "Navarra",
+    "poblacion": 19642,
+    "cpro": "31"
+  },
+  {
+    "slug": "san-bartolome",
+    "nombre": "San Bartolomé",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 19551,
+    "cpro": "35"
+  },
+  {
+    "slug": "arahal",
+    "nombre": "Arahal",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 19546,
+    "cpro": "41"
+  },
+  {
+    "slug": "el-viso-del-alcor",
+    "nombre": "Viso del Alcor, El",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 19458,
+    "cpro": "41"
+  },
+  {
+    "slug": "lasarte-oria",
+    "nombre": "Lasarte-Oria",
+    "ccaa": "País Vasco",
+    "provincia": "Gipuzkoa",
+    "poblacion": 19435,
+    "cpro": "20"
+  },
+  {
+    "slug": "moana",
+    "nombre": "Moaña",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 19320,
+    "cpro": "36"
+  },
+  {
+    "slug": "fuente-alamo-de-murcia",
+    "nombre": "Fuente Álamo de Murcia",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 19171,
+    "cpro": "30"
+  },
+  {
+    "slug": "la-nucia",
+    "nombre": "Nucia, la",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 19121,
+    "cpro": "03"
+  },
+  {
+    "slug": "utebo",
+    "nombre": "Utebo",
+    "ccaa": "Aragón",
+    "provincia": "Zaragoza",
+    "poblacion": 19116,
+    "cpro": "50"
+  },
+  {
+    "slug": "tarrega",
+    "nombre": "Tàrrega",
+    "ccaa": "Cataluña",
+    "provincia": "Lleida",
+    "poblacion": 19057,
+    "cpro": "25"
+  },
+  {
+    "slug": "cardedeu",
+    "nombre": "Cardedeu",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 19046,
+    "cpro": "08"
+  },
+  {
+    "slug": "tordera",
+    "nombre": "Tordera",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 19039,
+    "cpro": "08"
+  },
+  {
+    "slug": "sant-celoni",
+    "nombre": "Sant Celoni",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 18977,
+    "cpro": "08"
+  },
+  {
+    "slug": "teo",
+    "nombre": "Teo",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 18968,
+    "cpro": "15"
+  },
+  {
+    "slug": "boiro",
+    "nombre": "Boiro",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 18967,
+    "cpro": "15"
+  },
+  {
+    "slug": "monforte-de-lemos",
+    "nombre": "Monforte de Lemos",
+    "ccaa": "Galicia",
+    "provincia": "Lugo",
+    "poblacion": 18933,
+    "cpro": "27"
+  },
+  {
+    "slug": "villaquilambre",
+    "nombre": "Villaquilambre",
+    "ccaa": "Castilla y León",
+    "provincia": "León",
+    "poblacion": 18905,
+    "cpro": "24"
+  },
+  {
+    "slug": "parets-del-valles",
+    "nombre": "Parets del Vallès",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 18885,
+    "cpro": "08"
+  },
+  {
+    "slug": "santa-brigida",
+    "nombre": "Santa Brígida",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 18766,
+    "cpro": "35"
+  },
+  {
+    "slug": "villalbilla",
+    "nombre": "Villalbilla",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 18687,
+    "cpro": "28"
+  },
+  {
+    "slug": "huercal-de-almeria",
+    "nombre": "Huércal de Almería",
+    "ccaa": "Andalucía",
+    "provincia": "Almería",
+    "poblacion": 18660,
+    "cpro": "04"
+  },
+  {
+    "slug": "caldes-de-montbui",
+    "nombre": "Caldes de Montbui",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 18567,
+    "cpro": "08"
+  },
+  {
+    "slug": "monzon",
+    "nombre": "Monzón",
+    "ccaa": "Aragón",
+    "provincia": "Huesca",
+    "poblacion": 18525,
+    "cpro": "22"
+  },
+  {
+    "slug": "villanueva-del-pardillo",
+    "nombre": "Villanueva del Pardillo",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 18466,
+    "cpro": "28"
+  },
+  {
+    "slug": "el-astillero",
+    "nombre": "Astillero, El",
+    "ccaa": "Cantabria",
+    "provincia": "Cantabria",
+    "poblacion": 18448,
+    "cpro": "39"
+  },
+  {
+    "slug": "baena",
+    "nombre": "Baena",
+    "ccaa": "Andalucía",
+    "provincia": "Córdoba",
+    "poblacion": 18386,
+    "cpro": "14"
+  },
+  {
+    "slug": "torredembarra",
+    "nombre": "Torredembarra",
+    "ccaa": "Cataluña",
+    "provincia": "Tarragona",
+    "poblacion": 18237,
+    "cpro": "43"
+  },
+  {
+    "slug": "nigran",
+    "nombre": "Nigrán",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 18174,
+    "cpro": "36"
+  },
+  {
+    "slug": "manilva",
+    "nombre": "Manilva",
+    "ccaa": "Andalucía",
+    "provincia": "Málaga",
+    "poblacion": 18165,
+    "cpro": "29"
+  },
+  {
+    "slug": "mungia",
+    "nombre": "Mungia",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 18129,
+    "cpro": "48"
+  },
+  {
+    "slug": "lora-del-rio",
+    "nombre": "Lora del Río",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 18122,
+    "cpro": "41"
+  },
+  {
+    "slug": "laudio",
+    "nombre": "Laudio",
+    "ccaa": "País Vasco",
+    "provincia": "Araba/Álava",
+    "poblacion": 18077,
+    "cpro": "01"
+  },
+  {
+    "slug": "puerto-lumbreras",
+    "nombre": "Puerto Lumbreras",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 18006,
+    "cpro": "30"
+  },
+  {
+    "slug": "el-rosario",
+    "nombre": "Rosario, El",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 17958,
+    "cpro": "38"
+  },
+  {
+    "slug": "chiva",
+    "nombre": "Chiva",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 17951,
+    "cpro": "46"
+  },
+  {
+    "slug": "mula",
+    "nombre": "Mula",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 17937,
+    "cpro": "30"
+  },
+  {
+    "slug": "piera",
+    "nombre": "Piera",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17880,
+    "cpro": "08"
+  },
+  {
+    "slug": "balaguer",
+    "nombre": "Balaguer",
+    "ccaa": "Cataluña",
+    "provincia": "Lleida",
+    "poblacion": 17729,
+    "cpro": "25"
+  },
+  {
+    "slug": "manzanares",
+    "nombre": "Manzanares",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Ciudad Real",
+    "poblacion": 17728,
+    "cpro": "13"
+  },
+  {
+    "slug": "daimiel",
+    "nombre": "Daimiel",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Ciudad Real",
+    "poblacion": 17722,
+    "cpro": "13"
+  },
+  {
+    "slug": "cubelles",
+    "nombre": "Cubelles",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17673,
+    "cpro": "08"
+  },
+  {
+    "slug": "rojales",
+    "nombre": "Rojales",
+    "ccaa": "C. Valenciana",
+    "provincia": "Alicante/Alacant",
+    "poblacion": 17652,
+    "cpro": "03"
+  },
+  {
+    "slug": "massamagrell",
+    "nombre": "Massamagrell",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 17566,
+    "cpro": "46"
+  },
+  {
+    "slug": "guadarrama",
+    "nombre": "Guadarrama",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 17547,
+    "cpro": "28"
+  },
+  {
+    "slug": "berga",
+    "nombre": "Berga",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17473,
+    "cpro": "08"
+  },
+  {
+    "slug": "canovelles",
+    "nombre": "Canovelles",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17473,
+    "cpro": "08"
+  },
+  {
+    "slug": "tui",
+    "nombre": "Tui",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 17468,
+    "cpro": "36"
+  },
+  {
+    "slug": "poio",
+    "nombre": "Poio",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 17434,
+    "cpro": "36"
+  },
+  {
+    "slug": "la-garriga",
+    "nombre": "Garriga, La",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17426,
+    "cpro": "08"
+  },
+  {
+    "slug": "sada",
+    "nombre": "Sada",
+    "ccaa": "Galicia",
+    "provincia": "Coruña, A",
+    "poblacion": 17421,
+    "cpro": "15"
+  },
+  {
+    "slug": "albal",
+    "nombre": "Albal",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 17365,
+    "cpro": "46"
+  },
+  {
+    "slug": "benavente",
+    "nombre": "Benavente",
+    "ccaa": "Castilla y León",
+    "provincia": "Zamora",
+    "poblacion": 17309,
+    "cpro": "49"
+  },
+  {
+    "slug": "el-escorial",
+    "nombre": "Escorial, El",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 17171,
+    "cpro": "28"
+  },
+  {
+    "slug": "ejea-de-los-caballeros",
+    "nombre": "Ejea de los Caballeros",
+    "ccaa": "Aragón",
+    "provincia": "Zaragoza",
+    "poblacion": 17129,
+    "cpro": "50"
+  },
+  {
+    "slug": "bailen",
+    "nombre": "Bailén",
+    "ccaa": "Andalucía",
+    "provincia": "Jaén",
+    "poblacion": 17119,
+    "cpro": "23"
+  },
+  {
+    "slug": "montornes-del-valles",
+    "nombre": "Montornès del Vallès",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17102,
+    "cpro": "08"
+  },
+  {
+    "slug": "castilleja-de-la-cuesta",
+    "nombre": "Castilleja de la Cuesta",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 17074,
+    "cpro": "41"
+  },
+  {
+    "slug": "arenys-de-mar",
+    "nombre": "Arenys de Mar",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 17042,
+    "cpro": "08"
+  },
+  {
+    "slug": "pozoblanco",
+    "nombre": "Pozoblanco",
+    "ccaa": "Andalucía",
+    "provincia": "Córdoba",
+    "poblacion": 16931,
+    "cpro": "14"
+  },
+  {
+    "slug": "churriana-de-la-vega",
+    "nombre": "Churriana de la Vega",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 16878,
+    "cpro": "18"
+  },
+  {
+    "slug": "carlet",
+    "nombre": "Carlet",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 16857,
+    "cpro": "46"
+  },
+  {
+    "slug": "tuineje",
+    "nombre": "Tuineje",
+    "ccaa": "Canarias",
+    "provincia": "Palmas, Las",
+    "poblacion": 16834,
+    "cpro": "35"
+  },
+  {
+    "slug": "la-algaba",
+    "nombre": "Algaba, La",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 16803,
+    "cpro": "41"
+  },
+  {
+    "slug": "tarancon",
+    "nombre": "Tarancón",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Cuenca",
+    "poblacion": 16748,
+    "cpro": "16"
+  },
+  {
+    "slug": "benetusser",
+    "nombre": "Benetússer",
+    "ccaa": "C. Valenciana",
+    "provincia": "Valencia/València",
+    "poblacion": 16734,
+    "cpro": "46"
+  },
+  {
+    "slug": "ubrique",
+    "nombre": "Ubrique",
+    "ccaa": "Andalucía",
+    "provincia": "Cádiz",
+    "poblacion": 16615,
+    "cpro": "11"
+  },
+  {
+    "slug": "llica-d-amunt",
+    "nombre": "Lliçà d'Amunt",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 16540,
+    "cpro": "08"
+  },
+  {
+    "slug": "zizur-mayor",
+    "nombre": "Zizur Mayor",
+    "ccaa": "Navarra",
+    "provincia": "Navarra",
+    "poblacion": 16510,
+    "cpro": "31"
+  },
+  {
+    "slug": "espartinas",
+    "nombre": "Espartinas",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 16479,
+    "cpro": "41"
+  },
+  {
+    "slug": "santomera",
+    "nombre": "Santomera",
+    "ccaa": "R. de Murcia",
+    "provincia": "Murcia",
+    "poblacion": 16443,
+    "cpro": "30"
+  },
+  {
+    "slug": "las-cabezas-de-san-juan",
+    "nombre": "Cabezas de San Juan, Las",
+    "ccaa": "Andalucía",
+    "provincia": "Sevilla",
+    "poblacion": 16388,
+    "cpro": "41"
+  },
+  {
+    "slug": "cunit",
+    "nombre": "Cunit",
+    "ccaa": "Cataluña",
+    "provincia": "Tarragona",
+    "poblacion": 16385,
+    "cpro": "43"
+  },
+  {
+    "slug": "punta-umbria",
+    "nombre": "Punta Umbría",
+    "ccaa": "Andalucía",
+    "provincia": "Huelva",
+    "poblacion": 16281,
+    "cpro": "21"
+  },
+  {
+    "slug": "vallirana",
+    "nombre": "Vallirana",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 16245,
+    "cpro": "08"
+  },
+  {
+    "slug": "la-rapita",
+    "nombre": "Ràpita, La",
+    "ccaa": "Cataluña",
+    "provincia": "Tarragona",
+    "poblacion": 16119,
+    "cpro": "43"
+  },
+  {
+    "slug": "corbera-de-llobregat",
+    "nombre": "Corbera de Llobregat",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 16010,
+    "cpro": "08"
+  },
+  {
+    "slug": "miguelturra",
+    "nombre": "Miguelturra",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Ciudad Real",
+    "poblacion": 15924,
+    "cpro": "13"
+  },
+  {
+    "slug": "meco",
+    "nombre": "Meco",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 15922,
+    "cpro": "28"
+  },
+  {
+    "slug": "pasaia",
+    "nombre": "Pasaia",
+    "ccaa": "País Vasco",
+    "provincia": "Gipuzkoa",
+    "poblacion": 15820,
+    "cpro": "20"
+  },
+  {
+    "slug": "corvera-de-asturias",
+    "nombre": "Corvera de Asturias",
+    "ccaa": "Asturias",
+    "provincia": "Asturias",
+    "poblacion": 15785,
+    "cpro": "33"
+  },
+  {
+    "slug": "mollerussa",
+    "nombre": "Mollerussa",
+    "ccaa": "Cataluña",
+    "provincia": "Lleida",
+    "poblacion": 15763,
+    "cpro": "25"
+  },
+  {
+    "slug": "alpedrete",
+    "nombre": "Alpedrete",
+    "ccaa": "C. de Madrid",
+    "provincia": "Madrid",
+    "poblacion": 15686,
+    "cpro": "28"
+  },
+  {
+    "slug": "la-roda",
+    "nombre": "Roda, La",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Albacete",
+    "poblacion": 15643,
+    "cpro": "02"
+  },
+  {
+    "slug": "palau-solita-i-plegamans",
+    "nombre": "Palau-solità i Plegamans",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 15614,
+    "cpro": "08"
+  },
+  {
+    "slug": "fraga",
+    "nombre": "Fraga",
+    "ccaa": "Aragón",
+    "provincia": "Huesca",
+    "poblacion": 15576,
+    "cpro": "22"
+  },
+  {
+    "slug": "ocana",
+    "nombre": "Ocaña",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Toledo",
+    "poblacion": 15560,
+    "cpro": "45"
+  },
+  {
+    "slug": "san-martin-del-rey-aurelio",
+    "nombre": "San Martín del Rey Aurelio",
+    "ccaa": "Asturias",
+    "provincia": "Asturias",
+    "poblacion": 15531,
+    "cpro": "33"
+  },
+  {
+    "slug": "cuevas-del-almanzora",
+    "nombre": "Cuevas del Almanzora",
+    "ccaa": "Andalucía",
+    "provincia": "Almería",
+    "poblacion": 15526,
+    "cpro": "04"
+  },
+  {
+    "slug": "ermua",
+    "nombre": "Ermua",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 15516,
+    "cpro": "48"
+  },
+  {
+    "slug": "santa-fe",
+    "nombre": "Santa Fe",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 15494,
+    "cpro": "18"
+  },
+  {
+    "slug": "santa-ursula",
+    "nombre": "Santa Úrsula",
+    "ccaa": "Canarias",
+    "provincia": "Santa Cruz de Tenerife",
+    "poblacion": 15429,
+    "cpro": "38"
+  },
+  {
+    "slug": "cuarte-de-huerva",
+    "nombre": "Cuarte de Huerva",
+    "ccaa": "Aragón",
+    "provincia": "Zaragoza",
+    "poblacion": 15408,
+    "cpro": "50"
+  },
+  {
+    "slug": "villaviciosa",
+    "nombre": "Villaviciosa",
+    "ccaa": "Asturias",
+    "provincia": "Asturias",
+    "poblacion": 15379,
+    "cpro": "33"
+  },
+  {
+    "slug": "torello",
+    "nombre": "Torelló",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 15334,
+    "cpro": "08"
+  },
+  {
+    "slug": "azpeitia",
+    "nombre": "Azpeitia",
+    "ccaa": "País Vasco",
+    "provincia": "Gipuzkoa",
+    "poblacion": 15301,
+    "cpro": "20"
+  },
+  {
+    "slug": "la-solana",
+    "nombre": "Solana, La",
+    "ccaa": "Castilla-La Mancha",
+    "provincia": "Ciudad Real",
+    "poblacion": 15242,
+    "cpro": "13"
+  },
+  {
+    "slug": "ogijares",
+    "nombre": "Ogíjares",
+    "ccaa": "Andalucía",
+    "provincia": "Granada",
+    "poblacion": 15239,
+    "cpro": "18"
+  },
+  {
+    "slug": "mos",
+    "nombre": "Mos",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 15233,
+    "cpro": "36"
+  },
+  {
+    "slug": "montijo",
+    "nombre": "Montijo",
+    "ccaa": "Extremadura",
+    "provincia": "Badajoz",
+    "poblacion": 15198,
+    "cpro": "06"
+  },
+  {
+    "slug": "canet-de-mar",
+    "nombre": "Canet de Mar",
+    "ccaa": "Cataluña",
+    "provincia": "Barcelona",
+    "poblacion": 15198,
+    "cpro": "08"
+  },
+  {
+    "slug": "arnedo",
+    "nombre": "Arnedo",
+    "ccaa": "La Rioja",
+    "provincia": "Rioja, La",
+    "poblacion": 15140,
+    "cpro": "26"
+  },
+  {
+    "slug": "viveiro",
+    "nombre": "Viveiro",
+    "ccaa": "Galicia",
+    "provincia": "Lugo",
+    "poblacion": 15120,
+    "cpro": "27"
+  },
+  {
+    "slug": "gondomar",
+    "nombre": "Gondomar",
+    "ccaa": "Galicia",
+    "provincia": "Pontevedra",
+    "poblacion": 15066,
+    "cpro": "36"
+  },
+  {
+    "slug": "sopela",
+    "nombre": "Sopela",
+    "ccaa": "País Vasco",
+    "provincia": "Bizkaia",
+    "poblacion": 15048,
+    "cpro": "48"
+  }
+]
