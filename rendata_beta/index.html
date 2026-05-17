@@ -1017,8 +1017,17 @@ initMap();
 /* Hero: rotación diaria de imagen y nombre de ciudad */
 (function(){
   const ciudades = [
-    {slug:'ronda-hero', nombre:'Ronda'}
-    // Añadir aquí más fotos panorámicas conforme estén disponibles
+    {slug:'ronda-hero', nombre:'Ronda'},
+    {slug:'toledo-hero', nombre:'Toledo'},
+    {slug:'segovia-hero', nombre:'Segovia'},
+    {slug:'sevilla-hero', nombre:'Sevilla'},
+    {slug:'granada-hero', nombre:'Granada'},
+    {slug:'san-sebastian-hero', nombre:'San Sebastián'},
+    {slug:'bilbao-hero', nombre:'Bilbao'},
+    {slug:'barcelona-hero', nombre:'Barcelona'},
+    {slug:'valencia-hero', nombre:'Valencia'},
+    {slug:'salamanca-hero', nombre:'Salamanca'},
+    {slug:'cordoba-hero', nombre:'Córdoba'}
   ];
   const idx = Math.floor(Date.now()/86400000) % ciudades.length;
   const c = ciudades[idx];
