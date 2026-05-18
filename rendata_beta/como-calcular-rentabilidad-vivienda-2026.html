@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Guía detallada: ROI bruto, ROI neto, IRR, cash-flow, descuento por gastos (IBI, comunidad, mantenimiento, vacancia, impuestos). Plantilla y casos prácticos.">
+<title>Cómo calcular la rentabilidad de una vivienda 2026 — Guía metodológica completa | Ren Data</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ren Data">
+<meta property="og:title" content="Cómo calcular la rentabilidad de una vivienda 2026 — Guía metodológica completa">
+<meta property="og:description" content="Guía detallada: ROI bruto, ROI neto, IRR, cash-flow, descuento por gastos (IBI, comunidad, mantenimiento, vacancia, impuestos). Plantilla y casos prácticos.">
+<meta property="og:url" content="https://rendata.es/como-calcular-rentabilidad-vivienda-2026.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo calcular la rentabilidad de una vivienda 2026 — Guía metodológica completa">
+<meta name="twitter:description" content="Guía detallada: ROI bruto, ROI neto, IRR, cash-flow, descuento por gastos (IBI, comunidad, mantenimiento, vacancia, impuestos). Plantilla y casos prácticos.">
+<link rel="canonical" href="https://rendata.es/como-calcular-rentabilidad-vivienda-2026.html">
+<link rel="stylesheet" href="/css/fonts.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Cómo calcular la rentabilidad de una vivienda 2026 — Guía metodológica completa", "description": "Guía detallada: ROI bruto, ROI neto, IRR, cash-flow, descuento por gastos (IBI, comunidad, mantenimiento, vacancia, impuestos). Plantilla y casos prácticos.", "datePublished": "2026-05-18", "dateModified": "2026-05-18", "author": {"@type": "Organization", "name": "Ren Data", "url": "https://rendata.es/"}, "publisher": {"@type": "Organization", "name": "Ren Data", "url": "https://rendata.es/", "logo": {"@type": "ImageObject", "url": "https://rendata.es/favicon.svg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://rendata.es/como-calcular-rentabilidad-vivienda-2026.html"}, "inLanguage": "es-ES", "keywords": ["rentabilidad inmobiliaria", "invertir vivienda España", "ROI alquiler"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rendata.es/"}, {"@type": "ListItem", "position": 2, "name": "Análisis", "item": "https://rendata.es/analisis.html"}, {"@type": "ListItem", "position": 3, "name": "Cómo calcular rentabilidad", "item": "https://rendata.es/como-calcular-rentabilidad-vivienda-2026.html"}]}</script>
+<script src="/js/nav-dropdown.js" defer></script>
+<link rel="stylesheet" href="/css/top10.css">
+<style>
+.bc{max-width:880px;margin:0 auto;padding:.9rem 2rem 0;font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem}
+.bc a{color:var(--muted);text-decoration:none;font-weight:500}
+.bc a:hover{color:var(--blue);text-decoration:underline}
+.bc-sep{color:#cbd5e1}
+.bc-cur{color:var(--text);font-weight:600}
+.pro-con{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0 2rem}
+.pc-col{padding:1.25rem 1.4rem;border-radius:var(--r);background:var(--white);border:1px solid var(--border);box-shadow:var(--sh)}
+.pc-col.pro{border-left:4px solid var(--green)}
+.pc-col.con{border-left:4px solid #dc2626}
+.pc-col h3{font-size:1.05rem;font-weight:800;color:var(--text);margin:0 0 .8rem;border:none;padding:0;display:block;letter-spacing:-.02em}
+.pc-col.pro h3{color:var(--green)}
+.pc-col.con h3{color:#dc2626}
+.pc-col ul{list-style:none;padding:0;margin:0}
+.pc-col li{font-size:.88rem;padding:.45rem 0;color:var(--text2);line-height:1.55;border-bottom:1px solid var(--border)}
+.pc-col li:last-child{border-bottom:none}
+.pc-col li:before{margin-right:.4rem;font-weight:700}
+.pc-col.pro li:before{content:"✓";color:var(--green)}
+.pc-col.con li:before{content:"⚠";color:#dc2626}
+.tax-box{background:#fef3c7;border:1px solid #fcd34d;border-radius:var(--r);padding:1.4rem 1.6rem;margin:1.5rem 0;font-size:.92rem;color:#78350f;line-height:1.7}
+.tax-box h3{font-size:1.05rem;font-weight:800;color:#78350f;margin:0 0 .6rem;border:none;padding:0;display:block;letter-spacing:-.02em}
+@media(max-width:740px){.pro-con{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="/css/nav.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M57323B51"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0M57323B51');</script>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">
+    <svg width="22" height="22" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <div class="logo-wm"><span style="color:var(--text);font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:var(--blue);font-weight:800;letter-spacing:-.03em"> Data</span></div>
+  </a>
+  <nav>
+    <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="/">Ciudades</a>
+    <a href="/ranking.html">Ranking</a>
+    <a href="/analisis.html">Análisis</a>
+    <a href="/comparador.html">Comparador</a>
+    <a href="/glosario.html">Glosario</a>
+    <a href="/guia-inversor.html">Guía</a>
+    <a href="/sobre.html">Sobre</a>
+  </nav>
+</header>
+
+<nav class="bc" aria-label="Breadcrumb">
+  <a href="/">Inicio</a>
+  <span class="bc-sep">›</span>
+  <a href="analisis.html">Análisis</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-cur">Cómo calcular rentabilidad 2026</span>
+</nav>
+
+<section class="art-hero">
+  <div class="art-hero-inner">
+    <div class="art-eyebrow"><span class="live-dot"></span>Análisis · Datos Q1 2026</div>
+    <h1>Cómo calcular la <span class="ac">rentabilidad</span> de una vivienda 2026</h1>
+    <div class="art-meta">
+      <span>📅 Publicado el 18 de mayo de 2026</span>
+      <span>📊 Fuente: Idealista, Ministerio de Vivienda</span>
+      <span>🔄 Actualizado mensualmente</span>
+    </div>
+    <p class="art-lead">La rentabilidad inmobiliaria tiene múltiples métricas que miden cosas distintas. Esta guía explica las 5 fórmulas que todo inversor debe conocer: ROI bruto, ROI neto, cash-on-cash return, cap rate y IRR. Con plantilla, ejemplos numéricos y los errores más comunes que llevan a sobreestimar el rendimiento.</p>
+  </div>
+</section>
+
+<article class="art">
+
+  <div class="art-toc">
+    <div class="art-toc-title">Índice</div>
+    <ul>
+      <li><a href="#bruto">ROI bruto (yield)</a></li>
+      <li><a href="#neto">ROI neto</a></li>
+      <li><a href="#cash">Cash-on-cash return</a></li>
+      <li><a href="#cap">Cap rate</a></li>
+      <li><a href="#irr">TIR / IRR a 10 años</a></li>
+      <li><a href="#gastos">Lista completa de gastos a descontar</a></li>
+      <li><a href="#ejemplo">Ejemplo numérico paso a paso</a></li>
+      <li><a href="#errores">Errores comunes</a></li>
+    </ul>
+  </div>
+
+  <h2 id="bruto">1. ROI bruto (yield bruto)</h2>
+  <p>La métrica más simple y la que Ren Data publica. <strong>ROI bruto = Alquiler anual / Precio compra × 100</strong>. Sin descontar nada.</p>
+  <p>Ejemplo: vivienda de 200.000€ que se alquila a 1.000€/mes (12.000€/año). ROI bruto = 12.000 / 200.000 = 6%.</p>
+  <p><strong>Cuándo usar:</strong> comparar plazas rápidamente. Es el "headline" del análisis. <strong>Cuándo NO usar:</strong> tomar la decisión final — siempre confirma con ROI neto.</p>
+
+  <h2 id="neto">2. ROI neto</h2>
+  <p>El bruto descontando todos los gastos recurrentes anuales. <strong>ROI neto = (Alquiler anual − Gastos anuales) / Precio compra × 100</strong>.</p>
+  <p>Mismo ejemplo (200.000€ y 1.000€/mes) con gastos típicos:</p>
+  <ul style="margin:.5rem 0 1rem 1.5rem">
+    <li>IBI anual: 400€</li>
+    <li>Comunidad: 60€/mes × 12 = 720€</li>
+    <li>Seguro: 250€</li>
+    <li>Mantenimiento (provisión 1%): 2.000€</li>
+    <li>Vacancia (1 mes de cada 12): 1.000€</li>
+    <li>Gestión inmobiliaria (8% si delegas): 960€</li>
+    <li>IRPF (suponiendo 24% marginal con reducción 60%): 1.152€</li>
+  </ul>
+  <p>Gastos totales: 6.482€. ROI neto = (12.000 − 6.482) / 200.000 = <strong>2,76%</strong> — menos de la mitad del bruto.</p>
+
+  <h2 id="cash">3. Cash-on-cash return</h2>
+  <p>Mide la rentabilidad sobre el <strong>capital realmente desembolsado</strong>, no sobre el precio. Útil cuando hay hipoteca.</p>
+  <p><strong>Cash-on-cash = Cash-flow anual / Entrada + gastos compra × 100</strong></p>
+  <p>Si financias el 80% (160.000€ con hipoteca al 3,5% a 25 años = 800€/mes cuota), el capital desembolsado es: 40.000€ entrada + 16.000€ gastos = 56.000€. Cash-flow anual ≈ Alquiler (12.000€) − Cuota anual (9.600€) − Gastos no hipotecarios (5.330€) − IRPF (sobre rendimientos netos, ej. 800€) = -3.730€ (negativo).</p>
+  <p>Cash-on-cash = -6,6%. Aquí la financiación destruye valor en el corto plazo — el inversor pone dinero cada mes esperando revalorización.</p>
+
+  <h2 id="cap">4. Cap rate (tasa de capitalización)</h2>
+  <p>Métrica usada en mercados profesionales. <strong>Cap rate = NOI / Valor mercado × 100</strong>, donde NOI = Net Operating Income (alquiler − gastos operativos sin contar hipoteca ni amortizaciones).</p>
+  <p>Para nuestro ejemplo: NOI = 12.000 − (400 + 720 + 250 + 2.000 + 1.000 + 960) = 6.670€. Cap rate = 6.670 / 200.000 = 3,3%.</p>
+  <p>Útil para comparar inmuebles a valor de mercado actual sin distorsión de la fecha de compra.</p>
+
+  <h2 id="irr">5. TIR / IRR a 10 años</h2>
+  <p>La <strong>Tasa Interna de Retorno</strong> es la métrica más completa: incluye cash-flow anual + plusvalía al vender. Se calcula con función IRR de Excel sobre la serie de flujos.</p>
+  <p>Año 0: -56.000€ (entrada + gastos). Años 1-10: cash-flow anual neto. Año 10: cash-flow anual + ingreso por venta menos cuota hipoteca pendiente.</p>
+  <p>Con revalorización del 5% anual, al año 10 la vivienda vale 325.779€. Si la vendes pagando hipoteca pendiente de 120.000€ + gastos venta 25.000€, recibes 180.779€. IRR típica en estos parámetros: 8-12%.</p>
+
+  <h2 id="gastos">Lista completa de gastos a descontar</h2>
+  <div class="tax-box">
+    <h3>💸 Gastos típicos del inversor inmobiliario</h3>
+    <p><strong>Gastos de compra (one-off):</strong> ITP (6-11% según CCAA), notaría (0,5%), registro (0,3%), gestoría (0,3%), tasación (300-500€). Total: 7-12% del precio.</p>
+    <p><strong>Gastos recurrentes anuales (sobre vivienda):</strong> IBI (0,3-0,8% del valor catastral), comunidad (40-80€/mes según finca), seguro hogar (200-400€), tasa basuras (50-150€).</p>
+    <p><strong>Gastos operativos:</strong> mantenimiento (provisión 1% del valor al año), vacancia (provisión 1 mes de cada 12), gestión inmobiliaria (8-10% del alquiler si delegas).</p>
+    <p><strong>Gastos fiscales:</strong> IRPF sobre rendimientos netos (marginal × renta − reducción 60% si vivienda habitual). Si optas SL: IS al 25%.</p>
+    <p><strong>Gastos de venta (one-off al final):</strong> plusvalía municipal, IRPF sobre ganancia patrimonial (19-23%), agencia (3-5%), notaría/registro (0,8%).</p>
+  </div>
+
+  <h2 id="ejemplo">Ejemplo numérico paso a paso</h2>
+  <p><strong>Caso:</strong> Piso de 100m² en Burgos comprado en 2026 por 175.000€. Alquilado a 770€/mes (ROI bruto 5,3% según DATA Ren Data). Financiación 80% al 3,5% TIN a 25 años. Horizonte 10 años con revalorización 5% anual.</p>
+  <p><strong>Año 0 — Compra</strong>: 35.000€ entrada + 17.500€ ITP (Castilla y León 8% sobre 175k = 14.000€) + 3.500€ notaría/registro/gestoría = <strong>desembolso 56.000€</strong>.</p>
+  <p><strong>Año 1 — Ingresos y gastos operativos</strong>: 9.240€ alquileres − cuota hipoteca (700€×12=8.400€) − IBI (450€) − comunidad (60×12=720€) − seguro (300€) − provisión 1% mant (1.750€) − provisión vacancia (770€) − IRPF (24% × 5.020€ × 40% por reducción ≈ 482€) = <strong>cash-flow año 1: -3.562€</strong>.</p>
+  <p><strong>Acumulado años 1-10</strong>: vivienda revalorizada a 285.000€. Hipoteca pendiente ~120.000€. Si vende: ingresa 285k − 120k − gastos venta (5%=14.250€) − IRPF ganancia patrimonial = neto venta ~135.000€. Sumado a cash-flow acumulado años 1-10 (~-15.000€): IRR ~12% anualizada.</p>
+
+  <h2 id="errores">Errores comunes</h2>
+  <p><strong>Error 1: Pensar que el ROI bruto es el "real".</strong> El bruto sobreestima 2-2,5 veces. Siempre confirma con neto.</p>
+  <p><strong>Error 2: Olvidar la provisión por mantenimiento.</strong> Sin provisión 1% anual, en 10 años llega la sorpresa de 20.000€ en reformas.</p>
+  <p><strong>Error 3: Confundir revalorización con yield.</strong> La revalorización no es cash-flow — solo se realiza al vender.</p>
+  <p><strong>Error 4: No considerar coste de oportunidad.</strong> 50.000€ en S&P500 al 8% rinde 4.000€/año pasivos. Compara siempre.</p>
+  <p><strong>Error 5: Estimar alquiler optimista.</strong> Usa el percentil 25-50 del mercado, no el percentil 75.</p>
+
+  <p>Para aplicar la metodología a tu propia inversión, usa el <a href="comparador.html">comparador</a> con datos reales del DATA Ren Data o consulta cualquier <a href="ranking.html">ficha de ciudad</a> donde encontrarás ROI bruto y métricas adicionales.</p>
+
+  <div class="art-cta">
+    <h3>¿Listo para encontrar tu próxima inversión?</h3>
+    <p>Compara hasta 4 ciudades simultáneamente o explora el ranking completo de 587 plazas analizadas.</p>
+    <a href="comparador.html">Abrir comparador →</a>
+  </div>
+</article>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="/" class="logo" style="margin-bottom:.6rem;display:inline-flex">
+        <svg width="22" height="22" viewBox="0 0 34 34" fill="none"><path d="M17 2.5C12.3 2.5 8.5 6.3 8.5 11c0 3.2 1.7 6.7 3.8 9.8C14 23.4 15.7 25.8 17 27.5c1.3-1.7 3-4.1 4.7-6.7 2.1-3.1 3.8-6.6 3.8-9.8 0-4.7-3.8-8.5-8.5-8.5z" fill="#1a56db"/><polyline points="12,13 14.2,10.5 16.4,12.3 19.2,8.8 22,10.2" stroke="white" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div class="logo-wm"><span style="color:var(--text);font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:var(--blue);font-weight:800;letter-spacing:-.03em"> Data</span></div>
+      </a>
+      <p>Análisis de rentabilidad inmobiliaria gratuito para 587 ciudades de España. Datos Q1 2026.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Análisis</h4>
+      <a href="ranking.html">Ranking completo</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="comparador.html">Comparador</a>
+      <a href="guia-inversor.html">Guía del inversor</a>
+    </div>
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <a href="glosario.html">Glosario</a>
+      <a href="sobre.html">Sobre Ren Data</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 rendata.es · Fuente: Idealista Q1 2026 · Ministerio de Vivienda</div>
+</footer>
+
+</body>
+</html>
