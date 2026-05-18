@@ -1,22 +1,43 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contacto | Ren Data</title>
+<title>Contacto — Ren Data</title>
+<meta name="description" content="Contacto de Ren Data: dudas sobre datos de una ciudad, sugerencias de ciudades a añadir o propuestas de colaboración para inmobiliarias. Respondemos en menos de 48 horas.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="canonical" href="https://rendata.es/contacto.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contacto — Ren Data">
+<meta property="og:description" content="Dudas sobre datos, sugerencias de ciudades o colaboraciones para inmobiliarias.">
+<meta property="og:url" content="https://rendata.es/contacto.html">
 <link rel="stylesheet" href="/css/fonts.css">
-
 <link rel="stylesheet" href="/css/contacto.css">
 <link rel="stylesheet" href="/css/nav.css">
 <script src="/js/nav-dropdown.js" defer></script>
-<!-- Google tag (gtag.js) -->
+<style>
+.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0 0 2rem}
+.choice-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem 1.4rem;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;text-align:left}
+.choice-card:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,.12)}
+.choice-card.active{border-color:var(--blue);background:#f0f6ff;box-shadow:0 4px 12px rgba(37,99,235,.15)}
+.choice-icon{font-size:1.8rem;margin-bottom:.6rem;line-height:1}
+.choice-title{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.4rem;letter-spacing:-.01em}
+.choice-desc{font-size:.78rem;color:var(--muted);line-height:1.55;flex:1}
+.choice-tag{display:inline-block;margin-top:.6rem;font-size:.68rem;color:var(--blue);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start}
+.contact-form{background:#fff;border:1px solid var(--border);border-radius:14px;padding:2rem;box-shadow:0 1px 3px rgba(14,24,40,.08)}
+.form-context{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:.9rem 1.1rem;margin-bottom:1.4rem;font-size:.82rem;color:#1e40af;line-height:1.55}
+.form-context strong{color:#1e3a8a}
+.faqs{margin:3rem 0 1rem}
+.faqs h2{font-size:1.15rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:.6rem;overflow:hidden}
+.faq-item summary{padding:.95rem 1.2rem;font-size:.88rem;font-weight:600;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;color:var(--text)}
+.faq-item summary::after{content:'+';font-size:1.2rem;color:var(--blue);font-weight:300;transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{background:#f8fafc}
+.faq-body{padding:0 1.2rem 1rem;font-size:.85rem;color:var(--text2,#374151);line-height:1.65}
+@media(max-width:740px){.choice-grid{grid-template-columns:1fr}}
+</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0M57323B51"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0M57323B51');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0M57323B51');</script>
 </head><body>
 <header>
   <a href="index.html" class="logo"><div style="font-size:1.1rem;line-height:1"><span style="color:#fff;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#60a5fa;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
@@ -24,128 +45,132 @@
     <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <div class="mob-nav-links">
-      <a href="/">🏠 Ciudades</a>
-      <a href="/ranking.html">📊 Ranking</a>
-      <a href="/analisis.html">📈 Análisis</a>
-      <a href="/comparador.html">⚖️ Comparar</a>
-      <a href="/glosario.html">📖 Glosario</a>
-      <a href="/guia-inversor.html">🎯 Guía inversor</a>
-      <a href="/sobre.html">ℹ️ Sobre</a>
-      <details class="mob-nav-details">
-        <summary>🗺️ Comunidades</summary>
-        <a href="/ccaa-andalucia.html"><img src="/img/flags/andalucia.png" class="nav-flag" alt="" loading="lazy"> Andalucía</a>
-        <a href="/ccaa-aragon.html"><img src="/img/flags/aragon.png" class="nav-flag" alt="" loading="lazy"> Aragón</a>
-        <a href="/ccaa-asturias.html"><img src="/img/flags/asturias.png" class="nav-flag" alt="" loading="lazy"> Asturias</a>
-        <a href="/ccaa-baleares.html"><img src="/img/flags/baleares.png" class="nav-flag" alt="" loading="lazy"> Baleares</a>
-        <a href="/ccaa-canarias.html"><img src="/img/flags/canarias.png" class="nav-flag" alt="" loading="lazy"> Canarias</a>
-        <a href="/ccaa-cantabria.html"><img src="/img/flags/cantabria.png" class="nav-flag" alt="" loading="lazy"> Cantabria</a>
-        <a href="/ccaa-castilla-la-mancha.html"><img src="/img/flags/castilla-la-mancha.png" class="nav-flag" alt="" loading="lazy"> Castilla-La Mancha</a>
-        <a href="/ccaa-castilla-y-leon.html"><img src="/img/flags/castilla-y-leon.png" class="nav-flag" alt="" loading="lazy"> Castilla y León</a>
-        <a href="/ccaa-cataluna.html"><img src="/img/flags/cataluna.png" class="nav-flag" alt="" loading="lazy"> Cataluña</a>
-        <a href="/ccaa-comunitat-valenciana.html"><img src="/img/flags/comunitat-valenciana.png" class="nav-flag" alt="" loading="lazy"> C. Valenciana</a>
-        <a href="/ccaa-extremadura.html"><img src="/img/flags/extremadura.png" class="nav-flag" alt="" loading="lazy"> Extremadura</a>
-        <a href="/ccaa-galicia.html"><img src="/img/flags/galicia.png" class="nav-flag" alt="" loading="lazy"> Galicia</a>
-        <a href="/ccaa-la-rioja.html"><img src="/img/flags/la-rioja.png" class="nav-flag" alt="" loading="lazy"> La Rioja</a>
-        <a href="/ccaa-madrid.html"><img src="/img/flags/madrid.png" class="nav-flag" alt="" loading="lazy"> Madrid</a>
-        <a href="/ccaa-murcia.html"><img src="/img/flags/murcia.png" class="nav-flag" alt="" loading="lazy"> Murcia</a>
-        <a href="/ccaa-navarra.html"><img src="/img/flags/navarra.png" class="nav-flag" alt="" loading="lazy"> Navarra</a>
-        <a href="/ccaa-pais-vasco.html"><img src="/img/flags/pais-vasco.png" class="nav-flag" alt="" loading="lazy"> País Vasco</a>
-      </details>
-    </div>
     <a href="/">Ciudades</a>
     <a href="/ranking.html">Ranking</a>
     <a href="/analisis.html">Análisis</a>
-    <div class="nav-dropdown">
-      <button class="nav-drop-btn" type="button" aria-expanded="false">Comunidades ▾</button>
-      <div class="nav-drop-menu">
-        <a href="/ccaa-andalucia.html"><img src="/img/flags/andalucia.png" class="nav-flag" alt="" loading="lazy"> Andalucía</a>
-        <a href="/ccaa-madrid.html"><img src="/img/flags/madrid.png" class="nav-flag" alt="" loading="lazy"> Madrid</a>
-        <a href="/ccaa-cataluna.html"><img src="/img/flags/cataluna.png" class="nav-flag" alt="" loading="lazy"> Cataluña</a>
-        <a href="/ccaa-comunitat-valenciana.html"><img src="/img/flags/comunitat-valenciana.png" class="nav-flag" alt="" loading="lazy"> C. Valenciana</a>
-        <a href="/ccaa-canarias.html"><img src="/img/flags/canarias.png" class="nav-flag" alt="" loading="lazy"> Canarias</a>
-        <a href="/ccaa-baleares.html"><img src="/img/flags/baleares.png" class="nav-flag" alt="" loading="lazy"> Baleares</a>
-        <a href="/ccaa-pais-vasco.html"><img src="/img/flags/pais-vasco.png" class="nav-flag" alt="" loading="lazy"> País Vasco</a>
-        <a href="/ccaa-galicia.html"><img src="/img/flags/galicia.png" class="nav-flag" alt="" loading="lazy"> Galicia</a>
-        <a href="/ccaa-castilla-y-leon.html"><img src="/img/flags/castilla-y-leon.png" class="nav-flag" alt="" loading="lazy"> Castilla y León</a>
-        <a href="/ccaa-aragon.html"><img src="/img/flags/aragon.png" class="nav-flag" alt="" loading="lazy"> Aragón</a>
-        <a href="/ccaa-murcia.html"><img src="/img/flags/murcia.png" class="nav-flag" alt="" loading="lazy"> Murcia</a>
-        <a href="/ccaa-castilla-la-mancha.html"><img src="/img/flags/castilla-la-mancha.png" class="nav-flag" alt="" loading="lazy"> Castilla-La Mancha</a>
-        <a href="/ccaa-extremadura.html"><img src="/img/flags/extremadura.png" class="nav-flag" alt="" loading="lazy"> Extremadura</a>
-        <a href="/ccaa-asturias.html"><img src="/img/flags/asturias.png" class="nav-flag" alt="" loading="lazy"> Asturias</a>
-        <a href="/ccaa-cantabria.html"><img src="/img/flags/cantabria.png" class="nav-flag" alt="" loading="lazy"> Cantabria</a>
-        <a href="/ccaa-navarra.html"><img src="/img/flags/navarra.png" class="nav-flag" alt="" loading="lazy"> Navarra</a>
-        <a href="/ccaa-la-rioja.html"><img src="/img/flags/la-rioja.png" class="nav-flag" alt="" loading="lazy"> La Rioja</a>
-      </div>
-    </div>
     <a href="/comparador.html">Comparador</a>
+    <a href="/metodologia.html">Metodología</a>
     <a href="/glosario.html">Glosario</a>
     <a href="/guia-inversor.html">Guía</a>
     <a href="/sobre.html">Sobre</a>
   </nav>
 </header>
-<div class="page-hero"><div class="page-hero-inner">
-  <div class="page-eyebrow">Contacto</div>
-  <h1>Hablemos</h1>
-  <p>¿Tienes dudas, quieres colaborar o necesitas información? Escríbenos.</p>
-</div></div>
-<div class="content">
-  <div class="contact-grid">
-    <form class="contact-form" action="https://formspree.io/f/xpwzgkjr" method="POST">
-      <h2 style="margin-top:0;margin-bottom:1.25rem;font-size:1.05rem">Envíanos un mensaje</h2>
-      <div class="form-field">
-        <label class="form-label">Tu nombre</label>
-        <input type="text" name="nombre" class="form-input" placeholder="María García" required>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Email</label>
-        <input type="email" name="email" class="form-input" placeholder="maria@ejemplo.com" required>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Asunto</label>
-        <select name="asunto" class="form-input">
-          <option>Quiero invertir — necesito orientación</option>
-          <option>Propuesta de colaboración</option>
-          <option>Error en los datos</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Mensaje</label>
-        <textarea name="mensaje" class="form-input" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
-      </div>
-      <button type="submit" class="form-btn">Enviar mensaje →</button>
-    </form>
-    <div>
-      <div class="info-card">
-        <div class="info-icon">⏱️</div>
-        <div class="info-title">Tiempo de respuesta</div>
-        <div class="info-text">Respondemos en menos de 48 horas en días laborables.</div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🤝</div>
-        <div class="info-title">Colaboraciones</div>
-        <div class="info-text">Si eres agencia inmobiliaria, portal o medio de comunicación y quieres colaborar, escríbenos indicando tu propuesta.</div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">⚠️</div>
-        <div class="info-title">Error en los datos</div>
-        <div class="info-text">Si detectas algún dato incorrecto en alguna ciudad, indícanos ciudad, dato y la fuente que usas de referencia.</div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">📊</div>
-        <div class="info-title">Datos y API</div>
-        <div class="info-text">Si eres empresa y necesitas acceso a nuestros datos de rentabilidad para tu plataforma, contáctanos para hablar de condiciones.</div>
-      </div>
-    </div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Contacto</div>
+    <h1>¿Cómo podemos ayudarte?</h1>
+    <p>Elige el motivo de tu mensaje y te responderemos en menos de 48 horas en días laborables.</p>
   </div>
 </div>
+
+<div class="content">
+
+  <div class="choice-grid" role="radiogroup" aria-label="Motivo de contacto">
+    <button type="button" class="choice-card active" data-choice="dudas" data-asunto="Duda sobre los datos de una ciudad">
+      <div class="choice-icon">❓</div>
+      <div class="choice-title">¿Tienes dudas sobre los datos de alguna ciudad?</div>
+      <div class="choice-desc">Si has visto algún dato que no encaja con tu experiencia local o quieres entender de dónde viene una cifra concreta.</div>
+      <span class="choice-tag">Usuarios</span>
+    </button>
+    <button type="button" class="choice-card" data-choice="sugerencia" data-asunto="Sugerencia de ciudad a añadir">
+      <div class="choice-icon">📍</div>
+      <div class="choice-title">¿Quieres que añadamos tu ciudad?</div>
+      <div class="choice-desc">Si tu municipio no aparece en Ren Data y tiene al menos 5.000 habitantes, dínoslo. Priorizamos según demanda.</div>
+      <span class="choice-tag">Sugerencias</span>
+    </button>
+    <button type="button" class="choice-card" data-choice="colaboracion" data-asunto="Propuesta de colaboración inmobiliaria">
+      <div class="choice-icon">🤝</div>
+      <div class="choice-title">¿Eres una inmobiliaria y quieres colaborar?</div>
+      <div class="choice-desc">Si gestionas operaciones en una ciudad y puedes aportar datos de mercado reales, abrimos colaboración con atribución.</div>
+      <span class="choice-tag">Profesionales</span>
+    </button>
+  </div>
+
+  <div class="contact-grid">
+    <form class="contact-form" action="https://formspree.io/f/xpwzgkjr" method="POST">
+      <div class="form-context" id="formContext">
+        <strong>Vas a enviar:</strong> una duda sobre los datos de una ciudad. Indica de qué ciudad, qué dato te llama la atención y, si puedes, la fuente con la que comparas.
+      </div>
+
+      <input type="hidden" name="motivo" id="motivoField" value="dudas">
+
+      <div class="form-field">
+        <label class="form-label" for="nombreField">Tu nombre</label>
+        <input id="nombreField" type="text" name="nombre" class="form-input" placeholder="María García" required>
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="emailField">Email</label>
+        <input id="emailField" type="email" name="email" class="form-input" placeholder="maria@ejemplo.com" required>
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="asuntoField">Asunto</label>
+        <input id="asuntoField" type="text" name="asunto" class="form-input" value="Duda sobre los datos de una ciudad" required>
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="mensajeField">Mensaje</label>
+        <textarea id="mensajeField" name="mensaje" class="form-input" placeholder="Cuéntanos los detalles..." required></textarea>
+      </div>
+      <button type="submit" class="form-btn">Enviar mensaje →</button>
+      <p style="margin:1rem 0 0;font-size:.72rem;color:var(--muted);line-height:1.55">Al enviar, aceptas el tratamiento de tu email para responderte. Ver <a href="/privacidad.html">política de privacidad</a>.</p>
+    </form>
+  </div>
+
+  <section class="faqs">
+    <h2>Preguntas frecuentes</h2>
+    <details class="faq-item">
+      <summary>¿Por qué los datos de mi ciudad difieren de Idealista o Fotocasa?</summary>
+      <div class="faq-body">Ren Data usa datos oficiales del INE, Ministerio de Vivienda y observatorios autonómicos, no datos de anuncios. Los anuncios reflejan precios pedidos (ask), mientras que los datos oficiales reflejan precios de transacción (cierre). Es normal una diferencia del 8-15% entre ambos.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuánto tardan en responder?</summary>
+      <div class="faq-body">Menos de 48 horas en días laborables. Si nos escribes un viernes por la tarde, te respondemos el lunes o martes.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Añadís ciudades nuevas?</summary>
+      <div class="faq-body">Sí. Priorizamos por población (a partir de 5.000 habitantes), demanda de usuarios y disponibilidad de datos oficiales. Si nos escribes pidiendo tu ciudad, la añadimos al backlog.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cómo es la colaboración con inmobiliarias?</summary>
+      <div class="faq-body">Si gestionas operaciones reales en una ciudad y puedes compartir datos de cierre, te damos atribución en la ficha (logo + enlace) a cambio. No es una relación comercial — es un acuerdo de transparencia.</div>
+    </details>
+  </section>
+
+</div>
+
 <footer>
   <a href="index.html" class="logo"><div style="font-size:1rem"><span style="color:#0e2a6b;font-weight:800;letter-spacing:-.03em">Ren</span><span style="color:#2563eb;font-weight:800;letter-spacing:-.03em"> Data</span></div></a>
   <p>© 2026 rendata.es · Datos de fuentes públicas</p>
   <div class="f-links">
+    <a href="metodologia.html">Metodología</a>
     <a href="aviso-legal.html">Aviso legal</a>
-    <a href="privacidad.html">Privacidad</a>
+    <a href="metodologia.html">Metodología</a>
+      <a href="privacidad.html">Privacidad</a>
     <a href="contacto.html">Contacto</a>
   </div>
-</footer></body></html>
+</footer>
+
+<script>
+(function(){
+  var CONTEXTS = {
+    "dudas": "<strong>Vas a enviar:</strong> una duda sobre los datos de una ciudad. Indica de qué ciudad, qué dato te llama la atención y, si puedes, la fuente con la que comparas.",
+    "sugerencia": "<strong>Vas a enviar:</strong> una sugerencia de ciudad. Indica nombre del municipio, provincia, y por qué crees que debería estar.",
+    "colaboracion": "<strong>Vas a enviar:</strong> una propuesta de colaboración como inmobiliaria. Indica nombre de la agencia, ciudad(es) donde operas, y qué tipo de datos puedes aportar."
+  };
+  var cards = document.querySelectorAll(".choice-card");
+  var ctxEl = document.getElementById("formContext");
+  var motivoEl = document.getElementById("motivoField");
+  var asuntoEl = document.getElementById("asuntoField");
+  cards.forEach(function(c){
+    c.addEventListener("click", function(){
+      cards.forEach(function(x){x.classList.remove("active");});
+      c.classList.add("active");
+      var key = c.dataset.choice;
+      ctxEl.innerHTML = CONTEXTS[key] || CONTEXTS.dudas;
+      motivoEl.value = key;
+      asuntoEl.value = c.dataset.asunto;
+    });
+  });
+})();
+</script>
+</body></html>

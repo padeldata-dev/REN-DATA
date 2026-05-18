@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Metodología — Cómo calculamos la rentabilidad inmobiliaria | Ren Data</title>
+<meta name="description" content="Metodología de Ren Data: fuentes oficiales (INE, Ministerio de Vivienda, Ministerio de Hacienda, observatorios CCAA), cálculo del ROI bruto sobre 100m², frecuencia de actualización trimestral y disclaimers honestos. 587 ciudades analizadas.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Metodología Ren Data — Fuentes, fórmulas y limitaciones">
+<meta property="og:description" content="Cómo calculamos la rentabilidad inmobiliaria en 587 ciudades españolas. Fuentes oficiales, fórmulas transparentes, actualización trimestral.">
+<meta property="og:url" content="https://rendata.es/metodologia.html">
+<link rel="canonical" href="https://rendata.es/metodologia.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/css/fonts.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Ren Data","url":"https://rendata.es/","logo":"https://rendata.es/favicon.svg","description":"Análisis gratuito de rentabilidad inmobiliaria para 587 ciudades de España. Datos oficiales del INE, Ministerio de Vivienda y observatorios autonómicos. Actualización trimestral.","sameAs":["https://rendata.es/"],"contactPoint":{"@type":"ContactPoint","email":"contacto@rendata.es","contactType":"customer support","areaServed":"ES","availableLanguage":"es"}}</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué fuentes usa Ren Data para calcular la rentabilidad?","acceptedAnswer":{"@type":"Answer","text":"Ren Data usa exclusivamente fuentes oficiales y abiertas: INE (Instituto Nacional de Estadística) para población, Ministerio de Vivienda (Estadística de Precios de Vivienda Libre) para precio €/m², Ministerio de Hacienda para tipos de ITP por CCAA, observatorios autonómicos (Andalucía SIMA, Catalunya analisi.transparenciacatalunya.cat, Madrid datos.comunidad.madrid, etc.) para alquileres, y Notariado para validación cruzada."}},{"@type":"Question","name":"¿Cómo se calcula el ROI bruto?","acceptedAnswer":{"@type":"Answer","text":"ROI bruto = (alquiler anual / precio compra) × 100. Para comparabilidad entre ciudades unificamos la superficie a 100m² (próxima a la media INE 2021 de vivienda española). La fórmula operativa: ROI = (alquiler_mensual × 12) / (precio_m² × 100) × 100. No se descuentan gastos — para conocer el ROI neto restar IBI, comunidad, mantenimiento, vacancia e impuestos (típicamente 1,5-2 puntos por debajo del bruto)."}},{"@type":"Question","name":"¿Con qué frecuencia se actualizan los datos?","acceptedAnswer":{"@type":"Answer","text":"Trimestralmente. Los datos oficiales se publican con 15-30 días de retraso desde el cierre del trimestre, por lo que el Q2 2026 está disponible a partir de mayo. El siguiente informe (Q3 2026) estará disponible en agosto."}},{"@type":"Question","name":"¿Cuáles son las limitaciones de los datos?","acceptedAnswer":{"@type":"Answer","text":"Tres limitaciones principales: (1) los precios m² son medias municipales del Ministerio de Vivienda — pueden diferir de portales como Idealista o Fotocasa porque reflejan precios de transacción (cierre) y no precios pedidos (ask), con una diferencia típica del 8-15%; (2) los datos de alquiler proceden de observatorios autonómicos con cobertura desigual — algunos municipios pequeños se estiman por ratio histórico; (3) el ROI bruto no descuenta gastos operativos — el ROI neto real está 1,5-2 puntos por debajo del bruto."}},{"@type":"Question","name":"¿Ren Data es asesoramiento financiero?","acceptedAnswer":{"@type":"Answer","text":"No. Ren Data es una herramienta informativa gratuita de análisis de mercado. Los datos publicados son ratios y agregados de fuentes oficiales — no constituyen recomendación de compra, venta o inversión. Antes de tomar una decisión patrimonial relevante, consulta con asesor financiero y fiscal independiente."}}]}</script>
+
+<script src="/js/nav-dropdown.js" defer></script>
+<link rel="stylesheet" href="/css/nav.css">
+<style>
+:root{--bg:#f8fafc;--white:#fff;--blue:#1a56db;--navy:#0e2a6b;--green:#059669;--red:#dc2626;--text:#0f1923;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--r:12px;--sh:0 1px 3px rgba(14,24,40,.06);--font:'Plus Jakarta Sans',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased}
+header{background:#0e2a6b;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+header .logo{text-decoration:none;color:#fff;font-size:1.1rem;font-weight:800;letter-spacing:-.02em}
+header .logo span.ac{color:#60a5fa}
+header nav{display:flex;gap:.2rem;flex-wrap:wrap}
+header nav a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);text-decoration:none;padding:.42rem .8rem;border-radius:8px;transition:all .15s}
+header nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+
+.bc{max-width:880px;margin:0 auto;padding:.9rem 2rem 0;font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem}
+.bc a{color:var(--muted);text-decoration:none;font-weight:500}
+.bc a:hover{color:var(--blue);text-decoration:underline}
+.bc-sep{color:#cbd5e1}
+.bc-cur{color:var(--text);font-weight:600}
+
+.hero{background:#fff;border-bottom:1px solid var(--border);padding:3rem 2rem 2.5rem}
+.hero-inner{max-width:760px;margin:0 auto}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:.7rem}
+.hero h1{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1.2;margin-bottom:.8rem}
+.hero p{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.65}
+
+article.content{max-width:760px;margin:0 auto;padding:2.5rem 2rem 4rem}
+article.content h2{font-size:1.45rem;font-weight:800;letter-spacing:-.03em;color:var(--text);margin:2.5rem 0 .9rem;padding-bottom:.55rem;border-bottom:2px solid var(--blue);display:inline-block}
+article.content h2:first-child{margin-top:0}
+article.content h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:1.6rem 0 .6rem;letter-spacing:-.02em}
+article.content p{font-size:.93rem;color:var(--text2);line-height:1.75;margin-bottom:1rem}
+article.content ul{margin:.5rem 0 1rem 1.5rem}
+article.content ul li{font-size:.92rem;color:var(--text2);line-height:1.7;margin-bottom:.4rem}
+article.content strong{color:var(--text)}
+article.content a{color:var(--blue);text-decoration:none}
+article.content a:hover{text-decoration:underline}
+
+.toc{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.4rem 1.6rem;margin-bottom:2rem;box-shadow:var(--sh)}
+.toc-title{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.7rem}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem}
+.toc li{font-size:.85rem;line-height:1.5;margin:0}
+.toc a{color:var(--blue);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+.formula{background:#0f1923;color:#e5eaf2;font-family:'Consolas','SF Mono',monospace;padding:1.2rem 1.5rem;border-radius:var(--r);margin:1rem 0;font-size:.92rem;line-height:1.7;text-align:center}
+.formula strong{color:#60a5fa}
+
+.source-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1rem 0 1.5rem}
+.source{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.3rem;box-shadow:var(--sh)}
+.source h4{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.source .tag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:#eff6ff;padding:.2rem .5rem;border-radius:4px;margin-bottom:.6rem}
+.source p{font-size:.82rem;color:var(--text2);margin:0;line-height:1.6}
+.source a{font-size:.78rem;color:var(--blue);display:inline-block;margin-top:.5rem;font-weight:600}
+
+.disclaimer{background:#fef3c7;border:1px solid #fcd34d;border-radius:var(--r);padding:1.2rem 1.4rem;margin:1.5rem 0;font-size:.88rem;color:#78350f;line-height:1.65}
+.disclaimer h3{color:#78350f;border:none;padding:0;margin:0 0 .5rem;font-size:1rem;font-weight:700}
+.disclaimer strong{color:#451a03}
+
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin:1rem 0 1.5rem}
+.team-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;box-shadow:var(--sh)}
+.team-card h4{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
+.team-card .role{font-size:.78rem;color:var(--blue);font-weight:600;margin-bottom:.6rem}
+.team-card p{font-size:.84rem;color:var(--text2);margin:0;line-height:1.6}
+
+.cta-foot{background:linear-gradient(135deg,#0e2a6b 0%,#1a56db 100%);color:#fff;padding:2.5rem 2rem;border-radius:14px;text-align:center;margin:3rem 0 1rem}
+.cta-foot h3{color:#fff;font-size:1.4rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.7rem;border:none;padding:0}
+.cta-foot p{color:rgba(255,255,255,.85);font-size:.95rem;margin:0 auto 1.4rem;max-width:500px}
+.cta-foot .btn{display:inline-block;background:#fff;color:#0e2a6b;font-weight:700;padding:.85rem 1.6rem;border-radius:8px;text-decoration:none;font-size:.88rem;transition:transform .15s}
+.cta-foot .btn:hover{transform:translateY(-2px);text-decoration:none}
+
+footer{padding:2rem;text-align:center;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);background:#fff}
+footer a{color:var(--blue);text-decoration:none;margin:0 .8rem}
+footer p{margin-bottom:.3rem}
+
+@media (max-width:740px){
+  .source-grid,.team-grid{grid-template-columns:1fr}
+  .toc ul{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">Ren<span class="ac"> Data</span></a>
+  <nav>
+    <a href="/">Ciudades</a>
+    <a href="/ranking.html">Ranking</a>
+    <a href="/analisis.html">Análisis</a>
+    <a href="/comparador.html">Comparador</a>
+    <a href="/metodologia.html">Metodología</a>
+    <a href="/glosario.html">Glosario</a>
+    <a href="/guia-inversor.html">Guía</a>
+    <a href="/sobre.html">Sobre</a>
+  </nav>
+</header>
+
+<nav class="bc" aria-label="Breadcrumb">
+  <a href="/">Inicio</a>
+  <span class="bc-sep">›</span>
+  <span class="bc-cur">Metodología</span>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Transparencia · Q2 2026</div>
+    <h1>Metodología</h1>
+    <p>Cómo calculamos la rentabilidad inmobiliaria de las 587 ciudades de España. Fuentes, fórmulas, frecuencia de actualización y limitaciones — sin maquillaje.</p>
+  </div>
+</section>
+
+<article class="content">
+
+  <div class="toc">
+    <div class="toc-title">Índice</div>
+    <ul>
+      <li><a href="#fuentes">1. Fuentes de datos</a></li>
+      <li><a href="#calculo">2. Cómo se calcula el ROI</a></li>
+      <li><a href="#superficie">3. Superficie estandarizada (100m²)</a></li>
+      <li><a href="#actualizacion">4. Frecuencia de actualización</a></li>
+      <li><a href="#cobertura">5. Cobertura por CCAA</a></li>
+      <li><a href="#limitaciones">6. Limitaciones</a></li>
+      <li><a href="#disclaimer">7. Disclaimers honestos</a></li>
+      <li><a href="#equipo">8. Equipo</a></li>
+    </ul>
+  </div>
+
+  <h2 id="fuentes">1. Fuentes de datos</h2>
+
+  <p>Ren Data trabaja <strong>exclusivamente con fuentes oficiales y abiertas</strong>. No utilizamos scraping de portales privados (Idealista, Fotocasa, Pisos.com) — sus términos de servicio lo prohíben y, además, sus datos son precios pedidos (<em>ask</em>) que difieren sistemáticamente de los precios reales de transacción.</p>
+
+  <div class="source-grid">
+    <div class="source">
+      <span class="tag">Oficial · Auto</span>
+      <h4>INE — Padrón municipal</h4>
+      <p>Población oficial de cada municipio español. Fichero <code>pobmun.zip</code> actualizado anualmente con datos a 1 de enero.</p>
+      <a href="https://www.ine.es" target="_blank" rel="noopener">ine.es →</a>
+    </div>
+    <div class="source">
+      <span class="tag">Oficial · Trimestral</span>
+      <h4>Ministerio de Vivienda</h4>
+      <p>Estadística de Precios de Vivienda Libre. Precio medio €/m² por municipio (cobertura para capitales y municipios &gt;25.000 hab).</p>
+      <a href="https://www.mivau.gob.es/vivienda/datos-y-estadisticas" target="_blank" rel="noopener">mivau.gob.es →</a>
+    </div>
+    <div class="source">
+      <span class="tag">Oficial · Auto</span>
+      <h4>Ministerio de Hacienda</h4>
+      <p>Tipos de ITP (Impuesto de Transmisiones Patrimoniales) por CCAA. Bonificaciones autonómicas para vivienda habitual, jóvenes y familias numerosas.</p>
+      <a href="https://www.hacienda.gob.es" target="_blank" rel="noopener">hacienda.gob.es →</a>
+    </div>
+    <div class="source">
+      <span class="tag">CCAA · Variable</span>
+      <h4>Observatorios autonómicos</h4>
+      <p>Datos de alquiler por municipio. Cobertura desigual: Cataluña, Madrid y Andalucía publican datos exhaustivos; otras CCAA tienen cobertura limitada.</p>
+      <a href="https://analisi.transparenciacatalunya.cat/" target="_blank" rel="noopener">Cataluña</a> · <a href="https://datos.comunidad.madrid/dataset?theme=Vivienda" target="_blank" rel="noopener">Madrid</a> · <a href="https://www.juntadeandalucia.es/institutodeestadisticaycartografia" target="_blank" rel="noopener">Andalucía</a>
+    </div>
+    <div class="source">
+      <span class="tag">Validación cruzada</span>
+      <h4>Notariado</h4>
+      <p>Centro de Información Estadística Notarial. Precio medio de transacción real para capitales de provincia — usado para validación cruzada del Ministerio de Vivienda.</p>
+      <a href="https://www.notariado.org/portal/centro-de-informacion-estadistica-notarial" target="_blank" rel="noopener">notariado.org →</a>
+    </div>
+    <div class="source">
+      <span class="tag">Complementario</span>
+      <h4>Catastro · BdE</h4>
+      <p>Catastro para superficie construida media. Banco de España para indicadores macroeconómicos contextuales (Euríbor, índice de precios, etc.).</p>
+      <a href="https://www.catastro.minhap.es" target="_blank" rel="noopener">catastro.minhap.es →</a>
+    </div>
+  </div>
+
+  <h2 id="calculo">2. Cómo se calcula el ROI</h2>
+
+  <p>El <strong>ROI bruto</strong> (yield bruto) que publicamos es la métrica más directa de la rentabilidad inmobiliaria: cuánto produce la vivienda en alquiler en un año respecto a su precio de compra. La fórmula es:</p>
+
+  <div class="formula">
+    <strong>ROI bruto</strong> = (alquiler anual / precio compra) × 100
+  </div>
+
+  <p>En términos operativos, partiendo de las dos magnitudes que publicamos (precio m² y alquiler mensual), la fórmula equivalente es:</p>
+
+  <div class="formula">
+    <strong>ROI bruto</strong> = (alquiler_mensual × 12) / (precio_m² × superficie) × 100
+  </div>
+
+  <p>Con superficie unificada a 100m² (ver siguiente sección), la fórmula se simplifica:</p>
+
+  <div class="formula">
+    <strong>ROI bruto</strong> = (alquiler_mensual × 12) / precio_m² <span style="color:#94a3b8">(simplificado para 100m²)</span>
+  </div>
+
+  <p><strong>Ejemplo práctico.</strong> Vivienda en Zaragoza con precio medio 1.500€/m² y alquiler medio de 750€/mes. ROI bruto = (750 × 12) / (1.500 × 100) × 100 = 9.000 / 150.000 × 100 = <strong>6,0%</strong>.</p>
+
+  <h2 id="superficie">3. ¿Por qué superficie estandarizada a 100m²?</h2>
+
+  <p>Si comparas yield entre ciudades sin fijar la superficie, los resultados se distorsionan: en mercados donde la vivienda típica es de 65m² (Barcelona centro), el "alquiler medio" responde a un tamaño distinto que en Cuenca, donde lo habitual es 110m². La comparación queda contaminada.</p>
+
+  <p>Para corregir esto, <strong>fijamos la superficie en 100m²</strong>, próxima a la <strong>media española de vivienda de 99,3m² (INE Censo 2021)</strong>. Aplicamos este valor uniforme a todas las ciudades. Las dos magnitudes que publicamos (precio m² y alquiler medio) están ya normalizadas a esta superficie.</p>
+
+  <p><strong>Consecuencia operativa:</strong> el ROI publicado refleja la rentabilidad de una vivienda estándar tipo familiar (90-110m², 3 habitaciones). Para estudios pequeños (40-50m²) el yield real suele ser <strong>1-2 puntos superior</strong> en centros urbanos. Para chalets de 200m²+ el yield suele ser <strong>1 punto inferior</strong>.</p>
+
+  <h2 id="actualizacion">4. Frecuencia de actualización</h2>
+
+  <p><strong>Trimestral.</strong> Los datos oficiales del Ministerio de Vivienda se publican con 15-30 días de retraso desde el cierre del trimestre, así que:</p>
+
+  <ul>
+    <li><strong>Q1 (enero-marzo)</strong>: datos disponibles en mayo</li>
+    <li><strong>Q2 (abril-junio)</strong>: datos disponibles en agosto</li>
+    <li><strong>Q3 (julio-septiembre)</strong>: datos disponibles en noviembre</li>
+    <li><strong>Q4 (octubre-diciembre)</strong>: datos disponibles en febrero del año siguiente</li>
+  </ul>
+
+  <p>Población (INE) se actualiza una vez al año, con datos a 1 de enero. Tipos de ITP autonómicos se actualizan cuando las CCAA modifican su legislación (típicamente con presupuestos anuales).</p>
+
+  <h2 id="cobertura">5. Cobertura por CCAA</h2>
+
+  <p><strong>587 municipios analizados</strong> distribuidos por las 17 comunidades autónomas. La cobertura no es uniforme — refleja la disponibilidad real de datos oficiales:</p>
+
+  <ul>
+    <li><strong>Cobertura completa:</strong> capitales de provincia (50), ciudades &gt;30.000 hab (cobertura MIVAU robusta).</li>
+    <li><strong>Cobertura buena:</strong> ciudades 15.000-30.000 hab — MIVAU + observatorio autonómico cuando existe.</li>
+    <li><strong>Cobertura limitada:</strong> municipios &lt;15.000 hab — usamos estimaciones por ratio histórico cuando no hay dato oficial.</li>
+  </ul>
+
+  <p>Para cada ficha de ciudad indicamos las <strong>fuentes específicas</strong> usadas y la fecha del dato más reciente.</p>
+
+  <h2 id="limitaciones">6. Limitaciones</h2>
+
+  <p>Tres limitaciones que el usuario debe conocer:</p>
+
+  <p><strong>1. Datos oficiales vs portales privados.</strong> Nuestros precios m² provienen del Ministerio de Vivienda y reflejan precios de <em>transacción</em> (cierre real ante notario). Los portales como Idealista o Fotocasa publican precios <em>pedidos</em> (ask), que suelen ser un <strong>8-15% superiores</strong>. Si comparas, recuerda que estás comparando dos magnitudes distintas.</p>
+
+  <p><strong>2. Cobertura de alquiler desigual.</strong> Los observatorios autonómicos publican datos de alquiler con cobertura desigual. Cataluña, Madrid y Andalucía tienen series exhaustivas. Otras CCAA tienen huecos. En municipios pequeños sin dato oficial usamos <strong>estimación por ratio histórico</strong>: alquiler_estimado = precio_m²_nuevo × (alquiler_histórico / precio_m²_histórico) × factor de mercado local (típicamente 0,85 para ajustar a precios actuales). Esto es una aproximación, no un dato directo.</p>
+
+  <p><strong>3. ROI bruto ≠ ROI neto.</strong> El ROI que publicamos es <strong>bruto</strong>: no descuenta gastos. Para obtener el ROI neto real hay que restar:</p>
+
+  <ul>
+    <li>IBI anual (0,3-0,8% del valor catastral)</li>
+    <li>Comunidad (40-80€/mes según finca)</li>
+    <li>Seguro hogar (200-400€/año)</li>
+    <li>Provisión mantenimiento (1% del valor anual)</li>
+    <li>Provisión vacancia (1 mes/año)</li>
+    <li>Gestión inmobiliaria si delegas (8-10% del alquiler)</li>
+    <li>IRPF (marginal × renta − reducción 60% si vivienda habitual)</li>
+  </ul>
+
+  <p>En términos generales, el <strong>ROI neto típico está 1,5-2 puntos por debajo del bruto</strong>. Para una guía detallada, lee nuestro artículo <a href="como-calcular-rentabilidad-vivienda-2026.html">Cómo calcular la rentabilidad de una vivienda 2026</a>.</p>
+
+  <h2 id="disclaimer">7. Disclaimers honestos</h2>
+
+  <div class="disclaimer">
+    <h3>⚠️ Lo que Ren Data NO es</h3>
+    <p><strong>Ren Data NO es asesoramiento financiero, fiscal ni jurídico.</strong> Somos una herramienta informativa gratuita de análisis de mercado. Los datos publicados son ratios y agregados de fuentes oficiales — no constituyen recomendación de compra, venta o inversión.</p>
+    <p><strong>Antes de tomar una decisión patrimonial relevante</strong>, consulta con asesor financiero y fiscal independiente. El mercado inmobiliario es ilíquido, intensivo en capital y sometido a fiscalidad autonómica compleja. Nuestros datos son un punto de partida, no un sustituto del análisis profesional individualizado.</p>
+    <p><strong>Si encuentras un dato incorrecto</strong>, escríbenos por <a href="contacto.html">contacto</a> indicando ciudad, dato y fuente alternativa. Lo revisamos y corregimos.</p>
+  </div>
+
+  <h2 id="equipo">8. Equipo</h2>
+
+  <p>Ren Data es un proyecto independiente nacido en 2025 para hacer accesible el análisis de rentabilidad inmobiliaria a particulares e inversores no profesionales. Sin publicidad, sin pago, sin afiliados. Vivimos de servicios paralelos (análisis a medida para inmobiliarias y fondos) que no afectan a la independencia del proyecto público.</p>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <h4>Datos y pipeline</h4>
+      <div class="role">Ingeniería de datos</div>
+      <p>Responsables de la pipeline de ingesta de datos oficiales, validación cruzada entre fuentes y publicación trimestral. Mantienen la cobertura de las 587 ciudades.</p>
+    </div>
+    <div class="team-card">
+      <h4>Análisis de mercado</h4>
+      <div class="role">Investigación</div>
+      <p>Producción del análisis editorial: artículos por CCAA, perfiles de inversor, comparativas y guías metodológicas. Verificación de barrios reales y motores económicos por ciudad.</p>
+    </div>
+    <div class="team-card">
+      <h4>Asesoría fiscal</h4>
+      <div class="role">Colaborador externo</div>
+      <p>Asesor fiscal independiente que revisa la sección de fiscalidad por CCAA en cada ficha y artículo. Verifica tipos de ITP, bonificaciones y particularidades forales.</p>
+    </div>
+    <div class="team-card">
+      <h4>Producto y diseño</h4>
+      <div class="role">Frontend</div>
+      <p>Diseño de la interfaz, accesibilidad, SEO y experiencia de uso. Mantenimiento del comparador, mapa interactivo y widget embebable.</p>
+    </div>
+  </div>
+
+  <div class="cta-foot">
+    <h3>¿Más preguntas sobre los datos?</h3>
+    <p>Si tienes dudas sobre la metodología, has detectado un error o quieres colaborar como inmobiliaria con datos locales, escríbenos.</p>
+    <a class="btn" href="contacto.html">Contactar →</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 <a href="/">Ren Data</a> · Análisis gratuito de 587 ciudades · Datos Q2 2026</p>
+  <p style="margin-top:.5rem">
+    <a href="/metodologia.html">Metodología</a> ·
+    <a href="/glosario.html">Glosario</a> ·
+    <a href="/sobre.html">Sobre</a> ·
+    <a href="/contacto.html">Contacto</a> ·
+    <a href="/widget-demo.html">Widget</a> ·
+    <a href="/aviso-legal.html">Aviso legal</a> ·
+    <a href="/privacidad.html">Privacidad</a>
+  </p>
+</footer>
+
+</body>
+</html>
