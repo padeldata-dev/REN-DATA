@@ -102,11 +102,39 @@
 </header>
 
 <div class="hero">
-  <h1>Compara dos ciudades<br><span>para invertir en España</span></h1>
-  <p>Elige dos ciudades y compara precio m², alquiler, ROI, demanda y mercado laboral al instante.</p>
+  <h1>Compara dos ciudades<br><span>para vivir o invertir en España</span></h1>
+  <p>Elige dos ciudades y selecciona si comparas como comprador (vivir) o como inversor (alquilar). Ren Data te muestra las métricas que importan a cada perfil.</p>
 </div>
 
 <div class="page">
+  <!-- MODE SELECTOR -->
+  <div class="cmp-mode-wrap">
+    <div class="cmp-mode-tabs">
+      <button class="cmp-mode-tab active" data-mode="comprador" onclick="setMode('comprador',this)">🏠 Quiero vivir</button>
+      <button class="cmp-mode-tab" data-mode="inversor" onclick="setMode('inversor',this)">📈 Quiero invertir</button>
+    </div>
+    <p class="cmp-mode-hint" id="modeHint">Comparativa con métricas de comprador: precio total, años de sueldo, esfuerzo mensual, ITP y coste mensual de propiedad.</p>
+  </div>
+
+  <style>
+    .cmp-mode-wrap{max-width:880px;margin:0 auto 1.25rem;padding:0 1rem}
+    .cmp-mode-tabs{display:flex;gap:.5rem;background:#fff;border:1px solid var(--border,#e2e8f0);border-radius:14px;padding:.4rem;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+    .cmp-mode-tab{flex:1;padding:.7rem 1rem;background:transparent;border:none;border-radius:10px;font-size:.92rem;font-weight:700;cursor:pointer;color:var(--muted,#64748b);font-family:inherit;transition:all .18s ease}
+    .cmp-mode-tab:hover{color:var(--blue,#1a56db)}
+    .cmp-mode-tab.active{background:var(--blue,#1a56db);color:#fff;box-shadow:0 2px 8px rgba(26,86,219,.25)}
+    .cmp-mode-hint{font-size:.78rem;color:var(--muted,#64748b);text-align:center;margin-top:.55rem;line-height:1.5}
+    .buyer-card{background:#fff;border:1px solid var(--border,#e2e8f0);border-radius:14px;padding:1.15rem 1.2rem;box-shadow:0 1px 3px rgba(0,0,0,.04);position:relative}
+    .buyer-card.winner{border-color:var(--green,#059669);box-shadow:0 0 0 1px var(--green,#059669),0 4px 14px rgba(5,150,105,.15)}
+    .buyer-card .winner-badge{position:absolute;top:.65rem;right:.65rem;background:var(--green,#059669);color:#fff;font-size:.6rem;font-weight:800;padding:.18rem .55rem;border-radius:99px;text-transform:uppercase;letter-spacing:.08em}
+    .buyer-kpi{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.45rem}
+    .buyer-kpi-item{background:#f8fafc;border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:.55rem .7rem}
+    .buyer-kpi-lbl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted,#64748b)}
+    .buyer-kpi-val{font-size:1.05rem;font-weight:800;color:var(--text,#0e1828);letter-spacing:-.02em;margin-top:.18rem;line-height:1.2}
+    .buyer-kpi-sub{font-size:.65rem;color:var(--muted,#64748b);margin-top:.18rem}
+    .buyer-title{font-size:1.05rem;font-weight:800;color:var(--text,#0e1828);letter-spacing:-.02em;margin-bottom:.65rem}
+    .buyer-title small{display:block;font-size:.7rem;color:var(--muted,#64748b);font-weight:600;margin-top:.18rem}
+  </style>
+
   <!-- SELECTORS -->
   <div class="selectors">
     <div class="sel-wrap">
@@ -124,7 +152,37 @@
     </div>
   </div>
 
-  <!-- RESULT -->
+  <!-- BUYER RESULT -->
+  <div id="resultBuyer" style="display:none">
+    <div class="cmp-section">
+      <h2 class="cmp-section-title">¿Cuánto cuesta comprar?</h2>
+      <div class="cmp-grid">
+        <div class="buyer-card" id="byCostA"></div>
+        <div class="buyer-card" id="byCostB"></div>
+      </div>
+    </div>
+    <div class="cmp-section">
+      <h2 class="cmp-section-title">Capacidad de compra (años de sueldo y esfuerzo)</h2>
+      <div class="cmp-grid">
+        <div class="buyer-card" id="byAffA"></div>
+        <div class="buyer-card" id="byAffB"></div>
+      </div>
+    </div>
+    <div class="cmp-section">
+      <h2 class="cmp-section-title">Coste mensual y ayudas</h2>
+      <div class="cmp-grid">
+        <div class="buyer-card" id="byCstA"></div>
+        <div class="buyer-card" id="byCstB"></div>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="sum-title" id="buyerSumTitle">Resumen comprador</div>
+      <div class="sum-grid" id="buyerSumGrid"></div>
+      <div class="actions" id="buyerSumActions"></div>
+    </div>
+  </div>
+
+  <!-- INVESTOR RESULT -->
   <div id="result" style="display:none">
 
     <!-- RENTABILIDAD -->
@@ -230,12 +288,16 @@ const fmt=n=>n>=1000?n.toLocaleString('es'):n;
   sel.value=i===0?'zaragoza':'madrid';
 });
 
-// DEEPLINK: read ?a=slug&b=slug from URL
+// DEEPLINK: read ?a=slug&b=slug&mode=... from URL
 (function(){
   const p=new URLSearchParams(window.location.search);
-  const a=p.get('a'), b=p.get('b');
+  const a=p.get('a'), b=p.get('b'), m=p.get('mode');
   if(a && DATA.find(c=>c.sl===a)) document.getElementById('selA').value=a;
   if(b && DATA.find(c=>c.sl===b)) document.getElementById('selB').value=b;
+  if(m === 'inversor'){
+    const btn = document.querySelector('.cmp-mode-tab[data-mode="inversor"]');
+    if(btn) setMode('inversor', btn);
+  }
 })();
 
 // Update URL when user changes a city (for bookmarking/sharing)
@@ -250,12 +312,142 @@ function getCity(sl){return DATA.find(c=>c.sl===sl);}
 function liq(d){return d<=16?100:d<=20?80:d<=24?60:d<=28?40:20;}
 function rc(r){return r>=6.5?'var(--green)':r>=5?'var(--blue)':'var(--red)';}
 
+// ─── MODE SWITCHER ───────────────────────────────────────────────
+let currentMode = 'comprador'; // default
+function setMode(mode, btn){
+  currentMode = mode;
+  document.querySelectorAll('.cmp-mode-tab').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  document.getElementById('modeHint').textContent = mode==='comprador'
+    ? 'Comparativa con métricas de comprador: precio total, años de sueldo, esfuerzo mensual, ITP y coste mensual de propiedad.'
+    : 'Comparativa con métricas de inversor: ROI, alquiler, días en mercado y liquidez del activo.';
+  compare();
+}
+
+// ─── DATOS PARA COMPRADOR ────────────────────────────────────────
+// Salario bruto anual medio aproximado por CCAA (AEAT 2024).
+// Cuando no hay dato concreto -> media nacional ~22.000€.
+const SALARIO_CCAA = {
+  "C. de Madrid":32400,"Cataluña":28000,"País Vasco":30000,"Navarra":28000,
+  "Aragón":24200,"Asturias":24000,"C. Valenciana":22000,"Andalucía":21400,
+  "Galicia":22000,"Castilla y León":22400,"Castilla-La Mancha":21200,
+  "R. de Murcia":21600,"Extremadura":20400,"La Rioja":23000,"Cantabria":23200,
+  "Canarias":21200,"Islas Baleares":24400,"Ceuta":22000,"Melilla":22000
+};
+// ITP CCAA (% sobre precio compra) — vigente 2026
+const ITP_CCAA = {
+  "C. de Madrid":6.0,"Navarra":6.0,"Canarias":6.5,"País Vasco":4.0,
+  "Andalucía":7.0,"La Rioja":7.0,"Aragón":8.0,"Asturias":8.0,
+  "Castilla y León":8.0,"R. de Murcia":8.0,"Cantabria":9.0,
+  "Castilla-La Mancha":9.0,"Galicia":9.0,"Cataluña":10.0,
+  "C. Valenciana":10.0,"Extremadura":8.0,"Islas Baleares":9.0,
+  "Ceuta":0.5,"Melilla":0.5
+};
+
+function cuotaHipo(precio, ltv=0.80, tipo=0.032, plazo=25){
+  const cap = precio*ltv;
+  const r = tipo/12;
+  const n = plazo*12;
+  return cap*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+}
+function ibiAnual(precio){return precio*0.005;} // ~0.5% valor catastral aprox
+function comunidadMes(){return 75;}             // estimación nacional
+
+function buyerMetrics(c){
+  const precio100 = c.p*100; // piso ref 100m²
+  const salary = SALARIO_CCAA[c.cc] || 22000;
+  const itpPct = ITP_CCAA[c.cc] ?? 8;
+  const itp = precio100 * (itpPct/100);
+  const gastosOtros = precio100 * 0.02; // notaría+registro+gestoría
+  const gastosTotal = itp + gastosOtros;
+  const entrada = precio100 * 0.20;
+  const ahorroNec = entrada + gastosTotal;
+  const cuota = cuotaHipo(precio100);
+  const netoMes = salary*0.80/12;
+  const esfuerzo = cuota/netoMes*100;
+  const anosSueldo = precio100/salary;
+  const costeMensual = cuota + ibiAnual(precio100)/12 + comunidadMes();
+  return {precio100,salary,itpPct,itp,gastosTotal,entrada,ahorroNec,cuota,esfuerzo,anosSueldo,costeMensual};
+}
+
+function renderBuyer(cA, cB){
+  const mA = buyerMetrics(cA), mB = buyerMetrics(cB);
+
+  // 1) Coste compra
+  const costAw = mA.precio100 <= mB.precio100;
+  ['A','B'].forEach(x=>{
+    const c = x==='A'?cA:cB, m = x==='A'?mA:mB, w = x==='A'?costAw:!costAw;
+    document.getElementById('byCost'+x).className='buyer-card'+(w?' winner':'');
+    document.getElementById('byCost'+x).innerHTML = (w?'<div class="winner-badge">✓ Más accesible</div>':'')+
+      `<div class="buyer-title">${c.n} <small>${c.cc}</small></div>`+
+      `<div class="buyer-kpi">`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Precio piso 100 m²</div><div class="buyer-kpi-val">${fmt(Math.round(m.precio100))}€</div><div class="buyer-kpi-sub">${fmt(c.p)}€/m²</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Entrada 20%</div><div class="buyer-kpi-val">${fmt(Math.round(m.entrada))}€</div><div class="buyer-kpi-sub">Mínimo banco</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Gastos compra</div><div class="buyer-kpi-val">${fmt(Math.round(m.gastosTotal))}€</div><div class="buyer-kpi-sub">ITP ${m.itpPct}% + otros</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Ahorro total nec.</div><div class="buyer-kpi-val" style="color:var(--blue)">${fmt(Math.round(m.ahorroNec))}€</div><div class="buyer-kpi-sub">Sin Aval ICO</div></div>`+
+      `</div>`;
+  });
+
+  // 2) Capacidad de compra
+  const affAw = mA.anosSueldo <= mB.anosSueldo;
+  ['A','B'].forEach(x=>{
+    const c = x==='A'?cA:cB, m = x==='A'?mA:mB, w = x==='A'?affAw:!affAw;
+    const colA = m.anosSueldo<8?'var(--green)':m.anosSueldo<12?'#d97706':'var(--red)';
+    const colE = m.esfuerzo<30?'var(--green)':m.esfuerzo<40?'#d97706':'var(--red)';
+    document.getElementById('byAff'+x).className='buyer-card'+(w?' winner':'');
+    document.getElementById('byAff'+x).innerHTML = (w?'<div class="winner-badge">✓ Más asequible</div>':'')+
+      `<div class="buyer-title">${c.n} <small>Salario medio ${c.cc}: ${fmt(m.salary)}€/año</small></div>`+
+      `<div class="buyer-kpi">`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Años de sueldo</div><div class="buyer-kpi-val" style="color:${colA}">${m.anosSueldo.toFixed(1)}</div><div class="buyer-kpi-sub">Precio ÷ salario bruto</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Esfuerzo cuota</div><div class="buyer-kpi-val" style="color:${colE}">${m.esfuerzo.toFixed(0)}%</div><div class="buyer-kpi-sub">% de la nómina neta</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Cuota mensual</div><div class="buyer-kpi-val">${fmt(Math.round(m.cuota))}€</div><div class="buyer-kpi-sub">80% LTV · 25 años · 3,2%</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Salario neto/mes</div><div class="buyer-kpi-val">${fmt(Math.round(m.salary*0.80/12))}€</div><div class="buyer-kpi-sub">Estimado 80% bruto</div></div>`+
+      `</div>`;
+  });
+
+  // 3) Coste mensual + ayudas
+  const costMAw = mA.costeMensual <= mB.costeMensual;
+  ['A','B'].forEach(x=>{
+    const c = x==='A'?cA:cB, m = x==='A'?mA:mB, w = x==='A'?costMAw:!costMAw;
+    document.getElementById('byCst'+x).className='buyer-card'+(w?' winner':'');
+    document.getElementById('byCst'+x).innerHTML = (w?'<div class="winner-badge">✓ Coste menor</div>':'')+
+      `<div class="buyer-title">${c.n}</div>`+
+      `<div class="buyer-kpi">`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">Coste mensual propiedad</div><div class="buyer-kpi-val">${fmt(Math.round(m.costeMensual))}€</div><div class="buyer-kpi-sub">Cuota + IBI + comunidad</div></div>`+
+      `<div class="buyer-kpi-item"><div class="buyer-kpi-lbl">vs alquiler local</div><div class="buyer-kpi-val">${fmt(c.alq)}€</div><div class="buyer-kpi-sub">Alquiler medio ciudad</div></div>`+
+      `<div class="buyer-kpi-item" style="grid-column:span 2"><div class="buyer-kpi-lbl">Ayudas disponibles</div><div class="buyer-kpi-val" style="font-size:.82rem;line-height:1.35">Aval ICO 20% estatal · ITP ${m.itpPct}% en ${c.cc}</div><div class="buyer-kpi-sub"><a href="rentabilidad-${c.sl}.html#ayudas-compra" style="color:var(--blue);text-decoration:none;font-weight:600">Ver ayudas completas en ${c.n} →</a></div></div>`+
+      `</div>`;
+  });
+
+  // Summary
+  document.getElementById('buyerSumTitle').textContent = 'Resumen comprador: '+cA.n+' vs '+cB.n;
+  const cats = [
+    ['Más accesible (precio)', costAw?cA.n:cB.n, `${fmt(Math.round(costAw?mA.precio100:mB.precio100))}€ vs ${fmt(Math.round(costAw?mB.precio100:mA.precio100))}€`],
+    ['Menor años sueldo', affAw?cA.n:cB.n, `${(affAw?mA:mB).anosSueldo.toFixed(1)} años vs ${(affAw?mB:mA).anosSueldo.toFixed(1)} años`],
+    ['Menor esfuerzo', mA.esfuerzo<=mB.esfuerzo?cA.n:cB.n, `${(mA.esfuerzo<=mB.esfuerzo?mA:mB).esfuerzo.toFixed(0)}% vs ${(mA.esfuerzo<=mB.esfuerzo?mB:mA).esfuerzo.toFixed(0)}%`],
+    ['Menor coste mensual', costMAw?cA.n:cB.n, `${fmt(Math.round(costMAw?mA.costeMensual:mB.costeMensual))}€ vs ${fmt(Math.round(costMAw?mB.costeMensual:mA.costeMensual))}€`],
+  ];
+  document.getElementById('buyerSumGrid').innerHTML = cats.map(([cat,winner,detail])=>`<div class="sum-item"><div class="sum-cat">${cat}</div><div class="sum-winner">🏆 ${winner}</div><div class="sum-detail">${detail}</div></div>`).join('');
+  const shareUrl = `${window.location.origin}/comparador.html?a=${cA.sl}&b=${cB.sl}&mode=comprador`;
+  document.getElementById('buyerSumActions').innerHTML = `<a href="rentabilidad-${cA.sl}.html" class="act-btn">Ver ficha ${cA.n} →</a><a href="rentabilidad-${cB.sl}.html" class="act-btn sec">Ver ficha ${cB.n} →</a><button class="act-btn share-btn" onclick="navigator.clipboard.writeText('${shareUrl}').then(()=>{this.textContent='¡Copiado ✓';setTimeout(()=>this.textContent='Copiar enlace',2000)})">Copiar enlace</button>`;
+}
+
 function compare(){
   const cA=getCity(document.getElementById('selA').value);
   const cB=getCity(document.getElementById('selB').value);
   if(!cA||!cB)return;
-  document.getElementById('result').style.display='block';
   document.getElementById('emptyState').style.display='none';
+
+  // Switch result blocks based on mode
+  if(currentMode === 'comprador'){
+    document.getElementById('result').style.display='none';
+    document.getElementById('resultBuyer').style.display='block';
+    renderBuyer(cA, cB);
+    return;
+  }
+  // Investor mode (default behavior below)
+  document.getElementById('resultBuyer').style.display='none';
+  document.getElementById('result').style.display='block';
 
   const maxROI=Math.max(cA.roi,cB.roi);
   // ROI
