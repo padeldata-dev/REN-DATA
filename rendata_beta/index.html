@@ -1359,14 +1359,25 @@ initMap();
     {slug:'leon-hero', nombre:'León'},
     {slug:'lleida-hero', nombre:'Lleida'},
     {slug:'tarragona-hero', nombre:'Tarragona'},
-    {slug:'santander-hero', nombre:'Santander'}
+    {slug:'santander-hero', nombre:'Santander'},
+    /* Fotos genericas de España — sin ciudad concreta */
+    {slug:'pexels-hero-1', nombre:'España', generic:true},
+    {slug:'pexels-hero-2', nombre:'España', generic:true},
+    {slug:'pexels-hero-3', nombre:'España', generic:true},
+    {slug:'pexels-hero-4', nombre:'España', generic:true},
+    {slug:'pexels-hero-5', nombre:'España', generic:true},
+    {slug:'pexels-hero-6', nombre:'España', generic:true},
+    {slug:'pexels-hero-7', nombre:'España', generic:true},
+    {slug:'pexels-hero-8', nombre:'España', generic:true}
   ];
   const idx = Math.floor(Date.now()/86400000) % ciudades.length;
   const c = ciudades[idx];
   const hero = document.getElementById('hero');
   const name = document.getElementById('heroCityName');
+  const tag  = document.getElementById('heroCityTag');
   if(hero) hero.style.backgroundImage = "url('img/" + c.slug + ".jpg')";
   if(name) name.textContent = c.nombre;
+  if(tag)  tag.style.display = c.generic ? 'none' : '';
 })();
 </script>
 
