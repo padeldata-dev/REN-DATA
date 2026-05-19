@@ -1,0 +1,83 @@
+{
+  "n_cities": 587,
+  "nationals": {
+    "precio_m2": 1893.3390119250425,
+    "alquiler": 878.5315161839864,
+    "salary": 21259.829642248722,
+    "anos": 8.905711117094247,
+    "esfuerzo": 51.79693196224204,
+    "prr": 17.95931598209288
+  },
+  "shared_values": [
+    20200,
+    20400,
+    20800,
+    21000,
+    21200,
+    21400,
+    21600,
+    22000,
+    22400,
+    22800,
+    23400,
+    24200,
+    25200,
+    27200
+  ],
+  "samples": {
+    "a-coruna": {
+      "city": "A Coruña",
+      "salary": 22600.0,
+      "precio_m2": 2100.0,
+      "alquiler": 880.0,
+      "ccaa": "Galicia",
+      "poblacion": 251543,
+      "salary_estimated": false
+    },
+    "a-estrada": {
+      "city": "A Estrada",
+      "salary": 21200.0,
+      "precio_m2": 1100.0,
+      "alquiler": 540.0,
+      "ccaa": "",
+      "poblacion": 0,
+      "salary_estimated": true
+    },
+    "adeje": {
+      "city": "Adeje",
+      "salary": 21200.0,
+      "precio_m2": 3200.0,
+      "alquiler": 1400.0,
+      "ccaa": "Canarias",
+      "poblacion": 14029,
+      "salary_estimated": true
+    },
+    "adra": {
+      "city": "Adra",
+      "salary": 21200.0,
+      "precio_m2": 1300.0,
+      "alquiler": 693.0,
+      "ccaa": "Andalucía",
+      "poblacion": 20898,
+      "salary_estimated": true
+    },
+    "aguilas": {
+      "city": "Águilas",
+      "salary": 21000.0,
+      "precio_m2": 1400.0,
+      "alquiler": 720.0,
+      "ccaa": "R. de Murcia",
+      "poblacion": 25702,
+      "salary_estimated": true
+    },
+    "aguimes": {
+      "city": "Agüimes",
+      "salary": 21200.0,
+      "precio_m2": 1900.0,
+      "alquiler": 918.0,
+      "ccaa": "Canarias",
+      "poblacion": 18284,
+      "salary_estimated": true
+    }
+  }
+}
