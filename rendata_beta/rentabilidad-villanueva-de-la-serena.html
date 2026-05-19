@@ -1102,6 +1102,81 @@ function setMode(mode,btn){
       </div>
     </div>
   </div>
+<style>
+.ayudas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.25rem 0}
+.ayuda-card{background:var(--white,#fff);border:1px solid var(--border,#e2e8f0);border-radius:14px;padding:1.15rem 1.2rem;box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;flex-direction:column}
+.ayuda-card.ayuda-estatal{border-left:3px solid var(--blue,#1a56db)}
+.ayuda-card.ayuda-autonomico{border-left:3px solid var(--green,#059669)}
+.ayuda-card.ayuda-joven{border-left:3px solid #d97706}
+.ayuda-card.ayuda-iva{border-left:3px solid #7c3aed}
+.ayuda-hdr{display:flex;align-items:center;gap:.55rem;margin-bottom:.55rem;flex-wrap:wrap}
+.ayuda-tag{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.22rem .55rem;border-radius:99px;background:#f1f5f9;color:var(--text2,#475569);border:1px solid var(--border,#e2e8f0)}
+.ayuda-card.ayuda-estatal .ayuda-tag{background:#eff6ff;color:#1a56db;border-color:#bfdbfe}
+.ayuda-card.ayuda-autonomico .ayuda-tag{background:#ecfdf5;color:#059669;border-color:#a7f3d0}
+.ayuda-card.ayuda-joven .ayuda-tag{background:#fffbeb;color:#92400e;border-color:#fde68a}
+.ayuda-card.ayuda-iva .ayuda-tag{background:#f3e8ff;color:#6d28d9;border-color:#ddd6fe}
+.ayuda-tit{font-size:1rem;font-weight:800;color:var(--text,#0e1828);letter-spacing:-.02em;margin:0;line-height:1.25}
+.ayuda-desc{font-size:.82rem;color:var(--text2,#475569);line-height:1.55;margin:.4rem 0 .65rem}
+.ayuda-req{list-style:none;padding:0;margin:0}
+.ayuda-req li{font-size:.74rem;color:var(--text2,#475569);padding:.28rem 0 .28rem 1rem;position:relative;line-height:1.45;border-top:1px solid var(--border,#e2e8f0)}
+.ayuda-req li:first-child{border-top:none}
+.ayuda-req li::before{content:"✓";position:absolute;left:0;color:var(--green,#059669);font-weight:700}
+.ayuda-req li strong{color:var(--text,#0e1828)}
+.ayudas-note{font-size:.72rem;color:var(--muted,#64748b);background:var(--white,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:.8rem 1rem;line-height:1.55;margin-top:.55rem}
+@media(max-width:760px){.ayudas-grid{grid-template-columns:1fr}}
+</style>
+<!-- AYUDAS PARA COMPRAR EN EXTREMADURA -->
+  <div class="section" id="ayudas-compra">
+    <div class="sec-hdr">
+      <div class="sec-eye">Ayudas y financiación</div>
+      <h2>Ayudas para comprar en Extremadura</h2>
+      <p>Programas estatales y autonómicos vigentes para comprador de primera vivienda en Villanueva de la Serena.</p>
+    </div>
+    <div class="ayudas-grid">
+      <div class="ayuda-card ayuda-estatal">
+        <div class="ayuda-hdr">
+          <span class="ayuda-tag">Estatal</span>
+          <h3 class="ayuda-tit">Aval ICO 20% primera vivienda</h3>
+        </div>
+        <p class="ayuda-desc">Aval del Estado por el 20% del valor de la vivienda (hasta el 25% en familias con menores), permitiendo financiar hasta el 100% sin entrada propia. Programa vigente hasta 2027.</p>
+        <ul class="ayuda-req">
+          <li>Menor de 35 años <strong>o</strong> familia con menores a cargo</li>
+          <li>Primera vivienda habitual</li>
+          <li>Renta máxima: 4,5x IPREM anual (~37.800€ individual)</li>
+          <li>Valor máximo vivienda: hasta 250.000€ (varía por zona ICO)</li>
+        </ul>
+      </div>
+      <div class="ayuda-card ayuda-autonomico">
+        <div class="ayuda-hdr">
+          <span class="ayuda-tag">Autonómica · Extremadura</span>
+          <h3 class="ayuda-tit">Deducción IRPF jóvenes y familias</h3>
+        </div>
+        <p class="ayuda-desc">Extremadura ofrece deducción del 3% (hasta 540€) por compra de vivienda habitual para jóvenes <36, familias numerosas y discapacidad.</p>
+        <ul class="ayuda-req">
+        <li>Menor de 36 años, familia numerosa o discapacidad ≥65%</li>
+        <li>Vivienda habitual</li>
+        <li>Base liquidable ≤ 19.000€ individual</li>
+        </ul>
+      </div>
+      <div class="ayuda-card ayuda-joven">
+        <div class="ayuda-hdr">
+          <span class="ayuda-tag">Hipoteca joven · Extremadura</span>
+          <h3 class="ayuda-tit">Plan Joven Extremadura</h3>
+        </div>
+        <p class="ayuda-desc">Subvenciones de hasta 12.000€ para compra de primera vivienda joven en municipios pequeños. juntaex.es/vivienda.</p>
+      </div>
+      <div class="ayuda-card ayuda-iva">
+        <div class="ayuda-hdr">
+          <span class="ayuda-tag">Vivienda nueva</span>
+          <h3 class="ayuda-tit">IVA y AJD aplicables</h3>
+        </div>
+        <p class="ayuda-desc">IVA general 10% en vivienda nueva + AJD 1,5% en Extremadura. ITP escalado 8-11% en 2ª mano. Bonificación para jóvenes y vivienda habitual.</p>
+      </div>
+    </div>
+    <p class="ayudas-note"><strong>Importante:</strong> los importes, requisitos y condiciones pueden variar cada año fiscal y dependen de tu situación personal. Esta página es informativa, no constituye asesoramiento fiscal ni jurídico. Antes de solicitar cualquier ayuda, consulta la convocatoria vigente en la web oficial de Extremadura o con un asesor.</p>
+  </div>
+
+
 
   <!-- FAQ -->
   <div class="section" id="faq">
@@ -1166,6 +1241,24 @@ function setMode(mode,btn){
     <svg class="faq-arrow" id="fa-9" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
   <div class="faq-a" id="fa-body-9">Para un piso típico en Villanueva de la Serena (~61.600€) necesitas aproximadamente: <strong>entrada del 20% (12.320€)</strong> + <strong>gastos de compra ~8% (4.928€)</strong> → un ahorro total cercano a <strong>17.248€</strong>. La hipoteca al 80% del precio a 25 años y 3,2% TAE quedaría en torno a <strong>239€/mes</strong>. Usa la calculadora de hipoteca de esta misma página para ajustar entrada, plazo y tipo a tu caso concreto.</div>
+</div><div class="faq-item" onclick="toggleFaq(10)">
+  <div class="faq-q" id="fq-10">
+    <span>¿Qué ayudas existen para comprar piso en Extremadura?</span>
+    <svg class="faq-arrow" id="fa-10" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="faq-a" id="fa-body-10">Las principales ayudas para comprar una vivienda en Extremadura son tres: (1) <strong>Aval ICO 20% estatal</strong> para jóvenes &lt;35 o familias con menores, que evita aportar entrada; (2) <strong>Deducción IRPF jóvenes y familias</strong>: Extremadura ofrece deducción del 3% (hasta 540€) por compra de vivienda habitual para jóvenes <36, familias numerosas y discapacidad.; (3) <strong>Plan Joven Extremadura</strong>: Subvenciones de hasta 12.000€ para compra de primera vivienda joven en municipios pequeños. juntaex.es/vivienda. Revisa el bloque "Ayudas para comprar en Extremadura" más arriba para detalles, requisitos y enlaces oficiales.</div>
+</div><div class="faq-item" onclick="toggleFaq(11)">
+  <div class="faq-q" id="fq-11">
+    <span>¿Cuánto tiempo tarda el proceso de compra en Villanueva de la Serena?</span>
+    <svg class="faq-arrow" id="fa-11" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="faq-a" id="fa-body-11">El proceso completo de compra en Villanueva de la Serena (como en el resto de España) suele tardar entre <strong>6 y 10 semanas</strong> desde la firma de arras hasta la escritura ante notario: 1-2 semanas para due diligence (nota simple, ITE, certificado energético), 4-6 semanas para tramitar la hipoteca y tasación, y 1-2 semanas adicionales para coordinar firma con notario y registro. Si la operación es al contado el plazo se reduce a 3-5 semanas. Días en mercado de Villanueva de la Serena: consulta el indicador "Días en mercado" más arriba — refleja la velocidad de venta media.</div>
+</div><div class="faq-item" onclick="toggleFaq(12)">
+  <div class="faq-q" id="fq-12">
+    <span>¿Es mejor comprar obra nueva o segunda mano en Villanueva de la Serena?</span>
+    <svg class="faq-arrow" id="fa-12" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="faq-a" id="fa-body-12">Cada opción tiene ventajas según tu perfil. <strong>Obra nueva</strong> en Villanueva de la Serena: paga IVA 10% + AJD (típicamente 1-1,5% según Extremadura), garantía decenal del promotor, certificado energético A/B con menores facturas, sin obras pendientes. Suele ser <strong>10-25% más cara</strong> que la segunda mano comparable. <strong>Segunda mano</strong>: paga ITP (varía del 4% en País Vasco al 10% en Cataluña/C. Valenciana), entrega inmediata, suele estar mejor ubicada (cascos históricos, barrios consolidados), pero requiere inspección técnica si tiene &gt;20 años y posibles reformas. Para vivienda habitual a largo plazo, la segunda mano céntrica suele ser más eficiente; para inversión en alquiler turístico o familias jóvenes, la obra nueva en zonas en crecimiento tiene más sentido.</div>
 </div></div>
   </div>
   
