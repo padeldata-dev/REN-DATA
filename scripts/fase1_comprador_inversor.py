@@ -259,11 +259,16 @@ def main(argv: list[str]) -> int:
         files = [f for f in files if f.stem in only or f.name in only]
 
     ok = 0
+    skipped = []
     fail = []
     for path in files:
         slug = path.stem
         try:
             html = path.read_text(encoding="utf-8")
+            # Skip articles/non-ficha files that match the glob accidentally
+            if 'class="banner-title"' not in html or 'id="hi-precio"' not in html:
+                skipped.append(slug)
+                continue
             new, info = transform(html, slug)
             if info["ok"] and new != html:
                 path.write_text(new, encoding="utf-8")
@@ -274,6 +279,8 @@ def main(argv: list[str]) -> int:
             fail.append({"slug": slug, "error": repr(e)})
 
     print(f"Processed: {ok}/{len(files)} fichas OK")
+    if skipped:
+        print(f"Skipped (no ficha template): {len(skipped)} — {', '.join(skipped[:5])}{'…' if len(skipped) > 5 else ''}")
     if fail:
         print(f"FAILURES ({len(fail)}):")
         for f in fail[:20]:
