@@ -39,14 +39,10 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 
 /* HERO redesigned — fintech / data-driven aesthetic */
 .hero{position:relative;border-bottom:1px solid var(--border);padding:6.5rem 2.5rem 6rem;text-align:left;overflow:hidden;background:#0a1428 center/cover no-repeat;color:#fff;min-height:600px;display:flex;align-items:center}
-/* Overlay: vignette + diagonal blue gradient over background photo */
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,20,40,.82) 0%,rgba(26,86,219,.32) 45%,rgba(10,20,40,.88) 100%);pointer-events:none;z-index:0}
-/* Decorative blue blur left */
-.hero::after{content:'';position:absolute;left:-12%;bottom:-25%;width:55%;height:90%;background:radial-gradient(closest-side,rgba(26,86,219,.4),transparent 70%);pointer-events:none;z-index:0;filter:blur(10px)}
-/* Decorative green accent blur right (REN DATA colors) */
-.hero-deco{position:absolute;right:-15%;top:-25%;width:55%;height:130%;background:radial-gradient(closest-side,rgba(5,150,105,.22),transparent 70%);pointer-events:none;z-index:0;filter:blur(14px)}
-/* Subtle grid pattern overlay for depth */
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,#000 30%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,#000 30%,transparent 100%)}
+/* Overlay neutro negro semitransparente — sin tinte de color para
+   respetar los colores naturales de las fotos */
+.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45);pointer-events:none;z-index:0}
+.hero-deco,.hero-grid{display:none}
 .hero-inner{position:relative;z-index:1;max-width:1180px;width:100%;margin:0 auto}
 
 /* Bottom accent line — visual separator between hero and trust-bar */
