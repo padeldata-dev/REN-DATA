@@ -817,6 +817,72 @@ function setMode(mode,btn){
       </div><!-- coll-body -->
     </div><!-- coll-wrap -->
   </div>
+<style>
+.afford-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.25rem 0}
+.afford-card{background:var(--white,#fff);border:1px solid var(--border,#e2e8f0);border-radius:14px;padding:1.2rem 1.15rem;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.afford-icon{font-size:1.4rem;margin-bottom:.5rem}
+.afford-val{font-size:1.95rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.afford-unit{font-size:.9rem;color:var(--muted,#64748b);font-weight:600;margin-left:.3rem}
+.afford-lbl{font-size:.78rem;color:var(--text2,#475569);margin-top:.5rem;line-height:1.4;font-weight:600}
+.afford-sub{font-size:.7rem;color:var(--muted,#64748b);margin-top:.4rem;font-family:ui-monospace,monospace}
+.afford-cmp{font-size:.72rem;font-weight:600;margin-top:.7rem;padding-top:.6rem;border-top:1px dashed var(--border,#e2e8f0)}
+.afford-cmp.up{color:var(--green,#059669)}
+.afford-cmp.down{color:var(--red,#dc2626)}
+.afford-cmp.eq{color:var(--muted,#64748b)}
+.afford-verdict{display:flex;align-items:center;gap:.95rem;padding:1.05rem 1.2rem;border-radius:12px;margin:.9rem 0 .55rem;border:1px solid}
+.afford-verdict.ok{background:#ecfdf5;border-color:#a7f3d0}
+.afford-verdict.ok .afford-vd-tit,.afford-verdict.ok .afford-vd-txt{color:#065f46}
+.afford-verdict.warn{background:#fffbeb;border-color:#fde68a}
+.afford-verdict.warn .afford-vd-tit,.afford-verdict.warn .afford-vd-txt{color:#92400e}
+.afford-verdict.bad{background:#fef2f2;border-color:#fecaca}
+.afford-verdict.bad .afford-vd-tit,.afford-verdict.bad .afford-vd-txt{color:#991b1b}
+.afford-vd-icon{font-size:1.55rem}
+.afford-vd-tit{font-weight:800;font-size:.95rem}
+.afford-vd-txt{font-size:.78rem;margin-top:.18rem;line-height:1.45}
+.afford-note{font-size:.72rem;color:var(--muted,#64748b);background:var(--white,#fff);border:1px solid var(--border,#e2e8f0);border-radius:8px;padding:.85rem 1rem;line-height:1.6;margin-top:.55rem}
+@media(max-width:760px){.afford-grid{grid-template-columns:1fr}}
+</style>
+<!-- ¿PUEDO PERMITIRME COMPRAR EN SANT VICENT DEL RASPEIG? -->
+  <div class="section" id="afford">
+    <div class="sec-hdr">
+      <div class="sec-eye">Capacidad de compra</div>
+      <h2>¿Puedo permitirme comprar en Sant Vicent del Raspeig?</h2>
+      <p>Cruzamos el precio de un piso de 100 m² en Sant Vicent del Raspeig con el salario medio anual (21.000€ · estimación provincial AEAT 2024) y el alquiler local para responder a las tres preguntas clave del comprador.</p>
+    </div>
+    <div class="afford-grid">
+      <div class="afford-card">
+        <div class="afford-icon">📅</div>
+        <div class="afford-val" style="color:#d97706">8.6<span class="afford-unit">años</span></div>
+        <div class="afford-lbl">de sueldo bruto para comprar un piso de 100 m²</div>
+        <div class="afford-sub">180.000€ ÷ 21.000€/año</div>
+        <div class="afford-cmp eq">≈ media España (8.9)</div>
+      </div>
+      <div class="afford-card">
+        <div class="afford-icon">💸</div>
+        <div class="afford-val" style="color:var(--red)">50<span class="afford-unit">%</span></div>
+        <div class="afford-lbl">de tu nómina mensual neta iría a la cuota de hipoteca</div>
+        <div class="afford-sub">698€/mes ÷ 1.400€/mes neto est.</div>
+        <div class="afford-cmp eq">≈ media España (51.8)</div>
+      </div>
+      <div class="afford-card">
+        <div class="afford-icon">⚖️</div>
+        <div class="afford-val" style="color:#d97706">17.2<span class="afford-unit">años</span></div>
+        <div class="afford-lbl">de alquiler equivalen al precio del piso (price-to-rent)</div>
+        <div class="afford-sub">180.000€ ÷ 10.440€/año alquiler</div>
+        <div class="afford-cmp eq">≈ media España (18.0)</div>
+      </div>
+    </div>
+    <div class="afford-verdict warn">
+      <span class="afford-vd-icon">⚖️</span>
+      <div>
+        <div class="afford-vd-tit">Zona de equilibrio</div>
+        <div class="afford-vd-txt">Indicadores mixtos: la compra es viable pero requiere ajustar plazo, entrada o presupuesto. Compara con la calculadora de hipoteca de esta misma página.</div>
+      </div>
+    </div>
+    <p class="afford-note"><strong>Cómo leer estos datos:</strong> "Años de sueldo" es la ratio precio/ingresos bruta (ideal &lt;8, sostenible &lt;12). "Esfuerzo" sigue el estándar bancario del Banco de España: &lt;30% saludable, 30-40% ajustado, &gt;40% no viable. "Price-to-rent" indica si conviene comprar (&lt;15), equilibrio (15-20) o seguir alquilando (&gt;20). <strong>Fuentes:</strong> salario medio anual — estimación provincial AEAT 2024; precio del m² y alquiler de Sant Vicent del Raspeig — datos Q1 2026 de Ren Data (origen INE · Ministerio de Vivienda). La cuota mensual asume hipoteca al 80% LTV, 3,2% TAE, 25 años. El salario neto se aproxima como 80% del bruto.</p>
+  </div>
+
+
 
   <!-- CASOS DE USO -->
   <div class="section">
