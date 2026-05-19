@@ -25,7 +25,7 @@ FICHAS_DIR = ROOT / "rendata_beta"
 RE_CITY        = re.compile(r'<div class="banner-title">([^<]+)</div>')
 RE_PRECIO_TIPO = re.compile(r'id="hi-precio"\s+type="number"\s+value="(\d+)"')
 RE_ITP_PCT     = re.compile(r'<div class="itp-val">(\d+(?:[.,]\d+)?)<span class="itp-pct">')
-RE_ITP_CCAA    = re.compile(r'<div class="sl">ITP al comprar en ([^<]+)</div>')
+RE_ITP_CCAA    = re.compile(r'<div class="sl">(ITP|IPSI|IGIC) al comprar en ([^<]+)</div>')
 RE_HERO_DESC   = re.compile(
     r'<p class="hero-desc">Análisis completo para inversores[^<]*</p>'
 )
@@ -60,7 +60,8 @@ def cuota_hipoteca(precio: float, ltv: float = 0.80,
 
 # ---------- Snippet builders -----------------------------------------------
 
-def build_caso_comprador(city: str, precio: int, ccaa: str, itp_pct: str) -> str:
+def build_caso_comprador(city: str, precio: int, ccaa: str,
+                         itp_pct: str, tax_label: str = "ITP") -> str:
     entrada = precio * 0.20
     gastos = precio * 0.08
     ahorro = entrada + gastos
@@ -81,7 +82,7 @@ def build_caso_comprador(city: str, precio: int, ccaa: str, itp_pct: str) -> str
         f'    <div class="caso-row"><span class="caso-rl">Entrada mínima (20%)</span><span class="caso-rv" style="color:var(--blue)">{euro(entrada)}€</span></div>\n'
         f'    <div class="caso-row"><span class="caso-rl">Gastos compra (~8%)</span><span class="caso-rv" style="color:var(--red)">-{euro(gastos)}€</span></div>\n'
         f'    <div class="caso-row"><span class="caso-rl">Ahorro total necesario</span><span class="caso-rv" style="color:var(--green)">{euro(ahorro)}€</span></div>\n'
-        f'    <div class="caso-row"><span class="caso-rl">ITP {ccaa}</span><span class="caso-rv">{itp_pct}%</span></div>\n'
+        f'    <div class="caso-row"><span class="caso-rl">{tax_label} {ccaa}</span><span class="caso-rv">{itp_pct}%</span></div>\n'
         '  </div>\n'
         '  <div class="caso-footer">\n'
         '    <div class="caso-roi-wrap">\n'
@@ -177,11 +178,13 @@ def transform(html: str, slug: str) -> tuple[str, dict]:
         )
         return html, info
 
-    city    = m_city.group(1).strip()
-    precio  = int(m_pre.group(1))
-    itp_pct = m_itp.group(1).replace(",", ".").rstrip("0").rstrip(".") or m_itp.group(1)
-    ccaa    = m_ccaa.group(1).strip()
-    info.update(city=city, precio=precio, itp=itp_pct, ccaa=ccaa)
+    city      = m_city.group(1).strip()
+    precio    = int(m_pre.group(1))
+    # Preserve original tax % as written (handles "0,5" and "10")
+    itp_pct   = m_itp.group(1)
+    tax_label = m_ccaa.group(1)
+    ccaa      = m_ccaa.group(2).strip()
+    info.update(city=city, precio=precio, itp=itp_pct, ccaa=ccaa, tax=tax_label)
 
     out = html
 
@@ -202,7 +205,7 @@ def transform(html: str, slug: str) -> tuple[str, dict]:
     info["banner_sub"] = n_sub
 
     # (C) 4o caso de uso
-    caso = build_caso_comprador(city, precio, ccaa, itp_pct)
+    caso = build_caso_comprador(city, precio, ccaa, itp_pct, tax_label)
     new_out, n_caso = RE_CASOS_GRID_CLOSE.subn(
         lambda mm: mm.group(1) + caso + mm.group(2), out, count=1
     )

@@ -130,7 +130,7 @@
   <div class="banner-content">
     <div>
       <div class="banner-title">Cornellà de Llobregat</div>
-      <div class="banner-sub">Cataluña · Análisis de inversión inmobiliaria · Abril 2026</div>
+      <div class="banner-sub">Cataluña · Comprar o invertir · Abril 2026</div>
     </div>
     <div class="banner-roi">
       <div class="banner-roi-v">5,4%</div>
@@ -160,7 +160,7 @@
   <div>
     <div class="hero-tag"><span class="live-dot"></span>Datos actualizados · Abril 2026</div>
     <h1>Rentabilidad del alquiler<br>en <span class="city">Cornellà de Llobregat</span></h1>
-    <p class="hero-desc">Análisis completo para inversores: precio del m², rentabilidad por barrio, evolución histórica y comparativa nacional. Todo lo que necesitas antes de comprar.</p>
+    <p class="hero-desc">Datos completos para comprar o invertir en Cornellà de Llobregat: precio del m², rentabilidad por barrio, gastos de compra, hipoteca y mercado por zonas.</p>
     <div class="hero-acts">
       <a href="ranking.html" class="btn-p">Ver ranking ciudades →</a>
       <a href="#zonas" class="btn-s">Ver zonas</a>
@@ -204,6 +204,38 @@
   </div>
 </div>
 
+
+<!-- MODE SELECTOR comprador/inversor -->
+<div class="mode-selector-wrap">
+  <div class="mode-selector">
+    <span class="mode-selector-label">¿Para qué buscas datos?</span>
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="comprador" onclick="setMode('comprador',this)">🏠 Quiero vivir aquí</button>
+      <button class="mode-tab" data-mode="inversor" onclick="setMode('inversor',this)">📈 Quiero invertir</button>
+    </div>
+  </div>
+  <p class="mode-selector-hint">Toda la información sigue visible — selecciona tu perfil para ir directo a lo que más te interesa.</p>
+</div>
+<style>
+.mode-selector-wrap{max-width:1200px;margin:1rem auto 0;padding:0 1.5rem}
+.mode-selector{background:#fff;border:1px solid var(--border,#e2e8f0);border-radius:14px;padding:.85rem 1.15rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.mode-selector-label{font-size:.72rem;font-weight:700;color:var(--text,#0f172a);text-transform:uppercase;letter-spacing:.07em}
+.mode-tabs{display:flex;gap:.45rem;flex-wrap:wrap}
+.mode-tab{padding:.5rem 1rem;border:1px solid var(--border,#e2e8f0);border-radius:99px;background:#f8fafc;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .18s ease;color:var(--text2,#475569);font-family:inherit}
+.mode-tab:hover{border-color:var(--blue,#1a56db);color:var(--blue,#1a56db)}
+.mode-tab.active{background:var(--blue,#1a56db);color:#fff;border-color:var(--blue,#1a56db);box-shadow:0 2px 6px rgba(26,86,219,.25)}
+.mode-selector-hint{max-width:1200px;margin:.55rem auto 1.25rem;padding:0 1.5rem;font-size:.7rem;color:var(--muted,#64748b);text-align:center}
+@media(max-width:560px){.mode-selector{flex-direction:column;align-items:flex-start;gap:.7rem}.mode-tab{flex:1 1 auto;text-align:center}}
+</style>
+<script>
+function setMode(mode,btn){
+  document.querySelectorAll(".mode-tab").forEach(function(b){b.classList.remove("active")});
+  btn.classList.add("active");
+  var targetId = mode==="comprador" ? "calculadoras" : "zonas";
+  var t = document.getElementById(targetId);
+  if(t){var y = t.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({top:y,behavior:"smooth"});}
+}
+</script>
 <div class="main">
 
   <!-- ZONAS -->
@@ -914,7 +946,34 @@
       <div class="caso-roi-label">Años recuperación</div>
     </div>
   </div>
-</div></div>
+</div><div class="caso-card">
+  <div class="caso-header">
+    <div class="caso-emoji">🏠</div>
+    <div>
+      <div class="caso-label">Comprador para vivir</div>
+      <div class="caso-budget">196.000€ · piso tipo en Cornellà de Llobregat</div>
+    </div>
+    <span class="caso-badge viable">Vivienda habitual</span>
+  </div>
+  <div class="caso-body">
+    <div class="caso-row"><span class="caso-rl">Precio piso típico</span><span class="caso-rv">196.000€</span></div>
+    <div class="caso-row"><span class="caso-rl">Entrada mínima (20%)</span><span class="caso-rv" style="color:var(--blue)">39.200€</span></div>
+    <div class="caso-row"><span class="caso-rl">Gastos compra (~8%)</span><span class="caso-rv" style="color:var(--red)">-15.680€</span></div>
+    <div class="caso-row"><span class="caso-rl">Ahorro total necesario</span><span class="caso-rv" style="color:var(--green)">54.880€</span></div>
+    <div class="caso-row"><span class="caso-rl">ITP Cataluña</span><span class="caso-rv">1%</span></div>
+  </div>
+  <div class="caso-footer">
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val" style="color:var(--blue)">760€</div>
+      <div class="caso-roi-label">Cuota/mes · 25 años · 3,2%</div>
+    </div>
+    <div class="caso-roi-wrap">
+      <div class="caso-roi-val">71.193€</div>
+      <div class="caso-roi-label">Intereses totales</div>
+    </div>
+  </div>
+</div>
+</div>
     <div style="margin-top:.85rem;font-size:.75rem;color:var(--muted);background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem">
       ⚠️ Estimaciones basadas en precio medio de Cornellà de Llobregat. ITP Cataluña: 10%. La rentabilidad real depende de la zona, estado del inmueble y condiciones del mercado.
     </div>
@@ -1081,6 +1140,18 @@
     <svg class="faq-arrow" id="fa-7" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
   <div class="faq-a" id="fa-body-7">Al comprar una vivienda de segunda mano en Cataluña para alquilar pagarás: ITP (Impuesto de Transmisiones Patrimoniales, entre el 7% y el 10% según la comunidad autónoma), notaría y registro (~1% del precio). En total, cuenta con un 10–12% adicional sobre el precio de compra para gastos. Los ingresos del alquiler tributan en el IRPF como rendimientos del capital inmobiliario, con una reducción del 60% si es vivienda habitual del inquilino.</div>
+</div><div class="faq-item" onclick="toggleFaq(8)">
+  <div class="faq-q" id="fq-8">
+    <span>¿Es buen momento para comprar piso en Cornellà de Llobregat si quiero vivir en él?</span>
+    <svg class="faq-arrow" id="fa-8" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="faq-a" id="fa-body-8">Para un comprador de vivienda habitual en Cornellà de Llobregat, las condiciones favorables son tres: pre-aprobación bancaria de la hipoteca, ahorro suficiente para entrada + gastos (~28% del precio del piso) y horizonte de permanencia mínimo de 5-7 años para amortizar los gastos de compra. Revisa la evolución del precio del m², los días en mercado y la guía de compra paso a paso más arriba — los datos de Cornellà de Llobregat en esta página te ayudarán a decidir si esperar o comprar ahora.</div>
+</div><div class="faq-item" onclick="toggleFaq(9)">
+  <div class="faq-q" id="fq-9">
+    <span>¿Cuánto necesito ahorrar para comprar un piso en Cornellà de Llobregat?</span>
+    <svg class="faq-arrow" id="fa-9" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="faq-a" id="fa-body-9">Para un piso típico en Cornellà de Llobregat (~196.000€) necesitas aproximadamente: <strong>entrada del 20% (39.200€)</strong> + <strong>gastos de compra ~8% (15.680€)</strong> → un ahorro total cercano a <strong>54.880€</strong>. La hipoteca al 80% del precio a 25 años y 3,2% TAE quedaría en torno a <strong>760€/mes</strong>. Usa la calculadora de hipoteca de esta misma página para ajustar entrada, plazo y tipo a tu caso concreto.</div>
 </div></div>
   </div>
   
