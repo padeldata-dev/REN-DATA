@@ -103,11 +103,13 @@
 </header>
 
 <section class="hero fu d1" id="hero" style="--hero-img:url('img/ronda-hero.jpg')">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-cols">
     <div class="hero-left">
       <div class="hero-left-inner">
         <a href="/" class="hero-logo" aria-label="Ren Data">
-          <img src="/img/logo-rendata.png" alt="Ren Data" height="60">
+          <img src="/img/logo-rendata.png" alt="Ren Data" height="55">
         </a>
         <h1 class="hero-title">RENDATA</h1>
         <div class="hero-tagline">DATOS QUE CONSTRUYEN MEJORES DECISIONES</div>
@@ -133,10 +135,8 @@
       </div>
     </div>
     <div class="hero-right" aria-hidden="true">
-      <div class="hero-photo"></div>
-      <div class="hero-fade"></div>
-      <svg class="hero-network" viewBox="0 0 760 580" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="rgba(255,255,255,.55)" stroke-width="1" fill="none" stroke-linecap="round">
+      <svg class="hero-network" viewBox="0 0 760 580" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="rgba(255,255,255,.6)" stroke-width="1" fill="none" stroke-linecap="round">
           <line x1="310" y1="290" x2="640" y2="175"/>
           <line x1="310" y1="290" x2="210" y2="475"/>
           <line x1="310" y1="290" x2="575" y2="320"/>
@@ -164,7 +164,7 @@
           <line x1="290" y1="130" x2="250" y2="200"/>
           <line x1="115" y1="525" x2="60" y2="530"/>
         </g>
-        <g fill="#fff">
+        <g fill="rgba(255,255,255,.92)">
           <circle cx="370" cy="60" r="4.5"/>
           <circle cx="425" cy="50" r="3"/>
           <circle cx="300" cy="55" r="3"/>
@@ -203,9 +203,32 @@
           <circle cx="115" cy="525" r="3"/>
         </g>
       </svg>
-      <div class="hero-city-tag" id="heroCityTag"><span class="pin">📍</span><span id="heroCityName">Ronda</span></div>
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-eyebrow">Análisis</div>
+          <div class="hero-card-title">¿Dónde invertir en vivienda en España?</div>
+          <div class="hero-card-value">ROI medio <span class="ac">5,8%</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-eyebrow">Ranking ciudades</div>
+          <div class="hero-card-title">Rentabilidad media (ROI)</div>
+          <div class="hero-card-value"><span class="hi">5,8%</span></div>
+          <div class="hero-card-foot">España · 587 ciudades</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-eyebrow">Subida media</div>
+          <div class="hero-card-title">Precio del m² (anual)</div>
+          <div class="hero-card-value">↑ <span class="hi">7,1%</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-eyebrow">Cobertura</div>
+          <div class="hero-card-title">587 ciudades analizadas</div>
+          <div class="hero-card-value"><span class="ac">+30</span> indicadores</div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="hero-city-tag" id="heroCityTag"><span class="pin">📍</span><span id="heroCityName">Ronda</span></div>
   <div class="hero-accent" aria-hidden="true"></div>
 </section>
 
