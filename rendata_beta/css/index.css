@@ -44,7 +44,7 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 .hero-deco,.hero-grid{display:none}
 
 /* Full-section photo background + horizontal white→transparent overlay */
-.hero-bg{position:absolute;inset:0;background-image:var(--hero-img,url('../img/ronda-hero.jpg'));background-size:cover;background-position:center;z-index:0}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:0}
 .hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.95) 40%,rgba(255,255,255,.65) 50%,rgba(255,255,255,.15) 58%,rgba(255,255,255,0) 70%)}
 
 /* 2-column grid 55/45 */

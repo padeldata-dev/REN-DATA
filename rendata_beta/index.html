@@ -102,8 +102,8 @@
   </nav>
 </header>
 
-<section class="hero fu d1" id="hero" style="--hero-img:url('img/ronda-hero.jpg')">
-  <div class="hero-bg" aria-hidden="true"></div>
+<section class="hero fu d1" id="hero">
+  <div class="hero-bg" id="heroBg" aria-hidden="true" style="background-image:url('/img/ronda-hero.jpg')"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-cols">
     <div class="hero-left">
@@ -1458,10 +1458,10 @@ initMap();
   ];
   const idx = Math.floor(Date.now()/86400000) % ciudades.length;
   const c = ciudades[idx];
-  const hero = document.getElementById('hero');
+  const bg   = document.getElementById('heroBg');
   const name = document.getElementById('heroCityName');
   const tag  = document.getElementById('heroCityTag');
-  if(hero) hero.style.setProperty('--hero-img', "url('img/" + c.slug + ".jpg')");
+  if(bg)   bg.style.backgroundImage = "url('/img/" + c.slug + ".jpg')";
   if(name) name.textContent = c.nombre;
   if(tag)  tag.style.display = c.generic ? 'none' : '';
 })();
