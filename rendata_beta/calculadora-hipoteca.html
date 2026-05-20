@@ -272,14 +272,14 @@ function compute(){
   }
 
   const showYears = [1,2,3,5,10,15,20,25,30,35,40].filter(y=>y<=years);
-  const tabla = `<table class="amort">
+  const tabla = `<div class="resp-table-wrap"><table class="amort">
     <thead><tr><th>Año</th><th>Capital</th><th>Intereses</th><th>Capital pendiente</th></tr></thead>
     <tbody>${showYears.map(y=>{
       const r = rows[y-1];
       return `<tr><td>Año ${y}</td><td>${fmtE(r.capital)}</td><td>${fmtE(r.interes)}</td><td>${fmtE(r.saldo)}</td></tr>`;
-    }).join('')}</tbody></table>`;
+    }).join('')}</tbody></table></div>`;
 
-  const gastosTabla = `<table class="gastos-table">
+  const gastosTabla = `<div class="resp-table-wrap"><table class="gastos-table">
     <tr><td>Entrada (20%)</td><td>${fmtE(entradaMin)}</td></tr>
     <tr><td>${ivaItpLabel}</td><td>${fmtE(ivaItp)}</td></tr>
     ${tipo==='nueva'?`<tr><td>${ajdLabel}</td><td>${fmtE(ajd)}</td></tr>`:''}
@@ -288,7 +288,7 @@ function compute(){
     <tr><td>Gestoría</td><td>${fmtE(gestoria)}</td></tr>
     <tr><td>Tasación</td><td>${fmtE(tasacion)}</td></tr>
     <tr style="background:#f1f5f9;font-weight:800"><td>Total ahorro necesario</td><td>${fmtE(ahorroNecesario)}</td></tr>
-  </table>`;
+  </table></div>`;
 
   document.getElementById('results').innerHTML = `
     <div class="kpi-row three">

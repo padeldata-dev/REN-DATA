@@ -337,3 +337,12 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:3rem 2
 .footer-bottom a:hover{color:var(--blue)}
 @media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;gap:2rem}}
 @media(max-width:600px){footer{padding:2rem 1.25rem 1.25rem}.footer-inner{grid-template-columns:1fr;gap:1.5rem}}
+
+
+/* Responsive table wrapper — added by audit block 2 */
+.resp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0}
+.resp-table-wrap table{min-width:560px}
+/* Mobile-safe image rule (global) */
+img{max-width:100%;height:auto}
+/* Avoid iOS zoom on inputs */
+@media(max-width:768px){input[type="text"],input[type="number"],input[type="email"],select,textarea{font-size:16px}}
