@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Calculadora de hipoteca con cuota mensual, total intereses, gastos de compra reales por comunidad autónoma (ITP/IVA, notario, registro) y tabla de amortización completa.">
+<title>Calculadora de hipoteca con gastos por CCAA | Ren Data</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ren Data">
+<meta property="og:title" content="Calculadora de hipoteca con gastos por CCAA">
+<meta property="og:description" content="Calculadora de hipoteca con cuota mensual, total intereses, gastos de compra reales por comunidad autónoma (ITP/IVA, notario, registro) y tabla de amortización completa.">
+<meta property="og:url" content="https://rendata.es/calculadora-hipoteca.html">
+<meta property="og:image" content="https://rendata.es/img/logo-rendata-transparente.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculadora de hipoteca con gastos por CCAA">
+<meta name="twitter:description" content="Calculadora de hipoteca con cuota mensual, total intereses, gastos de compra reales por comunidad autónoma (ITP/IVA, notario, registro) y tabla de amortización completa.">
+<link rel="canonical" href="https://rendata.es/calculadora-hipoteca.html">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/nav.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de hipoteca por CCAA — Ren Data",
+  "url": "https://rendata.es/calculadora-hipoteca.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "Calcula tu cuota mensual de hipoteca, total intereses, gastos de compra reales por comunidad autónoma (ITP, notario, registro, gestoría) y consulta la tabla de amortización año a año.",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "inLanguage": "es-ES",
+  "publisher": {"@type": "Organization", "name": "Ren Data", "url": "https://rendata.es/"}
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rendata.es/"},
+    {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://rendata.es/analisis.html"},
+    {"@type": "ListItem", "position": 3, "name": "Calculadora de hipoteca", "item": "https://rendata.es/calculadora-hipoteca.html"}
+  ]
+}</script>
+<style>
+:root{--bg:#f8fafc;--white:#fff;--blue:#1a56db;--blue-d:#1140a6;--blue-l:#eff6ff;--text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--border2:#d1dae8;--green:#059669;--green-bg:#ecfdf5;--red:#dc2626;--red-bg:#fef2f2;--sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);--font:'Plus Jakarta Sans',sans-serif;--r:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.logo img{height:32px;width:auto;display:block}
+nav a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.45rem .85rem;border-radius:8px;transition:all .15s}
+nav a:hover{color:var(--blue);background:var(--blue-l)}
+.tool-hero{background:linear-gradient(135deg,#0a1628 0%,#1a3a7a 50%,#0f1b3d 100%);color:#fff;padding:3rem 2rem 2.5rem;text-align:center}
+.tool-hero h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin:0 0 .7rem}
+.tool-hero p{font-size:1.05rem;color:rgba(226,232,240,.92);max-width:680px;margin:0 auto}
+.crumb{max-width:1100px;margin:1.5rem auto 0;padding:0 2rem;font-size:.78rem;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--blue)}
+.tool-wrap{max-width:1100px;margin:2rem auto;padding:0 2rem 4rem}
+.tool-grid{display:grid;grid-template-columns:340px 1fr;gap:1.5rem;align-items:start}
+@media(max-width:860px){.tool-grid{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh)}
+.card h2{font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin-bottom:1rem}
+.f-group{margin-bottom:1.1rem}
+.f-label{display:block;font-size:.78rem;font-weight:700;color:var(--text2);margin-bottom:.4rem}
+.f-input,.f-select{width:100%;background:#fff;border:1.5px solid var(--border2);border-radius:8px;padding:.65rem .9rem;font-size:.95rem;font-family:inherit;color:var(--text);outline:none;transition:border-color .15s}
+.f-input:focus,.f-select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+.f-hint{font-size:.7rem;color:var(--muted);margin-top:.3rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.kpi-row{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-bottom:1rem}
+.kpi-row.three{grid-template-columns:repeat(3,1fr)}
+.kpi{background:var(--blue-l);border:1px solid #c7d8f6;border-radius:10px;padding:.85rem 1rem}
+.kpi-l{font-size:.65rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.3rem}
+.kpi-v{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--text)}
+.kpi.k-warn{background:#fef9c3;border-color:#fde68a} .kpi.k-warn .kpi-l{color:#a16207}
+.kpi.k-ok{background:var(--green-bg);border-color:#a7f3d0} .kpi.k-ok .kpi-l{color:var(--green)}
+.kpi.k-bad{background:var(--red-bg);border-color:#fecaca} .kpi.k-bad .kpi-l{color:var(--red)}
+.summary{background:#0f1b3d;color:#fff;border-radius:10px;padding:1.1rem 1.3rem;font-size:.92rem;line-height:1.55;margin-bottom:1rem}
+.summary strong{color:#34d399}
+table.amort{width:100%;border-collapse:collapse;margin-top:.8rem;font-size:.85rem}
+table.amort th,table.amort td{padding:.5rem .7rem;text-align:right;border-bottom:1px solid var(--border)}
+table.amort th{background:#f1f5f9;font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text)}
+table.amort td:first-child,table.amort th:first-child{text-align:left}
+.gastos-table{margin-top:1rem;width:100%;border-collapse:collapse;font-size:.88rem}
+.gastos-table td{padding:.4rem .8rem;border-bottom:1px solid var(--border)}
+.gastos-table td:last-child{text-align:right;font-weight:700}
+.note{font-size:.78rem;color:var(--muted);margin-top:1rem;line-height:1.55}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo"><img src="/img/logo-rendata-transparente.png" height="32" alt="REN DATA"></a>
+  <nav>
+    <button class="mob-menu-btn" onclick="this.closest('nav').classList.toggle('open')" aria-label="Menú" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="mob-nav-links">
+      <a href="/">🏠 Ciudades</a>
+      <a href="/ranking.html">📊 Ranking</a>
+      <a href="/analisis.html">📈 Análisis</a>
+      <a href="/comparador.html">⚖️ Comparar</a>
+      <a href="/simulador-comprar-vs-alquilar.html">🔄 Comprar vs alquilar</a>
+      <a href="/calculadora-hipoteca.html">💶 Calculadora hipoteca</a>
+      <a href="/metodologia.html">📊 Metodología</a>
+      <a href="/glosario.html">📖 Glosario</a>
+      <a href="/guia-inversor.html">🎯 Guía inversor</a>
+      <a href="/sobre.html">ℹ️ Sobre</a>
+    </div>
+    <a href="/">Ciudades</a>
+    <a href="/ranking.html">Ranking</a>
+    <a href="/analisis.html">Análisis</a>
+    <a href="/comparador.html">Comparador</a>
+    <a href="/simulador-comprar-vs-alquilar.html">Comprar vs alquilar</a>
+    <a href="/calculadora-hipoteca.html">Calculadora hipoteca</a>
+    <a href="/metodologia.html">Metodología</a>
+    <a href="/glosario.html">Glosario</a>
+    <a href="/sobre.html">Sobre</a>
+  </nav>
+</header>
+
+<section class="tool-hero">
+  <h1>💶 Calculadora de hipoteca</h1>
+  <p>Calcula tu cuota mensual, total de intereses pagados, gastos reales de compra según tu CCAA (ITP, notario, registro, gestoría) y consulta la tabla de amortización año a año.</p>
+</section>
+
+<nav class="crumb"><a href="/">Inicio</a> · <a href="/analisis.html">Herramientas</a> · Calculadora de hipoteca</nav>
+
+<div class="tool-wrap">
+  <div class="tool-grid">
+    <div class="card">
+      <h2>📋 Datos</h2>
+      <div class="f-group">
+        <label class="f-label" for="price">Precio vivienda (€)</label>
+        <input class="f-input" id="price" type="number" min="20000" step="1000" value="200000">
+      </div>
+      <div class="f-group">
+        <label class="f-label" for="savings">Ahorros disponibles (€)</label>
+        <input class="f-input" id="savings" type="number" min="0" step="1000" value="50000">
+        <div class="f-hint">Cubre entrada y gastos de compra</div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label class="f-label" for="rate">Interés (%)</label>
+          <input class="f-input" id="rate" type="number" step="0.1" min="0.5" max="10" value="3.5">
+        </div>
+        <div class="f-group">
+          <label class="f-label" for="years">Plazo (años)</label>
+          <input class="f-input" id="years" type="number" min="10" max="40" value="30">
+        </div>
+      </div>
+      <div class="f-group">
+        <label class="f-label" for="ccaa">Comunidad autónoma</label>
+        <select class="f-select" id="ccaa">
+          <option value="Andalucía">Andalucía (ITP 7%)</option>
+          <option value="Aragón">Aragón (ITP 8%)</option>
+          <option value="Asturias">Asturias (ITP 8%)</option>
+          <option value="Islas Baleares">Islas Baleares (ITP 11%)</option>
+          <option value="Canarias">Canarias (ITP 6,5%)</option>
+          <option value="Cantabria">Cantabria (ITP 9%)</option>
+          <option value="Castilla-La Mancha">Castilla-La Mancha (ITP 9%)</option>
+          <option value="Castilla y León">Castilla y León (ITP 8%)</option>
+          <option value="Cataluña">Cataluña (ITP 10%)</option>
+          <option value="C. Valenciana">C. Valenciana (ITP 10%)</option>
+          <option value="Extremadura">Extremadura (ITP 8%)</option>
+          <option value="Galicia">Galicia (ITP 10%)</option>
+          <option value="La Rioja">La Rioja (ITP 7%)</option>
+          <option value="C. de Madrid" selected>C. de Madrid (ITP 6%)</option>
+          <option value="R. de Murcia">R. de Murcia (ITP 8%)</option>
+          <option value="Navarra">Navarra (ITP 6%)</option>
+          <option value="País Vasco">País Vasco (ITP 7%)</option>
+        </select>
+      </div>
+      <div class="f-group">
+        <label class="f-label" for="vivtype">Tipo de vivienda</label>
+        <select class="f-select" id="vivtype">
+          <option value="segunda" selected>Segunda mano (paga ITP)</option>
+          <option value="nueva">Obra nueva (paga IVA 10% + AJD)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Resultados</h2>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.5rem">
+    <h2>💡 Notas</h2>
+    <p class="note"><strong>Cálculos.</strong> Cuota mensual con sistema francés (cuota constante). <strong>Gastos de compra de segunda mano</strong>: ITP según CCAA + notario (~0,5%) + registro (~0,4%) + gestoría (~300€). <strong>Obra nueva</strong>: IVA 10% + AJD 1,5% (excepto Madrid 0,75%, Canarias 1%) + notario + registro + gestoría. Los porcentajes ITP son los tipos generales 2026; pueden existir reducciones por jóvenes &lt;35, familia numerosa, vivienda habitual, etc. <strong>Banco</strong>: la mayoría de bancos financian hasta el 80% del valor de tasación; el 20% restante más los gastos de compra los aporta el comprador (≈30% del precio).</p>
+  </div>
+</div>
+
+<footer style="border-top:1px solid var(--border);background:#fff;padding:1.5rem 2rem;text-align:center;font-size:.8rem;color:var(--muted)">
+  © 2026 Ren Data · <a href="/" style="color:var(--blue);text-decoration:none">Inicio</a> · <a href="/metodologia.html" style="color:var(--blue);text-decoration:none">Metodología</a> · <a href="/sobre.html" style="color:var(--blue);text-decoration:none">Sobre</a>
+</footer>
+
+<script src="/js/nav-dropdown.js" defer></script>
+<script>
+// ITP/IVA por CCAA (% sobre precio vivienda)
+const ITP = {
+  "Andalucía": 7, "Aragón": 8, "Asturias": 8, "Islas Baleares": 11, "Canarias": 6.5,
+  "Cantabria": 9, "Castilla-La Mancha": 9, "Castilla y León": 8, "Cataluña": 10,
+  "C. Valenciana": 10, "Extremadura": 8, "Galicia": 10, "La Rioja": 7,
+  "C. de Madrid": 6, "R. de Murcia": 8, "Navarra": 6, "País Vasco": 7
+};
+const AJD = { "C. de Madrid": 0.75, "Canarias": 1 };
+
+function fmt(n){ return Math.round(n).toLocaleString('es-ES'); }
+function fmtE(n){ return '€' + fmt(n); }
+function fmtPct(n){ return n.toFixed(2).replace('.',',') + '%'; }
+
+function monthlyPayment(principal, annualRate, years){
+  const r = annualRate / 100 / 12;
+  const n = years * 12;
+  if (r === 0) return principal / n;
+  return principal * (r * Math.pow(1+r,n)) / (Math.pow(1+r,n) - 1);
+}
+
+function compute(){
+  const price = +document.getElementById('price').value || 0;
+  const savings = +document.getElementById('savings').value || 0;
+  const rate = +document.getElementById('rate').value || 3.5;
+  const years = Math.min(40, Math.max(10, +document.getElementById('years').value || 30));
+  const ccaa = document.getElementById('ccaa').value;
+  const tipo = document.getElementById('vivtype').value;
+
+  // Gastos de compra
+  let ivaItp, ivaItpLabel, ajd = 0, ajdLabel = '—';
+  if (tipo === 'segunda'){
+    ivaItp = price * (ITP[ccaa] || 0) / 100;
+    ivaItpLabel = `ITP ${fmtPct(ITP[ccaa])} (${ccaa})`;
+  } else {
+    ivaItp = price * 0.10;
+    ivaItpLabel = 'IVA 10% (obra nueva)';
+    const ajdRate = (AJD[ccaa] !== undefined ? AJD[ccaa] : 1.5);
+    ajd = price * ajdRate / 100;
+    ajdLabel = `AJD ${fmtPct(ajdRate)} (${ccaa})`;
+  }
+  const notario = price * 0.005;
+  const registro = price * 0.004;
+  const gestoria = 300;
+  const tasacion = 350;
+  const totalGastos = ivaItp + ajd + notario + registro + gestoria + tasacion;
+
+  // Hipoteca: banco financia hasta 80% del precio. Entrada = 20%.
+  // Entrada mínima necesaria = 20% del precio. Ahorros disponibles deben cubrir entrada + gastos.
+  const entradaMin = price * 0.20;
+  const ahorroNecesario = entradaMin + totalGastos;
+  const loan = Math.max(0, price - entradaMin);  // 80% financiable
+  const monthly = monthlyPayment(loan, rate, years);
+  const totalPagado = monthly * 12 * years;
+  const totalIntereses = totalPagado - loan;
+
+  const cubreAhorros = savings >= ahorroNecesario;
+
+  // Tabla amortización (por año)
+  const r = rate / 100 / 12;
+  let saldo = loan;
+  const rows = [];
+  for(let y=1; y<=years; y++){
+    let capPagado = 0, intPagado = 0;
+    for(let m=1; m<=12; m++){
+      const interes = saldo * r;
+      const capital = monthly - interes;
+      saldo -= capital;
+      capPagado += capital;
+      intPagado += interes;
+    }
+    rows.push({y, capital:capPagado, interes:intPagado, saldo:Math.max(0,saldo)});
+  }
+
+  const showYears = [1,2,3,5,10,15,20,25,30,35,40].filter(y=>y<=years);
+  const tabla = `<table class="amort">
+    <thead><tr><th>Año</th><th>Capital</th><th>Intereses</th><th>Capital pendiente</th></tr></thead>
+    <tbody>${showYears.map(y=>{
+      const r = rows[y-1];
+      return `<tr><td>Año ${y}</td><td>${fmtE(r.capital)}</td><td>${fmtE(r.interes)}</td><td>${fmtE(r.saldo)}</td></tr>`;
+    }).join('')}</tbody></table>`;
+
+  const gastosTabla = `<table class="gastos-table">
+    <tr><td>Entrada (20%)</td><td>${fmtE(entradaMin)}</td></tr>
+    <tr><td>${ivaItpLabel}</td><td>${fmtE(ivaItp)}</td></tr>
+    ${tipo==='nueva'?`<tr><td>${ajdLabel}</td><td>${fmtE(ajd)}</td></tr>`:''}
+    <tr><td>Notaría (~0,5%)</td><td>${fmtE(notario)}</td></tr>
+    <tr><td>Registro (~0,4%)</td><td>${fmtE(registro)}</td></tr>
+    <tr><td>Gestoría</td><td>${fmtE(gestoria)}</td></tr>
+    <tr><td>Tasación</td><td>${fmtE(tasacion)}</td></tr>
+    <tr style="background:#f1f5f9;font-weight:800"><td>Total ahorro necesario</td><td>${fmtE(ahorroNecesario)}</td></tr>
+  </table>`;
+
+  document.getElementById('results').innerHTML = `
+    <div class="kpi-row three">
+      <div class="kpi"><div class="kpi-l">Cuota mensual</div><div class="kpi-v">${fmtE(monthly)}</div></div>
+      <div class="kpi k-warn"><div class="kpi-l">Total intereses</div><div class="kpi-v">${fmtE(totalIntereses)}</div></div>
+      <div class="kpi"><div class="kpi-l">Total pagado banco</div><div class="kpi-v">${fmtE(loan+totalIntereses)}</div></div>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi ${cubreAhorros?'k-ok':'k-bad'}">
+        <div class="kpi-l">Ahorro necesario</div>
+        <div class="kpi-v">${fmtE(ahorroNecesario)}</div>
+      </div>
+      <div class="kpi ${cubreAhorros?'k-ok':'k-bad'}">
+        <div class="kpi-l">${cubreAhorros?'Tus ahorros cubren':'Te faltan'}</div>
+        <div class="kpi-v">${cubreAhorros?'✓ Cubierto':fmtE(ahorroNecesario - savings)}</div>
+      </div>
+    </div>
+    <div class="summary">
+      Para una vivienda de <strong>${fmtE(price)}</strong> en ${ccaa} necesitas
+      <strong>${fmtE(ahorroNecesario)}</strong> de ahorros (20% entrada + ~${fmtPct(totalGastos/price*100)} de gastos).
+      El banco te financia <strong>${fmtE(loan)}</strong> a ${years} años al ${fmtPct(rate)},
+      con cuota mensual de <strong>${fmtE(monthly)}</strong>. Pagarás <strong>${fmtE(totalIntereses)}</strong>
+      en intereses durante toda la hipoteca.
+    </div>
+    <h2 style="font-size:.92rem;font-weight:800;margin:1rem 0 .4rem">💸 Desglose de gastos</h2>
+    ${gastosTabla}
+    <h2 style="font-size:.92rem;font-weight:800;margin:1.2rem 0 .4rem">📅 Tabla de amortización</h2>
+    ${tabla}
+  `;
+}
+
+document.querySelectorAll('#price,#savings,#rate,#years,#ccaa,#vivtype').forEach(el=>{
+  el.addEventListener('input', compute);
+  el.addEventListener('change', compute);
+});
+compute();
+</script>
+</body>
+</html>
