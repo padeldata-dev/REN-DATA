@@ -1,0 +1,502 @@
+[
+  {
+    "slug": "madrid",
+    "n": "Madrid",
+    "ccaa": "C. de Madrid",
+    "pob": 2866850,
+    "p": 5960,
+    "alq": 1750,
+    "roi": 3.5,
+    "d": 15
+  },
+  {
+    "slug": "barcelona",
+    "n": "Barcelona",
+    "ccaa": "Cataluña",
+    "pob": 1508805,
+    "p": 4900,
+    "alq": 1880,
+    "roi": 4.6,
+    "d": 18
+  },
+  {
+    "slug": "valencia",
+    "n": "Valencia",
+    "ccaa": "C. Valenciana",
+    "pob": 746683,
+    "p": 2700,
+    "alq": 1200,
+    "roi": 5.3,
+    "d": 16
+  },
+  {
+    "slug": "sevilla",
+    "n": "Sevilla",
+    "ccaa": "Andalucía",
+    "pob": 697487,
+    "p": 2450,
+    "alq": 1080,
+    "roi": 5.3,
+    "d": 22
+  },
+  {
+    "slug": "zaragoza",
+    "n": "Zaragoza",
+    "ccaa": "Aragón",
+    "pob": 601674,
+    "p": 1950,
+    "alq": 980,
+    "roi": 6,
+    "d": 24
+  },
+  {
+    "slug": "malaga",
+    "n": "Málaga",
+    "ccaa": "Andalucía",
+    "pob": 549135,
+    "p": 3180,
+    "alq": 1340,
+    "roi": 5.1,
+    "d": 18
+  },
+  {
+    "slug": "palma",
+    "n": "Palma",
+    "ccaa": "Islas Baleares",
+    "pob": 434786,
+    "p": 4200,
+    "alq": 1650,
+    "roi": 4.7,
+    "d": 22
+  },
+  {
+    "slug": "las-palmas-gc",
+    "n": "Las Palmas de Gran Canaria",
+    "ccaa": "Canarias",
+    "pob": 381868,
+    "p": 2100,
+    "alq": 980,
+    "roi": 5.6,
+    "d": 20
+  },
+  {
+    "slug": "bilbao",
+    "n": "Bilbao",
+    "ccaa": "País Vasco",
+    "pob": 358875,
+    "p": 3150,
+    "alq": 1270,
+    "roi": 4.8,
+    "d": 28
+  },
+  {
+    "slug": "murcia",
+    "n": "Murcia",
+    "ccaa": "R. de Murcia",
+    "pob": 345759,
+    "p": 1750,
+    "alq": 860,
+    "roi": 5.9,
+    "d": 20
+  },
+  {
+    "slug": "valladolid",
+    "n": "Valladolid",
+    "ccaa": "Castilla y León",
+    "pob": 319805,
+    "p": 1600,
+    "alq": 800,
+    "roi": 6,
+    "d": 25
+  },
+  {
+    "slug": "cordoba",
+    "n": "Córdoba",
+    "ccaa": "Andalucía",
+    "pob": 306248,
+    "p": 1520,
+    "alq": 740,
+    "roi": 5.8,
+    "d": 26
+  },
+  {
+    "slug": "l-hospitalet-de-llobregat",
+    "n": "L'Hospitalet de Llobregat",
+    "ccaa": "Cataluña",
+    "pob": 289510,
+    "p": 3400,
+    "alq": 1500,
+    "roi": 5.3,
+    "d": 20
+  },
+  {
+    "slug": "vigo",
+    "n": "Vigo",
+    "ccaa": "Galicia",
+    "pob": 286774,
+    "p": 1850,
+    "alq": 890,
+    "roi": 5.8,
+    "d": 25
+  },
+  {
+    "slug": "alicante",
+    "n": "Alicante",
+    "ccaa": "C. Valenciana",
+    "pob": 274577,
+    "p": 2250,
+    "alq": 990,
+    "roi": 5.3,
+    "d": 19
+  },
+  {
+    "slug": "gijon",
+    "n": "Gijón",
+    "ccaa": "Asturias",
+    "pob": 264381,
+    "p": 1680,
+    "alq": 800,
+    "roi": 5.7,
+    "d": 27
+  },
+  {
+    "slug": "a-coruna",
+    "n": "A Coruña",
+    "ccaa": "Galicia",
+    "pob": 251543,
+    "p": 2100,
+    "alq": 880,
+    "roi": 5,
+    "d": 26
+  },
+  {
+    "slug": "granada",
+    "n": "Granada",
+    "ccaa": "Andalucía",
+    "pob": 245640,
+    "p": 1980,
+    "alq": 910,
+    "roi": 5.5,
+    "d": 21
+  },
+  {
+    "slug": "vitoria",
+    "n": "Vitoria",
+    "ccaa": "País Vasco",
+    "pob": 214234,
+    "p": 2700,
+    "alq": 1150,
+    "roi": 5.1,
+    "d": 27
+  },
+  {
+    "slug": "badalona",
+    "n": "Badalona",
+    "ccaa": "Cataluña",
+    "pob": 210987,
+    "p": 2600,
+    "alq": 1200,
+    "roi": 5.5,
+    "d": 20
+  },
+  {
+    "slug": "santa-cruz-de-tenerife",
+    "n": "Santa Cruz de Tenerife",
+    "ccaa": "Canarias",
+    "pob": 203787,
+    "p": 2000,
+    "alq": 930,
+    "roi": 5.6,
+    "d": 22
+  },
+  {
+    "slug": "oviedo",
+    "n": "Oviedo",
+    "ccaa": "Asturias",
+    "pob": 200049,
+    "p": 1850,
+    "alq": 880,
+    "roi": 5.7,
+    "d": 26
+  },
+  {
+    "slug": "mostoles",
+    "n": "Móstoles",
+    "ccaa": "C. de Madrid",
+    "pob": 196173,
+    "p": 2160,
+    "alq": 985,
+    "roi": 5.5,
+    "d": 21
+  },
+  {
+    "slug": "elche",
+    "n": "Elche",
+    "ccaa": "C. Valenciana",
+    "pob": 191660,
+    "p": 1600,
+    "alq": 780,
+    "roi": 5.8,
+    "d": 22
+  },
+  {
+    "slug": "san-sebastian",
+    "n": "San Sebastián",
+    "ccaa": "País Vasco",
+    "pob": 189866,
+    "p": 5200,
+    "alq": 1880,
+    "roi": 4.3,
+    "d": 30
+  },
+  {
+    "slug": "sabadell",
+    "n": "Sabadell",
+    "ccaa": "Cataluña",
+    "pob": 185798,
+    "p": 1800,
+    "alq": 900,
+    "roi": 6,
+    "d": 22
+  },
+  {
+    "slug": "santander",
+    "n": "Santander",
+    "ccaa": "Cantabria",
+    "pob": 185410,
+    "p": 2250,
+    "alq": 940,
+    "roi": 5,
+    "d": 26
+  },
+  {
+    "slug": "jerez-de-la-frontera",
+    "n": "Jerez de la Frontera",
+    "ccaa": "Andalucía",
+    "pob": 182269,
+    "p": 1650,
+    "alq": 780,
+    "roi": 5.7,
+    "d": 25
+  },
+  {
+    "slug": "castellon-de-la-plana",
+    "n": "Castellón de la Plana",
+    "ccaa": "C. Valenciana",
+    "pob": 180379,
+    "p": 1440,
+    "alq": 718,
+    "roi": 6,
+    "d": 24
+  },
+  {
+    "slug": "leganes",
+    "n": "Leganés",
+    "ccaa": "C. de Madrid",
+    "pob": 174593,
+    "p": 2270,
+    "alq": 1026,
+    "roi": 5.4,
+    "d": 20
+  },
+  {
+    "slug": "almeria",
+    "n": "Almería",
+    "ccaa": "Andalucía",
+    "pob": 170503,
+    "p": 1380,
+    "alq": 760,
+    "roi": 6.6,
+    "d": 25
+  },
+  {
+    "slug": "cartagena",
+    "n": "Cartagena",
+    "ccaa": "R. de Murcia",
+    "pob": 170483,
+    "p": 1360,
+    "alq": 701,
+    "roi": 6.2,
+    "d": 22
+  },
+  {
+    "slug": "pamplona",
+    "n": "Pamplona",
+    "ccaa": "Navarra",
+    "pob": 166279,
+    "p": 2950,
+    "alq": 1170,
+    "roi": 4.8,
+    "d": 24
+  },
+  {
+    "slug": "terrassa",
+    "n": "Terrassa",
+    "ccaa": "Cataluña",
+    "pob": 163862,
+    "p": 1750,
+    "alq": 875,
+    "roi": 6,
+    "d": 23
+  },
+  {
+    "slug": "fuenlabrada",
+    "n": "Fuenlabrada",
+    "ccaa": "C. de Madrid",
+    "pob": 163567,
+    "p": 1900,
+    "alq": 880,
+    "roi": 5.6,
+    "d": 22
+  },
+  {
+    "slug": "alcala-de-henares",
+    "n": "Alcalá de Henares",
+    "ccaa": "C. de Madrid",
+    "pob": 163386,
+    "p": 1950,
+    "alq": 920,
+    "roi": 5.7,
+    "d": 20
+  },
+  {
+    "slug": "burgos",
+    "n": "Burgos",
+    "ccaa": "Castilla y León",
+    "pob": 163156,
+    "p": 1720,
+    "alq": 890,
+    "roi": 6.2,
+    "d": 25
+  },
+  {
+    "slug": "la-laguna",
+    "n": "La Laguna",
+    "ccaa": "Canarias",
+    "pob": 161108,
+    "p": 2000,
+    "alq": 920,
+    "roi": 5.5,
+    "d": 22
+  },
+  {
+    "slug": "salamanca",
+    "n": "Salamanca",
+    "ccaa": "Castilla y León",
+    "pob": 159225,
+    "p": 1750,
+    "alq": 880,
+    "roi": 6,
+    "d": 25
+  },
+  {
+    "slug": "cadiz",
+    "n": "Cádiz",
+    "ccaa": "Andalucía",
+    "pob": 145595,
+    "p": 2200,
+    "alq": 1000,
+    "roi": 5.5,
+    "d": 23
+  },
+  {
+    "slug": "leon",
+    "n": "León",
+    "ccaa": "Castilla y León",
+    "pob": 145242,
+    "p": 1400,
+    "alq": 770,
+    "roi": 6.6,
+    "d": 26
+  },
+  {
+    "slug": "albacete",
+    "n": "Albacete",
+    "ccaa": "Castilla-La Mancha",
+    "pob": 143799,
+    "p": 1200,
+    "alq": 680,
+    "roi": 6.8,
+    "d": 26
+  },
+  {
+    "slug": "getafe",
+    "n": "Getafe",
+    "ccaa": "C. de Madrid",
+    "pob": 143153,
+    "p": 2400,
+    "alq": 1100,
+    "roi": 5.5,
+    "d": 18
+  },
+  {
+    "slug": "alcorcon",
+    "n": "Alcorcón",
+    "ccaa": "C. de Madrid",
+    "pob": 141465,
+    "p": 2300,
+    "alq": 1020,
+    "roi": 5.3,
+    "d": 21
+  },
+  {
+    "slug": "huelva",
+    "n": "Huelva",
+    "ccaa": "Andalucía",
+    "pob": 140675,
+    "p": 1400,
+    "alq": 700,
+    "roi": 6,
+    "d": 24
+  },
+  {
+    "slug": "logrono",
+    "n": "Logroño",
+    "ccaa": "La Rioja",
+    "pob": 123841,
+    "p": 1560,
+    "alq": 780,
+    "roi": 6,
+    "d": 23
+  },
+  {
+    "slug": "badajoz",
+    "n": "Badajoz",
+    "ccaa": "Extremadura",
+    "pob": 122510,
+    "p": 920,
+    "alq": 530,
+    "roi": 6.9,
+    "d": 29
+  },
+  {
+    "slug": "tarragona",
+    "n": "Tarragona",
+    "ccaa": "Cataluña",
+    "pob": 112176,
+    "p": 1780,
+    "alq": 890,
+    "roi": 6,
+    "d": 24
+  },
+  {
+    "slug": "lleida",
+    "n": "Lleida",
+    "ccaa": "Cataluña",
+    "pob": 112035,
+    "p": 1300,
+    "alq": 650,
+    "roi": 6,
+    "d": 22
+  },
+  {
+    "slug": "ourense",
+    "n": "Ourense",
+    "ccaa": "Galicia",
+    "pob": 107060,
+    "p": 1080,
+    "alq": 610,
+    "roi": 6.8,
+    "d": 29
+  }
+]
