@@ -38,9 +38,9 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 .nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:600!important;box-shadow:0 1px 4px rgba(26,86,219,.3)!important}
 .nav-cta:hover{background:var(--blue-d)!important;transform:translateY(-1px)}
 
-/* HERO — gradient blue, logo-centric, centered layout */
+/* HERO — gradient blue, logo-centric, centered layout, compacto (<=75vh desktop) */
 :root{--hero-navy:#0f1b3d;--hero-blue:#1a56db;--hero-blue-l:#93c5fd}
-.hero{position:relative;border-bottom:1px solid #0a1628;overflow:hidden;color:#fff;min-height:640px;display:flex;align-items:center;justify-content:center;text-align:center;padding:3.5rem 1.5rem 4rem;background:radial-gradient(ellipse at 30% 20%,#1a3a7a 0%,#0f2454 35%,#0a1628 75%),linear-gradient(135deg,#0a1628 0%,#1a3a7a 50%,#0f1b3d 100%);background-blend-mode:overlay}
+.hero{position:relative;border-bottom:1px solid #0a1628;overflow:hidden;color:#fff;min-height:0;max-height:75vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.6rem 1.5rem 1.8rem;background:radial-gradient(ellipse at 30% 20%,#1a3a7a 0%,#0f2454 35%,#0a1628 75%),linear-gradient(135deg,#0a1628 0%,#1a3a7a 50%,#0f1b3d 100%);background-blend-mode:overlay}
 
 /* Decorative layer — geometric grid + glow blobs */
 .hero-deco{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
@@ -49,62 +49,66 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 .hero-glow-1{width:520px;height:520px;background:radial-gradient(circle,#1a56db 0%,transparent 70%);top:-180px;right:-140px}
 .hero-glow-2{width:480px;height:480px;background:radial-gradient(circle,#3b82f6 0%,transparent 70%);bottom:-200px;left:-160px;opacity:.35}
 
-/* Inner content — centered column */
-.hero-inner{position:relative;z-index:2;max-width:760px;width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center;opacity:0;animation:heroFade 1s ease-out forwards;animation-delay:.08s}
+/* Inner content — centered column (sin fade global; cada hijo entra por separado) */
+.hero-inner{position:relative;z-index:2;max-width:760px;width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center}
 
 /* Bottom accent line */
 .hero-accent{position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent 0%,rgba(96,165,250,.7) 30%,rgba(52,211,153,.6) 70%,transparent 100%);z-index:3;pointer-events:none}
 
-/* Logo — protagonista */
-.hero-logo-wrap{display:inline-block;margin-bottom:1.8rem;line-height:0}
-.hero-logo-img{height:180px;width:auto;display:block;filter:drop-shadow(0 8px 32px rgba(96,165,250,.35))}
+/* Logo — protagonista, ahora compacto */
+.hero-logo-wrap{display:inline-block;margin-bottom:.9rem;line-height:0;opacity:0;transform:scale(.8);animation:heroLogoIn .8s cubic-bezier(.22,.61,.36,1) forwards}
+.hero-logo-img{height:120px;width:auto;display:block;filter:drop-shadow(0 8px 32px rgba(96,165,250,.35))}
 
-/* Title — RENDATA wordmark */
-.hero-title{font-size:clamp(2.6rem,5.2vw,3.6rem);font-weight:900;letter-spacing:-.045em;line-height:1;color:#fff;margin:0 0 .65rem;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+/* Title — RENDATA wordmark (entra 0.3s después del logo) */
+.hero-title{font-size:clamp(2.4rem,5vw,3.4rem);font-weight:900;letter-spacing:-.045em;line-height:1;color:#fff;margin:0 0 .45rem;text-shadow:0 4px 24px rgba(0,0,0,.45);opacity:0;animation:heroChildIn .7s ease-out .3s forwards}
 
-/* Uppercase tagline */
-.hero-tagline{font-size:14px;font-weight:700;color:var(--hero-blue-l);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.1rem;line-height:1.4}
+/* Subtítulo en minúsculas normales (0.5s después) */
+.hero-tagline{font-size:1.1rem;font-weight:500;color:rgba(255,255,255,.85);letter-spacing:0;text-transform:none;margin:0 auto .8rem;line-height:1.45;max-width:640px;text-shadow:0 1px 6px rgba(0,0,0,.25);opacity:0;animation:heroChildIn .7s ease-out .5s forwards}
 
 /* Descriptive subtitle */
-.hero-subtitle{font-size:1.05rem;font-weight:400;color:rgba(226,232,240,.92);line-height:1.55;margin:0 auto 2.2rem;max-width:600px;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+.hero-subtitle{font-size:1.02rem;font-weight:400;color:rgba(226,232,240,.92);line-height:1.5;margin:0 auto 1.2rem;max-width:600px;text-shadow:0 1px 6px rgba(0,0,0,.25);opacity:0;animation:heroChildIn .7s ease-out .5s forwards}
 .hero-subtitle strong{font-weight:700;color:#fff}
 
-/* 4 features — centered row with translucent circles */
-.hero-features-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem 2.2rem;margin-bottom:2rem}
-.hero-feature{display:flex;flex-direction:column;align-items:center;gap:.55rem;min-width:0}
-.hf-circle{flex-shrink:0;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:50%;font-size:1.55rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 4px 14px rgba(0,0,0,.25)}
-.hf-label{font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.01em;line-height:1.2;text-align:center;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+/* 4 features — centered row with translucent circles (0.7s después) */
+.hero-features-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;margin-bottom:1rem;opacity:0;animation:heroChildIn .7s ease-out .7s forwards}
+.hero-feature{display:flex;flex-direction:column;align-items:center;gap:.45rem;min-width:0}
+.hf-circle{flex-shrink:0;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:50%;font-size:1.45rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 4px 14px rgba(0,0,0,.25)}
+.hf-label{font-size:.76rem;font-weight:700;color:#fff;letter-spacing:.01em;line-height:1.2;text-align:center;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.3)}
 
-/* Meta line */
-.hero-meta{font-size:.82rem;font-weight:500;color:rgba(203,213,225,.85);letter-spacing:.02em;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+/* Meta line (también 0.7s) */
+.hero-meta{font-size:.8rem;font-weight:500;color:rgba(203,213,225,.85);letter-spacing:.02em;text-shadow:0 1px 4px rgba(0,0,0,.3);opacity:0;animation:heroChildIn .7s ease-out .7s forwards}
 .hero-meta strong{color:#34d399;font-weight:800;letter-spacing:.05em}
 
-@keyframes heroFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroLogoIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+@keyframes heroChildIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){
+  .hero-logo-wrap,.hero-title,.hero-tagline,.hero-subtitle,.hero-features-row,.hero-meta{animation:none;opacity:1;transform:none}
+}
 
 /* Tablet */
 @media(max-width:1024px){
-  .hero{min-height:580px;padding:3rem 1.25rem 3.5rem}
-  .hero-logo-img{height:150px}
+  .hero{max-height:none;padding:1.5rem 1.25rem 1.7rem}
+  .hero-logo-img{height:110px}
 }
 
 /* Mobile */
 @media(max-width:768px){
-  .hero{min-height:auto;padding:2.5rem 1.25rem 3rem}
-  .hero-logo-img{height:120px}
-  .hero-logo-wrap{margin-bottom:1.3rem}
-  .hero-title{font-size:clamp(2.2rem,9vw,2.9rem)}
-  .hero-tagline{font-size:12px;letter-spacing:1.6px;margin-bottom:.9rem}
-  .hero-subtitle{font-size:.95rem;margin-bottom:1.7rem}
-  .hero-features-row{gap:1.1rem 1.4rem;margin-bottom:1.5rem}
-  .hf-circle{width:48px;height:48px;font-size:1.25rem}
-  .hf-label{font-size:.7rem}
-  .hero-meta{font-size:.74rem}
+  .hero{padding:1.3rem 1.25rem 1.5rem}
+  .hero-logo-img{height:80px}
+  .hero-logo-wrap{margin-bottom:.7rem}
+  .hero-title{font-size:clamp(2rem,8.4vw,2.7rem)}
+  .hero-tagline{font-size:1rem;margin-bottom:.65rem}
+  .hero-subtitle{font-size:.92rem;margin-bottom:1rem}
+  .hero-features-row{gap:.9rem 1.3rem;margin-bottom:.85rem}
+  .hf-circle{width:44px;height:44px;font-size:1.15rem}
+  .hf-label{font-size:.68rem}
+  .hero-meta{font-size:.72rem}
   .hero-glow-1,.hero-glow-2{width:340px;height:340px}
 }
 @media(max-width:420px){
-  .hero-logo-img{height:100px}
-  .hero-features-row{gap:.9rem 1.1rem}
-  .hf-circle{width:44px;height:44px;font-size:1.15rem}
+  .hero-logo-img{height:80px}
+  .hero-features-row{gap:.7rem 1rem}
+  .hf-circle{width:40px;height:40px;font-size:1.05rem}
 }
 
 /* Search section (entre mapa y grid) */
