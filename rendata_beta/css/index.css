@@ -30,6 +30,9 @@ nav{display:flex;align-items:center;gap:.2rem}
 .nav-dropdown:hover .nav-drop-btn{color:var(--blue);background:var(--blue-l)}
 .nav-drop-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.5rem;min-width:340px;z-index:300;box-shadow:0 12px 32px rgba(14,24,40,.14)}.nav-dropdown.open .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .nav-dropdown:hover .nav-drop-menu{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.nav-drop-menu.nav-drop-menu-tools{left:auto;right:0;min-width:240px}
+.nav-dropdown.open .nav-drop-menu.nav-drop-menu-tools,
+.nav-dropdown:hover .nav-drop-menu.nav-drop-menu-tools{grid-template-columns:1fr}
 .nav-drop-menu a{font-size:.78rem;color:var(--text2);text-decoration:none;padding:.45rem .7rem;border-radius:6px;transition:all .15s;white-space:nowrap;display:inline-flex;align-items:center}
 .nav-drop-menu a:hover{color:var(--blue);background:var(--blue-l)}
 
