@@ -377,6 +377,12 @@
 <section class="cities-section fu d4">
   <div class="cities-meta"><div class="cities-count" id="cnt"></div></div>
   <div class="cities-grid" id="grid"></div>
+  <div class="cities-more" id="moreWrap" style="display:none">
+    <button class="cities-more-btn" id="moreBtn" type="button" onclick="loadMore()">
+      Ver más ciudades
+      <span class="cities-more-remaining" id="moreRemaining"></span>
+    </button>
+  </div>
 </section>
 
 <section class="how-section">
@@ -1052,16 +1058,21 @@ const gradMap = {
 const IMG_SET=new Set(['a-coruna','adeje','adra','aguilas','aguimes','albacete','alcala-de-guadaira','alcala-de-henares','alcala-la-real','alcaniz','alcantarilla','alcazar-de-san-juan','alcobendas','alcorcon','alcoy','alcudia','algeciras','algemesi','alhaurin-de-la-torre','alhaurin-el-grande','alicante','almansa','almendralejo','almeria','almunecar','altea','alzira','andratx','andujar','antequera','aranda-de-duero','aranjuez','arganda-del-rey','armilla','arona-tenerife-sur','arroyomolinos','avila','aviles','badajoz','badalona','baeza','banyoles','barakaldo','barbastro','barcelona','basauri','baza','benalmadena','benicarlo','benidorm','benissa','bermeo','bilbao','blanes','boadilla-del-monte','bormujos','burgos','burjassot','burriana','caceres','cadiz','calafell','calahorra','calatayud','calella','calpe','calvia','cambrils','cangas-do-morrazo','carballo','carmona','cartagena','castelldefels','castello-d-empuries','castellon','castellon-de-la-plana','castrillon','castro-urdiales','cerdanyola-del-valles','chiclana-de-la-frontera','chipiona','cieza','ciudad-real','ciudad-rodrigo','ciutadella-de-menorca','coin','collado-villalba','conil-de-la-frontera','cordoba','cornell-de-llobregat','coslada','cuenca','cullera','denia','don-benito','dos-hermanas','durango','ecija','eibar','el-ejido','el-prat-de-llobregat','el-puerto-de-santa-maria','elche','elda','esplugues-de-llobregat','estella-lizarra','estepona','felanitx','ferrol','figueres','fuengirola','fuenlabrada','fuerteventura-pjto-rosario','galapagar','gandia','gava','gernika-lumo','getafe','getxo','gijon','girona','granada','granadilla-de-abona','granollers','guadalajara','guadix','guardamar-del-segura','guimar','haro','hellin','hondarribia','huelva','huercal-overa','huesca','ibiza','igualada','illescas','irun','isla-cristina','jaen','javea','jerez-de-la-frontera','jumilla','l-escala','l-hospitalet-de-llobregat','la-laguna','la-linea-de-la-concepcion','la-oliva','la-orotava','la-rinconada','la-union','langreo','lanzarote-arrecife','laredo','las-palmas-gc','las-rozas','lebrija','leganes','leon','linares','llanes','lleida','lliria','lloret-de-mar','llucmajor','logrono','lorca','los-alcazares','los-llanos-de-aridane','luarca','lucena','lugo','madrid','mahon-menorca','mairena-del-alcor','mairena-del-aljarafe','majadahonda','malaga','manacor','manresa','marbella','marchena','marratxi','martos','mataro','mazarron','medina-del-campo','merida','mieres','mijas','miranda-de-ebro','mislata','mojacar','molina-de-segura','mollet-del-valles','mondragon','montilla','moron-de-la-frontera','mostoles','motril','murcia','naron','navalcarnero','navalmoral-de-la-mata','nerja','nules','oliva','olot','ontinyent','orense','orihuela','osuna','ourense','oviedo','palafrugell','palamos','palencia','palma','palma-del-rio','pamplona','paracuellos-de-jarama','parla','paterna','peniscola','pilar-de-la-horadada','pineda-de-mar','pinto','plasencia','pollenca','ponferrada','pontevedra','pozuelo-de-alarcon','premia-de-mar','priego-de-cordoba','puerto-de-la-cruz','puertollano','puigcerda','requena','reus','ribadesella','rincon-de-la-victoria','rivas-vaciamadrid','ronda','roquetas-de-mar','roses','rota','rubi','sabadell','sagunto','salamanca','salou','san-bartolome-de-tirajana','san-fernando-cadiz','san-fernando-de-henares','san-javier','san-lorenzo-de-el-escorial','san-pedro-del-pinatar','san-sebastian','san-sebastian-de-los-reyes','sanlucar-de-barrameda','sant-boi-de-llobregat','sant-cugat-del-valles','sant-feliu-de-llobregat','santa-cruz-de-la-palma','santa-cruz-de-tenerife','santa-lucia-de-tirajana','santa-pola','santander','santiago-de-compostela','sanxenxo','segovia','sevilla','siero','sitges','soller','soria','suances','sueca','talavera-de-la-reina','tarifa','tarragona','tavernes-de-la-valldigna','teguise','terrassa','teruel','toledo','tolosa','tomares','tomelloso','tordesillas','torre-pacheco','torrejon-de-ardoz','torrelavega','torrelodones','torremolinos','torrent','torrevieja','torrox','tortosa','tossa-de-mar','totana','tres-cantos','tudela','ubeda','utrera','valdepenas','valencia','valladolid','velez-blanco','velez-malaga','vera','vic','vigo','vila-seca','viladecans','vilagarcia-de-arousa','vilanova-i-la-geltru','villena','vinaros','vitoria','xativa','yaiza','yecla','zafra','zamora','zaragoza','zarautz']);
 let cf='all',cs='roi';
 let budget=0; // filtro por presupuesto total (€)
+const PAGE_SIZE=30;
+let shown=PAGE_SIZE; // paginación: tarjetas visibles actualmente
 const rc=r=>r>=6.2?'rh':r>=5.0?'rm':'rl';
 const fmt=n=>n>=1000?n.toLocaleString('es'):n;
-function flt(f,b){cf=f;document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
-function srt(v){cs=v;render()}
+function flt(f,b){cf=f;shown=PAGE_SIZE;document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
+function srt(v){cs=v;shown=PAGE_SIZE;render()}
+function loadMore(){shown+=PAGE_SIZE;render(true)}
 
-function render(){
+function render(keepShown){
   // FIX: search after map click resets filter to allow typing
   const __q=(document.getElementById('searchInput').value||'').trim();
   if(cf==='custom' && !__q) return;
   if(cf==='custom' && __q) cf='all';
+  // Si el render no viene de "loadMore", reseteamos paginación a 30
+  if(!keepShown) shown=PAGE_SIZE;
   const q=(document.getElementById('searchInput').value||'').toLowerCase();
   let d=[...DATA];
   if(q) d=d.filter(c=>c.n.toLowerCase().includes(q)||c.cc.toLowerCase().includes(q));
@@ -1079,10 +1090,20 @@ function render(){
   else if(cs==='alq') d.sort((a,b)=>b.alq-a.alq);
   else if(cs==='az') d.sort((a,b)=>a.n.localeCompare(b.n));
 
-  document.getElementById('cnt').innerHTML=`Mostrando <strong>${d.length}</strong> ${d.length===1?'ciudad':'ciudades'}`;
+  const total=d.length;
+  const slice=d.slice(0,shown);
 
-  if(!d.length){
+  // Contador: refleja visibles vs totales cuando hay paginación
+  document.getElementById('cnt').innerHTML = total>PAGE_SIZE
+    ? `Mostrando <strong>${slice.length}</strong> de <strong>${total}</strong> ciudades`
+    : `Mostrando <strong>${total}</strong> ${total===1?'ciudad':'ciudades'}`;
+
+  const moreWrap=document.getElementById('moreWrap');
+  const moreRem=document.getElementById('moreRemaining');
+
+  if(!total){
     document.getElementById('grid').innerHTML=`<div class="empty"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.4"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><p>Sin resultados. Prueba otro filtro.</p></div>`;
+    if(moreWrap) moreWrap.style.display='none';
     return;
   }
 
@@ -1090,7 +1111,7 @@ function render(){
     ?`<span style="color:var(--red)">↓ ${Math.abs(c.va)}%</span>`
     :`<span style="color:var(--green)">↑ ${c.va}%</span>`;
 
-  document.getElementById('grid').innerHTML=d.map(c=>`
+  document.getElementById('grid').innerHTML=slice.map(c=>`
     <a class="city-card" href="rentabilidad-${c.sl}.html">
       <div class="c-img" style="background:${gradMap[c.reg]||gradMap.default}">
         ${IMG_SET.has(c.sl)?`<img loading="lazy" src="img/${c.sl}.webp" alt="${c.n}" style="width:100%;height:100%;object-fit:cover;display:block">`:''}
@@ -1115,6 +1136,17 @@ function render(){
         </div>
       </div>
     </a>`).join('');
+
+  // Mostrar/ocultar botón "Ver más ciudades"
+  if(moreWrap){
+    if(shown<total){
+      const next=Math.min(PAGE_SIZE,total-shown);
+      if(moreRem) moreRem.textContent=`(+${next} de ${total-shown} restantes)`;
+      moreWrap.style.display='block';
+    } else {
+      moreWrap.style.display='none';
+    }
+  }
 }
 
 function setBudget(val, btn){
@@ -1300,6 +1332,8 @@ function selectRegion(id) {
         <div class="c-footer"><div class="c-trend">Alquiler ${va(c)} anual</div><div class="c-link">Ver análisis →</div></div>
       </div>
     </a>`).join('');
+  // Modo CCAA: lista completa, sin paginación
+  const _mw=document.getElementById('moreWrap'); if(_mw) _mw.style.display='none';
   // Scroll to cities
   setTimeout(() => document.querySelector('.filter-bar').scrollIntoView({behavior:'smooth',block:'start'}), 100);
 }

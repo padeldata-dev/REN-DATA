@@ -156,6 +156,14 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 /* grid-auto-rows + uniform card heights → sin huecos enormes entre filas */
 .cities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;grid-auto-rows:1fr}
 
+/* Paginación — botón "Ver más ciudades" */
+.cities-more{display:flex;justify-content:center;margin-top:2rem}
+.cities-more-btn{background:var(--white);border:1.5px solid var(--blue);color:var(--blue);font-family:var(--font);font-size:.92rem;font-weight:700;padding:.9rem 2rem;border-radius:10px;cursor:pointer;transition:all .15s;letter-spacing:-.01em;box-shadow:var(--sh);display:inline-flex;align-items:center;gap:.55rem;min-height:48px}
+.cities-more-btn:hover{background:var(--blue);color:#fff;box-shadow:var(--sh-md);transform:translateY(-1px)}
+.cities-more-btn:active{transform:translateY(0)}
+.cities-more-remaining{font-size:.78rem;font-weight:500;color:var(--muted);transition:color .15s}
+.cities-more-btn:hover .cities-more-remaining{color:rgba(255,255,255,.85)}
+
 /* CITY CARD */
 .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);transition:border-color .2s,box-shadow .2s,transform .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column;overflow:hidden}
 .city-card:hover{border-color:#3b73ea;box-shadow:var(--sh-lg);transform:translateY(-3px)}
