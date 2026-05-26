@@ -369,7 +369,7 @@
     <option value="roi">Mayor ROI</option>
     <option value="pa">Menor precio m²</option>
     <option value="pd">Mayor precio m²</option>
-    <option value="alq">Mayor alquiler</option>
+    <option value="alq">Mayor alquiler €/mes</option>
     <option value="az">A → Z</option>
   </select>
 </div>
@@ -1063,7 +1063,19 @@ let shown=PAGE_SIZE; // paginación: tarjetas visibles actualmente
 const rc=r=>r>=6.2?'rh':r>=5.0?'rm':'rl';
 const fmt=n=>n>=1000?n.toLocaleString('es'):n;
 function flt(f,b){cf=f;shown=PAGE_SIZE;document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
-function srt(v){cs=v;shown=PAGE_SIZE;render()}
+function srt(v){
+  cs=v;shown=PAGE_SIZE;
+  // Si venimos del modo "custom" (click en una comunidad del mapa), volvemos a la
+  // vista global para que el cambio de orden SIEMPRE re-renderice el grid. Sin esto,
+  // render() hace return temprano (cf==='custom') y el select parecía no aplicar.
+  if(cf==='custom'){
+    cf='all';
+    document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));
+    const allBtn=document.querySelector('.filter-bar .f-btn');
+    if(allBtn) allBtn.classList.add('active');
+  }
+  render();
+}
 function loadMore(){shown+=PAGE_SIZE;render(true)}
 
 function render(keepShown){
