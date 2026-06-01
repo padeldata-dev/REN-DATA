@@ -1,3 +1,7 @@
+# Forzar https (evita URLs duplicadas http/https en Search Console)
+http://rendata.es/* https://rendata.es/:splat 301
+http://www.rendata.es/* https://rendata.es/:splat 301
+
 # Rewrites internos (200) — no redirect, evitan bucle con html_handling
 /rentabilidad/* /rentabilidad-:splat.html 200
 /ccaa/* /ccaa-:splat.html 200
