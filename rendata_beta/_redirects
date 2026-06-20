@@ -1,8 +1,11 @@
 # === Fuerza https + dominio canonico (sin www) ===
 # Evita URLs duplicadas en Search Console (http/https, www/no-www)
+# NOTA: Workers Assets _redirects solo admite origen http:// o relativo.
+# El caso https://www.rendata.es -> https://rendata.es NO se puede poner aqui
+# (Cloudflare rechaza origenes https:// absolutos); resolver con una Redirect Rule
+# de zona en el panel de Cloudflare (www -> apex).
 http://rendata.es/* https://rendata.es/:splat 301
 http://www.rendata.es/* https://rendata.es/:splat 301
-https://www.rendata.es/* https://rendata.es/:splat 301
 
 # === 301 explicitos .html -> URL limpia (50 paginas clave) ===
 # Cloudflare Workers Assets ya hace 307 .html->limpia; estos 301 lo hacen permanente para SEO

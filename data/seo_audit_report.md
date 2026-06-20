@@ -31,11 +31,20 @@ Faltaba forzar `https://www.rendata.es → https://rendata.es`.
 
 | Origen | Destino |
 |---|---|
-| `http://rendata.es/*` | `https://rendata.es/:splat` |
-| `http://www.rendata.es/*` | `https://rendata.es/:splat` |
-| `https://www.rendata.es/*` | `https://rendata.es/:splat` *(añadida)* |
+| `http://rendata.es/*` | `https://rendata.es/:splat` | ✅ en `_redirects` |
+| `http://www.rendata.es/*` | `https://rendata.es/:splat` | ✅ en `_redirects` |
+| `https://www.rendata.es/*` | `https://rendata.es/:splat` | ⚠️ requiere Redirect Rule de zona |
 
-Resultado: un único origen canónico `https://rendata.es` (sin `www`, siempre `https`).
+> **Limitación de Cloudflare Workers Assets:** el archivo `_redirects` **solo admite
+> orígenes `http://` o relativos**. Un origen `https://` absoluto es rechazado
+> (`Invalid _redirects configuration: Only relative URLs are allowed`). Por tanto,
+> el caso `https://www.rendata.es → https://rendata.es` **no puede** ir en `_redirects`
+> y debe configurarse como **Redirect Rule de zona** en el panel de Cloudflare
+> (Rules → Redirect Rules: si `Host = www.rendata.es` ⇒ `https://rendata.es/${path}` 301).
+> Acción pendiente del lado de Cloudflare (no codificable en el repo).
+
+Resultado: `http→https` y `www(http)→apex` forzados desde el repo; `www(https)→apex`
+queda documentado para configurar en el panel.
 
 ---
 
@@ -132,6 +141,12 @@ Refuerza el enlazado interno hacia las páginas de ciudad de mayor valor.
 
 ## BLOQUE 7 — Oportunidades SEO detectadas
 
+### Prioridad ALTA — acción en Cloudflare (fuera del repo)
+- **Redirect Rule de zona `www → apex` para HTTPS.** `_redirects` no admite orígenes
+  `https://` absolutos. Configurar en el panel: `Host = www.rendata.es` ⇒ `301` a
+  `https://rendata.es/${http.request.uri.path}`. Sin esto, `https://www.rendata.es`
+  no canonicaliza al dominio sin `www`.
+
 ### Prioridad ALTA
 - **Migrar enlaces internos a URL limpia.** Los enlaces internos del sitio aún usan
   `.html` (p. ej. `index.html` tiene ~410 enlaces a `*.html`). Funcionan vía
@@ -165,7 +180,8 @@ Refuerza el enlazado interno hacia las páginas de ciudad de mayor valor.
 | Canonicals con `.html` | 0 |
 | Canonicals a dominio externo | 0 |
 | URLs en sitemap | 768 (0 con `.html`, 0 duplicados, 0 inexistentes) |
-| Redirecciones de dominio (301) | 3 (http→https, www→no-www) |
+| Redirecciones de dominio en `_redirects` (301) | 2 (http→https, www-http→apex) |
+| Redirección `www-https→apex` | pendiente (Redirect Rule de zona Cloudflare) |
 | Redirecciones 301 `.html`→limpia | 50 |
 | Páginas con título/meta optimizado | 20 |
 | Páginas con banda de enlaces internos | 19 |
