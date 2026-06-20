@@ -1,7 +1,62 @@
-# Forzar https (evita URLs duplicadas http/https en Search Console)
+# === Fuerza https + dominio canonico (sin www) ===
+# Evita URLs duplicadas en Search Console (http/https, www/no-www)
 http://rendata.es/* https://rendata.es/:splat 301
 http://www.rendata.es/* https://rendata.es/:splat 301
+https://www.rendata.es/* https://rendata.es/:splat 301
 
-# Rewrites internos (200) — no redirect, evitan bucle con html_handling
+# === 301 explicitos .html -> URL limpia (50 paginas clave) ===
+# Cloudflare Workers Assets ya hace 307 .html->limpia; estos 301 lo hacen permanente para SEO
+/rentabilidad-madrid.html /rentabilidad-madrid 301
+/rentabilidad-barcelona.html /rentabilidad-barcelona 301
+/rentabilidad-valencia.html /rentabilidad-valencia 301
+/rentabilidad-malaga.html /rentabilidad-malaga 301
+/rentabilidad-sevilla.html /rentabilidad-sevilla 301
+/rentabilidad-zaragoza.html /rentabilidad-zaragoza 301
+/rentabilidad-bilbao.html /rentabilidad-bilbao 301
+/rentabilidad-alicante.html /rentabilidad-alicante 301
+/rentabilidad-granada.html /rentabilidad-granada 301
+/rentabilidad-murcia.html /rentabilidad-murcia 301
+/rentabilidad-valladolid.html /rentabilidad-valladolid 301
+/rentabilidad-cordoba.html /rentabilidad-cordoba 301
+/rentabilidad-palma.html /rentabilidad-palma 301
+/rentabilidad-vigo.html /rentabilidad-vigo 301
+/rentabilidad-gijon.html /rentabilidad-gijon 301
+/rentabilidad-a-coruna.html /rentabilidad-a-coruna 301
+/rentabilidad-santander.html /rentabilidad-santander 301
+/rentabilidad-san-sebastian.html /rentabilidad-san-sebastian 301
+/rentabilidad-pamplona.html /rentabilidad-pamplona 301
+/rentabilidad-burgos.html /rentabilidad-burgos 301
+/rentabilidad-las-palmas-gc.html /rentabilidad-las-palmas-gc 301
+/rentabilidad-santa-cruz-de-tenerife.html /rentabilidad-santa-cruz-de-tenerife 301
+/rentabilidad-oviedo.html /rentabilidad-oviedo 301
+/rentabilidad-salamanca.html /rentabilidad-salamanca 301
+/rentabilidad-leon.html /rentabilidad-leon 301
+/rentabilidad-cadiz.html /rentabilidad-cadiz 301
+/rentabilidad-huelva.html /rentabilidad-huelva 301
+/rentabilidad-jaen.html /rentabilidad-jaen 301
+/rentabilidad-almeria.html /rentabilidad-almeria 301
+/rentabilidad-logrono.html /rentabilidad-logrono 301
+/rentabilidad-vitoria.html /rentabilidad-vitoria 301
+/rentabilidad-badajoz.html /rentabilidad-badajoz 301
+/rentabilidad-castellon-de-la-plana.html /rentabilidad-castellon-de-la-plana 301
+/rentabilidad-tarragona.html /rentabilidad-tarragona 301
+/rentabilidad-lleida.html /rentabilidad-lleida 301
+/rentabilidad-girona.html /rentabilidad-girona 301
+/rentabilidad-toledo.html /rentabilidad-toledo 301
+/rentabilidad-albacete.html /rentabilidad-albacete 301
+/rentabilidad-marbella.html /rentabilidad-marbella 301
+/rentabilidad-mostoles.html /rentabilidad-mostoles 301
+/ranking.html /ranking 301
+/analisis.html /analisis 301
+/comparador.html /comparador 301
+/calculadora-hipoteca.html /calculadora-hipoteca 301
+/simulador-comprar-vs-alquilar.html /simulador-comprar-vs-alquilar 301
+/top10-ciudades-rentables-2026.html /top10-ciudades-rentables-2026 301
+/informe-rentabilidad-espana-q2-2026.html /informe-rentabilidad-espana-q2-2026 301
+/guia-inversor.html /guia-inversor 301
+/barrios.html /barrios 301
+/metodologia.html /metodologia 301
+
+# === Rewrites internos (200) — sirven contenido sin redirigir, no crean bucle ===
 /rentabilidad/* /rentabilidad-:splat.html 200
 /ccaa/* /ccaa-:splat.html 200
