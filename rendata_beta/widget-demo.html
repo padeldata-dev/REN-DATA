@@ -91,7 +91,13 @@ footer a{color:var(--blue);text-decoration:none}
   <nav>
     <a href="/">Ciudades</a>
     <a href="/ranking.html">Ranking</a>
-    <a href="/analisis.html">Análisis</a>
+    <div class="nav-dropdown">
+      <button class="nav-drop-btn" type="button" aria-expanded="false">Contenido ▾</button>
+      <div class="nav-drop-menu" style="grid-template-columns:1fr;min-width:220px">
+        <a href="/analisis.html">📈 Análisis en profundidad</a>
+        <a href="/actualidad.html">📰 Actualidad</a>
+      </div>
+    </div>
     <a href="/vivir-en-espana.html">Vivir en…</a>
     <a href="/metodologia.html">Metodología</a>
     <a href="/contacto.html">Contacto</a>
