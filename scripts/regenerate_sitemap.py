@@ -22,6 +22,7 @@ PRIORITY_PAGES = [
     ("/", 1.0, "daily"),
     ("/ranking.html", 0.95, "daily"),
     ("/analisis.html", 0.9, "weekly"),
+    ("/actualidad.html", 0.85, "weekly"),
     ("/comparador.html", 0.85, "weekly"),
     ("/informe-rentabilidad-espana-q2-2026.html", 0.9, "monthly"),
     ("/metodologia.html", 0.85, "monthly"),
@@ -35,10 +36,18 @@ PRIORITY_PAGES = [
 ]
 
 
+def clean(loc):
+    """Cloudflare Workers Assets sirve URLs limpias (sin .html); el sitemap
+    debe apuntar a esa forma canónica, no al fichero real."""
+    if loc != "/" and loc.endswith(".html"):
+        loc = loc[: -len(".html")]
+    return loc
+
+
 def url_block(loc, lastmod, changefreq, priority):
     return (
         f'  <url>\n'
-        f'    <loc>{DOMAIN}{loc}</loc>\n'
+        f'    <loc>{DOMAIN}{clean(loc)}</loc>\n'
         f'    <lastmod>{lastmod}</lastmod>\n'
         f'    <changefreq>{changefreq}</changefreq>\n'
         f'    <priority>{priority}</priority>\n'
