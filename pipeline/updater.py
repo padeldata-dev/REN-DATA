@@ -126,21 +126,23 @@ def update_fichas(rows: list, master: list) -> int:
     print(f"[UPD] Fichas actualizadas: {n_updated}/{len(rows)}")
     return n_updated
 
-def update_master(rows: list):
+def update_master(rows: list, master: list):
     """Reescribe cities_master.csv con los valores nuevos como 'actuales'."""
     from .cities import save_cities
+    by_slug_master = {m["slug"]: m for m in master}
     new_master = []
     for r in rows:
+        old = by_slug_master.get(r["slug"], {})
         new_master.append({
             "slug": r["slug"], "nombre": r["nombre"], "ccaa": r["ccaa"],
-            "reg": "",  # se conserva si quieres
+            "reg": old.get("reg", ""),
             "precio_actual": r.get("precio_m2") or "",
             "alquiler_actual": r.get("alquiler_medio") or "",
             "roi_actual": r.get("roi") or "",
             "var_precio_anual": r.get("var_precio_anual") or "",
             "var_alquiler_anual": r.get("var_alquiler_anual") or "",
             "dias_mercado": r.get("dias_mercado") or "",
-            "ine_code": "",
+            "ine_code": old.get("ine_code", ""),
         })
     save_cities(new_master)
     print(f"[UPD] cities_master.csv actualizado")

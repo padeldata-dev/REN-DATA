@@ -57,6 +57,10 @@ def aggregate(quarter: str = None) -> list:
     print("\n--- Observatorios ---")
     madrid_raw = madrid.fetch()
     madrid_match = madrid.match_to_cities(madrid_raw, cities) if madrid_raw else {}
+    # API CKAN de la Comunidad de Madrid: series regionales agregadas
+    # (compraventas, superficie media, intereses, duración hipotecas, % fijo/variable).
+    # No tiene granularidad municipal pero queda snapshotted en data/raw.
+    madrid_api = madrid.fetch_observatorio_api()
     cat_raw = cataluna.fetch()
     cat_match = cataluna.match_to_cities(cat_raw, cities) if cat_raw else {}
     and_raw = andalucia.fetch()
@@ -84,10 +88,20 @@ def aggregate(quarter: str = None) -> list:
             new_p = c.get("precio_actual"); fuente_p = "historico"
 
         # Alquiler: observatorio CCAA > estimado por ratio histórico
+        #
+        # NOTA Cataluña (INCASOL, dataset qww9-bvhh): mide la media de TODAS
+        # las fianzas de alquiler registradas y vigentes (incluye contratos
+        # antiguos por debajo de mercado). El baseline actual del sitio usa
+        # precio de anuncio (tipo Idealista), sistemáticamente más alto.
+        # Verificado 2026-07-12: aplicar este dato directo produce una caída
+        # sistemática de mediana -26,5% (hasta -51,7%) en las 75 ciudades
+        # catalanas con match — no es un movimiento real de mercado, es un
+        # cambio de metodología. Desactivado como fuente de merge hasta que
+        # se decida un factor de recalibración o una migración consistente
+        # de metodología para toda España. El fetch queda arreglado y el
+        # snapshot se sigue guardando en data/raw/ para análisis posterior.
         if slug in madrid_match and madrid_match[slug].get("alquiler"):
             new_a = madrid_match[slug]["alquiler"]; fuente_a = "Madrid_obs"
-        elif slug in cat_match and cat_match[slug].get("alquiler"):
-            new_a = cat_match[slug]["alquiler"]; fuente_a = "Cataluna_obs"
         elif slug in and_match and and_match[slug].get("alquiler"):
             new_a = and_match[slug]["alquiler"]; fuente_a = "Andalucia_obs"
         else:
@@ -103,10 +117,19 @@ def aggregate(quarter: str = None) -> list:
                 new_a = old_a; fuente_a = "historico"
 
         # Variaciones anuales (vs valor actual del master)
+        # Solo se recalculan si hay una fuente nueva real: comparar el valor
+        # contra sí mismo cuando fuente_p=="historico" daría 0.0 y borraría
+        # la variación interanual ya conocida.
         old_p = c.get("precio_actual")
         old_a = c.get("alquiler_actual")
-        var_p = round((new_p / old_p - 1) * 100, 1) if (new_p and old_p) else None
-        var_a = round((new_a / old_a - 1) * 100, 1) if (new_a and old_a) else None
+        if fuente_p != "historico" and new_p and old_p:
+            var_p = round((new_p / old_p - 1) * 100, 1)
+        else:
+            var_p = c.get("var_precio_anual")
+        if fuente_a not in ("historico", "estimado_ratio") and new_a and old_a:
+            var_a = round((new_a / old_a - 1) * 100, 1)
+        else:
+            var_a = c.get("var_alquiler_anual")
 
         # ROI
         new_roi = calc_roi(new_p, new_a)

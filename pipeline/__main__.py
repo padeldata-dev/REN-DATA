@@ -40,7 +40,7 @@ def cmd_apply(args):
     print(f"\n=== APPLYING {len(rows)} rows to rendata_beta/ ===\n")
     update_index_data(rows)
     update_fichas(rows, master)
-    update_master(rows)
+    update_master(rows, master)
 
 def cmd_run(args):
     cmd_fetch(args)
