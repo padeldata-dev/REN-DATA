@@ -15,7 +15,9 @@ for u in urls:
     if u == "/":
         target = BETA / "index.html"
     else:
-        target = BETA / u.lstrip("/")
+        # El sitemap usa URLs limpias (sin .html); Cloudflare Workers Assets
+        # las resuelve contra el fichero real, que sí lleva la extensión.
+        target = BETA / (u.lstrip("/") + ".html")
     if not target.is_file():
         missing.append(u)
 
