@@ -236,6 +236,10 @@ footer p{font-size:.78rem;color:var(--muted)}
 .map-section{background:var(--white);border-bottom:1px solid var(--border);padding:3rem 2rem}
 .map-inner{max-width:1100px;margin:0 auto}
 .map-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.map-toggle{display:inline-flex;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:.25rem;gap:.25rem;margin-top:.9rem}
+.map-toggle-btn{border:none;background:none;font-family:var(--font);font-size:.78rem;font-weight:700;color:var(--muted);padding:.45rem .85rem;border-radius:7px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.map-toggle-btn.active{background:var(--white);color:var(--blue);box-shadow:0 1px 3px rgba(14,24,40,.12)}
+.map-toggle-btn:hover:not(.active){color:var(--text)}
 .map-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
 .map-eyebrow::before{content:'';display:block;width:14px;height:2px;background:var(--blue);border-radius:2px}
 .map-title{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.4rem}
@@ -258,13 +262,16 @@ footer p{font-size:.78rem;color:var(--muted)}
 #spainMap path.roi-high, #spainMap ellipse.roi-high, #spainMap rect.roi-high{fill:#bbf7d0}
 #spainMap path.roi-mid,  #spainMap ellipse.roi-mid,  #spainMap rect.roi-mid {fill:#bfdbfe}
 #spainMap path.roi-low,  #spainMap ellipse.roi-low,  #spainMap rect.roi-low {fill:#fecaca}
+#spainMap path.idx-high, #spainMap ellipse.idx-high, #spainMap rect.idx-high{fill:#bbf7d0}
+#spainMap path.idx-mid,  #spainMap ellipse.idx-mid,  #spainMap rect.idx-mid {fill:#fde68a}
+#spainMap path.idx-low,  #spainMap ellipse.idx-low,  #spainMap rect.idx-low {fill:#fecaca}
 #spainMap path.selected, #spainMap ellipse.selected,
 #spainMap g.selected rect:not([fill="none"]){
   stroke:var(--blue)!important;stroke-width:2.5!important;filter:brightness(.82)
 }
 #spainMap .reg-label{font-size:8px;font-weight:600;fill:#374151;pointer-events:none;user-select:none}
-#spainMap g[data-ccaa] rect:not([fill="none"]):not(.roi-high):not(.roi-mid):not(.roi-low){cursor:pointer;fill:#bfdbfe;stroke:white;stroke-width:1.5;transition:fill .15s}
-#spainMap g[data-ccaa] ellipse:not(.roi-high):not(.roi-mid):not(.roi-low){cursor:pointer;fill:#bbf7d0;stroke:white;stroke-width:1.5}
+#spainMap g[data-ccaa] rect:not([fill="none"]):not(.roi-high):not(.roi-mid):not(.roi-low):not(.idx-high):not(.idx-mid):not(.idx-low){cursor:pointer;fill:#bfdbfe;stroke:white;stroke-width:1.5;transition:fill .15s}
+#spainMap g[data-ccaa] ellipse:not(.roi-high):not(.roi-mid):not(.roi-low):not(.idx-high):not(.idx-mid):not(.idx-low){cursor:pointer;fill:#bbf7d0;stroke:white;stroke-width:1.5}
 /* Tooltip */
 .map-tooltip{position:fixed;background:var(--text);color:white;font-size:.78rem;font-weight:500;padding:.45rem .8rem;border-radius:7px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:9999;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.2)}
 .map-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--text)}

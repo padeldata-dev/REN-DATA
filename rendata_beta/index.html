@@ -222,12 +222,16 @@
     <div class="map-header">
       <div>
         <div class="map-eyebrow">Explorar por comunidad</div>
-        <h2 class="map-title">Haz clic en cualquier región de España</h2>
-        <p class="map-desc">Filtra las ciudades por comunidad autónoma directamente en el mapa. El color indica la rentabilidad media.</p>
+        <h2 class="map-title" id="mapTitle">Haz clic en cualquier región de España</h2>
+        <p class="map-desc" id="mapDesc">Filtra las ciudades por comunidad autónoma directamente en el mapa. El color indica la rentabilidad media.</p>
+        <div class="map-toggle" role="group" aria-label="Vista del mapa">
+          <button type="button" class="map-toggle-btn active" id="btnMapRoi" onclick="setMapMode('roi')">📈 Rentabilidad (ROI)</button>
+          <button type="button" class="map-toggle-btn" id="btnMapIdx" onclick="setMapMode('idx')">🏠 Accesibilidad</button>
+        </div>
       </div>
       <div class="map-legend">
-        <div class="legend-title">Rentabilidad media</div>
-        <div class="legend-items">
+        <div class="legend-title" id="legendTitle">Rentabilidad media</div>
+        <div class="legend-items" id="legendItems">
           <div class="legend-item"><div class="legend-dot" style="background:#059669"></div>&gt;6,2% Alta</div>
           <div class="legend-item"><div class="legend-dot" style="background:#1a56db"></div>5–6,2% Media</div>
           <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>&lt;5% Baja</div>
@@ -1288,20 +1292,70 @@ function regionROI(ccaaList) {
   return cities.reduce((s,c) => s+c.roi, 0) / cities.length;
 }
 
-// Colour map regions by ROI
+// Índice Ren Data de Accesibilidad a la Vivienda, media simple por CCAA
+// (datos propios, ver /indice-accesibilidad-vivienda.html — julio 2026)
+const CCAA_ACCESIBILIDAD = {
+  'Andalucía': 69.2, 'Aragón': 83.0, 'Asturias': 73.8, 'C. Valenciana': 64.8,
+  'C. de Madrid': 41.6, 'Canarias': 51.6, 'Cantabria': 58.0, 'Castilla y León': 81.3,
+  'Castilla-La Mancha': 84.6, 'Cataluña': 45.0, 'Extremadura': 89.2, 'Galicia': 72.2,
+  'Islas Baleares': 9.1, 'La Rioja': 80.3, 'Navarra': 66.0, 'País Vasco': 36.4,
+  'R. de Murcia': 79.3
+};
+function regionAccesibilidad(ccaaList) {
+  const vals = ccaaList.map(cc => CCAA_ACCESIBILIDAD[cc]).filter(v => v !== undefined);
+  if (!vals.length) return null;
+  return vals.reduce((s,v) => s+v, 0) / vals.length;
+}
+
+const ALL_MAP_CLASSES = ['roi-high','roi-mid','roi-low','idx-high','idx-mid','idx-low'];
+let mapMode = 'roi';
+
+// Colour map regions by ROI or by Índice de Accesibilidad, según mapMode
 function colorRegions() {
   Object.entries(REGION_CCAA).forEach(([id, ccaaList]) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const roi = regionROI(ccaaList);
-    const cls = roi >= 6.2 ? 'roi-high' : roi >= 5 ? 'roi-mid' : 'roi-low';
-    // Apply to path or children
-    if (el.tagName === 'g') {
-      el.querySelectorAll('ellipse, rect:not([fill="none"])').forEach(c => c.classList.add(cls));
+    let cls;
+    if (mapMode === 'idx') {
+      const idx = regionAccesibilidad(ccaaList);
+      cls = idx === null ? null : idx >= 65 ? 'idx-high' : idx >= 40 ? 'idx-mid' : 'idx-low';
     } else {
-      el.classList.add(cls);
+      const roi = regionROI(ccaaList);
+      cls = roi >= 6.2 ? 'roi-high' : roi >= 5 ? 'roi-mid' : 'roi-low';
     }
+    const targets = el.tagName === 'g' ? el.querySelectorAll('ellipse, rect:not([fill="none"])') : [el];
+    targets.forEach(t => {
+      ALL_MAP_CLASSES.forEach(c => t.classList.remove(c));
+      if (cls) t.classList.add(cls);
+    });
   });
+}
+
+function setMapMode(mode) {
+  if (mapMode === mode) return;
+  mapMode = mode;
+  document.getElementById('btnMapRoi').classList.toggle('active', mode === 'roi');
+  document.getElementById('btnMapIdx').classList.toggle('active', mode === 'idx');
+  if (mode === 'idx') {
+    document.getElementById('mapTitle').textContent = 'Accesibilidad a la vivienda por comunidad';
+    document.getElementById('mapDesc').textContent = 'Índice Ren Data de Accesibilidad (0-100): años de sueldo, esfuerzo hipotecario y ratio alquiler/salario combinados.';
+    document.getElementById('legendTitle').textContent = 'Índice de Accesibilidad';
+    document.getElementById('legendItems').innerHTML = `
+      <div class="legend-item"><div class="legend-dot" style="background:#059669"></div>≥65 Accesible</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ca8a04"></div>40–65 Media</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>&lt;40 Cara/inaccesible</div>
+    `;
+  } else {
+    document.getElementById('mapTitle').textContent = 'Haz clic en cualquier región de España';
+    document.getElementById('mapDesc').textContent = 'Filtra las ciudades por comunidad autónoma directamente en el mapa. El color indica la rentabilidad media.';
+    document.getElementById('legendTitle').textContent = 'Rentabilidad media';
+    document.getElementById('legendItems').innerHTML = `
+      <div class="legend-item"><div class="legend-dot" style="background:#059669"></div>&gt;6,2% Alta</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1a56db"></div>5–6,2% Media</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div>&lt;5% Baja</div>
+    `;
+  }
+  colorRegions();
 }
 
 // Tooltip
@@ -1417,11 +1471,14 @@ function initMap() {
     if (!el) return;
     const name = el.dataset ? el.dataset.name : id;
     const ccaaList = REGION_CCAA[id];
-    const roi = regionROI(ccaaList);
     const cities = DATA.filter(c => ccaaList.some(cc => c.cc.includes(cc) || cc.includes(c.cc)));
-    const tipText = `<strong>${name}</strong> · ROI ${roi.toFixed(1)}% · ${cities.length} ciudades`;
     const clickFn = () => selectRegion(id);
-    const enterFn = (e) => showTip(e, tipText);
+    const enterFn = (e) => {
+      const tipText = mapMode === 'idx'
+        ? (() => { const idx = regionAccesibilidad(ccaaList); return `<strong>${name}</strong> · Accesibilidad ${idx===null?'—':idx.toFixed(1)}/100`; })()
+        : `<strong>${name}</strong> · ROI ${regionROI(ccaaList).toFixed(1)}% · ${cities.length} ciudades`;
+      showTip(e, tipText);
+    };
     const moveFn  = (e) => moveTip(e);
     const leaveFn = () => hideTip();
     if (el.tagName === 'g') {
