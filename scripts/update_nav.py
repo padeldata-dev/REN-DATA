@@ -25,6 +25,7 @@ CANONICAL_NAV = '''<nav>
         <a href="/actualidad.html">📰 Actualidad</a>
         <a href="/columna.html">✍️ Columna</a>
         <a href="/indice-accesibilidad-vivienda.html">🏠 Índice de Accesibilidad</a>
+        <a href="/semaforo-mercado.html">🚦 Semáforo del mercado</a>
         <a href="/academia.html">🎓 Academia</a>
         <a href="/guia-inversor.html">🎯 Guía del inversor</a>
       </details>
@@ -69,6 +70,7 @@ CANONICAL_NAV = '''<nav>
         <a href="/actualidad.html">📰 Actualidad</a>
         <a href="/columna.html">✍️ Columna</a>
         <a href="/indice-accesibilidad-vivienda.html">🏠 Índice de Accesibilidad</a>
+        <a href="/semaforo-mercado.html">🚦 Semáforo del mercado</a>
         <a href="/academia.html">🎓 Academia</a>
         <a href="/guia-inversor.html">🎯 Guía del inversor</a>
       </div>

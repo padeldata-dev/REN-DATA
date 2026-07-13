@@ -1,0 +1,25 @@
+{
+ "historial": [
+  {
+   "fecha": "2026-07-13",
+   "mes_label": "Julio 2026",
+   "temperatura": 47.0,
+   "color": "amarillo",
+   "label": "Mercado neutral",
+   "componentes": {
+    "indice_accesibilidad": 58.6,
+    "temp_accesibilidad": 41.4,
+    "var_precio_anual_media": 7.05,
+    "temp_precio": 47.0,
+    "dias_mercado_media": 23.2,
+    "temp_dias": 55.9,
+    "n_ciudades": 477
+   },
+   "pesos": {
+    "accesibilidad": 0.4,
+    "variacion_precio": 0.35,
+    "dias_mercado": 0.25
+   }
+  }
+ ]
+}
