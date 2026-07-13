@@ -12,8 +12,9 @@ urls = re.findall(r'<loc>https://rendata\.es(/[^<]*)</loc>', xml)
 
 missing = []
 for u in urls:
-    if u == "/":
-        target = BETA / "index.html"
+    if u == "/" or u.endswith("/"):
+        # Raíz o índice de subdirectorio (ej. /en/) -> {dir}/index.html
+        target = BETA / u.lstrip("/") / "index.html" if u != "/" else BETA / "index.html"
     else:
         # El sitemap usa URLs limpias (sin .html); Cloudflare Workers Assets
         # las resuelve contra el fichero real, que sí lleva la extensión.

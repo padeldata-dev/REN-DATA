@@ -1,0 +1,61 @@
+:root{--bg:#f8fafc;--white:#fff;--text:#0e1828;--text2:#374151;--muted:#6b7a8d;--border:#e5eaf2;--navy:#0e2a6b;--gold:#b45309;--gold-l:#fffbeb;--green:#059669;--sh:0 1px 3px rgba(14,24,40,.08),0 4px 12px rgba(14,24,40,.05);--r:14px;--font:'Plus Jakarta Sans',sans-serif}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;-webkit-font-smoothing:antialiased;margin:0}
+
+.lang-switch{background:rgba(255,255,255,.12) !important;border-radius:20px;padding:.35rem .85rem !important}
+
+.bc{max-width:880px;margin:0 auto;padding:.9rem 2rem 0;font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem}
+.bc a{color:var(--muted);text-decoration:none;font-weight:500}
+.bc a:hover{color:var(--navy);text-decoration:underline}
+.bc-sep{color:#cbd5e1}
+.bc-cur{color:var(--text);font-weight:600}
+
+.en-hero{background:linear-gradient(150deg,#0a1628 0%,#0e2a6b 55%,#1a56db 100%);color:#fff;padding:3.5rem 2rem 3rem;text-align:center}
+.en-hero-inner{max-width:780px;margin:0 auto}
+.en-eyebrow{display:inline-flex;align-items:center;gap:.4rem;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#fbbf24;margin-bottom:1rem}
+.en-hero h1{font-size:2.3rem;font-weight:800;letter-spacing:-.04em;line-height:1.15;margin:0 0 1rem}
+.en-hero .ac{color:#93c5fd}
+.en-lead{font-size:1.02rem;color:rgba(255,255,255,.85);max-width:600px;margin:0 auto}
+
+.en-stat-row{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem}
+.en-stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:.9rem 1.3rem;min-width:110px}
+.en-stat-val{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.en-stat-lbl{font-size:.72rem;color:rgba(255,255,255,.7);font-weight:600;margin-top:.2rem}
+
+.en-wrap{max-width:760px;margin:0 auto;padding:2.75rem 1.5rem 4rem}
+.en-wrap h2{font-size:1.4rem;font-weight:800;letter-spacing:-.03em;color:var(--text);margin:2.2rem 0 1rem}
+.en-wrap p{font-size:.98rem;color:var(--text2);margin:0 0 1.1rem}
+.en-wrap a{color:var(--navy)}
+
+.en-table{width:100%;border-collapse:collapse;margin:1rem 0 .5rem;font-size:.92rem;background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.en-table th,.en-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border);text-align:left}
+.en-table th{color:var(--muted);font-weight:700;width:45%}
+.en-table td{color:var(--text);font-weight:600}
+.en-table tr:last-child th,.en-table tr:last-child td{border-bottom:none}
+
+.en-steps{padding-left:1.3rem;color:var(--text2);font-size:.96rem;line-height:1.85}
+.en-steps li{margin-bottom:.7rem}
+
+.en-tax-box{background:var(--gold-l);border:1px solid #fde68a;border-radius:var(--r);padding:1.4rem 1.6rem;margin:1.2rem 0}
+.en-tax-box h3{font-size:1rem;font-weight:800;color:#78350f;margin:0 0 .5rem}
+.en-tax-box p{color:#78350f}
+.en-tax-box ul{color:#78350f;padding-left:1.2rem;margin:0 0 1rem}
+.en-tax-box li{margin-bottom:.4rem;font-size:.94rem}
+
+.en-cta{display:flex;flex-direction:column;gap:.7rem;background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh);padding:1.4rem 1.6rem;margin-top:2rem}
+.en-cta a{font-weight:700;text-decoration:none;color:var(--navy)}
+.en-cta a:hover{text-decoration:underline}
+
+.en-city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.5rem 0 2rem}
+.en-city-card{display:block;background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:var(--sh);padding:1.1rem 1.3rem;text-decoration:none;color:inherit;transition:all .15s}
+.en-city-card:hover{border-color:var(--navy);transform:translateY(-2px)}
+.en-city-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.en-city-name{font-weight:800;color:var(--text);font-size:1.02rem}
+.en-city-roi{font-size:.76rem;font-weight:800;color:var(--green);background:#ecfdf5;padding:.2rem .55rem;border-radius:20px}
+.en-city-stats{font-size:.82rem;color:var(--muted)}
+
+@media(max-width:740px){
+  .en-hero{padding:2.5rem 1.25rem 2.25rem}
+  .en-hero h1{font-size:1.8rem}
+  .en-table th{width:55%}
+}
