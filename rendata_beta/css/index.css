@@ -72,6 +72,10 @@ nav a:hover{color:var(--blue);background:var(--blue-l)}
 .hero-subtitle{font-size:.95rem;font-weight:400;color:rgba(226,232,240,.92);line-height:1.45;margin:0 auto .9rem;max-width:600px;text-shadow:0 1px 6px rgba(0,0,0,.25);opacity:0;animation:heroChildIn .7s ease-out .5s forwards}
 .hero-subtitle strong{font-weight:700;color:#fff}
 
+/* Search box moved into hero so it's usable in the first 3 seconds (0.6s) */
+.hero-search-wrap{width:100%;margin:0 auto 1.1rem;opacity:0;animation:heroChildIn .7s ease-out .6s forwards}
+.hero-search-wrap .search-box{box-shadow:0 8px 28px rgba(0,0,0,.35),var(--sh-md)}
+
 /* 4 features — centered row with translucent circles (0.7s después) */
 .hero-features-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem 1.75rem;margin-bottom:.75rem;opacity:0;animation:heroChildIn .7s ease-out .7s forwards}
 .hero-feature{display:flex;flex-direction:column;align-items:center;gap:.35rem;min-width:0}
