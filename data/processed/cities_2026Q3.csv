@@ -1,0 +1,478 @@
+slug,nombre,ccaa,poblacion,precio_m2,alquiler_medio,roi,var_precio_anual,var_alquiler_anual,dias_mercado,dias_mercado_flag,fuente_precio,fuente_alquiler,fecha_extraccion,trimestre
+lleida,Lleida,Cataluña,112035,1300,650,6.0,7.5,16.1,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+murcia,Murcia,R. de Murcia,345759,1750,860,5.9,9.0,13.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+zamora,Zamora,Castilla y León,63783,960,600,7.5,7.0,7.8,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castellon,Castellón,C. Valenciana,180379,1500,750,6.0,8.0,13.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+huelva,Huelva,Andalucía,140675,1400,700,6.0,9.0,14.4,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+jaen,Jaén,Andalucía,104776,980,580,7.1,8.5,6.8,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cuenca,Cuenca,Castilla-La Mancha,43733,900,560,7.5,10.0,12.9,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mieres,Mieres,Asturias,51423,750,420,6.7,2.8,4.0,34,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+avila,Ávila,Castilla y León,47187,1120,660,7.1,9.0,20.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ferrol,Ferrol,Galicia,83048,800,440,6.6,2.8,4.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+langreo,Langreo,Asturias,50597,820,452,6.6,2.8,4.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+las-palmas-gc,Las Palmas GC,Canarias,381868,2100,980,5.6,10.0,11.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+linares,Linares,Andalucía,60222,780,430,6.6,3.5,5.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almeria,Almería,Andalucía,170503,1380,760,6.6,9.5,14.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+don-benito,Don Benito,Extremadura,31022,880,480,6.5,3.5,5.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lugo,Lugo,Galicia,85174,980,570,7.0,7.0,8.1,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ponferrada,Ponferrada,Castilla y León,61575,900,490,6.5,4.2,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+talavera-de-la-reina,Talavera de la Reina,Castilla-La Mancha,70922,850,465,6.6,4.2,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aranda-de-duero,Aranda de Duero,Castilla y León,29222,950,510,6.4,4.2,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+badajoz,Badajoz,Extremadura,122510,920,530,6.9,8.0,7.4,29,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calahorra,Calahorra,La Rioja,18926,1000,540,6.5,4.2,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ciudad-real,Ciudad Real,Castilla-La Mancha,59392,900,540,7.2,10.5,14.4,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lorca,Lorca,R. de Murcia,69045,860,470,6.6,4.9,7.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+medina-del-campo,Medina del Campo,Castilla y León,20174,920,494,6.4,3.5,5.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+plasencia,Plasencia,Extremadura,37299,910,491,6.5,4.2,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+soria,Soria,Castilla y León,33597,840,500,7.1,11.0,15.0,29,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+teruel,Teruel,Aragón,28994,820,490,7.2,9.0,9.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+elda,Elda,C. Valenciana,52751,1100,580,6.3,5.6,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+merida,Mérida,Extremadura,51830,1050,560,6.4,4.9,7.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+miranda-de-ebro,Miranda de Ebro,Castilla y León,35502,1000,530,6.4,4.2,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ourense,Ourense,Galicia,107060,1080,610,6.8,8.0,8.1,29,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tordesillas,Tordesillas,Castilla y León,7946,970,516,6.4,4.2,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torre-pacheco,Torre-Pacheco,R. de Murcia,20345,1200,630,6.3,6.3,9.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+caceres,Cáceres,Extremadura,77768,960,560,7.0,8.5,7.5,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+orense,Orense,Galicia,107060,1150,555,5.8,4.9,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aguilas,Águilas,R. de Murcia,25702,1400,720,6.2,7.0,10.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+albacete,Albacete,Castilla-La Mancha,143799,1200,680,6.8,8.5,13.6,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+algeciras,Algeciras,Andalucía,101907,1200,620,6.2,5.6,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aviles,Avilés,Asturias,85696,1160,601,6.2,4.2,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cartagena,Cartagena,R. de Murcia,170483,1360,701,6.2,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mazarron,Mazarrón,R. de Murcia,16142,1600,830,6.2,7.7,11.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+motril,Motril,Andalucía,50316,1440,739,6.2,6.3,9.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+antequera,Antequera,Andalucía,40181,1100,560,6.1,4.9,7.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+orihuela,Orihuela,C. Valenciana,50724,1470,675,5.5,6.3,9.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sagunto,Sagunto,C. Valenciana,73031,1440,718,6.0,6.3,9.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-cruz-de-tenerife,Santa Cruz de Tenerife,Canarias,203787,2000,930,5.6,6.3,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torrevieja,Torrevieja,C. Valenciana,35998,1800,900,6.0,8.4,12.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcoy,Alcoy,C. Valenciana,60921,1440,730,6.1,5.6,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alzira,Alzira,C. Valenciana,40556,1350,670,6.0,5.6,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castellon-de-la-plana,Castellón de la Plana,C. Valenciana,180379,1400,690,5.9,6.3,9.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+huesca,Huesca,Aragón,45607,1350,740,6.6,8.0,9.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+palencia,Palencia,Castilla y León,78831,1020,580,6.8,7.5,13.2,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+terrassa,Terrassa,Cataluña,163862,1750,875,6.0,5.6,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+toledo,Toledo,Castilla-La Mancha,66006,1600,860,6.4,9.0,12.9,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torrelavega,Torrelavega,Cantabria,58196,1450,723,6.0,4.9,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tudela,Tudela,Navarra,26857,1460,727,6.0,4.9,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+velez-malaga,Vélez-Málaga,Andalucía,53071,1600,800,6.0,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+zaragoza,Zaragoza,Aragón,601674,1950,980,6.0,8.0,12.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcala-de-guadaira,Alcalá de Guadaíra,Andalucía,56313,1400,680,5.8,5.6,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+elche,Elche,C. Valenciana,191660,1600,780,5.8,6.3,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+logrono,Logroño,La Rioja,123841,1560,780,6.0,8.0,11.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+oliva,Oliva,C. Valenciana,20654,1700,830,5.9,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sabadell,Sabadell,Cataluña,185798,1740,930,6.4,5.6,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+telde,Telde,Canarias,84389,1650,801,5.8,6.3,9.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+valladolid,Valladolid,Castilla y León,319805,1550,825,6.4,7.0,11.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cordoba,Córdoba,Andalucía,306248,1520,740,5.8,8.5,12.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+figueres,Figueres,Cataluña,33157,1500,720,5.8,5.6,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+leon,León,Castilla y León,145242,1400,770,6.6,8.0,10.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tarragona,Tarragona,Cataluña,112176,1780,890,6.0,8.0,10.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcala-de-henares,Alcalá de Henares,C. de Madrid,163386,1950,920,5.7,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+benidorm,Benidorm,C. Valenciana,50040,2200,1050,5.7,7.7,11.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+dos-hermanas,Dos Hermanas,Andalucía,91138,1600,760,5.7,6.3,9.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+gandia,Gandía,C. Valenciana,56555,1900,890,5.6,7.0,10.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+getafe,Getafe,C. de Madrid,143153,2400,1100,5.5,7.7,11.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+gijon,Gijón,Asturias,264381,1680,800,5.7,6.5,10.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+jerez-de-la-frontera,Jerez de la Frontera,Andalucía,182269,1650,780,5.7,6.3,9.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+parla,Parla,C. de Madrid,69163,1750,820,5.6,7.0,10.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+reus,Reus,Cataluña,90993,1660,785,5.7,5.6,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-pola,Santa Pola,C. Valenciana,17099,2000,950,5.7,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+burgos,Burgos,Castilla y León,163156,1720,890,6.2,8.0,12.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+fuenlabrada,Fuenlabrada,C. de Madrid,163567,1900,880,5.6,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+fuerteventura-pjto-rosario,Fuerteventura (Pjto.Rosario),Canarias,19030,2000,920,5.5,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+manresa,Manresa,Cataluña,64385,1800,840,5.6,5.6,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+badalona,Badalona,Cataluña,210987,2600,1200,5.5,6.3,9.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+blanes,Blanes,Cataluña,27713,2200,1000,5.5,6.3,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+burjassot,Burjassot,C. Valenciana,34061,2100,960,5.5,7.0,10.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+granada,Granada,Andalucía,245640,1980,910,5.5,9.0,12.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-laguna,La Laguna,Canarias,161108,2080,885,5.1,6.3,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+leganes,Leganés,C. de Madrid,174593,2270,1026,5.4,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mataro,Mataró,Cataluña,102018,2280,1033,5.4,5.6,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mostoles,Móstoles,C. de Madrid,196173,2160,985,5.5,7.0,10.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+oviedo,Oviedo,Asturias,200049,1850,880,5.7,7.0,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+paterna,Paterna,C. Valenciana,47414,2300,1039,5.4,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ronda,Ronda,Andalucía,34385,1800,820,5.5,6.3,9.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torremolinos,Torremolinos,Andalucía,35408,2400,1050,5.2,7.7,11.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torrent,Torrent,C. Valenciana,60999,1940,896,5.5,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+valencia,Valencia,C. Valenciana,746683,2700,1200,5.3,12.0,10.3,16,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vic,Vic,Cataluña,30397,2060,944,5.5,5.6,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arganda-del-rey,Arganda del Rey,C. de Madrid,29224,2000,900,5.4,7.7,11.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+benalmadena,Benalmádena,Andalucía,27147,2200,980,5.3,8.4,12.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+benissa,Benissa,C. Valenciana,9154,2400,1080,5.4,7.7,11.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cornell-de-llobregat,Cornellà de Llobregat,Cataluña,82490,2800,1250,5.4,5.6,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lanzarote-arrecife,Lanzarote (Arrecife),Canarias,38091,2270,1007,5.3,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+navalcarnero,Navalcarnero,C. de Madrid,11601,2100,940,5.4,7.7,11.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+puerto-de-la-cruz,Puerto de la Cruz,Canarias,24542,2320,1095,5.7,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+salamanca,Salamanca,Castilla y León,159225,1750,880,6.0,7.5,9.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santiago-de-compostela,Santiago de Compostela,Galicia,93672,2130,954,5.4,5.6,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcorcon,Alcorcón,C. de Madrid,141465,2300,1020,5.3,7.0,10.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cambrils,Cambrils,Cataluña,17536,2500,1095,5.3,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+estepona,Estepona,Andalucía,37557,2800,1180,5.1,9.8,14.0,16,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+guadalajara,Guadalajara,Castilla-La Mancha,67108,1810,895,5.9,10.0,10.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+illescas,Illescas,C. de Madrid,9743,2130,1015,5.7,8.4,12.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+l-hospitalet-de-llobregat,L'Hospitalet de Llobregat,Cataluña,289510,3400,1500,5.3,5.6,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lloret-de-mar,Lloret de Mar,Cataluña,16674,2470,1078,5.2,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sevilla,Sevilla,Andalucía,697487,2450,1080,5.3,9.5,6.8,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alicante,Alicante,C. Valenciana,274577,2250,990,5.3,13.0,9.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arona-tenerife-sur,Arona (Tenerife Sur),Canarias,28208,3200,1380,5.2,7.7,11.0,16,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calpe,Calpe,C. Valenciana,27616,2800,1200,5.1,8.4,12.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+denia,Dénia,C. Valenciana,27469,2600,1120,5.2,7.7,11.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+fuengirola,Fuengirola,Andalucía,41713,2600,1100,5.1,8.4,12.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+girona,Girona,Cataluña,70576,2300,1050,5.5,8.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+irun,Irun,País Vasco,55215,2680,1150,5.1,4.9,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vigo,Vigo,Galicia,286774,1850,890,5.8,8.0,8.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+altea,Altea,C. Valenciana,13519,3200,1350,5.1,8.4,12.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+barakaldo,Barakaldo,País Vasco,100474,2930,1255,5.1,4.9,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mijas,Mijas,Andalucía,35423,2660,1140,5.1,9.1,13.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+roses,Roses,Cataluña,11483,2920,1245,5.1,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+salou,Salou,Cataluña,10708,2440,1065,5.2,7.0,10.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+nerja,Nerja,Andalucía,14965,3200,1280,4.8,9.8,14.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castelldefels,Castelldefels,Cataluña,38509,3200,1320,5.0,7.0,10.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+inca,Inca,Islas Baleares,21129,2800,1160,5.0,6.3,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+marbella,Marbella,Andalucía,98823,4200,1680,4.8,9.1,13.0,14,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+getxo,Getxo,País Vasco,82196,3500,1400,4.8,4.9,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+malaga,Málaga,Andalucía,549135,3180,1340,5.1,11.0,6.4,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+manacor,Manacor,Islas Baleares,30018,3080,1215,4.7,7.0,10.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vitoria,Vitoria,País Vasco,214234,2700,1150,5.1,7.0,5.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+bilbao,Bilbao,País Vasco,358875,3150,1270,4.8,7.5,5.4,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cadiz,Cádiz,Andalucía,145595,2290,1030,5.4,9.0,9.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+madrid,Madrid,C. de Madrid,2866850,5960,1750,3.5,12.0,9.4,15,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pamplona,Pamplona,Navarra,166279,2950,1170,4.8,7.5,10.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santander,Santander,Cantabria,185410,2250,940,5.0,7.0,10.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sitges,Sitges,Cataluña,16801,4800,1850,4.6,7.0,10.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+a-coruna,A Coruña,Galicia,251543,2100,880,5.0,7.5,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+barcelona,Barcelona,Cataluña,1508805,4900,1880,4.6,4.2,6.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+palma,Palma,Islas Baleares,434786,4200,1650,4.7,9.0,7.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mahon-menorca,Mahón (Menorca),Islas Baleares,21884,3800,1500,4.7,7.0,10.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pontevedra,Pontevedra,Galicia,74287,1700,760,5.4,7.5,7.5,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ibiza,Ibiza,Islas Baleares,29447,6800,2200,3.9,6.3,9.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-sebastian,San Sebastián,País Vasco,189866,5200,1880,4.3,6.5,6.1,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alhaurin-de-la-torre,Alhaurín de la Torre,Andalucía,16914,2100,1015,5.8,11.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+javea,Jávea,C. Valenciana,30642,3200,1385,5.2,12.0,9.0,17,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+roquetas-de-mar,Roquetas de Mar,Andalucía,37237,1600,853,6.4,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mairena-del-aljarafe,Mairena del Aljarafe,Andalucía,30659,1800,884,5.9,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+boadilla-del-monte,Boadilla del Monte,C. de Madrid,17814,3320,1324,4.8,8.0,7.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+guardamar-del-segura,Guardamar del Segura,C. Valenciana,8227,1900,981,6.2,11.0,9.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-lucia-de-tirajana,Santa Lucía de Tirajana,Canarias,78584,2070,978,5.7,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cullera,Cullera,C. Valenciana,20595,2160,1042,5.8,10.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vila-seca,Vila-seca,Cataluña,12124,2400,1120,5.6,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vinaros,Vinaròs,C. Valenciana,20940,1700,878,6.2,9.0,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pilar-de-la-horadada,Pilar de la Horadada,C. Valenciana,9528,1800,975,6.5,11.0,9.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-fernando-de-henares,San Fernando de Henares,C. de Madrid,29688,2200,1025,5.6,8.0,7.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+paracuellos-de-jarama,Paracuellos de Jarama,C. de Madrid,5293,2600,1190,5.5,9.0,8.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tomares,Tomares,Andalucía,16980,2200,990,5.4,9.0,7.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+bormujos,Bormujos,Andalucía,6839,2000,965,5.8,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+utrera,Utrera,Andalucía,46173,1300,694,6.4,8.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+armilla,Armilla,Andalucía,12859,1870,916,5.9,9.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-oliva,La Oliva,Canarias,30022,2400,1155,5.8,11.0,9.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+teguise,Teguise,Canarias,8691,2680,1221,5.5,11.0,9.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alhaurin-el-grande,Alhaurín el Grande,Andalucía,16859,1700,876,6.2,9.0,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+coin,Coín,Andalucía,17572,1550,779,6.0,9.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+moron-de-la-frontera,Morón de la Frontera,Andalucía,28303,1100,623,6.8,8.0,7.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mairena-del-alcor,Mairena del Alcor,Andalucía,16071,1600,827,6.2,8.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+andratx,Andratx,Islas Baleares,12195,5000,1875,4.5,10.0,8.0,15,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pollenca,Pollença,Islas Baleares,12945,4200,1715,4.9,9.0,8.0,16,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcudia,Alcúdia,Islas Baleares,10284,3800,1615,5.1,10.0,8.0,17,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sueca,Sueca,C. Valenciana,24869,1400,758,6.5,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+benicarlo,Benicarló,C. Valenciana,19229,1700,850,6.0,9.0,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lebrija,Lebrija,Andalucía,23833,1000,583,7.0,8.0,7.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calafell,Calafell,Cataluña,9772,2200,1045,5.7,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+adeje,Adeje,Canarias,14029,3200,1400,5.2,7.8,6.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcantarilla,Alcantarilla,R. de Murcia,31872,1140,598,6.3,9.4,7.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcobendas,Alcobendas,C. de Madrid,83031,3200,1450,5.4,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almendralejo,Almendralejo,Extremadura,27209,900,470,6.3,9.3,7.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+andujar,Andújar,Andalucía,37705,1000,520,6.2,9.3,7.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+basauri,Basauri,País Vasco,48490,2320,1027,5.3,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calvia,Calvià,Islas Baleares,28748,4800,1880,4.7,7.1,5.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castrillon,Castrillón,Asturias,22361,1300,640,5.9,8.9,7.1,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castro-urdiales,Castro-Urdiales,Cantabria,15167,2400,1060,5.3,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cerdanyola-del-valles,Cerdanyola del Vallès,Cataluña,50503,2800,1220,5.2,7.8,6.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+chiclana-de-la-frontera,Chiclana de la Frontera,Andalucía,53001,2070,950,5.5,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cieza,Cieza,R. de Murcia,722,1040,495,5.7,9.1,7.3,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+collado-villalba,Collado Villalba,C. de Madrid,36950,2400,1000,5.0,7.5,6.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+coslada,Coslada,C. de Madrid,76001,2770,1268,5.5,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+durango,Durango,País Vasco,23909,2470,1109,5.4,8.1,6.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ecija,Écija,Andalucía,37292,850,460,6.5,9.6,7.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+eibar,Eibar,País Vasco,30314,1850,842,5.5,8.1,6.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+el-ejido,El Ejido,Andalucía,91440,1100,570,6.2,9.3,7.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+el-prat-de-llobregat,El Prat de Llobregat,Cataluña,66338,2500,1120,5.4,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+el-puerto-de-santa-maria,El Puerto de Santa María,Andalucía,89983,1800,860,5.7,8.7,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+esplugues-de-llobregat,Esplugues de Llobregat,Cataluña,46810,3000,1280,5.1,7.6,6.1,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+gava,Gavà,Cataluña,37985,3350,1458,5.2,7.8,6.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+granadilla-de-abona,Granadilla de Abona,Canarias,18508,2200,1060,5.8,8.4,6.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+granollers,Granollers,Cataluña,50951,2200,1020,5.6,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-linea-de-la-concepcion,La Línea de la Concepción,Andalucía,64499,1200,600,6.0,9.0,7.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-orotava,La Orotava,Canarias,42514,2090,956,5.5,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-rinconada,La Rinconada,Andalucía,40724,1300,670,6.2,9.3,7.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+las-rozas,Las Rozas,C. de Madrid,99037,3800,1620,5.1,7.6,6.1,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+llucmajor,Llucmajor,Islas Baleares,20474,3600,1560,5.2,7.6,6.1,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lucena,Lucena,Andalucía,34786,900,480,6.4,9.6,7.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+majadahonda,Majadahonda,C. de Madrid,40042,3830,1648,5.2,7.8,6.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+marratxi,Marratxí,Islas Baleares,16180,3200,1490,5.6,8.4,6.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+molina-de-segura,Molina de Segura,R. de Murcia,41109,1330,710,6.4,8.7,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mollet-del-valles,Mollet del Vallès,Cataluña,41911,2180,1020,5.6,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+naron,Narón,Galicia,31207,1160,604,6.2,9.1,7.3,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ontinyent,Ontinyent,C. Valenciana,31024,1050,540,6.2,9.3,7.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pinto,Pinto,C. de Madrid,25038,2200,1010,5.5,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pozuelo-de-alarcon,Pozuelo de Alarcón,C. de Madrid,60120,4200,1720,4.9,7.4,5.9,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+puertollano,Puertollano,Castilla-La Mancha,50772,750,400,6.4,9.6,7.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+rivas-vaciamadrid,Rivas-Vaciamadrid,C. de Madrid,22620,2800,1260,5.4,8.1,6.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+rubi,Rubí,Cataluña,54085,2470,1055,5.1,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-bartolome-de-tirajana,San Bartolomé de Tirajana,Canarias,35443,2490,1115,5.4,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-fernando-cadiz,San Fernando,Andalucía,85882,1540,739,5.8,8.7,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-javier,San Javier,R. de Murcia,16773,1860,846,5.5,8.1,6.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-sebastian-de-los-reyes,San Sebastián de los Reyes,C. de Madrid,57632,2900,1310,5.4,8.1,6.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-boi-de-llobregat,Sant Boi de Llobregat,Cataluña,78005,2580,1145,5.3,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-cugat-del-valles,Sant Cugat del Vallès,Cataluña,47210,4500,1800,4.8,7.2,5.8,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-feliu-de-llobregat,Sant Feliu de Llobregat,Cataluña,35797,2600,1160,5.4,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+segovia,Segovia,Castilla y León,54287,1550,740,5.7,8.4,6.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+siero,Siero,Asturias,46315,1360,662,5.8,8.7,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torrejon-de-ardoz,Torrejón de Ardoz,C. de Madrid,88821,2600,1210,5.6,8.4,6.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+totana,Totana,R. de Murcia,21441,1070,545,6.1,9.0,7.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tres-cantos,Tres Cantos,C. de Madrid,27715,3370,1446,5.1,7.8,6.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ubeda,Úbeda,Andalucía,32086,1200,580,5.8,8.4,6.7,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+viladecans,Viladecans,Cataluña,53235,2600,1150,5.3,7.9,6.4,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vilanova-i-la-geltru,Vilanova i la Geltrú,Cataluña,47979,2470,1150,5.6,8.2,6.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+villena,Villena,C. Valenciana,31555,730,389,6.4,9.4,7.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+xativa,Xàtiva,C. Valenciana,24760,1100,550,6.0,8.9,7.1,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+yecla,Yecla,R. de Murcia,28415,950,500,6.3,9.4,7.6,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+zarautz,Zarautz,País Vasco,19202,4200,1820,5.2,7.8,6.2,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torrox,Torrox,Andalucía,11869,2200,1063,5.8,11.0,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almunecar,Almuñécar,Andalucía,21472,2490,1135,5.5,11.0,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mojacar,Mojácar,Andalucía,4394,2800,1307,5.6,12.0,10.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vera,Vera,Andalucía,6453,1800,930,6.2,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+los-alcazares,Los Alcázares,R. de Murcia,20408,1700,906,6.4,10.0,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-pedro-del-pinatar,San Pedro del Pinatar,R. de Murcia,13644,1860,955,6.2,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+peniscola,Peñíscola,C. Valenciana,3821,2270,1092,5.8,10.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mislata,Mislata,C. Valenciana,40302,2100,998,5.7,9.0,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+palamos,Palamós,Cataluña,14239,2600,1213,5.6,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+palafrugell,Palafrugell,Cataluña,17303,2800,1283,5.5,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+premia-de-mar,Premiá de Mar,Cataluña,24420,2740,1269,5.6,9.0,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tortosa,Tortosa,Cataluña,30088,1300,703,6.5,8.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castello-d-empuries,Castelló d'Empúries,Cataluña,4830,2400,1160,5.8,10.0,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+olot,Olot,Cataluña,27482,1750,872,6.0,8.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+soller,Sóller,Islas Baleares,10515,4640,1848,4.8,10.0,8.0,16,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ciutadella-de-menorca,Ciutadella de Menorca,Islas Baleares,21296,3710,1601,5.2,9.0,8.0,18,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+felanitx,Felanitx,Islas Baleares,14123,2970,1353,5.5,9.0,8.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+yaiza,Yaiza,Canarias,3363,2800,1330,5.7,11.0,9.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aguimes,Agüimes,Canarias,18284,1900,918,5.8,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+guimar,Güímar,Canarias,14014,1750,818,5.6,9.0,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vilagarcia-de-arousa,Vilagarcía de Arousa,Galicia,33375,1800,870,5.8,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sanxenxo,Sanxenxo,Galicia,16034,2600,1170,5.4,9.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+carballo,Carballo,Galicia,27287,1150,599,6.3,7.0,6.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cangas-do-morrazo,Cangas do Morrazo,Galicia,23231,1800,886,5.9,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+llanes,Llanes,Asturias,13184,2000,933,5.6,8.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+hondarribia,Hondarribia,País Vasco,14453,3400,1473,5.2,8.0,7.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+laredo,Laredo,Cantabria,12913,1960,943,5.8,8.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+montilla,Montilla,Andalucía,22949,1000,567,6.8,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+baza,Baza,Andalucía,20685,900,525,7.0,7.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+isla-cristina,Isla Cristina,Andalucía,17310,1400,746,6.4,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+rincon-de-la-victoria,Rincón de la Victoria,Andalucía,19247,2070,963,5.6,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+guadix,Guadix,Andalucía,20310,900,510,6.8,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+adra,Adra,Andalucía,20898,1300,693,6.4,9.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+burriana,Burriana,C. Valenciana,26211,1450,725,6.0,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+requena,Requena,C. Valenciana,18795,1100,595,6.5,7.0,6.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aranjuez,Aranjuez,C. de Madrid,38900,2000,966,5.8,9.0,7.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-lorenzo-de-el-escorial,San Lorenzo de El Escorial,C. de Madrid,10828,2800,1213,5.2,9.0,7.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+galapagar,Galapagar,C. de Madrid,16503,2710,1215,5.4,9.0,8.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+torrelodones,Torrelodones,C. de Madrid,10743,3000,1275,5.1,9.0,7.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arroyomolinos,Arroyomolinos,C. de Madrid,2709,2570,1188,5.5,9.0,8.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcazar-de-san-juan,Alcázar de San Juan,Castilla-La Mancha,25961,1070,579,6.5,8.0,6.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+valdepenas,Valdepeñas,Castilla-La Mancha,26217,970,552,6.8,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tomelloso,Tomelloso,Castilla-La Mancha,29586,1060,576,6.5,8.0,6.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+baeza,Baeza,Andalucía,16012,1100,567,6.2,8.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcala-la-real,Alcalá la Real,Andalucía,21558,1000,542,6.5,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+martos,Martos,Andalucía,22307,870,497,6.9,7.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calella,Calella,Cataluña,11687,2340,1102,5.7,9.0,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pineda-de-mar,Pineda de Mar,Cataluña,17884,2060,992,5.8,8.0,7.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tossa-de-mar,Tossa de Mar,Cataluña,3853,3200,1387,5.2,10.0,8.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+l-escala,L'Escala,Cataluña,10374,2700,1229,5.5,9.0,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calatayud,Calatayud,Aragón,17078,870,511,7.0,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alcaniz,Alcañiz,Aragón,12679,960,549,6.9,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+zafra,Zafra,Extremadura,14884,960,545,6.8,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+navalmoral-de-la-mata,Navalmoral de la Mata,Extremadura,15819,960,524,6.6,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-union,La Unión,R. de Murcia,21380,860,520,7.3,8.0,7.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+jumilla,Jumilla,R. de Murcia,20439,950,542,6.8,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+hellin,Hellín,Castilla-La Mancha,26021,870,493,6.8,7.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almansa,Almansa,Castilla-La Mancha,23507,970,528,6.5,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lliria,Llíria,C. Valenciana,15550,1540,770,6.0,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+algemesi,Algemesí,C. Valenciana,25029,1400,724,6.2,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sanlucar-de-barrameda,Sanlúcar de Barrameda,Andalucía,61088,1440,743,6.2,9.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+rota,Rota,Andalucía,24197,1860,898,5.8,9.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+conil-de-la-frontera,Conil de la Frontera,Andalucía,16687,2200,1023,5.6,10.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tarifa,Tarifa,Andalucía,14993,2680,1201,5.4,11.0,9.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+chipiona,Chipiona,Andalucía,15518,1650,821,6.0,9.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+carmona,Carmona,Andalucía,25266,1360,682,6.0,8.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+osuna,Osuna,Andalucía,17212,1130,611,6.5,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+priego-de-cordoba,Priego de Córdoba,Andalucía,21732,960,521,6.5,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ciudad-rodrigo,Ciudad Rodrigo,Castilla y León,14901,940,538,6.9,7.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+barbastro,Barbastro,Aragón,14520,1200,650,6.5,8.0,6.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+haro,Haro,La Rioja,9119,1300,671,6.2,8.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+estella-lizarra,Estella-Lizarra,Navarra,14317,1350,677,6.0,8.0,6.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tolosa,Tolosa,País Vasco,17979,2510,1122,5.4,8.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mondragon,Mondragón,País Vasco,22450,2270,1050,5.6,8.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+bermeo,Bermeo,País Vasco,17176,2710,1236,5.5,8.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+gernika-lumo,Gernika-Lumo,País Vasco,15439,2520,1128,5.4,8.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+igualada,Igualada,Cataluña,32512,1730,860,6.0,8.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+puigcerda,Puigcerdà,Cataluña,6356,3000,1300,5.2,9.0,8.0,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+banyoles,Banyoles,Cataluña,14395,2280,1056,5.6,8.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+nules,Nules,C. Valenciana,11493,1450,748,6.2,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tavernes-de-la-valldigna,Tavernes de la Valldigna,C. Valenciana,16412,1670,829,6.0,8.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ribadesella,Ribadesella,Asturias,6295,2070,997,5.8,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+luarca,Luarca,Asturias,16073,1850,893,5.8,8.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+suances,Suances,Cantabria,6117,2060,958,5.6,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+palma-del-rio,Palma del Río,Andalucía,19011,930,523,6.7,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+marchena,Marchena,Andalucía,17921,930,527,6.8,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-cruz-de-la-palma,Santa Cruz de La Palma,Canarias,17265,1860,895,5.8,9.0,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+los-llanos-de-aridane,Los Llanos de Aridane,Canarias,20582,1700,793,5.6,8.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+huercal-overa,Huércal-Overa,Andalucía,13756,1030,556,6.5,7.0,6.0,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+velez-blanco,Vélez Blanco,Andalucía,2317,800,467,7.0,7.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santurtzi,Santurtzi,País Vasco,49976,2300,1080,5.6,4.5,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+portugalete,Portugalete,País Vasco,54071,2400,1090,5.4,4.5,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vilafranca-del-penedes,Vilafranca del Penedès,Cataluña,28553,2300,980,5.1,5.0,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+puerto-real,Puerto Real,Andalucía,33069,1550,780,6.0,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-eularia-des-riu,Santa Eulària des Riu,Islas Baleares,42479,3800,1450,4.6,7.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+el-vendrell,El Vendrell,Cataluña,41133,1900,830,5.2,5.5,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ripollet,Ripollet,Cataluña,28903,2500,1090,5.2,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+errenteria,Errenteria,País Vasco,39363,2700,1180,5.2,4.0,6.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-adria-de-besos,Sant Adrià de Besòs,Cataluña,33361,2800,1240,5.3,5.5,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arucas,Arucas,Canarias,29719,2070,930,5.4,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+oleiros,Oleiros,Galicia,23057,2000,880,5.3,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+los-palacios-y-villafranca,Los Palacios y Villafranca,Andalucía,38761,1360,645,5.7,6.0,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+los-realejos,Los Realejos,Canarias,37867,1900,820,5.2,5.5,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+montcada-i-reixac,Montcada i Reixac,Cataluña,27068,2510,1090,5.2,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-vila-joiosa,La Vila Joiosa,C. Valenciana,,2300,1040,5.4,6.5,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-joan-despi,Sant Joan Despí,Cataluña,26805,3100,1310,5.1,5.0,7.5,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+azuqueca-de-henares,Azuqueca de Henares,Castilla-La Mancha,16013,1700,860,6.1,6.0,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aldaia,Aldaia,C. Valenciana,23425,1700,820,5.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+salt,Salt,Cataluña,21519,1900,860,5.4,5.0,7.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arteixo,Arteixo,Galicia,20898,1700,780,5.5,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-roque,San Roque,Andalucía,22168,1500,760,6.1,5.5,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+petrer,Petrer,C. Valenciana,26505,1460,705,5.8,5.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+barbera-del-valles,Barberà del Vallès,Cataluña,25484,2580,1095,5.1,5.0,7.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+nijar,Níjar,Andalucía,15017,1170,540,5.5,5.0,7.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ames,Ames,Galicia,13288,1820,800,5.3,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ingenio,Ingenio,Canarias,24394,1860,850,5.5,5.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+leioa,Leioa,País Vasco,26256,2900,1230,5.1,4.5,6.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-pere-de-ribes,Sant Pere de Ribes,Cataluña,18695,2400,1040,5.2,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+manises,Manises,C. Valenciana,25170,1700,810,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-vall-d-uixo,La Vall d'Uixó,C. Valenciana,,1060,535,6.1,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+xirivella,Xirivella,C. Valenciana,26478,1970,925,5.6,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+el-campello,El Campello,C. Valenciana,31419,2170,955,5.3,6.5,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+coria-del-rio,Coria del Río,Andalucía,23362,1330,745,6.7,6.0,8.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arcos-de-la-frontera,Arcos de la Frontera,Andalucía,28110,1300,660,6.1,5.0,7.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+culleredo,Culleredo,Galicia,18513,1950,860,5.3,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+crevillent,Crevillent,C. Valenciana,30921,1120,590,6.3,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sesena,Seseña,Castilla-La Mancha,3597,1500,780,6.2,7.0,9.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+catarroja,Catarroja,C. Valenciana,20627,1750,830,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+camargo,Camargo,Cantabria,22311,1730,785,5.4,5.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alaquas,Alaquàs,C. Valenciana,25514,1620,845,6.3,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+villaviciosa-de-odon,Villaviciosa de Odón,C. de Madrid,17019,2940,1255,5.1,5.5,8.5,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+puente-genil,Puente Genil,Andalucía,27472,1050,605,6.9,5.0,7.5,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-andres-del-rabanedo,San Andrés del Rabanedo,Castilla y León,23226,1140,575,6.1,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-josep-de-sa-talaia,Sant Josep de sa Talaia,Islas Baleares,29761,3700,1420,4.6,7.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lepe,Lepe,Andalucía,18325,1300,680,6.3,5.5,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vicar,Vícar,Andalucía,14807,1060,605,6.8,5.0,7.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cartama,Cártama,Andalucía,12713,1900,900,5.7,6.0,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+martorell,Martorell,Cataluña,17822,2200,960,5.2,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almassora,Almassora,C. Valenciana,29159,1200,610,6.1,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-antoni-de-portmany,Sant Antoni de Portmany,Islas Baleares,14292,3500,1380,4.7,7.0,8.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+camas,Camas,Andalucía,25679,1500,770,6.2,6.0,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+candelaria,Candelaria,Canarias,12392,1830,795,5.2,5.5,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+redondela,Redondela,Galicia,28893,1500,700,5.6,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-vicenc-dels-horts,Sant Vicenç dels Horts,Cataluña,22621,2310,1010,5.2,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mutxamel,Mutxamel,C. Valenciana,12779,1820,940,6.2,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+betera,Bétera,C. Valenciana,11619,1740,900,6.2,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sestao,Sestao,País Vasco,34496,1900,920,5.8,4.5,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+paiporta,Paiporta,C. Valenciana,17259,1640,790,5.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+calp,Calp,C. Valenciana,27616,2310,1080,5.6,6.5,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-pobla-de-vallbona,La Pobla de Vallbona,C. Valenciana,27471,1620,785,5.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+molins-de-rei,Molins de Rei,Cataluña,18752,2700,1140,5.1,5.0,7.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ribeira,Ribeira,Galicia,26572,1240,620,6.0,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-andreu-de-la-barca,Sant Andreu de la Barca,Cataluña,18332,2030,960,5.7,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+quart-de-poblet,Quart de Poblet,C. Valenciana,27112,1640,775,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pielagos,Piélagos,Cantabria,10741,1970,895,5.5,5.0,7.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-joan-d-alacant,Sant Joan d'Alacant,C. Valenciana,26834,2030,995,5.9,6.0,8.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cangas,Cangas,Galicia,23231,1450,730,6.0,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+novelda,Novelda,C. Valenciana,23188,1150,535,5.6,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ciempozuelos,Ciempozuelos,C. de Madrid,12445,1800,890,5.9,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alboraia,Alboraia,C. Valenciana,26273,2000,960,5.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+onda,Onda,C. Valenciana,18680,1140,550,5.8,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-perpetua-de-mogoda,Santa Perpètua de Mogoda,Cataluña,18124,2300,1095,5.7,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+caravaca-de-la-cruz,Caravaca de la Cruz,R. de Murcia,21824,1060,580,6.6,4.5,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+villanueva-de-la-serena,Villanueva de la Serena,Extremadura,23833,1040,540,6.2,4.0,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+valls,Valls,Cataluña,20206,1600,750,5.6,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+castellar-del-valles,Castellar del Vallès,Cataluña,15845,2100,920,5.3,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+villarrobledo,Villarrobledo,Castilla-La Mancha,22165,930,495,6.4,4.0,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+galdar,Gáldar,Canarias,21704,1780,730,4.9,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mejorada-del-campo,Mejorada del Campo,C. de Madrid,14677,1990,885,5.3,5.5,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+olesa-de-montserrat,Olesa de Montserrat,Cataluña,15797,1920,835,5.2,5.0,7.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almonte,Almonte,Andalucía,16264,1470,710,5.8,5.5,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+galdakao,Galdakao,País Vasco,29646,2320,1115,5.8,4.5,6.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cambre,Cambre,Galicia,14972,1900,840,5.3,5.0,7.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+el-masnou,El Masnou,Cataluña,24761,3100,1280,5.0,5.5,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+erandio,Erandio,País Vasco,23613,2320,1130,5.8,4.5,6.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tacoronte,Tacoronte,Canarias,19056,1800,790,5.3,5.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+icod-de-los-vinos,Icod de los Vinos,Canarias,21364,1700,770,5.4,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+riba-roja-de-turia,Riba-roja de Túria,C. Valenciana,11236,1640,780,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ibi,Ibi,C. Valenciana,21076,1050,575,6.6,4.5,6.5,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+los-barrios,Los Barrios,Andalucía,24449,1450,750,6.2,5.5,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alhama-de-murcia,Alhama de Murcia,R. de Murcia,15318,1060,600,6.8,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+moguer,Moguer,Andalucía,13371,1360,700,6.2,5.0,7.5,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+villanueva-de-la-canada,Villanueva de la Cañada,C. de Madrid,7913,2890,1160,4.8,5.5,8.5,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+marin,Marín,Galicia,24731,1340,645,5.8,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-miguel-de-abona,San Miguel de Abona,Canarias,23960,1970,810,4.9,5.0,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+las-gabias,Las Gabias,Andalucía,23584,1520,830,6.6,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-juan-de-aznalfarache,San Juan de Aznalfarache,Andalucía,21484,1600,820,6.2,6.0,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ponteareas,Ponteareas,Galicia,17360,1300,620,5.7,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+picassent,Picassent,C. Valenciana,15438,1530,755,5.9,6.0,8.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-feliu-de-guixols,Sant Feliu de Guíxols,Cataluña,17779,2700,1100,4.9,5.5,7.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+amposta,Amposta,Cataluña,15900,1080,520,5.8,4.5,6.5,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+almoradi,Almoradí,C. Valenciana,13479,1050,580,6.6,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+laguna-de-duero,Laguna de Duero,Castilla y León,14234,1500,730,5.8,4.5,6.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+valle-de-egues,Valle de Egüés,Navarra,19603,2400,1005,5.0,5.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+arroyo-de-la-encomienda,Arroyo de la Encomienda,Castilla y León,1930,1700,800,5.6,5.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aljaraque,Aljaraque,Andalucía,9587,1550,790,6.1,5.5,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+las-torres-de-cotillas,Las Torres de Cotillas,R. de Murcia,22676,1260,645,6.1,5.0,7.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+esparreguera,Esparreguera,Cataluña,14501,1830,875,5.7,5.0,7.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+guia-de-isora,Guía de Isora,Canarias,12560,2300,960,5.0,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+barbate,Barbate,Andalucía,21888,1550,795,6.2,5.5,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+aspe,Aspe,C. Valenciana,16391,1140,580,6.1,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+maracena,Maracena,Andalucía,14095,1770,865,5.9,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+alfafar,Alfafar,C. Valenciana,20302,1630,850,6.3,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+montcada,Montcada,C. Valenciana,,1630,785,5.8,6.0,8.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ayamonte,Ayamonte,Andalucía,17566,1400,730,6.3,5.5,8.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+carcaixent,Carcaixent,C. Valenciana,20397,1060,585,6.6,4.5,6.5,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pucol,Puçol,C. Valenciana,13662,1640,785,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+tias,Tías,Canarias,10096,2130,915,5.2,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+pajara,Pájara,Canarias,5812,2300,1000,5.2,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+cartaya,Cartaya,Andalucía,11435,1250,655,6.3,5.5,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+manlleu,Manlleu,Cataluña,17035,1550,670,5.2,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+burlada,Burlada,Navarra,15366,2130,1030,5.8,5.0,7.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vilassar-de-mar,Vilassar de Mar,Cataluña,14821,3000,1330,5.3,5.5,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+mogan,Mogán,Canarias,10398,2700,1090,4.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+algete,Algete,C. de Madrid,12335,2110,955,5.4,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+l-alfas-del-pi,L'Alfàs del Pi,C. Valenciana,,2300,1010,5.3,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-just-desvern,Sant Just Desvern,Cataluña,13306,3500,1430,4.9,5.0,7.5,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+san-martin-de-la-vega,San Martín de la Vega,C. de Madrid,8995,1630,810,6.0,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+o-porrino,O Porriño,Galicia,,1240,615,6.0,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+loja,Loja,Andalucía,20032,1070,605,6.8,4.5,6.5,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+atarfe,Atarfe,Andalucía,10516,1440,805,6.7,5.5,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+archena,Archena,R. de Murcia,14163,1140,560,5.9,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+franqueses-del-valles-les,Les Franqueses del Vallès,Cataluña,,2100,925,5.3,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+benicassim,Benicàssim,C. Valenciana,20539,2110,1005,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+humanes-de-madrid,Humanes de Madrid,C. de Madrid,8305,1700,840,5.9,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+silla,Silla,C. Valenciana,16165,1660,725,5.2,6.0,8.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-zubia,La Zubia,Andalucía,20389,1600,810,6.1,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+hernani,Hernani,País Vasco,18627,2500,1100,5.3,4.0,6.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+lalin,Lalín,Galicia,20515,1100,540,5.9,4.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-quirze-del-valles,Sant Quirze del Vallès,Cataluña,10342,2520,1000,4.8,5.0,7.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+a-estrada,A Estrada,Galicia,,1150,520,5.4,4.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+santa-coloma-de-gramenet,Santa Coloma de Gramenet,Cataluña,123175,2600,1255,5.8,5.6,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+melilla,Melilla,Melilla,59576,1300,700,6.5,4.0,5.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+valdemoro,Valdemoro,C. de Madrid,21240,2100,950,5.4,6.5,10.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+ceuta,Ceuta,Ceuta,68796,1440,810,6.8,4.5,6.0,30,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+sant-vicent-del-raspeig,Sant Vicent del Raspeig,C. Valenciana,60247,1740,910,6.3,7.0,10.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+colmenar-viejo,Colmenar Viejo,C. de Madrid,28328,2480,1005,4.9,6.0,9.5,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+vila-real,Vila-real,C. Valenciana,53623,1150,580,6.1,5.5,7.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
