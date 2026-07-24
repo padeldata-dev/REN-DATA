@@ -160,6 +160,8 @@ else:
 
 # --- Check 6: hashes de congelados ---
 frozen = json.load(open(FROZEN_JSON, encoding="utf-8"))["frozen"]
+if not frozen:
+    print("[6] Congelados: OK (lista vacía, 0 congelados)")
 frz_bad = []
 for f, expected in frozen.items():
     fp = os.path.join(SITE, f)
@@ -170,7 +172,7 @@ for f, expected in frozen.items():
         frz_bad.append((f, "HASH CAMBIADO"))
 if frz_bad:
     errors.append(f"[6] {len(frz_bad)} ficheros CONGELADOS alterados: {frz_bad}")
-else:
+elif frozen:
     print(f"[6] Congelados: OK ({len(frozen)} ficheros con hash intacto)")
 
 # --- resumen ---
