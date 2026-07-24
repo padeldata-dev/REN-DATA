@@ -175,6 +175,26 @@ if frz_bad:
 elif frozen:
     print(f"[6] Congelados: OK ({len(frozen)} ficheros con hash intacto)")
 
+# --- Check 7: la cifra del nº de municipios coincide con len(DATA[]) ---
+n_data = len(slugs) if mm else 0   # slugs viene del check 3
+coherence_issues = []
+for page in ("index.html", "prensa.html", "metodologia.html"):
+    fp = os.path.join(SITE, page)
+    if not os.path.exists(fp):
+        continue
+    txt = open(fp, encoding="utf-8").read()
+    if str(n_data) not in txt:
+        coherence_issues.append((page, f"no menciona {n_data}"))
+    # 587 es un contador obsoleto inequívoco. ("209" aparece de forma legítima en
+    # la nota de ampliación "de 209 a 597" / "edición de 209 ciudades", no se marca.)
+    for stale in ("587 municipios", "587 ciudades"):
+        if stale in txt:
+            coherence_issues.append((page, f"cifra obsoleta: '{stale}'"))
+if coherence_issues:
+    errors.append(f"[7] {len(coherence_issues)} incoherencias de la cifra {n_data}: {coherence_issues}")
+else:
+    print(f"[7] Cifra municipios ({n_data}): OK y coherente en home/prensa/metodologia")
+
 # --- resumen ---
 print("-" * 60)
 for w in warnings:
