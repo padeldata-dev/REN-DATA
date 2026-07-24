@@ -37,7 +37,8 @@
     /* Results */
     .e404-results{text-align:left;margin-bottom:2.5rem;min-height:60px}
     .e404-result-item{display:flex;align-items:center;justify-content:space-between;padding:.65rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:inherit;margin-bottom:.4rem;transition:border-color .15s}
-    .e404-result-item:hover{border-color:var(--blue)}
+    .e404-result-item:hover,.e404-result-item.active{border-color:var(--blue);background:#eef2f9}
+    .e404-ri-name strong{color:var(--blue);font-weight:800}
     .e404-ri-name{font-weight:600;font-size:.9rem}
     .e404-ri-cc{font-size:.75rem;color:var(--muted)}
     .e404-ri-roi{font-weight:700;color:var(--blue);font-size:.85rem}
@@ -191,11 +192,11 @@
     <p class="e404-desc">La URL que buscas no está disponible. Pero puedes buscar cualquier ciudad española aquí:</p>
 
     <div class="e404-search">
-      <input class="e404-input" type="text" id="e404Search" placeholder="Busca una ciudad… ej: Málaga, Vigo, Lleida" oninput="searchCities(this.value)" autocomplete="off">
+      <input class="e404-input" type="text" id="e404Search" placeholder="Busca una ciudad… ej: Málaga, Vigo, Lleida" oninput="searchCities(this.value)" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="e404Results" aria-autocomplete="list" aria-activedescendant="" aria-label="Buscar una ciudad">
       <svg class="e404-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
     </div>
 
-    <div class="e404-results" id="e404Results"></div>
+    <div class="e404-results" id="e404Results" role="listbox" aria-label="Sugerencias de ciudades"></div>
 
     <div class="e404-links">
       <h3>O explora directamente</h3>
@@ -371,24 +372,52 @@ const DATA=[
   {n:"San Sebastián",cc:"País Vasco",reg:"norte",roi:4.3,p:5200,alq:1880,vp:6.5,va:6.1,d:30,sl:"san-sebastian"}
 ];
 
+/* Buscador con matching normalizado (mismas semánticas que la home):
+   ignora tildes (NFD) y mayúsculas, prioriza empieza-por sobre contiene,
+   máx. 8, resalta la coincidencia y soporta teclado (↑↓ Enter Esc). */
+function e404Norm(s){ return (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim(); }
+function e404Hl(name,q){ var nn=e404Norm(name), i=nn.indexOf(q); if(i<0||!q) return name;
+  return name.slice(0,i)+'<strong>'+name.slice(i,i+q.length)+'</strong>'+name.slice(i+q.length); }
+var e404Matches=[], e404Active=-1;
 function searchCities(q){
   const res = document.getElementById('e404Results');
-  if(!q || q.length < 2){ res.innerHTML=''; return; }
-  const matches = DATA.filter(c=>
-    c.n.toLowerCase().includes(q.toLowerCase()) ||
-    c.cc.toLowerCase().includes(q.toLowerCase())
-  ).slice(0,6);
-  if(!matches.length){
+  const inp = document.getElementById('e404Search');
+  const nq = e404Norm(q); e404Active=-1;
+  if(!nq || nq.length < 2){ res.innerHTML=''; e404Matches=[]; inp.setAttribute('aria-expanded','false'); inp.setAttribute('aria-activedescendant',''); return; }
+  let starts=[], contains=[];
+  for(const c of DATA){ const p=e404Norm(c.n).indexOf(nq);
+    if(p===0) starts.push(c);
+    else if(p>0 || e404Norm(c.cc).indexOf(nq)>=0) contains.push(c); }
+  const by=(a,b)=>a.n.localeCompare(b.n,'es'); starts.sort(by); contains.sort(by);
+  e404Matches = starts.concat(contains).slice(0,8);
+  inp.setAttribute('aria-expanded', e404Matches.length?'true':'false');
+  if(!e404Matches.length){
     res.innerHTML='<p style="color:var(--muted);font-size:.85rem;padding:.5rem 0">No encontrada. <a href="/" style="color:var(--blue)">Ver todas las ciudades</a></p>';
     return;
   }
-  res.innerHTML = matches.map(c=>
-    `<a href="/rentabilidad-${c.sl}.html" class="e404-result-item">
-      <div><div class="e404-ri-name">${c.n}</div><div class="e404-ri-cc">${c.cc}</div></div>
+  res.innerHTML = e404Matches.map((c,i)=>
+    `<a href="/rentabilidad-${c.sl}.html" class="e404-result-item" role="option" id="e404-opt-${i}" aria-selected="false">
+      <div><div class="e404-ri-name">${e404Hl(c.n,nq)}</div><div class="e404-ri-cc">${c.cc}</div></div>
       <div class="e404-ri-roi">${c.roi.toString().replace('.',',')+' % ROI'}</div>
     </a>`
   ).join('');
 }
+function e404Sync(els,inp){
+  els.forEach((el,i)=>{ var on=(i===e404Active); el.classList.toggle('active',on); el.setAttribute('aria-selected',on?'true':'false'); });
+  inp.setAttribute('aria-activedescendant', e404Active>=0?'e404-opt-'+e404Active:'');
+  if(e404Active>=0 && els[e404Active]) els[e404Active].scrollIntoView({block:'nearest'});
+}
+document.addEventListener('DOMContentLoaded', function(){
+  var inp=document.getElementById('e404Search'); if(!inp) return;
+  inp.addEventListener('keydown', function(e){
+    var res=document.getElementById('e404Results'); var els=res.querySelectorAll('.e404-result-item');
+    if(!els.length) return;
+    if(e.key==='ArrowDown'){ e.preventDefault(); e404Active=(e404Active+1)%els.length; e404Sync(els,inp); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); e404Active=(e404Active<=0?els.length-1:e404Active-1); e404Sync(els,inp); }
+    else if(e.key==='Enter'){ var c=e404Matches[e404Active>=0?e404Active:0]; if(c){ e.preventDefault(); window.location.href='/rentabilidad-'+c.sl+'.html'; } }
+    else if(e.key==='Escape'){ e.preventDefault(); res.innerHTML=''; e404Matches=[]; e404Active=-1; inp.setAttribute('aria-expanded','false'); inp.setAttribute('aria-activedescendant',''); }
+  });
+});
 </script>
 </body>
 </html>

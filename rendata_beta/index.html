@@ -164,8 +164,9 @@
     <p class="hero-subtitle">¿Buscas comprar tu primera vivienda o invertir? Datos reales de <strong>597 ciudades</strong> españolas para tomar mejores decisiones.</p>
     <div class="hero-search-wrap search-wrap">
       <svg class="s-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off">
+      <input type="text" class="search-box" id="searchInput" placeholder="Busca una ciudad… ej: Zaragoza, Murcia, Valencia" oninput="render()" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="acList" aria-autocomplete="list" aria-activedescendant="" aria-label="Buscar una ciudad">
       <span class="s-hint">597 ciudades</span>
+      <div class="ac-list" id="acList" role="listbox" aria-label="Sugerencias de ciudades"></div>
     </div>
     <div class="hero-features-row">
       <div class="hero-feature">
@@ -1842,5 +1843,71 @@ initMap();
   <li><a href="rentabilidad-zarautz.html" style="color:#1a56db;text-decoration:none">Zarautz</a> <span style="color:#6b7a8d;font-size:.78rem">— País Vasco</span></li>
 </ul>
 </div></noscript>
+<script>
+/* Autocompletado del buscador de ciudades — Ren Data.
+   Dropdown fijo posicionado bajo la barra (el .hero usa overflow:hidden, por eso
+   el contenedor se ancla a <body> con position:fixed y coordenadas del input). */
+(function(){
+  var input = document.getElementById('searchInput');
+  var list  = document.getElementById('acList');
+  if(!input || !list || typeof DATA === 'undefined') return;
+  document.body.appendChild(list); // sacar del hero para no ser recortado
+  var items = [], active = -1, MAX = 8;
+
+  function norm(s){ return (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim(); }
+  function esc(s){ return s.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function hl(name,q){ var nn=norm(name), i=nn.indexOf(q); if(i<0||!q) return esc(name);
+    return esc(name.slice(0,i))+'<strong>'+esc(name.slice(i,i+q.length))+'</strong>'+esc(name.slice(i+q.length)); }
+  function roiCls(r){ return r>=6?'ac-roi-hi':(r>=5?'ac-roi-mid':'ac-roi-lo'); }
+  function fmtRoi(r){ return r.toFixed(1).replace('.',',')+'%'; }
+
+  function compute(q){
+    if(!q) return [];
+    var starts=[], contains=[];
+    for(var i=0;i<DATA.length;i++){ var c=DATA[i], p=norm(c.n).indexOf(q);
+      if(p===0) starts.push(c); else if(p>0) contains.push(c); }
+    var byName=function(a,b){return a.n.localeCompare(b.n,'es');};
+    starts.sort(byName); contains.sort(byName);
+    return starts.concat(contains).slice(0,MAX);
+  }
+  function place(){
+    var r=input.getBoundingClientRect();
+    list.style.left=r.left+'px'; list.style.top=(r.bottom+4)+'px'; list.style.width=r.width+'px';
+    list.style.maxHeight=Math.max(120,Math.min(320,window.innerHeight-r.bottom-16))+'px';
+  }
+  function draw(){
+    var q=norm(input.value); items=compute(q);
+    if(!items.length){ close(); return; }
+    var h='';
+    for(var i=0;i<items.length;i++){ var c=items[i];
+      h+='<div class="ac-item'+(i===active?' active':'')+'" role="option" id="ac-opt-'+i+'" data-i="'+i+'" aria-selected="'+(i===active?'true':'false')+'">'
+        +'<span class="ac-name">'+hl(c.n,q)+'</span><span class="ac-prov">'+esc(c.cc)+'</span>'
+        +'<span class="ac-roi '+roiCls(c.roi)+'">'+fmtRoi(c.roi)+'</span></div>'; }
+    list.innerHTML=h; place(); list.classList.add('open'); input.setAttribute('aria-expanded','true'); syncActive();
+  }
+  function syncActive(){
+    input.setAttribute('aria-activedescendant', active>=0?'ac-opt-'+active:'');
+    var els=list.children;
+    for(var i=0;i<els.length;i++){ var on=(i===active); els[i].classList.toggle('active',on); els[i].setAttribute('aria-selected',on?'true':'false'); }
+    if(active>=0 && els[active]) els[active].scrollIntoView({block:'nearest'});
+  }
+  function go(i){ var c=items[i]; if(c) window.location.href='rentabilidad-'+c.sl+'.html'; }
+  function close(){ list.classList.remove('open'); list.innerHTML=''; active=-1; input.setAttribute('aria-expanded','false'); input.setAttribute('aria-activedescendant',''); }
+
+  input.addEventListener('input', function(){ active=-1; draw(); });
+  input.addEventListener('focus', function(){ if(input.value.trim()) draw(); });
+  input.addEventListener('keydown', function(e){
+    var open=list.classList.contains('open');
+    if(e.key==='ArrowDown'){ if(!open){ draw(); if(!items.length) return; } e.preventDefault(); active=(active+1)%items.length; syncActive(); }
+    else if(e.key==='ArrowUp'){ if(!open) return; e.preventDefault(); active=(active<=0?items.length-1:active-1); syncActive(); }
+    else if(e.key==='Enter'){ if(open&&items.length){ e.preventDefault(); go(active>=0?active:0); } }
+    else if(e.key==='Escape'){ if(open){ e.preventDefault(); close(); } }
+  });
+  list.addEventListener('mousedown', function(e){ var it=e.target.closest('.ac-item'); if(!it) return; e.preventDefault(); go(parseInt(it.dataset.i,10)); });
+  document.addEventListener('click', function(e){ if(!e.target.closest('.search-wrap') && !e.target.closest('.ac-list')) close(); });
+  window.addEventListener('resize', function(){ if(list.classList.contains('open')) place(); });
+  window.addEventListener('scroll', function(){ if(list.classList.contains('open')) place(); }, true);
+})();
+</script>
 </body>
 </html>
