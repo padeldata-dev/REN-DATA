@@ -342,7 +342,7 @@ oleiros,Oleiros,Galicia,23057,2000,880,5.3,5.0,7.0,24,Estimado,historico,estimad
 los-palacios-y-villafranca,Los Palacios y Villafranca,Andalucía,38761,1360,645,5.7,6.0,8.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 los-realejos,Los Realejos,Canarias,37867,1900,820,5.2,5.5,7.5,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 montcada-i-reixac,Montcada i Reixac,Cataluña,27068,2510,1090,5.2,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-la-vila-joiosa,La Vila Joiosa,C. Valenciana,,2300,1040,5.4,6.5,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-vila-joiosa,La Vila Joiosa,C. Valenciana,37449,2300,1040,5.4,6.5,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 sant-joan-despi,Sant Joan Despí,Cataluña,26805,3100,1310,5.1,5.0,7.5,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 azuqueca-de-henares,Azuqueca de Henares,Castilla-La Mancha,16013,1700,860,6.1,6.0,9.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 aldaia,Aldaia,C. Valenciana,23425,1700,820,5.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
@@ -357,7 +357,7 @@ ingenio,Ingenio,Canarias,24394,1860,850,5.5,5.0,7.0,25,Estimado,historico,estima
 leioa,Leioa,País Vasco,26256,2900,1230,5.1,4.5,6.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 sant-pere-de-ribes,Sant Pere de Ribes,Cataluña,18695,2400,1040,5.2,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 manises,Manises,C. Valenciana,25170,1700,810,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-la-vall-d-uixo,La Vall d'Uixó,C. Valenciana,,1060,535,6.1,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+la-vall-d-uixo,La Vall d'Uixó,C. Valenciana,32242,1060,535,6.1,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 xirivella,Xirivella,C. Valenciana,26478,1970,925,5.6,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 el-campello,El Campello,C. Valenciana,31419,2170,955,5.3,6.5,9.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 coria-del-rio,Coria del Río,Andalucía,23362,1330,745,6.7,6.0,8.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
@@ -441,7 +441,7 @@ barbate,Barbate,Andalucía,21888,1550,795,6.2,5.5,8.0,24,Estimado,historico,esti
 aspe,Aspe,C. Valenciana,16391,1140,580,6.1,4.5,6.5,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 maracena,Maracena,Andalucía,14095,1770,865,5.9,5.5,8.0,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 alfafar,Alfafar,C. Valenciana,20302,1630,850,6.3,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-montcada,Montcada,C. Valenciana,,1630,785,5.8,6.0,8.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+montcada,Montcada,C. Valenciana,22213,1630,785,5.8,6.0,8.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 ayamonte,Ayamonte,Andalucía,17566,1400,730,6.3,5.5,8.0,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 carcaixent,Carcaixent,C. Valenciana,20397,1060,585,6.6,4.5,6.5,27,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 pucol,Puçol,C. Valenciana,13662,1640,785,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
@@ -453,14 +453,14 @@ burlada,Burlada,Navarra,15366,2130,1030,5.8,5.0,7.0,22,Estimado,historico,estima
 vilassar-de-mar,Vilassar de Mar,Cataluña,14821,3000,1330,5.3,5.5,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 mogan,Mogán,Canarias,10398,2700,1090,4.8,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 algete,Algete,C. de Madrid,12335,2110,955,5.4,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-l-alfas-del-pi,L'Alfàs del Pi,C. Valenciana,,2300,1010,5.3,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+l-alfas-del-pi,L'Alfàs del Pi,C. Valenciana,21080,2300,1010,5.3,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 sant-just-desvern,Sant Just Desvern,Cataluña,13306,3500,1430,4.9,5.0,7.5,20,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 san-martin-de-la-vega,San Martín de la Vega,C. de Madrid,8995,1630,810,6.0,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-o-porrino,O Porriño,Galicia,,1240,615,6.0,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+o-porrino,O Porriño,Galicia,20965,1240,615,6.0,4.5,6.5,25,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 loja,Loja,Andalucía,20032,1070,605,6.8,4.5,6.5,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 atarfe,Atarfe,Andalucía,10516,1440,805,6.7,5.5,8.0,24,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 archena,Archena,R. de Murcia,14163,1140,560,5.9,5.0,7.0,26,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-franqueses-del-valles-les,Les Franqueses del Vallès,Cataluña,,2100,925,5.3,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+franqueses-del-valles-les,Les Franqueses del Vallès,Cataluña,20881,2100,925,5.3,5.0,7.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 benicassim,Benicàssim,C. Valenciana,20539,2110,1005,5.7,6.0,8.5,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 humanes-de-madrid,Humanes de Madrid,C. de Madrid,8305,1700,840,5.9,5.5,8.0,22,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 silla,Silla,C. Valenciana,16165,1660,725,5.2,6.0,8.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
@@ -468,7 +468,7 @@ la-zubia,La Zubia,Andalucía,20389,1600,810,6.1,5.5,8.0,23,Estimado,historico,es
 hernani,Hernani,País Vasco,18627,2500,1100,5.3,4.0,6.5,23,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 lalin,Lalín,Galicia,20515,1100,540,5.9,4.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 sant-quirze-del-valles,Sant Quirze del Vallès,Cataluña,10342,2520,1000,4.8,5.0,7.5,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
-a-estrada,A Estrada,Galicia,,1150,520,5.4,4.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
+a-estrada,A Estrada,Galicia,20112,1150,520,5.4,4.0,6.0,28,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 santa-coloma-de-gramenet,Santa Coloma de Gramenet,Cataluña,123175,2600,1255,5.8,5.6,8.0,21,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 melilla,Melilla,Melilla,59576,1300,700,6.5,4.0,5.0,32,Estimado,historico,estimado_ratio,2026-07-22,2026Q3
 valdemoro,Valdemoro,C. de Madrid,21240,2100,950,5.4,6.5,10.0,19,Estimado,historico,estimado_ratio,2026-07-22,2026Q3

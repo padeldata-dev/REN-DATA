@@ -30,6 +30,45 @@ def _slug_to_norm(slug: str) -> str:
     base = slug.replace("-", " ")
     return base
 
+# Artículos co-oficiales que el INE antepone invertidos ("Porriño, O").
+# Incluye castellano, catalán/valenciano, gallego y balear.
+COOFICIAL_ARTICLES = ("la", "el", "los", "las", "les", "els", "l'", "o", "a", "os", "as", "es", "sa")
+
+def _deinvert_article(name: str) -> str:
+    """
+    Invierte la forma INE "X, Art" → "Art X" de forma genérica.
+      'porrino, o'              → 'o porrino'
+      'franqueses del valles, les' → 'les franqueses del valles'
+      "alfas del pi, l'"        → "l'alfas del pi"   (l' sin espacio)
+    Si no hay artículo antepuesto reconocido, devuelve el nombre sin tocar.
+    """
+    if "," not in name:
+        return name
+    base, art = name.rsplit(",", 1)
+    base, art = base.strip(), art.strip()
+    if art in COOFICIAL_ARTICLES:
+        return f"{art}{base}" if art.endswith("'") else f"{art} {base}"
+    return name
+
+def _expand_ine_keys(populations: dict) -> dict:
+    """
+    Índice ampliado de poblaciones para casar nombres-web con claves INE.
+    Para cada clave INE añade (sin sobrescribir las originales):
+      - cada parte de las formas bilingües separadas por '/'
+        ('montcada/moncada' → 'montcada', 'moncada')
+      - la forma de-invertida de cada parte
+        ('vila joiosa, la/villajoyosa' → 'la vila joiosa', 'villajoyosa')
+    """
+    idx = dict(populations)
+    for k, v in populations.items():
+        for part in (k.split("/") if "/" in k else [k]):
+            part = part.strip()
+            if not part:
+                continue
+            idx.setdefault(part, v)
+            idx.setdefault(_deinvert_article(part), v)
+    return idx
+
 def download_pobmun(force: bool = False) -> Path:
     """Descarga pobmun.zip al cache RAW. Retorna path al ZIP."""
     out = RAW_DIR / "pobmun.zip"
@@ -49,8 +88,19 @@ def parse_pobmun(zip_path: Path) -> dict:
     """
     populations = {}
     with zipfile.ZipFile(zip_path) as zf:
-        # Buscar el archivo más reciente (suele ser pobmunYY_*.xls)
-        names = sorted([n for n in zf.namelist() if n.lower().endswith((".xls", ".xlsx"))])
+        # Ordenar por AÑO ascendente para que el más reciente se procese el
+        # último y sus valores prevalezcan sobre años anteriores en claves que
+        # colisionen (evita que pobmun96.xlsx pise a pobmun25.xlsx por orden
+        # alfabético).
+        import re as _re
+        def _year_of(n: str) -> int:
+            m = _re.search(r"pobmun(\d{2})", n.lower())
+            if not m:
+                return -1
+            yy = int(m.group(1))
+            return 2000 + yy if yy <= 50 else 1900 + yy
+        names = sorted([n for n in zf.namelist() if n.lower().endswith((".xls", ".xlsx"))],
+                       key=_year_of)
         if not names:
             print("[INE] AVISO: el ZIP no contiene XLS/XLSX")
             return populations
@@ -163,7 +213,20 @@ def match_to_cities(populations: dict, cities: list) -> dict:
         "mondragon": "arrasate/mondragon",
         "luarca": "valdes",  # Luarca es la capital del concejo de Valdés
         "velez-blanco": "velez-blanco",
+        # Formas bilingües / artículo antepuesto invertido del INE (padrón 2025).
+        # Con el índice ampliado (_expand_ine_keys) casan solas, pero se dejan
+        # explícitas como red de seguridad y documentación.
+        "la-vila-joiosa": "vila joiosa, la/villajoyosa",
+        "la-vall-d-uixo": "vall d'uixo, la",
+        "montcada": "montcada/moncada",
+        "l-alfas-del-pi": "alfas del pi, l'",
+        "o-porrino": "porrino, o",
+        "franqueses-del-valles-les": "franqueses del valles, les",
+        "a-estrada": "estrada, a",
     }
+    # Índice ampliado: añade formas de-invertidas y partes bilingües de las
+    # claves INE, para casar nombres-web como "O Porriño" o "Les Franqueses".
+    pop_idx = _expand_ine_keys(populations)
     result = {}
     not_found = []
     for c in cities:
@@ -173,11 +236,14 @@ def match_to_cities(populations: dict, cities: list) -> dict:
         norm_n = _normalize(nombre)
         if norm_n in populations:
             result[slug] = populations[norm_n]; continue
-        # 2) Alias por slug
+        # 2) Alias por slug (tabla manual: tiene prioridad sobre la heurística)
         if slug in ALIASES:
             ali = _normalize(ALIASES[slug])
             if ali in populations:
                 result[slug] = populations[ali]; continue
+        # 2b) Nombre directo contra el índice ampliado (bilingües + de-invertido)
+        if norm_n in pop_idx:
+            result[slug] = pop_idx[norm_n]; continue
         # 3) Sin sufijo paréntesis
         if "(" in nombre:
             base = _normalize(nombre.split("(")[0])
