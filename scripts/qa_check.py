@@ -195,6 +195,43 @@ if coherence_issues:
 else:
     print(f"[7] Cifra municipios ({n_data}): OK y coherente en home/prensa/metodologia")
 
+# --- Check 8: ROI de ficha == ROI de DATA[] + sin restos del módulo externo ---
+data_roi = {}
+if mm:
+    for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
+        b = bm.group(0)
+        sm = re.search(r'sl:"([^"]+)"', b); rm = re.search(r'roi:([-\d.]+)', b)
+        if sm and rm:
+            data_roi[sm.group(1)] = f"{float(rm.group(1)):.1f}".replace(".", ",")
+roi_ext = {
+    "title": re.compile(r'<title>[^<]*?ROI (\d+,\d+)%'),
+    "sticky": re.compile(r'ROI bruto</span><span class="sb-val[^"]*">(\d+,\d+)%'),
+    "ed": re.compile(r'ed-stat-val">(\d+,\d+)%</div><div class="ed-stat-lbl">rentabilidad bruta'),
+}
+roi_dev = []
+external_remnants = []
+EXT_HEADER = re.compile(r'alquiler residencial\s*[··]\s*Q4 2025')
+EXT_MURCIA = re.compile(r'Murcia</span>[^%]{0,120}?7,4%')  # valor externo en un nb-módulo
+for p in pages:
+    if not p.startswith("rentabilidad-"):
+        continue
+    slug = p[len("rentabilidad-"):-len(".html")]
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    if slug in data_roi:
+        want = data_roi[slug]
+        for nm, rx in roi_ext.items():
+            m = rx.search(txt)
+            if m and m.group(1) != want:
+                roi_dev.append((p, nm, m.group(1), want))
+    if EXT_HEADER.search(txt) or EXT_MURCIA.search(txt):
+        external_remnants.append(p)
+if roi_dev:
+    errors.append(f"[8] {len(roi_dev)} desviaciones ficha↔DATA[]: {roi_dev[:6]}")
+elif external_remnants:
+    errors.append(f"[8] {len(external_remnants)} fichas con restos del módulo externo sin atribuir: {external_remnants[:6]}")
+else:
+    print(f"[8] ROI ficha==DATA[] y sin módulo externo: OK ({len(data_roi)} fichas)")
+
 # --- resumen ---
 print("-" * 60)
 for w in warnings:
