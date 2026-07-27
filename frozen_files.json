@@ -1,5 +1,15 @@
 {
-  "_comment": "Congelación LEVANTADA (fin de campaña Málaga). Lista vacía = 0 ficheros congelados. Para volver a congelar, recalcula los SHA256 y rellena 'frozen'.",
+  "_comment": "CONGELACION ACTIVA - campana de prensa Malaga (3 emails enviados 2026-07-27). Estas 9 paginas son las URLs citadas a los periodistas (7 fichas + el analisis provincial) mas ranking.html, al que pueden llegar desde ellas. Mientras la campana este viva NO deben cambiar ni un dato. Cualquier correccion legitima que necesite tocarlas se anota en PENDIENTES_DESCONGELACION.md y se aplica al levantar la congelacion. qa_check[6] falla si cambia cualquier SHA256.",
   "base_dir": "rendata_beta",
-  "frozen": {}
+  "frozen": {
+    "rentabilidad-mollina.html": "cd3dde8d8f498248856b8793331936cdfbe67de586b6fb352c2304c0999895d2",
+    "rentabilidad-villanueva-del-trabuco.html": "a27603644b2d60b9fc023f3185e915b8dc0f47de5482c43ce820307a2e217f37",
+    "rentabilidad-campillos.html": "304b2aaeb66b57da36f03ccf11b4a987ec4c5a9d420d12b4323c883f82e80e2a",
+    "rentabilidad-alameda.html": "1355b0d10f729eda591e03817a240ed465112fa991b8047daed3243263a7aa2a",
+    "rentabilidad-archidona.html": "5a9f058e3908696c42e5b25cb7fedd09d52b2f8c60faa900183d732af27ccb51",
+    "rentabilidad-velez-malaga.html": "bcc2e55236d3907d1e06864f0cc75d9680358eac87cb22a4e9f30fc3a0ed1cf8",
+    "rentabilidad-benahavis.html": "c9b22fb82e349c83970c516669ffe675cc5969f5b14b885a27ed41c23b64d112",
+    "mercado-inmobiliario-provincia-malaga-2026.html": "ee260fdfb00f3ce9977091ac4133e9b28834af2b9c59d66feaba1cb16561ca7c",
+    "ranking.html": "7eea58642a049ac3ea1a8ee79973dda42f5fced152a98f7a951d4b8214c47094"
+  }
 }
