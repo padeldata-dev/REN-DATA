@@ -57,49 +57,63 @@ alquiler, puesto nacional) sí es correcto y está verificado.
 
 ---
 
-## 3. Campo `pob` de `DATA[]` / `RANK[]` — estimaciones redondeadas, no datos
+## 3. Campo `pob` de `DATA[]` / `RANK[]` — plan listo, bloqueado por la congelación
 
-**Resuelto el origen el 2026-07-27.** No es un caso aislado de La Unión: el campo `pob`
-lleva **marcadores redondeados a millar en 175 de los 448 municipios** que lo tienen, y
-en muchos es un **30.000 genérico**. Las fichas, en cambio, llevan el dato real de padrón.
-Difieren en **176 fichas**.
+**Diagnóstico cerrado y script escrito y validado el 2026-07-27:
+`scripts/sync_poblacion.py`.** No se ha aplicado nada porque escribir exige tocar
+`ranking.html`, que está congelado. `DATA[]` y `RANK[]` se actualizan **a la vez o
+ninguno**: desincronizarlos sería peor que el estado actual.
 
-### 3.1 La Unión — dato confirmado
+### 3.1 Qué pasa
+
+`pob` nunca se pobló con padrón: lleva **marcadores redondeados a millar en 176
+municipios** (59 de ellos un `30000` genérico). Además `DATA[]` solo tiene el campo en
+**448 de 597**, mientras que `RANK[]` lo tiene en los 597.
+
+**Pero las fichas tampoco son fiables del todo**, así que un volcado "desde la ficha"
+habría corrompido datos:
+
+- **34 fichas comparten su población con otra ficha.** El valor `50.021` aparece en
+  **7 municipios**: Adeje, Cangas do Morrazo, Luarca, Mairena del Aljarafe, Mislata,
+  Rincón de la Victoria y Utrera.
+- Valores absurdos: **Granada 2.287** hab., **Torrent 182**, **Mieres 369**,
+  **Calahorra 680** (su propio texto dice "25.000 habitantes").
+- A veces es al revés: **Castellón** muestra 172.000 redondeado y `RANK` trae 180.379,
+  que es el fino.
+
+### 3.2 El plan (ya calculado)
 
 | | |
-|---|---|
-| **Cifra correcta** | **21.380 habitantes** — INE 2025, municipio completo (código INE 30041, comarca del Campo de Cartagena). Serie coherente: 20.560 (Censo 2021) → 21.153 (1-ene-2024) → 21.380 (2025). |
-| **Ya correcto en** | `rentabilidad-la-union.html` (bloque Demografía) — **no requiere acción** |
-| **A corregir** | `rendata_beta/ranking.html` → `RANK[]`, entrada `sl:"la-union"`: **`pob:18000` → `pob:21380`** |
-| **A corregir** | `rendata_beta/index.html` → `DATA[]`, entrada `sl:"la-union"`: **`pob:18000` → `pob:21380`** |
-| **Por qué no se aplica hoy** | `ranking.html` está congelado. Tocar solo `index.html` dejaría `DATA[]` y `RANK[]` desincronizados, que es peor que la incoherencia actual. **Se aplican los dos a la vez o ninguno.** |
-| **Urgencia** | Media. La Unión es #3 nacional y va en el envío de prensa top nacional, pero el dossier ya indica usar 21.380 y `pob` **no interviene** en el cálculo del puesto (solo el ROI). |
+|---|--:|
+| Sincronizables con seguridad | **299** (290 desde la ficha + 9 rellenando `DATA` desde `RANK`) |
+| En cuarentena, revisión manual | **26** |
+| Cobertura de `pob` en `DATA[]` | 448 → **586** |
 
-### 3.2 El problema de fondo — el filtro ">50.000 hab." del ranking está mal
+Salvaguardas que aplica el script antes de fiarse de una ficha: (1) su valor no está
+repetido en otra ficha, (2) si `RANK` no es un marcador redondo, la ficha debe estar
+entre 0,5x y 2x, (3) la ficha no puede ser redonda a millar cuando `RANK` trae un valor
+más fino. Lo que no pasa el filtro queda en cuarentena, no se escribe.
 
-`ranking.html` usa `c.pob>=50000` para el filtro de municipios grandes. Con los
-marcadores redondeados, **37 municipios quedan fuera del filtro pese a superar los
-50.000 habitantes**. Los peores casos:
+**Los 26 en cuarentena:** 19 por valor duplicado (incluye Adeje, Luarca, Mislata,
+Rincón de la Victoria, Utrera, Mairena, Cangas), 4 por ficha implausible frente a un
+`RANK` fino (Granada, Torrent, Mieres, Calahorra), 2 por ficha redondeada con `RANK`
+más fino (Castellón, Orense) y 1 implausible (Arroyomolinos, ficha 816).
 
-| Municipio | Población real (ficha) | `pob` en DATA/RANK |
-|---|--:|--:|
-| Alcobendas | 123.342 | 30.000 |
-| El Ejido | 91.440 | 30.000 |
-| Chiclana de la Frontera | 90.864 | 30.000 |
-| El Puerto de Santa María | 89.983 | 30.000 |
-| Coslada | 80.512 | 30.000 |
-| Collado Villalba | 67.274 | 30.000 |
-| El Prat de Llobregat | 66.338 | 30.000 |
-| Granadilla de Abona | 58.752 | 30.000 |
-| Cerdanyola del Vallès | 58.528 | 30.000 |
-| Calvià | 53.793 | 30.000 |
+### 3.3 Efecto en el filtro ">50.000 hab." de `ranking.html`
 
-Ninguno entra falsamente (0 falsos positivos): el sesgo es solo por defecto.
+`passes()` usa `c.pob>=50000`. Tras la corrección: **122 → 153 municipios (+31 entran,
+0 salen)**. Entran, entre otros, Alcobendas (123.342 reales, hoy figura con 30.000),
+Torrejón de Ardoz (143.526), El Ejido (91.440), Chiclana (90.864) y Coslada (80.512).
 
-**Cómo aplicarlo al descongelar:** repoblar `pob` en `DATA[]` y `RANK[]` desde el dato
-de padrón que ya tienen las fichas (que es el bueno), no desde los marcadores. Añadir
-después un check a `qa_check.py` que exija `pob` de `DATA[]` == habitantes de la ficha,
-igual que se hizo con ROI, días y vp.
+### 3.4 Cómo aplicarlo
 
-**Esto NO afecta a ninguna cifra de rentabilidad, precio, alquiler ni al orden del
-ranking**, que se calcula solo con el ROI.
+1. Sacar `ranking.html` de `frozen_files.json`.
+2. `python scripts/sync_poblacion.py` (informe) y luego `--apply`. El script se niega a
+   escribir mientras detecte la congelación.
+3. `python scripts/qa_check.py` — el check **[11]** ya está puesto y exige
+   `pob` de `DATA[]` == `pob` de `RANK[]` (invariante duro, con test negativo hecho).
+   La deuda con las fichas sale como WARN.
+4. Resolver los 26 de cuarentena a mano contra INE.
+
+**Nada de esto afecta a rentabilidad, precio, alquiler ni al orden del ranking**, que se
+calcula solo con el ROI.

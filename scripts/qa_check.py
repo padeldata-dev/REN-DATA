@@ -367,6 +367,57 @@ else:
     print(f"[10] Gastos reales (ingresos==alq*12 y neto==ingresos-gastos): OK "
           f"({gastos_ok} fichas)")
 
+# --- Check 11: campo `pob` coherente entre DATA[], RANK[] y la ficha ---
+# INVARIANTE DURO: si DATA[] y RANK[] traen ambos `pob`, deben coincidir. Son dos
+# copias del mismo dato y desincronizarlas es peor que tenerlas mal a la vez.
+# DEUDA (warning): `pob` nunca se pobló con padrón — lleva marcadores redondeados
+# a millar — y las fichas tampoco son fiables del todo (34 comparten valor con
+# otra ficha, algunas traen valores absurdos). Ver scripts/sync_poblacion.py y
+# PENDIENTES_DESCONGELACION.md.
+rank_path = os.path.join(SITE, "ranking.html")
+if not os.path.exists(rank_path):
+    warnings.append("[11] ranking.html no encontrado")
+else:
+    rtxt = open(rank_path, encoding="utf-8", errors="ignore").read()
+    ri = rtxt.find("const RANK=[")
+    rj = rtxt.find("];", ri)
+    def _pobs(blob):
+        o = {}
+        for bm in re.finditer(r'\{[^{}]*\}', blob):
+            b = bm.group(0)
+            s = re.search(r'sl:"([^"]+)"', b); p = re.search(r'pob:(\d+)', b)
+            if s:
+                o[s.group(1)] = int(p.group(1)) if p else None
+        return o
+    pob_data = _pobs(mm.group(1)) if mm else {}
+    pob_rank = _pobs(rtxt[ri + len("const RANK=["):rj]) if ri != -1 else {}
+    pob_ficha = {}
+    for p in pages:
+        if not p.startswith("rentabilidad-"):
+            continue
+        t = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+        m = re.search(r'<div class="demo-val">([\d.]+)</div>\s*'
+                      r'<div class="demo-label">Habitantes', t)
+        if m:
+            pob_ficha[p[len("rentabilidad-"):-len(".html")]] = int(m.group(1).replace(".", ""))
+    conflictos = [(s, pob_data[s], pob_rank[s]) for s in pob_data
+                  if pob_data.get(s) is not None and pob_rank.get(s) is not None
+                  and pob_data[s] != pob_rank[s]]
+    sin_pob = [s for s in pob_data if pob_data[s] is None]
+    vs_ficha = [s for s in pob_data
+                if pob_data.get(s) is not None and s in pob_ficha
+                and pob_data[s] != pob_ficha[s]]
+    if conflictos:
+        errors.append(f"[11] {len(conflictos)} municipios con pob distinto entre DATA[] y "
+                      f"RANK[] (deben ir sincronizados): {conflictos[:6]}")
+    else:
+        print(f"[11] pob DATA[]==RANK[]: OK (0 conflictos en {len(pob_data)} municipios)")
+    if sin_pob or vs_ficha:
+        warnings.append(f"[11] deuda de población: {len(sin_pob)} sin `pob` en DATA[] y "
+                        f"{len(vs_ficha)} que no cuadran con su ficha. "
+                        f"Plan y cuarentena en scripts/sync_poblacion.py "
+                        f"(bloqueado: ranking.html congelado).")
+
 # --- resumen ---
 print("-" * 60)
 for w in warnings:
