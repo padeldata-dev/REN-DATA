@@ -55,3 +55,15 @@ mientras dure la campaña.
 un dato erróneo comunicado a prensa: protege una página cuyo titular (ROI, precio,
 alquiler, puesto nacional) sí es correcto y está verificado.
 
+---
+
+## 3. `ranking.html` — población de La Unión incoherente con su ficha
+
+| | |
+|---|---|
+| **`ranking.html` (RANK[]) dice** | `pob: 18000` |
+| **`rentabilidad-la-union.html` dice** | 21.380 habitantes |
+| **Detectado** | 2026-07-27, preparando `dossier_top_nacional.md` |
+| **Por qué importa** | La Unión es #3 nacional y va en el próximo envío de prensa. Un periodista que abra el ranking y la ficha ve dos poblaciones distintas del mismo municipio. |
+| **Cómo aplicarlo** | Decidir cuál es la buena contra INE Padrón y unificar. El `18000` redondo tiene pinta de estimación; el `21.380` de la ficha parece el dato real. **Confirmar antes de tocar** — no es un fix mecánico. |
+| **Mientras tanto** | El dossier avisa de no citar población exacta de La Unión. El titular ("supera a 51 de las 53 capitales") no depende de ella y está verificado. |
