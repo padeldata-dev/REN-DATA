@@ -117,3 +117,23 @@ Torrejón de Ardoz (143.526), El Ejido (91.440), Chiclana (90.864) y Coslada (80
 
 **Nada de esto afecta a rentabilidad, precio, alquiler ni al orden del ranking**, que se
 calcula solo con el ROI.
+
+---
+
+## 4. `rentabilidad-velez-malaga.html` — cifras en prosa editorial
+
+Detectado 2026-07-27 al ejecutar `scripts/fix_prosa_vp_va.py`. Es la única congelada
+que necesita el fix de prosa (las otras 6 ya estaban bien en estas frases).
+
+| Bloque | Qué muestra | Debería |
+|---|---|---|
+| info-box "Mercado en expansión" | subida de precio con el valor de `va` | `vp` = **+7,0%**, y la comparación redactada según los datos |
+| "En los últimos 12 meses el precio ha subido un X%" (×2: cuerpo y JSON-LD) | valor cruzado | `vp` = **+7,0%** |
+| "revalorización anual del inmueble (+X%)" | valor cruzado | `vp` = **+7,0%** |
+
+**Cómo aplicarlo:** sacar la ficha de `frozen_files.json` y volver a ejecutar
+`python scripts/fix_prosa_vp_va.py`. El script ya la detecta y la reporta como
+bloqueada. `qa_check[12]` la saca como WARN mientras dure la congelación.
+
+Esta ficha acumula ya tres pendientes (ed-stat `vp`, tabla de gastos y prosa): al
+descongelar, ejecutar los tres fixers en orden y revisarla entera.

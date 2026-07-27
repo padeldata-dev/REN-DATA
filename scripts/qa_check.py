@@ -418,6 +418,78 @@ else:
                         f"Plan y cuarentena en scripts/sync_poblacion.py "
                         f"(bloqueado: ranking.html congelado).")
 
+# --- Check 12: cifras en PROSA editorial ligadas a DATA[] ---
+# [8] solo vigila huecos estructurados (hero, ed-stat, gastos, meta...). Estas tres
+# frases viven en texto libre y por eso sobrevivieron a tres rondas de fixes: se
+# detectaron el 2026-07-27 verificando Ronda, cuyo editorial decía "yield del 5,6%"
+# con un titular de 5,5%, y cuyo info-box daba `va` (alquiler) como subida del PRECIO.
+PROSA = {
+    "yield": (re.compile(r"yield del\s*(?:<strong>)?([\d,]+)%"), "roi"),
+    "12-meses": (re.compile(r"En los últimos 12 meses el precio ha subido un ([\d,]+)%"), "vp"),
+    "revalorización": (re.compile(r"revalorización anual del inmueble \(\+([\d,]+)%\)"), "vp"),
+    "info-box-precio": (re.compile(r"El precio de la vivienda en .+? ha subido un ([\d,]+)%"), "vp"),
+    "info-box-alquiler": (re.compile(r"El precio de la vivienda en .+? ha subido un [\d,]+% en el "
+                                     r"último año[.,] (?:El alquiler sube aún más rápido|"
+                                     r"por encima del alquiler|al mismo ritmo que el alquiler) "
+                                     r"\(\+([\d,]+)%\)"), "va"),
+}
+data_vals = {}
+if mm:
+    for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
+        b = bm.group(0)
+        sm = re.search(r'sl:"([^"]+)"', b)
+        if not sm:
+            continue
+        d = {}
+        for k in ("roi", "vp", "va"):
+            v = re.search(k + r":([-\d.]+)", b)
+            if v:
+                d[k] = f"{float(v.group(1)):.1f}".replace(".", ",")
+        data_vals[sm.group(1)] = d
+prosa_dev, prosa_frozen, prosa_ok = [], [], 0
+for p in pages:
+    if not p.startswith("rentabilidad-"):
+        continue
+    slug = p[len("rentabilidad-"):-len(".html")]
+    if slug not in data_vals:
+        continue
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    fallos = []
+    for nombre, (rx, campo) in PROSA.items():
+        want = data_vals[slug].get(campo)
+        if not want:
+            continue
+        for m in rx.finditer(txt):
+            if m.group(1) != want:
+                fallos.append(f"{nombre} {m.group(1)}%!={want}%")
+                break
+    if fallos:
+        (prosa_frozen if p in _frozen_names else prosa_dev).append((p, "; ".join(fallos)))
+    else:
+        prosa_ok += 1
+# la frase comparativa debe decir lo que dicen los datos, no lo contrario
+COMPARA = re.compile(r"ha subido un ([\d,]+)% en el último año\. El alquiler sube aún más "
+                     r"rápido \(\+([\d,]+)%\)")
+logica = []
+for p in pages:
+    if not p.startswith("rentabilidad-"):
+        continue
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    m = COMPARA.search(txt)
+    if m and float(m.group(2).replace(",", ".")) <= float(m.group(1).replace(",", ".")):
+        (prosa_frozen if p in _frozen_names else logica).append(
+            (p, f"dice 'sube aún más rápido' con alquiler +{m.group(2)}% <= precio +{m.group(1)}%"))
+if prosa_frozen:
+    warnings.append(f"[12] {len(prosa_frozen)} desviaciones de prosa en ficheros CONGELADOS "
+                    f"(ver PENDIENTES_DESCONGELACION.md): {[f for f, _ in prosa_frozen]}")
+if prosa_dev or logica:
+    errors.append(f"[12] {len(prosa_dev)} fichas con cifras de prosa != DATA[] y "
+                  f"{len(logica)} con la comparación precio/alquiler al revés: "
+                  f"{(prosa_dev + logica)[:5]}")
+else:
+    print(f"[12] Prosa editorial (yield, 12 meses, revalorización, info-box) == DATA[]: "
+          f"OK ({prosa_ok} fichas)")
+
 # --- resumen ---
 print("-" * 60)
 for w in warnings:
