@@ -207,6 +207,11 @@ roi_ext = {
     "title": re.compile(r'<title>[^<]*?ROI (\d+,\d+)%'),
     "sticky": re.compile(r'ROI bruto</span><span class="sb-val[^"]*">(\d+,\d+)%'),
     "ed": re.compile(r'ed-stat-val">(\d+,\d+)%</div><div class="ed-stat-lbl">rentabilidad bruta'),
+    # --- slots que faltaban y donde se escondió el bug de julio 2026 ---
+    "hero": re.compile(r'<div class="sl">Rentabilidad bruta estimada</div>\s*<div class="sv"[^>]*>(\d+,\d+)%'),
+    "gastos": re.compile(r'<span class="coll-trigger-title">Del (\d+,\d+)% bruto al'),
+    "infobox": re.compile(r'se sitúa en el (\d+,\d+)%, (?:por encima de|por debajo de|en línea con) la media nacional'),
+    "meta": re.compile(r'<meta name="description" content="[^"]*?: (\d+,\d+)% ROI'),
 }
 roi_dev = []
 external_remnants = []
@@ -231,6 +236,47 @@ elif external_remnants:
     errors.append(f"[8] {len(external_remnants)} fichas con restos del módulo externo sin atribuir: {external_remnants[:6]}")
 else:
     print(f"[8] ROI ficha==DATA[] y sin módulo externo: OK ({len(data_roi)} fichas)")
+
+# --- Check 9: el badge "Media España" == media real de DATA[] (constante única) ---
+# Nació como literal 6,5% (media de la edición de 209 ciudades) y en las fichas
+# resincronizadas se sobrescribió con el ROI del propio municipio etiquetado
+# "Media España". Debe ser UNA sola cifra en las 597, la media real de DATA[].
+data_rois = []
+if mm:
+    for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
+        rm = re.search(r'roi:([-\d.]+)', bm.group(0))
+        if rm:
+            data_rois.append(float(rm.group(1)))
+badge_re = re.compile(r'<span class="badge badge-n">Media España (\d+,\d+)%</span>')
+natl_ref = re.compile(r'La rentabilidad media de España es el (\d+,\d+)%')
+if not data_rois:
+    errors.append("[9] No se pudo calcular la media nacional desde DATA[]")
+else:
+    want_natl = f"{sum(data_rois) / len(data_rois):.1f}".replace(".", ",")
+    badge_dev, badge_missing = [], []
+    for p in pages:
+        if not p.startswith("rentabilidad-"):
+            continue
+        slug = p[len("rentabilidad-"):-len(".html")]
+        if slug not in data_roi:
+            continue
+        txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+        m = badge_re.search(txt)
+        if not m:
+            badge_missing.append(p)
+        elif m.group(1) != want_natl:
+            badge_dev.append((p, m.group(1), want_natl))
+        m2 = natl_ref.search(txt)
+        if m2 and m2.group(1) != want_natl:
+            badge_dev.append((p, "info-box " + m2.group(1), want_natl))
+    if badge_dev:
+        errors.append(f"[9] {len(badge_dev)} badges/referencias 'Media España' != media real "
+                      f"{want_natl}%: {badge_dev[:6]}")
+    elif badge_missing:
+        errors.append(f"[9] {len(badge_missing)} fichas sin badge 'Media España': {badge_missing[:6]}")
+    else:
+        print(f"[9] Badge 'Media España' == media real DATA[] ({want_natl}%): "
+              f"OK (constante única en {len(data_roi)} fichas)")
 
 # --- resumen ---
 print("-" * 60)
