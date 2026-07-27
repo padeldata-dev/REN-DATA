@@ -1,5 +1,5 @@
 {
-  "_comment": "CONGELACION ACTIVA - campana de prensa Malaga (3 emails enviados 2026-07-27). Estas 9 paginas son las URLs citadas a los periodistas (7 fichas + el analisis provincial) mas ranking.html, al que pueden llegar desde ellas. Mientras la campana este viva NO deben cambiar ni un dato. Cualquier correccion legitima que necesite tocarlas se anota en PENDIENTES_DESCONGELACION.md y se aplica al levantar la congelacion. qa_check[6] falla si cambia cualquier SHA256.",
+  "_comment": "CONGELACION ACTIVA - campana de prensa Malaga (3 emails enviados 2026-07-27). Estas 9 paginas son las URLs citadas a los periodistas (7 fichas + el analisis provincial) mas ranking.html, al que pueden llegar desde ellas. Mientras la campana este viva NO deben cambiar ni un dato. Cualquier correccion legitima que necesite tocarlas se anota en PENDIENTES_DESCONGELACION.md y se aplica al levantar la congelacion. qa_check[6] falla si cambia cualquier SHA256. Los SHA256 se calculan con los saltos de linea normalizados a LF (ver qa_check[6]): asi el hash guarda el CONTENIDO y no la codificacion, y coincide con lo que sirve rendata.es.",
   "base_dir": "rendata_beta",
   "frozen": {
     "rentabilidad-mollina.html": "cd3dde8d8f498248856b8793331936cdfbe67de586b6fb352c2304c0999895d2",
@@ -9,7 +9,7 @@
     "rentabilidad-archidona.html": "5a9f058e3908696c42e5b25cb7fedd09d52b2f8c60faa900183d732af27ccb51",
     "rentabilidad-velez-malaga.html": "bcc2e55236d3907d1e06864f0cc75d9680358eac87cb22a4e9f30fc3a0ed1cf8",
     "rentabilidad-benahavis.html": "c9b22fb82e349c83970c516669ffe675cc5969f5b14b885a27ed41c23b64d112",
-    "mercado-inmobiliario-provincia-malaga-2026.html": "ee260fdfb00f3ce9977091ac4133e9b28834af2b9c59d66feaba1cb16561ca7c",
-    "ranking.html": "7eea58642a049ac3ea1a8ee79973dda42f5fced152a98f7a951d4b8214c47094"
+    "mercado-inmobiliario-provincia-malaga-2026.html": "3d9eaabb1795a58b44f193af95106e9f92f7454e1bf5d7c8f846d4d6090995ae",
+    "ranking.html": "e57a31a3bf0d5fa9e08c60aeed4658f38ec4e48fbc3c1b8a007cb9820a3252d1"
   }
 }

@@ -159,6 +159,14 @@ else:
     print(f"[5] JSON-LD: OK (parseable en todas)")
 
 # --- Check 6: hashes de congelados ---
+# El hash se calcula sobre el contenido con los saltos de línea NORMALIZADOS a LF.
+# Motivo: el repo tiene core.autocrlf=true y no hay .gitattributes, así que un
+# fichero puede estar en CRLF en el árbol de trabajo y en LF en producción (o al
+# revés) sin que cambie ni un dato. Congelar los bytes crudos hacía que el hash
+# guardase la codificación en vez del contenido, y no coincidía con lo servido.
+def frozen_digest(path):
+    return hashlib.sha256(open(path, "rb").read().replace(b"\r\n", b"\n")).hexdigest()
+
 frozen = json.load(open(FROZEN_JSON, encoding="utf-8"))["frozen"]
 if not frozen:
     print("[6] Congelados: OK (lista vacía, 0 congelados)")
@@ -167,8 +175,7 @@ for f, expected in frozen.items():
     fp = os.path.join(SITE, f)
     if not os.path.exists(fp):
         frz_bad.append((f, "NO EXISTE")); continue
-    got = hashlib.sha256(open(fp, "rb").read()).hexdigest()
-    if got != expected:
+    if frozen_digest(fp) != expected:
         frz_bad.append((f, "HASH CAMBIADO"))
 if frz_bad:
     errors.append(f"[6] {len(frz_bad)} ficheros CONGELADOS alterados: {frz_bad}")
