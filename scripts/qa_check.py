@@ -197,12 +197,19 @@ else:
 
 # --- Check 8: ROI de ficha == ROI de DATA[] + sin restos del módulo externo ---
 data_roi = {}
+data_d = {}
+data_vp = {}
 if mm:
     for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
         b = bm.group(0)
         sm = re.search(r'sl:"([^"]+)"', b); rm = re.search(r'roi:([-\d.]+)', b)
+        dm = re.search(r'd:(\d+)', b); vm = re.search(r'vp:([-\d.]+)', b)
         if sm and rm:
             data_roi[sm.group(1)] = f"{float(rm.group(1)):.1f}".replace(".", ",")
+        if sm and dm:
+            data_d[sm.group(1)] = dm.group(1)
+        if sm and vm:
+            data_vp[sm.group(1)] = f"{float(vm.group(1)):.1f}".replace(".", ",")
 roi_ext = {
     "title": re.compile(r'<title>[^<]*?ROI (\d+,\d+)%'),
     "sticky": re.compile(r'ROI bruto</span><span class="sb-val[^"]*">(\d+,\d+)%'),
@@ -213,29 +220,47 @@ roi_ext = {
     "infobox": re.compile(r'se sitúa en el (\d+,\d+)%, (?:por encima de|por debajo de|en línea con) la media nacional'),
     "meta": re.compile(r'<meta name="description" content="[^"]*?: (\d+,\d+)% ROI'),
 }
+# ed-stat de días de venta y subida de precio anual (mismo patrón de bug)
+ED_DIAS = re.compile(r'<div class="ed-stat-val">(\d+)</div><div class="ed-stat-lbl">días media venta</div>')
+ED_VP = re.compile(r'<div class="ed-stat-val">\+([\d,]+)%</div><div class="ed-stat-lbl">subida precio anual</div>')
 roi_dev = []
+frozen_dev = []   # desviaciones en ficheros CONGELADOS -> warning, no error
 external_remnants = []
 EXT_HEADER = re.compile(r'alquiler residencial\s*[··]\s*Q4 2025')
 EXT_MURCIA = re.compile(r'Murcia</span>[^%]{0,120}?7,4%')  # valor externo en un nb-módulo
+_frozen_names = set(json.load(open(FROZEN_JSON, encoding="utf-8"))["frozen"])
 for p in pages:
     if not p.startswith("rentabilidad-"):
         continue
     slug = p[len("rentabilidad-"):-len(".html")]
     txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    sink = frozen_dev if p in _frozen_names else roi_dev
     if slug in data_roi:
         want = data_roi[slug]
         for nm, rx in roi_ext.items():
             m = rx.search(txt)
             if m and m.group(1) != want:
-                roi_dev.append((p, nm, m.group(1), want))
+                sink.append((p, nm, m.group(1), want))
+    if slug in data_d:
+        m = ED_DIAS.search(txt)
+        if m and m.group(1) != data_d[slug]:
+            sink.append((p, "ed-días", m.group(1), data_d[slug]))
+    if slug in data_vp:
+        m = ED_VP.search(txt)
+        if m and m.group(1) != data_vp[slug]:
+            sink.append((p, "ed-vp", m.group(1), data_vp[slug]))
     if EXT_HEADER.search(txt) or EXT_MURCIA.search(txt):
         external_remnants.append(p)
+if frozen_dev:
+    warnings.append(f"[8] {len(frozen_dev)} desviaciones en ficheros CONGELADOS "
+                    f"(no se corrigen hasta levantar la congelación, ver "
+                    f"PENDIENTES_DESCONGELACION.md): {frozen_dev}")
 if roi_dev:
     errors.append(f"[8] {len(roi_dev)} desviaciones ficha↔DATA[]: {roi_dev[:6]}")
 elif external_remnants:
     errors.append(f"[8] {len(external_remnants)} fichas con restos del módulo externo sin atribuir: {external_remnants[:6]}")
 else:
-    print(f"[8] ROI ficha==DATA[] y sin módulo externo: OK ({len(data_roi)} fichas)")
+    print(f"[8] ROI/días/vp ficha==DATA[] y sin módulo externo: OK ({len(data_roi)} fichas)")
 
 # --- Check 9: el badge "Media España" == media real de DATA[] (constante única) ---
 # Nació como literal 6,5% (media de la edición de 209 ciudades) y en las fichas
