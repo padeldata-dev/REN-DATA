@@ -310,6 +310,63 @@ else:
         print(f"[9] Badge 'Media España' == media real DATA[] ({want_natl}%): "
               f"OK (constante única en {len(data_roi)} fichas)")
 
+# --- Check 10: la tabla "Gastos reales" cuadra consigo misma ---
+# Antes del fix de 2026-07-27 la fila del neto no era la suma de la tabla que
+# resumía (fallaba en 597/597) y los ingresos venían de una plantilla de
+# 6.000€/año o de un trimestre anterior. Se exige: ingresos == alq*12 de DATA[]
+# y neto_€ == ingresos - suma(gastos).
+G_ING = re.compile(r'<div class="gasto-name">[^<]*Ingresos por alquiler</div>\s*'
+                   r'<div class="gasto-val" style="color:var\(--green\)">\+([\d.]+)€')
+G_NETO = re.compile(r'Rentabilidad neta estimada</div>\s*<div class="gasto-val"[^>]*>[\d,]+%'
+                    r'</div>\s*<div class="gasto-val"[^>]*>([\d.]+)€/año')
+G_ROWS = [re.compile(r'<div class="gasto-name">[^<]*' + re.escape(lbl) +
+                     r'[^<]*</div>\s*<div class="gasto-val" style="color:var\(--red\)">-([\d.]+)€')
+          for lbl in ("IBI (Impuesto sobre Bienes Inmuebles)", "Gastos de comunidad",
+                      "Mantenimiento y reparaciones", "Seguro de hogar e impagos",
+                      "Vacancia estimada", "IRPF sobre rendimientos")]
+data_alq = {}
+if mm:
+    for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
+        b = bm.group(0)
+        sm = re.search(r'sl:"([^"]+)"', b); am = re.search(r'alq:(\d+)', b)
+        if sm and am:
+            data_alq[sm.group(1)] = int(am.group(1))
+_n = lambda s: int(s.replace(".", ""))
+gastos_dev, gastos_frozen, gastos_ok = [], [], 0
+for p in pages:
+    if not p.startswith("rentabilidad-"):
+        continue
+    slug = p[len("rentabilidad-"):-len(".html")]
+    if slug not in data_alq:
+        continue
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    mi = G_ING.search(txt); mn = G_NETO.search(txt)
+    if not (mi and mn):
+        continue
+    rows = [r.search(txt) for r in G_ROWS]
+    if not all(rows):
+        gastos_dev.append((p, "tabla incompleta")); continue
+    ing = _n(mi.group(1)); neto = _n(mn.group(1))
+    suma = sum(_n(r.group(1)) for r in rows)
+    problemas = []
+    if ing != data_alq[slug] * 12:
+        problemas.append(f"ingresos {ing} != alq*12 {data_alq[slug] * 12}")
+    if neto != ing - suma:
+        problemas.append(f"neto {neto} != ingresos-gastos {ing - suma}")
+    if problemas:
+        (gastos_frozen if p in _frozen_names else gastos_dev).append((p, "; ".join(problemas)))
+    else:
+        gastos_ok += 1
+if gastos_frozen:
+    warnings.append(f"[10] {len(gastos_frozen)} tablas de gastos desviadas en ficheros "
+                    f"CONGELADOS (ver PENDIENTES_DESCONGELACION.md): "
+                    f"{[f for f, _ in gastos_frozen]}")
+if gastos_dev:
+    errors.append(f"[10] {len(gastos_dev)} tablas 'Gastos reales' que no cuadran: {gastos_dev[:6]}")
+else:
+    print(f"[10] Gastos reales (ingresos==alq*12 y neto==ingresos-gastos): OK "
+          f"({gastos_ok} fichas)")
+
 # --- resumen ---
 print("-" * 60)
 for w in warnings:

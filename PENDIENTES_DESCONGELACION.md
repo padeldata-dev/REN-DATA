@@ -24,24 +24,34 @@ los deploys mientras dure la congelación.
 
 ---
 
-## 2. Tabla "Gastos reales" — 8 de las 9 congeladas están afectadas
+## 2. Tabla "Gastos reales" — 7 congeladas pendientes (fórmula YA aprobada y aplicada al resto)
 
-El saneamiento de la tabla de gastos (ver informe del 2026-07-27) está **parado a la
-espera de aprobación de la fórmula**. Cuando se apruebe, estas congeladas entran en el
-mismo lote:
+El saneamiento se aplicó el 2026-07-27 a **590 fichas** con `scripts/fix_gastos_reales.py`.
+Estas 7 quedaron fuera **solo por estar congeladas**. Para aplicarlas: sacarlas de
+`frozen_files.json` y volver a ejecutar el script — ya las detecta y las reporta como
+bloqueadas.
 
-| Ficha | Ingresos que muestra | `alq`×12 real | Estado |
-|---|---|---|---|
-| `rentabilidad-mollina` | 6.000€ | 5.760€ | plantilla sin personalizar |
-| `rentabilidad-villanueva-del-trabuco` | 6.000€ | 5.400€ | plantilla sin personalizar |
-| `rentabilidad-alameda` | 6.000€ | 5.520€ | plantilla sin personalizar |
-| `rentabilidad-archidona` | 6.000€ | 6.240€ | plantilla sin personalizar |
-| `rentabilidad-campillos` | 6.720€ | 6.000€ | trimestre anterior (implica 560€/mes; hoy `alq`=500€) |
-| `rentabilidad-benahavis` | 14.160€ | 16.800€ | trimestre anterior (implica 1.180€/mes; hoy `alq`=1.400€) |
-| `rentabilidad-velez-malaga` | 9.600€ | 9.600€ | **correcta, no requiere acción** |
+Fórmula aplicada: `ingresos = alq×12`, cada gasto = su % actual × ingresos nuevos,
+`neto_€ = ingresos − Σgastos`, `neto_% = neto_€ / (precio_m² × 100)`. Las del grupo A
+reciben además la línea "Estimación con parámetros medios…" bajo la tabla.
+
+| Ficha | Grupo | Ingresos que muestra | `alq`×12 correcto | Qué le falta |
+|---|---|---|---|---|
+| `rentabilidad-mollina` | A | 6.000€ | 5.760€ | base + neto + nota de estimación |
+| `rentabilidad-villanueva-del-trabuco` | A | 6.000€ | 5.400€ | base + neto + nota de estimación |
+| `rentabilidad-alameda` | A | 6.000€ | 5.520€ | base + neto + nota de estimación |
+| `rentabilidad-archidona` | A | 6.000€ | 6.240€ | base + neto + nota de estimación |
+| `rentabilidad-campillos` | B | 6.720€ | 6.000€ | base (implica 560€/mes; hoy `alq`=500€) + neto |
+| `rentabilidad-benahavis` | B | 14.160€ | 16.800€ | base (implica 1.180€/mes; hoy `alq`=1.400€) + neto |
+| `rentabilidad-velez-malaga` | C | 9.600€ | 9.600€ | solo el neto (la base ya es correcta) |
 
 `mercado-inmobiliario-provincia-malaga-2026` y `ranking.html` no tienen tabla de gastos
-(verificado). Así que de las 9 congeladas, **6 entrarán en el lote** y 3 no.
+(verificado): de las 9 congeladas entran **7** en el lote.
 
-**Ninguno de los 3 emails cita la tabla de gastos**, así que la congelación no protege
-un dato erróneo que se haya comunicado: protege una página cuyo titular sí es correcto.
+`qa_check[10]` las reporta como **WARN**, no como error, para no bloquear deploys
+mientras dure la campaña.
+
+**Ninguno de los 3 emails cita la tabla de gastos.** La congelación no está protegiendo
+un dato erróneo comunicado a prensa: protege una página cuyo titular (ROI, precio,
+alquiler, puesto nacional) sí es correcto y está verificado.
+
