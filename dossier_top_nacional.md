@@ -20,7 +20,7 @@ Las 9 plazas de este dossier ocupan los puestos **#1, #3, #4, #5, #6, #7, #8, #9
 | Nac. /597 | Municipio | Provincia / CCAA | Población | ROI | Precio m² | Alquiler | ¿Capital? |
 |--:|---|---|--:|--:|--:|--:|:--:|
 | **#1** | [Zamora](https://rendata.es/rentabilidad-zamora) | Zamora · Castilla y León | 59.815 | **7,5%** | 960 € | 600 €/mes | Sí |
-| **#3** | [La Unión](https://rendata.es/rentabilidad-la-union) | Murcia · R. de Murcia | 18.000 ¹ | **7,3%** | 860 € | 520 €/mes | No |
+| **#3** | [La Unión](https://rendata.es/rentabilidad-la-union) | Murcia · R. de Murcia | 21.380 ¹ | **7,3%** | 860 € | 520 €/mes | No |
 | #4 | [Ciudad Real](https://rendata.es/rentabilidad-ciudad-real) | Ciudad Real · Castilla-La Mancha | 76.217 | 7,2% | 900 € | 540 €/mes | Sí |
 | #5 | [Teruel](https://rendata.es/rentabilidad-teruel) | Teruel · Aragón | 36.655 | 7,2% | **820 €** | 490 €/mes | Sí |
 | #6 | [Jaén](https://rendata.es/rentabilidad-jaen) | Jaén · Andalucía | 112.235 | 7,1% | 980 € | 580 €/mes | Sí |
@@ -31,7 +31,9 @@ Las 9 plazas de este dossier ocupan los puestos **#1, #3, #4, #5, #6, #7, #8, #9
 
 **ROI medio de las 9: 7,17%** · **precio medio: 936 €/m²** · las 9 están **por encima de la media nacional (5,8%)**.
 
-¹ **Ojo con la población de La Unión:** el ranking publica **18.000** y su ficha publica **21.380**. Son dos cifras distintas en dos páginas nuestras. Está anotado para corregir (`ranking.html` está congelado por la campaña de Málaga y no se puede tocar hoy). **Recomendación: no dar una cifra de población exacta de La Unión** hasta reconciliarlas; el titular no la necesita.
+¹ **Población de La Unión — RESUELTO (2026-07-27): la cifra buena es 21.380.** Es el dato oficial del INE 2025 para el **municipio completo** (código INE 30041, comarca del Campo de Cartagena), coherente con la serie: 20.560 (Censo 2021) → 21.153 (1-ene-2024) → **21.380 (2025)**. Es la que publica su ficha y **la que hay que usar en el email**.
+El **18.000** que aparece en `ranking.html` es un **marcador redondeado**, no un dato: el campo `pob` de `DATA[]`/`RANK[]` lleva estimaciones a millar en 175 de 448 municipios. `ranking.html` está congelado por la campaña de Málaga; la corrección queda anotada en `PENDIENTES_DESCONGELACION.md`.
+**El titular no cambia:** el puesto #3 sale del ROI, no de la población.
 
 ---
 
@@ -66,7 +68,7 @@ Las 9 plazas de este dossier ocupan los puestos **#1, #3, #4, #5, #6, #7, #8, #9
 · **Medio:** **La Opinión-El Correo de Zamora** (Prensa Ibérica; líder de difusión y audiencia en la provincia, con edición de Benavente). Alternativa digital: *El Día de Zamora*.
 
 ### 🥈 La Unión · #3 de 597 — **el no-capital del top**
-*Dato fuerte:* **un municipio de la comarca del Campo de Cartagena que supera a 51 de las 53 capitales de provincia** (solo Zamora y Cuenca lo adelantan). Es **el único no-capital del top 10 nacional**.
+*Dato fuerte:* **un municipio de 21.380 habitantes que supera a 51 de las 53 capitales de provincia** (solo Zamora y Cuenca lo adelantan). Es **el único no-capital del top 10 nacional**. Población verificada contra INE 2025 (municipio completo, no pedanía).
 *Contraste con su capital:* **La Unión 7,3% vs Murcia capital 5,9% (#230)** — 1,4 puntos y **227 posiciones** de diferencia dentro de la misma región, con el m² a 860 € frente a 1.750 €.
 · **URL:** https://rendata.es/rentabilidad-la-union
 · **Medio:** **La Verdad, edición de Cartagena** (Vocento; 72,4% de la audiencia regional, con edición comarcal propia que cubre La Unión). Alternativa: *La Opinión de Murcia*.
@@ -136,7 +138,7 @@ Las 9 plazas de este dossier ocupan los puestos **#1, #3, #4, #5, #6, #7, #8, #9
 
 ## 5. Avisos antes de enviar
 
-1. **Población de La Unión:** dos cifras publicadas (18.000 en el ranking, 21.380 en la ficha). No citarla hasta reconciliar. El titular de "51 de 53 capitales" **no depende de la población** y está verificado.
+1. **Población de La Unión: usar 21.380** (INE 2025, municipio completo). Resuelto el 2026-07-27. El `18.000` de `ranking.html` es un marcador redondeado y está pendiente de corrección (página congelada). Si un periodista abre el ranking verá 18.000 — respuesta preparada: *"la cifra oficial es 21.380 (INE 2025); el ranking arrastra un redondeo en el campo de población que no afecta al orden, que se calcula solo con la rentabilidad"*. El titular de "51 de 53 capitales" **no depende de la población** y está verificado.
 2. **Cuenca (#2)** no está en el envío pero sí en el ranking. Si se manda a medios de Castilla-La Mancha junto a Ciudad Real, conviene incluirla o estar preparado para la pregunta.
 3. **Zamora y Cuenca empatan a 7,5%.** Zamora es #1 por el desempate del ranking. Decir "el más rentable de España" es correcto según nuestro ranking publicado, pero si un periodista lo cuestiona, la respuesta honesta es "empata en ROI con Cuenca y encabeza el ranking".
 4. **Lugo y Cáceres empatan a 7,0%** con Lebrija (#11) y Baza (#12). "Top 10" es exacto; "los 10 más rentables con diferencia" no lo sería.

@@ -57,13 +57,49 @@ alquiler, puesto nacional) sí es correcto y está verificado.
 
 ---
 
-## 3. `ranking.html` — población de La Unión incoherente con su ficha
+## 3. Campo `pob` de `DATA[]` / `RANK[]` — estimaciones redondeadas, no datos
+
+**Resuelto el origen el 2026-07-27.** No es un caso aislado de La Unión: el campo `pob`
+lleva **marcadores redondeados a millar en 175 de los 448 municipios** que lo tienen, y
+en muchos es un **30.000 genérico**. Las fichas, en cambio, llevan el dato real de padrón.
+Difieren en **176 fichas**.
+
+### 3.1 La Unión — dato confirmado
 
 | | |
 |---|---|
-| **`ranking.html` (RANK[]) dice** | `pob: 18000` |
-| **`rentabilidad-la-union.html` dice** | 21.380 habitantes |
-| **Detectado** | 2026-07-27, preparando `dossier_top_nacional.md` |
-| **Por qué importa** | La Unión es #3 nacional y va en el próximo envío de prensa. Un periodista que abra el ranking y la ficha ve dos poblaciones distintas del mismo municipio. |
-| **Cómo aplicarlo** | Decidir cuál es la buena contra INE Padrón y unificar. El `18000` redondo tiene pinta de estimación; el `21.380` de la ficha parece el dato real. **Confirmar antes de tocar** — no es un fix mecánico. |
-| **Mientras tanto** | El dossier avisa de no citar población exacta de La Unión. El titular ("supera a 51 de las 53 capitales") no depende de ella y está verificado. |
+| **Cifra correcta** | **21.380 habitantes** — INE 2025, municipio completo (código INE 30041, comarca del Campo de Cartagena). Serie coherente: 20.560 (Censo 2021) → 21.153 (1-ene-2024) → 21.380 (2025). |
+| **Ya correcto en** | `rentabilidad-la-union.html` (bloque Demografía) — **no requiere acción** |
+| **A corregir** | `rendata_beta/ranking.html` → `RANK[]`, entrada `sl:"la-union"`: **`pob:18000` → `pob:21380`** |
+| **A corregir** | `rendata_beta/index.html` → `DATA[]`, entrada `sl:"la-union"`: **`pob:18000` → `pob:21380`** |
+| **Por qué no se aplica hoy** | `ranking.html` está congelado. Tocar solo `index.html` dejaría `DATA[]` y `RANK[]` desincronizados, que es peor que la incoherencia actual. **Se aplican los dos a la vez o ninguno.** |
+| **Urgencia** | Media. La Unión es #3 nacional y va en el envío de prensa top nacional, pero el dossier ya indica usar 21.380 y `pob` **no interviene** en el cálculo del puesto (solo el ROI). |
+
+### 3.2 El problema de fondo — el filtro ">50.000 hab." del ranking está mal
+
+`ranking.html` usa `c.pob>=50000` para el filtro de municipios grandes. Con los
+marcadores redondeados, **37 municipios quedan fuera del filtro pese a superar los
+50.000 habitantes**. Los peores casos:
+
+| Municipio | Población real (ficha) | `pob` en DATA/RANK |
+|---|--:|--:|
+| Alcobendas | 123.342 | 30.000 |
+| El Ejido | 91.440 | 30.000 |
+| Chiclana de la Frontera | 90.864 | 30.000 |
+| El Puerto de Santa María | 89.983 | 30.000 |
+| Coslada | 80.512 | 30.000 |
+| Collado Villalba | 67.274 | 30.000 |
+| El Prat de Llobregat | 66.338 | 30.000 |
+| Granadilla de Abona | 58.752 | 30.000 |
+| Cerdanyola del Vallès | 58.528 | 30.000 |
+| Calvià | 53.793 | 30.000 |
+
+Ninguno entra falsamente (0 falsos positivos): el sesgo es solo por defecto.
+
+**Cómo aplicarlo al descongelar:** repoblar `pob` en `DATA[]` y `RANK[]` desde el dato
+de padrón que ya tienen las fichas (que es el bueno), no desde los marcadores. Añadir
+después un check a `qa_check.py` que exija `pob` de `DATA[]` == habitantes de la ficha,
+igual que se hizo con ROI, días y vp.
+
+**Esto NO afecta a ninguna cifra de rentabilidad, precio, alquiler ni al orden del
+ranking**, que se calcula solo con el ROI.
