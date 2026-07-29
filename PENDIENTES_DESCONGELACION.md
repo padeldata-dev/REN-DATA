@@ -137,3 +137,134 @@ bloqueada. `qa_check[12]` la saca como WARN mientras dure la congelación.
 
 Esta ficha acumula ya tres pendientes (ed-stat `vp`, tabla de gastos y prosa): al
 descongelar, ejecutar los tres fixers en orden y revisarla entera.
+
+---
+
+## 5. Sincronización de precio y alquiler — 7 congeladas pendientes
+
+El 2026-07-29 se ligaron a `DATA[]` **19 huecos** de precio/alquiler que hasta ahora
+nadie vigilaba (hero, barra sticky, gráfico de evolución, "Pulso del mercado", FAQ
+JSON-LD y prosa editorial). Se aplicó a **590 fichas** con `scripts/fix_ficha_sync.py`;
+estas 7 quedaron fuera **solo por estar congeladas**.
+
+| Ficha | Huecos a corregir |
+|---|---|
+| `rentabilidad-alameda` | FAQ (ROI ×2, alquiler 1 y 3 hab., piso 100 m², `va`), prosa (días, ROI), pulso (días) |
+| `rentabilidad-archidona` | evo precio, hero alquiler, FAQ (ROI ×2, alquiler y derivados, piso, `va`), prosa (alquiler, ROI, `vp`), badge ITP |
+| `rentabilidad-benahavis` | FAQ (ROI, alquiler 1 y 3 hab., piso, `va`), prosa (alquiler, precio), badge ITP |
+| `rentabilidad-campillos` | serie histórica, FAQ (ROI, derivados, piso, `va`), prosa (precio), badge ITP |
+| `rentabilidad-mollina` | FAQ (ROI ×2, derivados, piso, `va`), prosa (días, ROI), pulso (días) |
+| `rentabilidad-velez-malaga` | hero (precio y alquiler), evo badge, FAQ (`vp` ×2, `va` ×2), prosa (precio, `vp`, `va`), badge ITP |
+| `rentabilidad-villanueva-del-trabuco` | evo precio + serie, hero alquiler, FAQ (ROI ×2, alquiler y derivados, piso, `va`), prosa (alquiler, días, ROI, `vp`), pulso (días), badge ITP |
+
+**Cómo aplicarlo:** sacarlas de `frozen_files.json` y volver a ejecutar
+`python scripts/fix_ficha_sync.py`. El script ya las detecta y las lista como
+saltadas. `qa_check[13]` y `[14]` las sacan como **WARN** mientras dure la congelación.
+
+**Riesgo de dejarlo:** medio-bajo. El ROI, el precio y el alquiler del **titular** de las
+7 son correctos (los vigilan `[8]` y `[9]`); lo desincronizado son huecos secundarios.
+La excepción a mirar con cuidado es `rentabilidad-velez-malaga`, cuyo **hero** sirve un
+precio y un alquiler distintos de `DATA[]` — y el hero es lo primero que ve un
+periodista. Es la cuarta deuda acumulada de esa ficha.
+
+---
+
+## 6. Tres municipios DUPLICADOS en `DATA[]` y `RANK[]` — plan aprobado, bloqueado
+
+Detectado el 2026-07-29. **El dataset dice 597 municipios pero solo hay 594 distintos.**
+Tres municipios aparecen dos veces, con dos slugs, dos fichas vivas y **cifras
+contradictorias**:
+
+| Municipio (INE) | Entrada A | Entrada B | Población común |
+|---|---|---|--:|
+| Ourense · 32054 | `ourense` — #21, **6,8%**, 1.080 €/m², 610 €/mes | `orense` — #256, **5,8%**, 1.150 €/m², 555 €/mes | 105.769 |
+| Castelló de la Plana · 12040 | `castellon` — #197, **6,0%**, 1.500 €/m², 750 €/mes | `castellon-de-la-plana` — #231, **5,9%**, 1.400 €/m², 690 €/mes | 180.379 |
+| Calp · 03047 | `calpe` — #550, **5,1%**, 2.800 €/m², 1.200 €/mes | `calp` — #356, **5,6%**, 2.310 €/m², 1.080 €/mes | 27.616 |
+
+El duplicado viene de origen: `pipeline/data/cities_master.csv` ya trae las dos filas de
+cada par. `qa_check[3]` solo exigía slugs únicos, no municipios únicos.
+
+### 6.1 Qué dice la fuente oficial
+
+Verificado contra INE y BOE:
+
+- **Ourense** es la denominación del INE (código 32054); *Orense* es la forma castellana,
+  no la oficial.
+- **Castelló de la Plana** es la denominación exclusiva desde el
+  [Decreto 40/2019 del Consell](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2019-5721)
+  (INE 12040). Ni *Castellón* ni *Castellón de la Plana* son ya la forma oficial.
+- **Calp** es la denominación exclusiva desde el
+  [Decreto 125/2009 del Consell](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2009-15957)
+  (INE 03047); en 2022 el ayuntamiento inició el expediente para recuperar la forma
+  bilingüe *Calp/Calpe*.
+
+> **Lo que la fuente oficial NO resuelve: cuál de los dos precios es el bueno.** El INE no
+> publica precio ni alquiler, y en `data/processed/cities_2026Q3.csv` **las dos filas de
+> cada par salen marcadas `estimado_ratio` / `historico`**: ninguna está medida. Elegir una
+> u otra es elegir entre dos estimaciones igual de respaldadas. Por eso el plan es
+> quedarse con la del slug que se conserva y **volver a medir los tres municipios contra
+> MIVAU en el próximo trimestre** en vez de fingir que una de las dos es la correcta.
+
+### 6.2 Cuál se queda y cuál se retira
+
+Evidencia de enlazado interno medida sobre las 844 páginas:
+
+| Slug | Enlaces internos | Páginas que enlazan | ¿Página `barrios-`? | ¿En `_redirects`? |
+|---|--:|--:|:--:|:--:|
+| `ourense` | **24** | 16 | sí | no |
+| `orense` | 15 | 11 | no | no |
+| `castellon` | **26** | 22 | no | no |
+| `castellon-de-la-plana` | 18 | 12 | sí | sí |
+| `calpe` | **10** | 7 | no | no |
+| `calp` | 9 | 8 | no | no |
+
+**Propuesta:**
+
+1. **Ourense** — se queda `ourense` (nombre oficial *y* más enlazado). Se retira `orense`
+   con **301 → `/rentabilidad-ourense`**. Decisión limpia: los dos criterios coinciden.
+2. **Castellón** — se queda **`castellon`** (26 enlaces frente a 18) con el **nombre
+   mostrado corregido a "Castelló de la Plana"**, y 301 desde `castellon-de-la-plana`.
+   *Aquí los dos criterios NO coinciden* (el slug oficial sería el otro, que además tiene
+   la página `barrios-`): se prioriza el URL con más enlaces entrantes y mejor encaje con
+   la demanda de búsqueda, y se arregla el nombre visible. **Confirmar antes de ejecutar.**
+3. **Calp/Calpe** — se queda **`calpe`** (10 enlaces frente a 9, y es la forma dominante en
+   búsqueda) con el nombre mostrado **"Calp"**, y 301 desde `calp`. Margen estrecho:
+   también es defendible al revés. **Confirmar antes de ejecutar.**
+
+Ninguna de las tres se borra: las 6 tienen enlaces internos, así que las tres retiradas
+van con **301**, no con `rm`. Sus enlaces internos hay que repuntarlos igualmente, o
+`qa_check[1]` se cae al borrar el fichero.
+
+### 6.3 Por qué está bloqueado
+
+| Lo que exige | Choca con |
+|---|---|
+| Quitar 3 entradas de `RANK[]` | `ranking.html` está **congelado**, y es la URL que los 3 emails de prensa invitan a abrir |
+| Recalcular los puestos `r:` de los 597 | Ídem: todo `RANK[]` se renumera |
+| Bajar el contador **597 → 594** | Aparece **1.009 veces en 821 ficheros**, incluidos **los 9 congelados** |
+| Ídem | Hay un artículo publicado cuya **URL** lleva la cifra: `/actualidad-597-mercados-vivienda-2026` |
+| Ídem | El dato macro del dossier nacional pasa a ser **"593 de 594 rinden más que Madrid"**, y el "596 de 597" ya está en la bandeja de entrada de los periodistas |
+
+### 6.4 Cómo aplicarlo (al levantar la congelación)
+
+1. Confirmar las dos decisiones marcadas arriba (Castellón y Calp/Calpe).
+2. Quitar las 3 entradas retiradas de `DATA[]` (`index.html`) y de `RANK[]`
+   (`ranking.html`), y renumerar `r:` en `RANK[]`.
+3. Repuntar los enlaces internos de las 3 retiradas hacia el slug que se queda.
+4. Añadir los 3 `301` a `rendata_beta/_redirects` y quitar las 3 URLs de `sitemap.xml`.
+5. Corregir el nombre mostrado a la forma oficial en las fichas que se quedan.
+6. Sustituir **597 → 594** en los 821 ficheros; decidir aparte qué hacer con la URL
+   `/actualidad-597-mercados-vivienda-2026` (301 a una nueva o dejarla y corregir solo el
+   cuerpo).
+7. Rehacer también `pipeline/data/cities_master.csv`, que es de donde nace el duplicado,
+   o volverá a aparecer en la siguiente pasada del pipeline.
+8. Añadir a `qa_check` un check de **municipio único** (hoy `[3]` solo mira slugs):
+   mismo `cc` + misma `pob` exacta y no redondeada ⇒ error.
+9. Actualizar `dossier_top_nacional.md` ("596 de 597") y `dossier_nuevos_angulos.md`
+   (que ya avisa del duplicado y no propone Ourense por este motivo).
+
+### 6.5 Falso positivo descartado
+
+**Berga y Canovelles** (Cataluña) comparten el valor `17.473` de población siendo
+municipios distintos. **No es un duplicado**: es un error del campo `pob`, que entra en la
+deuda del punto 3 de este documento, no en esta.
