@@ -31,9 +31,31 @@ Comprueba, sobre todo `rendata_beta/` (incluidos `academia/` y `en/`):
 4. **canonical / og:url** presentes, absolutos y en el dominio `rendata.es`.
 5. **JSON-LD** parseable en todas las páginas.
 6. **Ficheros congelados** — SHA256 vs `frozen_files.json`; si un hash cambia, **FALLA**.
+7. **Cifra de municipios** coherente en home / prensa / metodología.
+8. **ROI, días y `vp`** de cada ficha == `DATA[]` (7 huecos de ROI).
+9. **Badge "Media España"** == media real de `DATA[]`, constante única.
+10. **Tabla "Gastos reales"** cuadra (`ingresos == alq×12`, `neto == ingresos − gastos`).
+11. **`pob`** de `DATA[]` == `pob` de `RANK[]`.
+12. **Prosa editorial** (yield, 12 meses, revalorización, info-box) == `DATA[]`.
+13. **Precio y alquiler == `DATA[]` en los 19 huecos** de la ficha: hero, barra sticky,
+    gráfico de evolución, "Pulso del mercado", FAQ JSON-LD, meta/og y prosa.
+14. **Serie histórica** coherente (acaba en el precio de `DATA[]` y su dirección coincide
+    con `vp`) y **tarjeta de ITP** con el tipo de su CCAA y el importe cuadrado.
 
 Sale con código `0` si todo pasa y `1` si algún check crítico falla (apto para CI
 o para bloquear un deploy).
+
+### Tests del propio guardián — `scripts/test_qa_check.py`
+
+```bash
+python scripts/test_qa_check.py
+```
+
+Copia el sitio a un temporal, **inyecta cada bug conocido de uno en uno** y exige que
+`qa_check.py` salga con código 1 **y** lo reporte el check correcto. Incluye un control
+positivo (la copia intacta debe pasar en verde). Un check que no falla cuando debe da luz
+verde falsa: eso es justo lo que dejó 484 fichas sirviendo un precio distinto del de
+`DATA[]` durante meses.
 
 ## Ficheros congelados
 

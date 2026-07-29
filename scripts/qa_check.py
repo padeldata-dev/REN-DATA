@@ -22,8 +22,10 @@ except Exception:
     pass
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = os.path.join(ROOT, "rendata_beta")
-FROZEN_JSON = os.path.join(ROOT, "frozen_files.json")
+# RENDATA_SITE permite apuntar el guardián a una copia del sitio; lo usa
+# scripts/test_qa_check.py para inyectar bugs y comprobar que cada check falla.
+SITE = os.environ.get("RENDATA_SITE") or os.path.join(ROOT, "rendata_beta")
+FROZEN_JSON = os.environ.get("RENDATA_FROZEN") or os.path.join(ROOT, "frozen_files.json")
 
 errors = []   # críticos → exit 1
 warnings = []
@@ -489,6 +491,158 @@ if prosa_dev or logica:
 else:
     print(f"[12] Prosa editorial (yield, 12 meses, revalorización, info-box) == DATA[]: "
           f"OK ({prosa_ok} fichas)")
+
+# --- Check 13: precio y alquiler ligados a DATA[] en TODOS los huecos ---
+# [8] solo vigilaba el ROI (7 slots), los días del ed-stat y el vp del ed-stat.
+# El precio y el alquiler se quedaron sueltos en el hero, la barra sticky, el
+# gráfico de evolución, "Pulso del mercado", la FAQ JSON-LD y la prosa: 484 de
+# 597 fichas servían un precio o un alquiler distinto del de DATA[] (detectado
+# el 2026-07-29; el caso de referencia era Villena, cuyo hero decía 750€/+11,0%
+# y 400€/+15,0% con DATA[] en 730€/+9,4% y 389€/+7,6%).
+# Lo arregla scripts/fix_ficha_sync.py; esto impide que vuelva a colarse.
+def _eu(v):
+    return "{:,}".format(int(round(v))).replace(",", ".")
+
+def _pc(v, sep=","):
+    return ("%.1f" % v).replace(".", sep)
+
+SYNC_SLOTS = [
+    ("meta-alquiler",  r'<meta name="description" content="[^"]*?€, alquiler ([\d.]+)€/mes', "alq", _eu),
+    ("og-alquiler",    r'<meta property="og:description" content="[^"]*?€, alquiler ([\d.]+)€/mes', "alq", _eu),
+    ("jsonld-precio",  r'"description":"Análisis de rentabilidad inmobiliaria en [^"]*?\. Precio m² ([\d.]+)€', "p", _eu),
+    ("jsonld-alq",     r'"description":"Análisis de rentabilidad inmobiliaria en [^"]*?alquiler medio ([\d.]+)€/mes', "alq", _eu),
+    ("faq-precio",     r'El precio medio del metro cuadrado en [^"]*? es de ([\d.]+)€/m²', "p", _eu),
+    ("faq-alquiler",   r'El alquiler medio en [^"]*? es de ([\d.]+)€/mes para un piso estándar', "alq", _eu),
+    ("faq-va",         r'Los alquileres en [^"]*? han subido un ([\d,]+)% en el último año', "va", _pc),
+    ("sticky-precio",  r'<span class="sb-label">Precio m²</span><span class="sb-val[^"]*">([\d.]+)€', "p", _eu),
+    ("sticky-alq",     r'<span class="sb-label">Alquiler</span><span class="sb-val[^"]*">([\d.]+)€/mes', "alq", _eu),
+    ("hero-precio",    r'<div class="sl">Precio m²</div><div class="sv"[^>]*>([\d.]+)€', "p", _eu),
+    ("hero-vp",        r'<div class="sl">Precio m²</div><div class="sv"[^>]*>[\d.]+€</div><div style="[^"]*"><span class="badge badge-\w+">[↑↓] ([\d,]+)% anual', "vp", _pc),
+    ("hero-alquiler",  r'<div class="sl">Alquiler medio</div><div class="sv"[^>]*>([\d.]+)€', "alq", _eu),
+    ("hero-va",        r'<div class="sl">Alquiler medio</div><div class="sv"[^>]*>[\d.]+€</div><div style="[^"]*"><span class="badge badge-\w+">[↑↓] ([\d,]+)% anual', "va", _pc),
+    ("evo-precio",     r'Precio actual</span><div style="[^"]*">([\d.]+) €/m²', "p", _eu),
+    ("evo-vp",         r'<span class="badge badge-\w+">[↑↓] ([\d,]+)% último año</span>', "vp", _pc),
+    ("pulso-dias",     r'<div class="ival">(\d+)</div><div class="ilabel">Días de media en mercado', "d", lambda v: str(int(v))),
+    ("prosa-dias",     r'con los pisos vendiéndose en tan solo (\d+) días de media', "d", lambda v: str(int(v))),
+    ("prosa-precio",   r'El precio del metro cuadrado ha alcanzado los ([\d.]+)€', "p", _eu),
+    ("prosa-alq",      r'en los últimos 12 meses, alcanzando los ([\d.]+)€ mensuales', "alq", _eu),
+]
+SYNC_RX = [(n, re.compile(r), f, fm) for n, r, f, fm in SYNC_SLOTS]
+data_full = {}
+if mm:
+    for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
+        b = bm.group(0)
+        sm = re.search(r'sl:"([^"]+)"', b)
+        if not sm:
+            continue
+        rec, ok = {}, True
+        for k in ("roi", "p", "alq", "vp", "va", "d"):
+            v = re.search(k + r":([-\d.]+)", b)
+            if not v:
+                ok = False
+                break
+            rec[k] = float(v.group(1))
+        if ok:
+            data_full[sm.group(1)] = rec
+sync_dev, sync_frozen, sync_ok = [], [], 0
+for p in pages:
+    if not p.startswith("rentabilidad-"):
+        continue
+    slug = p[len("rentabilidad-"):-len(".html")]
+    if slug not in data_full:
+        continue
+    c = data_full[slug]
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    fallos = []
+    for nombre, rx, campo, fmt in SYNC_RX:
+        want = fmt(c[campo])
+        for m in rx.finditer(txt):
+            if m.group(1) != want:
+                fallos.append(f"{nombre} {m.group(1)}!={want}")
+                break
+    if fallos:
+        (sync_frozen if p in _frozen_names else sync_dev).append((p, "; ".join(fallos[:4])))
+    else:
+        sync_ok += 1
+if sync_frozen:
+    warnings.append(f"[13] {len(sync_frozen)} fichas CONGELADAS con precio/alquiler desincronizado "
+                    f"(ver PENDIENTES_DESCONGELACION.md): {[f for f, _ in sync_frozen]}")
+if sync_dev:
+    errors.append(f"[13] {len(sync_dev)} fichas con precio/alquiler != DATA[] en hero/sticky/evo/"
+                  f"pulso/FAQ/prosa: {sync_dev[:5]}")
+else:
+    print(f"[13] Precio/alquiler ficha == DATA[] en los {len(SYNC_SLOTS)} huecos: OK ({sync_ok} fichas)")
+
+# --- Check 14: gráfico de evolución coherente + tarjeta ITP ---
+# 74 fichas dibujaban una serie DESCENDENTE con la etiqueta "↑ X%" y en 263 el
+# último punto no era el precio de DATA[] (p. ej. Sestao: 2.820€ en 2024 -> 1.900€
+# en 2026 rotulado "↑ 4,5%"). Y 181 tarjetas de ITP arrastraban el texto de
+# plantilla "piso de 68.880€ / 5.510€ de ITP", que no correspondía ni al precio
+# del municipio ni al tipo de su comunidad.
+ITP_CCAA_QA = {
+    "C. de Madrid": 6.0, "Navarra": 6.0, "Canarias": 6.5, "País Vasco": 4.0,
+    "Andalucía": 7.0, "La Rioja": 7.0, "Aragón": 8.0, "Asturias": 8.0,
+    "Castilla y León": 8.0, "R. de Murcia": 8.0, "Cantabria": 9.0,
+    "Castilla-La Mancha": 9.0, "Galicia": 9.0, "Cataluña": 10.0,
+    "C. Valenciana": 10.0, "Extremadura": 8.0, "Islas Baleares": 9.0,
+    "Ceuta": 0.5, "Melilla": 0.5,
+}
+data_cc = {}
+if mm:
+    for bm in re.finditer(r'\{[^{}]*\}', mm.group(1)):
+        b = bm.group(0)
+        sm = re.search(r'sl:"([^"]+)"', b)
+        cm = re.search(r'cc:"([^"]+)"', b)
+        if sm and cm:
+            data_cc[sm.group(1)] = cm.group(1)
+EVO_COL_QA = re.compile(r'<div class="evo-col"><span class="evo-v(?: cur)?">([\d.]+)€</span>')
+ITP_QA = re.compile(r'<div class="itp-val">([\d,.]+)<span class="itp-pct">%</span></div>')
+ITP_DESC_QA = re.compile(r'Para un piso de ([\d.]+)€ pagarás <strong>([\d.]+)€ de (?:ITP|IGIC|IPSI)</strong>')
+evo_dev, evo_frozen, evo_ok = [], [], 0
+for p in pages:
+    if not p.startswith("rentabilidad-"):
+        continue
+    slug = p[len("rentabilidad-"):-len(".html")]
+    if slug not in data_full:
+        continue
+    c = data_full[slug]
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    fallos = []
+    vals = [int(v.replace(".", "")) for v in EVO_COL_QA.findall(txt)]
+    if len(vals) < 2:
+        fallos.append("serie ilegible")
+    else:
+        if vals[-1] != int(c["p"]):
+            fallos.append(f"serie acaba en {vals[-1]} y DATA[] dice {int(c['p'])}")
+        subida = vals[-1] >= vals[-2]
+        if subida != (c["vp"] >= 0):
+            fallos.append(f"serie {'sube' if subida else 'baja'} con vp {c['vp']:+.1f}%")
+    rate = ITP_CCAA_QA.get(data_cc.get(slug))
+    if rate is not None:
+        want = ("%d" % rate) if float(rate).is_integer() else ("%.1f" % rate).replace(".", ",")
+        m = ITP_QA.search(txt)
+        if m and m.group(1) != want:
+            fallos.append(f"ITP {m.group(1)}% != {want}%")
+        md = ITP_DESC_QA.search(txt)
+        if md:
+            piso, imp = int(md.group(1).replace(".", "")), int(md.group(2).replace(".", ""))
+            if piso % int(c["p"]) != 0:
+                fallos.append(f"ITP piso {piso}€ no es múltiplo del precio {int(c['p'])}€/m²")
+            elif abs(imp - piso * rate / 100) > 1:
+                fallos.append(f"ITP importe {imp}€ != {rate}% de {piso}€")
+    if fallos:
+        (evo_frozen if p in _frozen_names else evo_dev).append((p, "; ".join(fallos[:3])))
+    else:
+        evo_ok += 1
+if evo_frozen:
+    warnings.append(f"[14] {len(evo_frozen)} fichas CONGELADAS con serie/ITP incoherente "
+                    f"(ver PENDIENTES_DESCONGELACION.md): {[f for f, _ in evo_frozen]}")
+if evo_dev:
+    errors.append(f"[14] {len(evo_dev)} fichas con la serie histórica o la tarjeta ITP "
+                  f"incoherentes: {evo_dev[:5]}")
+else:
+    print(f"[14] Serie histórica (acaba en DATA[] p, dirección == vp) e ITP por CCAA: "
+          f"OK ({evo_ok} fichas)")
 
 # --- resumen ---
 print("-" * 60)
