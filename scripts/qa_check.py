@@ -526,6 +526,9 @@ SYNC_SLOTS = [
     ("prosa-dias",     r'con los pisos vendiéndose en tan solo (\d+) días de media', "d", lambda v: str(int(v))),
     ("prosa-precio",   r'El precio del metro cuadrado ha alcanzado los ([\d.]+)€', "p", _eu),
     ("prosa-alq",      r'en los últimos 12 meses, alcanzando los ([\d.]+)€ mensuales', "alq", _eu),
+    # gemelo de ED_VP de [8]: solo existe en las 6 fichas de plantilla propia
+    # (Alicante, Barcelona, Granada, Palma, Valencia, Sevilla) y no lo vigilaba nadie.
+    ("edstat-va",      r'<div class="ed-stat-val">\+([\d,]+)%</div><div class="ed-stat-lbl">subida alquiler anual</div>', "va", _pc),
 ]
 SYNC_RX = [(n, re.compile(r), f, fm) for n, r, f, fm in SYNC_SLOTS]
 data_full = {}

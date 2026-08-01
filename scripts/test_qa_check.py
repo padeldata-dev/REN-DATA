@@ -88,6 +88,13 @@ CASOS = [
      '<a href="ranking-que-no-existe.html"'),
 ]
 
+# Caso extra sobre otra ficha: el ed-stat "subida alquiler anual" solo existe en las
+# 6 fichas de plantilla propia, así que no se puede inyectar en Lleida.
+CASOS_ALICANTE = [
+    ("[13] ed-stat 'subida alquiler anual' distinto de DATA[]", "[13]",
+     '<div class="ed-stat-val">+9,0%</div><div class="ed-stat-lbl">subida alquiler anual</div>',
+     '<div class="ed-stat-val">+12,0%</div><div class="ed-stat-lbl">subida alquiler anual</div>'),
+]
 
 def copiar_sitio(dst):
     for base, _, files in os.walk(SITE):
@@ -112,9 +119,6 @@ def main():
     fallos = []
     try:
         copiar_sitio(tmp)
-        ruta = os.path.join(tmp, FICHA)
-        limpio = open(ruta, encoding="utf-8").read()
-
         # --- control POSITIVO ---
         code, out = corre(tmp)
         if code == 0:
@@ -125,13 +129,17 @@ def main():
             print("  FALLO CONTROL POSITIVO — los casos negativos no son concluyentes")
 
         # --- casos negativos ---
-        for nombre, check, viejo, nuevo in CASOS:
-            if viejo not in limpio:
-                fallos.append(f"{nombre}: el ancla no existe en {FICHA} (test obsoleto)")
+        todos = [(n, c, FICHA, v, x) for n, c, v, x in CASOS]
+        todos += [(n, c, "rentabilidad-alicante.html", v, x) for n, c, v, x in CASOS_ALICANTE]
+        for nombre, check, fichero, viejo, nuevo in todos:
+            ruta_f = os.path.join(tmp, fichero)
+            base = open(ruta_f, encoding="utf-8", newline="").read()
+            if viejo not in base:
+                fallos.append(f"{nombre}: el ancla no existe en {fichero} (test obsoleto)")
                 print(f"  FALLO {nombre} — ancla no encontrada")
                 continue
-            with open(ruta, "w", encoding="utf-8", newline="\n") as fh:
-                fh.write(limpio.replace(viejo, nuevo, 1))
+            with open(ruta_f, "w", encoding="utf-8", newline="") as fh:
+                fh.write(base.replace(viejo, nuevo, 1))
             code, out = corre(tmp)
             citado = any(l.lstrip().startswith("[X] " + check) for l in out.splitlines())
             if code == 1 and citado:
@@ -142,8 +150,8 @@ def main():
             else:
                 fallos.append(f"{nombre}: NO detectado (exit 0)")
                 print(f"  FALLO {nombre} — el guardián NO lo detecta")
-            with open(ruta, "w", encoding="utf-8", newline="\n") as fh:
-                fh.write(limpio)
+            with open(ruta_f, "w", encoding="utf-8", newline="") as fh:
+                fh.write(base)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
@@ -153,7 +161,8 @@ def main():
         for f in fallos:
             print("  [X]", f)
         return 1
-    print(f"TESTS OK — {len(CASOS)} bugs inyectados, {len(CASOS)} detectados por el check correcto.")
+    n = len(CASOS) + len(CASOS_ALICANTE)
+    print(f"TESTS OK — {n} bugs inyectados, {n} detectados por el check correcto.")
     return 0
 
 

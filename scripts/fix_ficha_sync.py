@@ -306,6 +306,17 @@ def fix_pulso(t, c):
                 str(c["d"]), "pulso_dias")
 
 
+# ed-stat "subida alquiler anual": solo existe en las 6 fichas de plantilla propia
+# (Alicante, Barcelona, Granada, Palma, Valencia y Sevilla). qa_check[8] vigilaba
+# el gemelo "subida precio anual" (ED_VP) pero no este, y las 6 servían un valor
+# que no era ni `vp` ni `va`. Detectado el 2026-07-29 al revisar Alicante ficha a
+# ficha antes de un envío de prensa.
+def fix_edstat_va(t, c):
+    return sub1(t, R(r'<div class="ed-stat-val">\+([\d,]+)%</div>'
+                     r'<div class="ed-stat-lbl">subida alquiler anual</div>'),
+                pct(c["va"]), "edstat_va")
+
+
 def fix_prosa(t, c):
     t = sub1(t, R(r'con los pisos vendiéndose en tan solo (\d+) días de media'), str(c["d"]), "prosa_dias")
     # el precio de la prosa llevaba separador de miles anglosajón en algunas fichas
@@ -317,7 +328,8 @@ def fix_prosa(t, c):
     return t
 
 
-FIXERS = (fix_meta, fix_jsonld, fix_sticky, fix_hero, fix_itp, fix_evo, fix_pulso, fix_prosa)
+FIXERS = (fix_meta, fix_jsonld, fix_sticky, fix_hero, fix_itp, fix_evo, fix_pulso,
+          fix_edstat_va, fix_prosa)
 
 
 def main():
