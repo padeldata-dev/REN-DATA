@@ -1,20 +1,14 @@
-# === Fuerza https + dominio canonico (sin www) ===
-# Evita URLs duplicadas en Search Console (http/https, www/no-www)
-# NOTA: Workers Assets _redirects solo admite origen http:// o relativo.
-# El caso https://www.rendata.es -> https://rendata.es NO se puede poner aqui
-# (Cloudflare rechaza origenes https:// absolutos); resolver con una Redirect Rule
-# de zona en el panel de Cloudflare (www -> apex).
-http://rendata.es/* https://rendata.es/:splat 301
-http://www.rendata.es/* https://rendata.es/:splat 301
+# GENERADO POR scripts/gen_redirects.py — NO EDITAR A MANO.
+# Para cambiar la cabecera o los alias, edita las constantes del script.
+#
+# Cloudflare Workers Assets sirve cada `x.html` en DOS rutas, `/x.html` y `/x`,
+# y a la variante `.html` le da un 307 TEMPORAL: Google indexa las dos y parte
+# el posicionamiento entre ellas. Estos 301 lo hacen permanente.
+#
+# Las reglas ESTATICAS (sin `*` ni `:placeholder`) van PRIMERO: Cloudflare solo
+# admite 100 dinamicas y cuenta como dinamica todo lo que venga detras de una.
 
-# === Alias de ruta -> URL canonica (301) ===
-# Antes eran rewrites 200: servian la MISMA ficha en una segunda ruta, que es
-# justo la duplicacion que queremos evitar. Ahora redirigen permanentemente.
-/rentabilidad/* /rentabilidad-:splat 301
-/ccaa/* /ccaa-:splat 301
-
-# === BEGIN 301 .html -> URL limpia (generado por scripts/gen_redirects.py) ===
-# 843 paginas. NO EDITAR A MANO: `python scripts/gen_redirects.py`.
+# === 843 reglas estaticas: .html -> URL limpia ===
 /academia.html /academia 301
 /academia/que-es-ajd-actos-juridicos-documentados.html /academia/que-es-ajd-actos-juridicos-documentados 301
 /academia/que-es-apalancamiento-inmobiliario.html /academia/que-es-apalancamiento-inmobiliario 301
@@ -858,4 +852,18 @@ http://www.rendata.es/* https://rendata.es/:splat 301
 /vivir-en-vitoria.html /vivir-en-vitoria 301
 /vivir-en-zaragoza.html /vivir-en-zaragoza 301
 /widget-demo.html /widget-demo 301
-# === END 301 .html -> URL limpia ===
+
+# === Reglas dinamicas (max. 100, obligatoriamente al final) ===
+# Alias de ruta -> URL canonica. Antes eran rewrites 200 y servian la MISMA
+# ficha en una segunda ruta, que es justo la duplicacion que evitamos aqui.
+/rentabilidad/* /rentabilidad-:splat 301
+/ccaa/* /ccaa-:splat 301
+
+# Fuerza https + dominio canonico (sin www). En la practica no llegan a
+# ejecutarse: el edge de Cloudflare ("Always Use HTTPS") resuelve el salto antes
+# de que la peticion alcance al Worker. Se quedan como red de seguridad.
+# El caso https://www.rendata.es -> https://rendata.es NO se puede poner aqui
+# (Cloudflare rechaza origenes https:// absolutos); esta resuelto con una
+# Redirect Rule de zona en el panel (www -> apex).
+http://rendata.es/* https://rendata.es/:splat 301
+http://www.rendata.es/* https://rendata.es/:splat 301

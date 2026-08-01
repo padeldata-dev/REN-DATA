@@ -115,6 +115,12 @@ CASOS_FICHERO = [
      "/ccaa/* /ccaa-:splat 301",
      "/ccaa/* /ccaa-:splat.html 200"),
 
+    # Este es el que rompio el deploy del 2026-08-01: Cloudflare cuenta como
+    # dinamica toda regla que venga detras de la primera dinamica, y solo admite 100.
+    ("[15] regla dinamica delante de las estaticas", "[15]", "_redirects",
+     "/academia.html /academia 301",
+     "/alias-que-rompe-el-orden/* /academia 301\n/academia.html /academia 301"),
+
     ("[15] sitemap que lista la variante .html", "[15]", "sitemap.xml",
      "<loc>https://rendata.es/rentabilidad-lleida</loc>",
      "<loc>https://rendata.es/rentabilidad-lleida.html</loc>"),

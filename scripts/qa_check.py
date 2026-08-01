@@ -700,6 +700,25 @@ if sin_301:
 if mal_destino:
     dup_errs.append(f"{len(mal_destino)} 301 que no apuntan a la URL limpia: {mal_destino[:6]}")
 
+# 15a-bis. orden estaticas-antes-que-dinamicas. Cloudflare admite 2.000 reglas
+# estaticas y solo 100 dinamicas, y cuenta como dinamica TODO lo que venga detras
+# de la primera dinamica: con el bloque generado despues de los 4 alias, el
+# deploy se rechazo con "dynamic _redirects rules limit of 100 exceeded".
+def _es_dinamica(src, dst):
+    # `*` (splat) o `:nombre` como segmento de ruta; `https://` no cuenta
+    return "*" in src or "*" in dst or bool(re.search(r"/:[A-Za-z_]", dst))
+
+primera_dinamica = None
+for i, (src, dst, code) in enumerate(red_rules):
+    if _es_dinamica(src, dst):
+        primera_dinamica = primera_dinamica if primera_dinamica is not None else i
+    elif primera_dinamica is not None:
+        d = red_rules[primera_dinamica]
+        dup_errs.append(f"regla estatica {src} despues de la dinamica {d[0]}: "
+                        f"Cloudflare contaria las {len(red_rules) - primera_dinamica} "
+                        f"siguientes como dinamicas (limite 100) y rechazaria el deploy")
+        break
+
 # 15b. reglas huerfanas: origen .html que ya no existe -> 301 a un 404
 huerfanas = [src for src in red_301
              if src.endswith(".html") and src.lstrip("/") not in pageset]
