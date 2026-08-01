@@ -9,6 +9,10 @@ Comprueba, sobre rendata_beta/ (incluidos subdirectorios academia/ y en/):
   4. canonical presente, absoluto y en el dominio rendata.es; og:url coherente.
   5. JSON-LD parseable en todas las páginas.
   6. SHA256 de los ficheros CONGELADOS == frozen_files.json (si cambia → FALLA).
+  ...
+ 15. URLs duplicadas: cada página tiene su 301 `.html` → URL limpia en
+     _redirects, ningún canonical apunta a la variante `.html` y el sitemap
+     solo lista la versión canónica.
 
 Uso:
     python scripts/qa_check.py
@@ -646,6 +650,107 @@ if evo_dev:
 else:
     print(f"[14] Serie histórica (acaba en DATA[] p, dirección == vp) e ITP por CCAA: "
           f"OK ({evo_ok} fichas)")
+
+# --- Check 15: URLs duplicadas (.html vs limpia) ---
+# Workers Assets sirve cada `x.html` en DOS rutas (`/x.html` y `/x`) y para la
+# variante `.html` emite un 307 temporal: Google acaba indexando las dos y parte
+# las señales entre ellas (16 pares con impresiones en Search Console el
+# 2026-08-01, pero afectaba a las 843 paginas). El arreglo es un 301 explicito
+# por pagina en _redirects, generado por scripts/gen_redirects.py. Este check
+# vigila que no se cuele una pagina nueva sin su 301, ni un canonical que
+# apunte a la variante .html, ni un rewrite 200 que sirva lo mismo en otra ruta.
+dup_errs, dup_warns = [], []
+CLEAN_EXCLUDE = {"404.html"}          # noindex, la sirve Cloudflare como error
+
+def clean_url(page):
+    if page == "index.html":
+        return "/"
+    if page.endswith("/index.html"):
+        return "/" + page[:-len("/index.html")] + "/"
+    return "/" + page[:-len(".html")]
+
+red_file = os.path.join(SITE, "_redirects")
+if not os.path.exists(red_file):
+    dup_errs.append("no existe _redirects")
+    red_rules = []
+else:
+    red_rules = []
+    for ln in open(red_file, encoding="utf-8").read().splitlines():
+        s = ln.strip()
+        if not s or s.startswith("#"):
+            continue
+        f = s.split()
+        if len(f) >= 2:
+            red_rules.append((f[0], f[1], f[2] if len(f) > 2 else "302"))
+
+# 15a. toda pagina servible tiene su 301 .html -> limpia
+red_301 = {src: dst for src, dst, code in red_rules if code == "301"}
+sin_301, mal_destino = [], []
+for p in pages:
+    if p in CLEAN_EXCLUDE:
+        continue
+    src = "/" + p
+    if src not in red_301:
+        sin_301.append(p)
+    elif red_301[src] != clean_url(p):
+        mal_destino.append((p, red_301[src], clean_url(p)))
+if sin_301:
+    dup_errs.append(f"{len(sin_301)} paginas servidas en /x.html y /x sin 301 "
+                    f"(ejecuta scripts/gen_redirects.py): {sin_301[:6]}")
+if mal_destino:
+    dup_errs.append(f"{len(mal_destino)} 301 que no apuntan a la URL limpia: {mal_destino[:6]}")
+
+# 15b. reglas huerfanas: origen .html que ya no existe -> 301 a un 404
+huerfanas = [src for src in red_301
+             if src.endswith(".html") and src.lstrip("/") not in pageset]
+if huerfanas:
+    dup_errs.append(f"{len(huerfanas)} reglas 301 desde un .html inexistente: {huerfanas[:6]}")
+
+# 15c. rewrites 200: sirven la misma pagina en una segunda ruta sin redirigir
+rewrites = [(src, dst) for src, dst, code in red_rules if code == "200"]
+if rewrites:
+    dup_errs.append(f"{len(rewrites)} rewrites 200 sirven contenido en una ruta "
+                    f"alternativa (usa 301): {rewrites[:6]}")
+
+# 15d. el canonical de cada pagina es SU url limpia (el [4] solo mira el dominio)
+canon_dup = []
+for p in pages:
+    if p == "404.html":
+        continue
+    txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+    cans = re.findall(r'<link[^>]+rel="canonical"[^>]+href="([^"]+)"', txt, re.I)
+    if len(cans) != 1:
+        continue                       # ya lo reporta el check [4]
+    want = "https://rendata.es" + clean_url(p)
+    if cans[0] != want:
+        canon_dup.append((p, cans[0], want))
+if canon_dup:
+    dup_errs.append(f"{len(canon_dup)} canonical que no apuntan a la URL limpia "
+                    f"de su propia pagina: {canon_dup[:6]}")
+
+# 15e. el sitemap solo lista la version canonica, sin .html ni repetidos
+sitemap_file = os.path.join(SITE, "sitemap.xml")
+if os.path.exists(sitemap_file):
+    sm_locs = re.findall(r"<loc>\s*(.*?)\s*</loc>",
+                         open(sitemap_file, encoding="utf-8").read())
+    con_html = [l for l in sm_locs if l.endswith(".html")]
+    sm_paths = [re.sub(r"^https?://[^/]+", "", l) or "/" for l in sm_locs]
+    repetidos = sorted({x for x in sm_paths if sm_paths.count(x) > 1})
+    if con_html:
+        dup_errs.append(f"{len(con_html)} URLs .html en sitemap.xml: {con_html[:6]}")
+    if repetidos:
+        dup_errs.append(f"{len(repetidos)} URLs repetidas en sitemap.xml: {repetidos[:6]}")
+    fuera = sorted({clean_url(p) for p in pages if p not in CLEAN_EXCLUDE} - set(sm_paths))
+    if fuera:
+        dup_warns.append(f"[15] {len(fuera)} paginas fuera del sitemap "
+                         f"(intencionado si son noindex): {fuera[:8]}")
+
+warnings.extend(dup_warns)
+if dup_errs:
+    errors.append("[15] URLs duplicadas: " + " | ".join(dup_errs))
+else:
+    print(f"[15] URLs duplicadas (.html vs limpia): OK "
+          f"({len(pages) - len(CLEAN_EXCLUDE)} paginas con 301, canonical y sitemap limpios)")
 
 # --- resumen ---
 print("-" * 60)

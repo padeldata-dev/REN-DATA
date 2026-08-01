@@ -8,8 +8,8 @@ precio distinto del de DATA[] — el hueco simplemente no estaba vigilado.
 
 Cómo funciona
 -------------
-1. Copia los .html y el sitemap a un directorio temporal (los binarios no hacen
-   falta: el guardián solo lee HTML, sitemap.xml y frozen_files.json).
+1. Copia los .html, el sitemap y _redirects a un directorio temporal (los
+   binarios no hacen falta: el guardián solo lee esos ficheros y frozen_files.json).
 2. Por cada caso: rompe UNA cosa en UNA ficha, ejecuta `qa_check.py` contra la
    copia vía la variable de entorno RENDATA_SITE, y comprueba que
    (a) sale con código 1 y (b) el mensaje cita el check esperado.
@@ -79,6 +79,10 @@ CASOS = [
      '<div class="sl">Rentabilidad bruta estimada</div><div class="sv">6,0%',
      '<div class="sl">Rentabilidad bruta estimada</div><div class="sv">6,4%'),
 
+    ("[15] canonical apuntando a la variante .html", "[15]",
+     '<link rel="canonical" href="https://rendata.es/rentabilidad-lleida"',
+     '<link rel="canonical" href="https://rendata.es/rentabilidad-lleida.html"'),
+
     ("[12] prosa: 'yield del X%' distinto del ROI", "[12]",
      "En los últimos 12 meses el precio ha subido un 7,5%",
      "En los últimos 12 meses el precio ha subido un 8,9%"),
@@ -96,10 +100,31 @@ CASOS_ALICANTE = [
      '<div class="ed-stat-val">+12,0%</div><div class="ed-stat-lbl">subida alquiler anual</div>'),
 ]
 
+# Casos que no viven en una ficha: (nombre, check, fichero, texto viejo, nuevo).
+# [15] vigila la duplicación .html/limpia, que se rompe desde _redirects y desde
+# el sitemap, no desde el HTML de una ciudad.
+CASOS_FICHERO = [
+    ("[15] pagina servida en /x.html y /x sin su 301", "[15]", "_redirects",
+     "/rentabilidad-lleida.html /rentabilidad-lleida 301\n", ""),
+
+    ("[15] 301 que apunta a otra pagina", "[15]", "_redirects",
+     "/rentabilidad-lleida.html /rentabilidad-lleida 301",
+     "/rentabilidad-lleida.html /rentabilidad-girona 301"),
+
+    ("[15] rewrite 200 que sirve la ficha en una segunda ruta", "[15]", "_redirects",
+     "/ccaa/* /ccaa-:splat 301",
+     "/ccaa/* /ccaa-:splat.html 200"),
+
+    ("[15] sitemap que lista la variante .html", "[15]", "sitemap.xml",
+     "<loc>https://rendata.es/rentabilidad-lleida</loc>",
+     "<loc>https://rendata.es/rentabilidad-lleida.html</loc>"),
+]
+
+
 def copiar_sitio(dst):
     for base, _, files in os.walk(SITE):
         for f in files:
-            if not (f.endswith(".html") or f == "sitemap.xml"):
+            if not (f.endswith(".html") or f in ("sitemap.xml", "_redirects")):
                 continue
             src = os.path.join(base, f)
             out = os.path.join(dst, os.path.relpath(src, SITE))
@@ -131,6 +156,7 @@ def main():
         # --- casos negativos ---
         todos = [(n, c, FICHA, v, x) for n, c, v, x in CASOS]
         todos += [(n, c, "rentabilidad-alicante.html", v, x) for n, c, v, x in CASOS_ALICANTE]
+        todos += list(CASOS_FICHERO)
         for nombre, check, fichero, viejo, nuevo in todos:
             ruta_f = os.path.join(tmp, fichero)
             base = open(ruta_f, encoding="utf-8", newline="").read()
@@ -161,7 +187,7 @@ def main():
         for f in fallos:
             print("  [X]", f)
         return 1
-    n = len(CASOS) + len(CASOS_ALICANTE)
+    n = len(CASOS) + len(CASOS_ALICANTE) + len(CASOS_FICHERO)
     print(f"TESTS OK — {n} bugs inyectados, {n} detectados por el check correcto.")
     return 0
 
