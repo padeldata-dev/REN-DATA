@@ -1,132 +1,163 @@
 #!/usr/bin/env python3
-"""Regenerates rendata_beta/sitemap.xml with all current URLs.
-
-*** OBSOLETO — NO EJECUTAR SIN ARREGLARLO ANTES (comprobado 2026-08-01) ***
-Este script se escribio cuando el sitio era plano y solo mira `BETA.glob("*.html")`,
-la raiz: se deja fuera las 30 paginas de `academia/` y las 21 de `en/`, que SI estan
-en el sitemap actual. Ademas reescribe todos los <lastmod> con la fecha de hoy y
-pierde las fechas reales de cada pagina. Ejecutarlo tal cual borra 51 URLs del
-sitemap y falsea las 842 restantes.
-
-Mientras no se haga recursivo y conserve los <lastmod> existentes, los cambios
-puntuales se hacen a mano sobre sitemap.xml (asi se anadio /prensa el 2026-08-01).
-El guardian avisa: qa_check[15] lista las paginas que faltan en el sitemap.
-
-Sources:
-- All rentabilidad-*.html
-- All ccaa-*.html
-- All mercado-inmobiliario-*-2026.html (CCAA analysis articles)
-- All other top-level HTML (articles, profile guides, etc.)
 """
+Regenera rendata_beta/sitemap.xml a partir del árbol de ficheros.
+
+Historia: la versión anterior se escribió cuando el sitio era plano y solo
+recorría `BETA.glob("*.html")`, la raíz. Con `academia/` y `en/` en juego se
+dejaba fuera 51 páginas, y además reescribía TODOS los `<lastmod>` con la fecha
+de ejecución, borrando la fecha real del último cambio de cada página. Estaba
+bloqueado con un abort desde el 2026-08-01; esto lo arregla.
+
+Principio: **el sitemap manda sobre el script**. Los `<lastmod>`, `<changefreq>`
+y `<priority>` de una URL que ya está en el sitemap se conservan tal cual — son
+valores afinados a mano a lo largo de meses y el script no tiene forma de
+recuperarlos. El script solo:
+
+  - añade las páginas nuevas (fecha de hoy y los valores por familia de más
+    abajo, tomados de lo que ya usan sus hermanas),
+  - quita las URLs cuya página ha dejado de existir,
+  - respeta el orden y el formato del fichero actual, para que regenerarlo sin
+    cambios en el árbol no produzca ni un byte de diferencia.
+
+Uso:
+    python scripts/regenerate_sitemap.py           # reescribe sitemap.xml
+    python scripts/regenerate_sitemap.py --check   # solo compara, exit 1 si difiere
+"""
+import os
+import re
 import sys
-from datetime import datetime
-from pathlib import Path
+from datetime import date
 
-ROOT = Path(__file__).resolve().parent.parent
-BETA = ROOT / "rendata_beta"
-SITEMAP = BETA / "sitemap.xml"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# clean_url es la traducción fichero -> URL que sirve Workers Assets; se comparte
+# con gen_redirects.py para que redirecciones y sitemap no puedan discrepar.
+# qa_check.py mantiene a propósito su propia copia: es el guardián y no debe
+# validar al generador con la lógica del generador.
+from gen_redirects import clean_url, rel  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SITE = os.environ.get("RENDATA_SITE") or os.path.join(ROOT, "rendata_beta")
+SITEMAP = os.path.join(SITE, "sitemap.xml")
 DOMAIN = "https://rendata.es"
+TODAY = date.today().isoformat()
 
-today = datetime.today().strftime("%Y-%m-%d")
+# Nunca entran en el sitemap.
+EXCLUDE = {"404.html"}
+NOINDEX = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex',
+                     re.I)
 
-# Top-level pages (high priority)
-PRIORITY_PAGES = [
-    ("/", 1.0, "daily"),
-    ("/ranking.html", 0.95, "daily"),
-    ("/analisis.html", 0.9, "weekly"),
-    ("/actualidad.html", 0.85, "weekly"),
-    ("/comparador.html", 0.85, "weekly"),
-    ("/informe-rentabilidad-espana-q2-2026.html", 0.9, "monthly"),
-    ("/metodologia.html", 0.85, "monthly"),
-    ("/widget-demo.html", 0.7, "monthly"),
-    ("/guia-inversor.html", 0.8, "monthly"),
-    ("/glosario.html", 0.7, "monthly"),
-    ("/sobre.html", 0.5, "monthly"),
-    ("/contacto.html", 0.6, "monthly"),
-    ("/privacidad.html", 0.3, "yearly"),
-    ("/aviso-legal.html", 0.3, "yearly"),
+# Valores para páginas NUEVAS, por familia. Salen de lo que ya usan sus hermanas
+# en el sitemap actual, así una ficha nueva nace con los mismos que las otras 588.
+FAMILIAS = [
+    (re.compile(r"^/$"),                      "daily",   "1.0"),
+    (re.compile(r"^/academia/"),              "yearly",  "0.6"),
+    (re.compile(r"^/en/"),                    "monthly", "0.7"),
+    (re.compile(r"^/rentabilidad-"),          "monthly", "0.8"),
+    (re.compile(r"^/ccaa-"),                  "monthly", "0.7"),
+    (re.compile(r"^/barrios-"),               "monthly", "0.6"),
+    (re.compile(r"^/vivir-en-"),              "monthly", "0.6"),
+    (re.compile(r"^/mercado-inmobiliario-"),  "monthly", "0.7"),
 ]
+POR_DEFECTO = ("monthly", "0.6")
+
+ENTRY = re.compile(
+    r"<url>\s*<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>\s*"
+    r"<changefreq>(.*?)</changefreq>\s*<priority>(.*?)</priority>\s*</url>", re.S)
 
 
-def clean(loc):
-    """Cloudflare Workers Assets sirve URLs limpias (sin .html); el sitemap
-    debe apuntar a esa forma canónica, no al fichero real."""
-    if loc != "/" and loc.endswith(".html"):
-        loc = loc[: -len(".html")]
-    return loc
+def paginas():
+    """{ruta URL: fichero} de todas las páginas indexables del árbol."""
+    out = {}
+    for base, _, files in os.walk(SITE):
+        for f in sorted(files):
+            if not f.endswith(".html"):
+                continue
+            p = rel(os.path.join(base, f))
+            if p in EXCLUDE:
+                continue
+            txt = open(os.path.join(SITE, p), encoding="utf-8", errors="ignore").read()
+            if NOINDEX.search(txt):
+                continue
+            out[clean_url(p)] = p
+    return out
 
 
-def url_block(loc, lastmod, changefreq, priority):
-    return (
-        f'  <url>\n'
-        f'    <loc>{DOMAIN}{clean(loc)}</loc>\n'
-        f'    <lastmod>{lastmod}</lastmod>\n'
-        f'    <changefreq>{changefreq}</changefreq>\n'
-        f'    <priority>{priority}</priority>\n'
-        f'  </url>'
-    )
+def actual():
+    """(entradas del sitemap en su orden, salto de línea del fichero, texto crudo)."""
+    if not os.path.exists(SITEMAP):
+        return [], "\n", ""
+    crudo = open(SITEMAP, encoding="utf-8", newline="").read()
+    nl = "\r\n" if "\r\n" in crudo else "\n"
+    entradas = [(re.sub(r"^https?://[^/]+", "", loc) or "/", lm, cf, pr)
+                for loc, lm, cf, pr in ENTRY.findall(crudo)]
+    return entradas, nl, crudo
+
+
+def defecto(ruta):
+    for rx, cf, pr in FAMILIAS:
+        if rx.match(ruta):
+            return cf, pr
+    return POR_DEFECTO
+
+
+def construir(previas, quiero):
+    """Entradas finales: conserva las que siguen existiendo, añade las nuevas."""
+    vistas, salida = set(), []
+    for ruta, lm, cf, pr in previas:
+        if ruta in quiero and ruta not in vistas:
+            salida.append((ruta, lm, cf, pr))
+            vistas.add(ruta)
+    nuevas = sorted(set(quiero) - vistas)
+    for ruta in nuevas:
+        cf, pr = defecto(ruta)
+        salida.append((ruta, TODAY, cf, pr))
+    return salida, nuevas, [r for r, *_ in previas if r not in quiero]
+
+
+def render(entradas, nl):
+    bloques = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for ruta, lm, cf, pr in entradas:
+        bloques += [
+            "  <url>",
+            f"    <loc>{DOMAIN}{ruta}</loc>",
+            f"    <lastmod>{lm}</lastmod>",
+            f"    <changefreq>{cf}</changefreq>",
+            f"    <priority>{pr}</priority>",
+            "  </url>",
+        ]
+    bloques += ["</urlset>", ""]
+    return nl.join(bloques)
 
 
 def main():
-    # Seguro: mientras el recorrido no sea recursivo, ejecutarlo destruye datos.
-    raiz = len([p for p in BETA.glob("*.html") if p.name != "404.html"])
-    todas = len([p for p in BETA.glob("**/*.html") if p.name != "404.html"])
-    if todas > raiz:
-        print(f"ABORTADO: este script solo recorre la raiz ({raiz} paginas) y el sitio "
-              f"tiene {todas} (faltan las de academia/ y en/). Generarlo ahora borraria "
-              f"{todas - raiz} URLs del sitemap y pisaria los <lastmod> reales. "
-              f"Hazlo recursivo y conserva los <lastmod> antes de usarlo.")
+    previas, nl, crudo = actual()
+    quiero = paginas()
+    entradas, nuevas, retiradas = construir(previas, quiero)
+    out = render(entradas, nl)
+
+    if "--check" in sys.argv:
+        if out == crudo:
+            print(f"regenerate_sitemap: sitemap.xml al dia ({len(entradas)} URLs)")
+            return 0
+        print(f"regenerate_sitemap: sitemap.xml DESACTUALIZADO "
+              f"({len(entradas)} URLs esperadas, {len(previas)} en el fichero)")
+        if nuevas:
+            print(f"  faltan {len(nuevas)}: {nuevas[:8]}")
+        if retiradas:
+            print(f"  sobran {len(retiradas)}: {retiradas[:8]}")
+        if not nuevas and not retiradas:
+            print("  mismas URLs pero el fichero difiere (formato, orden o metadatos)")
+        print("  Ejecuta: python scripts/regenerate_sitemap.py")
         return 1
 
-    blocks = []
-    seen = set()
-
-    # 1. Priority top-level
-    for loc, prio, freq in PRIORITY_PAGES:
-        blocks.append(url_block(loc, today, freq, prio))
-        seen.add(loc)
-
-    # 2. CCAA pages
-    for p in sorted(BETA.glob("ccaa-*.html")):
-        loc = f"/{p.name}"
-        blocks.append(url_block(loc, today, "weekly", 0.85))
-        seen.add(loc)
-
-    # 3. CCAA analysis articles (mercado-inmobiliario-*)
-    for p in sorted(BETA.glob("mercado-inmobiliario-*-2026.html")):
-        loc = f"/{p.name}"
-        blocks.append(url_block(loc, today, "monthly", 0.8))
-        seen.add(loc)
-
-    # 4. Other article pages (top-level *.html not yet seen + not 404)
-    excluded = {"404.html"}
-    for p in sorted(BETA.glob("*.html")):
-        name = p.name
-        if name in excluded:
-            continue
-        loc = f"/{name}"
-        if loc in seen:
-            continue
-        if name.startswith("rentabilidad-") or name.startswith("ccaa-"):
-            continue
-        # Article page
-        blocks.append(url_block(loc, today, "monthly", 0.75))
-        seen.add(loc)
-
-    # 5. City pages (rentabilidad-*)
-    for p in sorted(BETA.glob("rentabilidad-*.html")):
-        loc = f"/{p.name}"
-        blocks.append(url_block(loc, today, "weekly", 0.7))
-        seen.add(loc)
-
-    xml = (
-        '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "\n".join(blocks) + "\n"
-        '</urlset>\n'
-    )
-    SITEMAP.write_text(xml, encoding="utf-8")
-    print(f"Wrote {len(blocks)} URLs to {SITEMAP}")
+    with open(SITEMAP, "w", encoding="utf-8", newline="") as f:
+        f.write(out)
+    print(f"regenerate_sitemap: {len(entradas)} URLs escritas en {rel(SITEMAP)}")
+    print(f"  nuevas: {len(nuevas)}{' ' + str(nuevas[:5]) if nuevas else ''}")
+    print(f"  retiradas: {len(retiradas)}{' ' + str(retiradas[:5]) if retiradas else ''}")
     return 0
 
 
